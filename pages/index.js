@@ -1,12 +1,17 @@
+import Head from "next/head"
 import { useState } from "react"
+
 
 
 const Home = () => {
     
-    return <div>
+    return <>
+                <Head>
+                    <title>Parte Diaria</title>
+                </Head>
                 <h1>HOME1</h1>
                 <Counter/>
-            </div> 
+            </> 
 }
 
 const Counter = ()=>{
