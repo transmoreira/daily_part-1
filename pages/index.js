@@ -8,10 +8,11 @@ const Home = () => {
     return <>
         <Head>
             <title>Parte Diaria</title>
+            <link rel="icon" href="/favicon.png" />
         </Head>
         <h1>HOME1</h1>
         <Counter />
-        <Pesquisacep />
+        <PesquisaName />
     </>
 }
 
@@ -26,51 +27,25 @@ const Counter = () => {
     </div>
 }
 
-const Pesquisacep = () => {
+const PesquisaName = () => {
 
-    const [cepResult, setCepResult] = useState("__.___-___")
-    const [cepPesquisado, setCepPesquisado] = useState("")
 
-    const meu_callback = () => {
-    }
-
-    const keyUp = (value) => {
-        setCepPesquisado(value.target.value)
-    }
-
+    const [name, setName] = useState(0)
     const buscar = async () => {
 
-        const cep = cepPesquisado.replace(/\D/g, '');
 
+        const url = `https://gorest.co.in/public/v2/users`;
 
-        if (cep != "") {
-
-
-            const validacep = /^[0-9]{8}$/;
-
-
-            if (validacep.test(cep)) {
-
-
-                const url = `https://viacep.com.br/ws/${cep}/json/`;
-
-                const data = await fetch(url)
-                const result = await data.json()
-                setCepResult(result.logradouro)
-
-            }
-            else {
-                setCepResult("Formato de CEP inválido.");
-            }
-        }
-
-
+        const data = await fetch(url)
+        const result = await data.json()
+        const random = Math.floor(Math.random()*result.length)
+        setName(result[random].name)
+        
     }
 
     return <div>
-        <input onKeyUp={keyUp} />
         <button onClick={buscar}>Buscar</button>
-        <p>{cepResult}</p>
+        <p>{name}</p>
     </div>
 }
 
