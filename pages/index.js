@@ -1,53 +1,27 @@
 import Head from "next/head"
 import { useState } from "react"
+import daily_parts from "../src/data/daily_parts"
+import Table from "../src/components/Table"
+import Filter from "../src/components/Filter"
 
 
 
 const Home = () => {
-
+    const [listDailyParts, setListDailyParts] = useState(daily_parts)
+    
     return <>
         <Head>
             <title>Parte Diaria</title>
             <link rel="icon" href="/favicon.png" />
         </Head>
-        <h1>HOME1</h1>
-        <Counter />
-        <PesquisaName />
+        <Filter state={[listDailyParts, setListDailyParts]}/>
+        <main>
+            {listDailyParts.map(item => <Table key={item.id} dailyPart={item} />)}
+        </main>
     </>
 }
 
-const Counter = () => {
-    const [count, setCount] = useState(1)
-    const addCaount = () => {
-        setCount(count + 1)
-    }
-    return <div>
-        <p>{count}</p>
-        <button onClick={addCaount}>Adicionar</button>
-    </div>
-}
 
-const PesquisaName = () => {
-
-
-    const [name, setName] = useState(0)
-    const buscar = async () => {
-
-
-        const url = `https://gorest.co.in/public/v2/users`;
-
-        const data = await fetch(url)
-        const result = await data.json()
-        const random = Math.floor(Math.random()*result.length)
-        setName(result[random].name)
-        
-    }
-
-    return <div>
-        <button onClick={buscar}>Buscar</button>
-        <p>{name}</p>
-    </div>
-}
 
 
 
