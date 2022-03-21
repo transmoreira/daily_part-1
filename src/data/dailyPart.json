@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "client": "Vale",
+        "date": "2022-03-21T01:39:31.656Z",
+        "driver": {
+            "registration": "2075",
+            "name": "DIVANIR DE JESUS SILVA"
+        },
+        "car": {
+            "number": "38418",
+            "plate": "QOR4780"
+        },
+        "travels": [
+            {
+                "line": "A32",
+                "startTime": "05:45",
+                "startKM": "129555",
+                "origin": "ITABIRITO",
+                "destiny": "CMT",
+                "endTime": "07:10",
+                "endKM": "129598"
+            },
+            {
+                "line": "A31",
+                "startTime": "07:45",
+                "startKM": "129645",
+                "origin": "CMT",
+                "destiny": "ITABIRITO",
+                "endTime": "09:10",
+                "endKM": "129673"
+            }
+        ]
+    }
+]

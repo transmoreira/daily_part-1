@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { dateFormated } from "../../utils/dates"
-import daily_parts from "../../data/daily_parts"
+import * as dailyPart from "../../data/dailyPart.json"
+import * as clientsJSON from "../../data/clients.json"
 
 
 const starDate = new Date()
@@ -19,11 +20,10 @@ const filterDatas = {
 
 const Filter = (props) => {
     const [listDailyParts, setListDailyParts] = props.state
+    const [lines, setLines] = useState([])
 
 
-
-
-
+    const clients = clientsJSON.default.map(item=>item.name)  
 
 
     const onChange = (event) => {
@@ -46,7 +46,9 @@ const Filter = (props) => {
                 }
                 break
             case "client":
-                filterDatas.client = element.value
+                filterDatas.client = element.children[element.value].innerText
+                const lines = element.value > 0 ? clientsJSON.default[element.value-1].lines.map(item=>item.name) : []
+                setLines(lines)
                 break;
             case "line":
                 filterDatas.line = element.value
@@ -56,11 +58,12 @@ const Filter = (props) => {
     }
 
     const newFilter = () => {
-
-        const newList = daily_parts.filter(item => {
-            return item.date.getTime() > filterDatas.timeCourse.start.getTime() &&
-                item.date.getTime() < filterDatas.timeCourse.end.getTime() &&
-                (item.client == filterDatas.client || filterDatas.client == "") &&
+        
+        const newList = dailyPart.filter(item => {
+            
+            return new Date(item.date).getTime() > filterDatas.timeCourse.start.getTime() &&
+                new Date(item.date).getTime() < filterDatas.timeCourse.end.getTime() &&
+                (filterDatas.client == ""|| item.client == filterDatas.client) &&
                 (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
         })
 
@@ -83,18 +86,14 @@ const Filter = (props) => {
             <div>
                 Cliente:
                 <select id="client" onChange={onChange}>
-                    <option></option>
-                    <option>Vale</option>
-                    <option>Fiat</option>
-                    <option>Pardini</option>
+                    <option value={0}></option>
+                    {clients.map((item, index)=><option value={index+1}>{item}</option>)}
                 </select>
                 Linha:
-                <select id="line" onChange={onChange}>
-                    <option></option>
-                    <option>A02</option>
-                    <option>A01</option>
-                    <option>D303</option>
-                </select>
+                <input id="line" onChange={onChange}  list="list"/>
+                <datalist id="list">
+                    {lines.map((item, index)=><option>{item}</option>)}
+                </datalist>
             </div>
             <div>
                 <input type="button" value="Filtrar" onClick={newFilter} />

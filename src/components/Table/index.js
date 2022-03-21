@@ -3,7 +3,7 @@ import { dateFormated } from "../../utils/dates"
 export default (props) => {
 
     const { id, client, date, driver, car, travels } = props.dailyPart
-  
+    
     
 
     return <section className="table">
@@ -21,7 +21,7 @@ export default (props) => {
                     <th className="no-editable">Carro</th>
                     <th id="car">{car.number}</th>
                     <th className="no-editable">DATA</th>
-                    <th id="date">{dateFormated(date)}</th>
+                    <th id="date">{dateFormated(new Date(date))}</th>
                     <th className="no-editable">CLIENTE</th>
                     <th colSpan="2" id="client">{client}</th>
                 </tr>

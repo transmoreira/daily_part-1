@@ -6,10 +6,14 @@ const date = (daysDiff)=>{
     const customDate = new Date(today.setDate(today.getDate() + daysDiff))
     return customDate
 }
+const clients = async ()=>{
+    const resultClient = await fetch("./clients.json")
+    return await resultClient.json()
+}
 
 
 
-const dailyPart = [
+/*const dailyPart = [
     {
         id: 1,
         client: "Vale",
@@ -233,6 +237,8 @@ const dailyPart = [
 
         ]
     }
-]
+]*/
 
-export default dailyPart
+
+
+export  { clients}

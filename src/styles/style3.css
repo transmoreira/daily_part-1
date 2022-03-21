@@ -1,0 +1,119 @@
+
+body{
+    padding-top: 20px;
+}
+main{
+    text-align: center;
+}
+
+table{
+    background-color: white;
+    box-shadow: gray 0 0 15px;
+    border-spacing: 0;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+td, th{
+    border: solid 1px gray;
+    max-width: 70px;
+    height: 25px;
+    padding-right: 10px;
+    font-weight: normal;
+}
+input{
+    width: 95%;
+}
+
+.info{   
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 0, 0.5);
+    color: red;
+    border: orange 2px solid;
+}
+
+img{
+    width: 100%;
+    height: 200%;
+}
+
+.no-editable{
+    background-color: rgba(128, 128, 128, 0.15);
+    font-weight: bold;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 1000;
+    display: none;
+}
+
+.content-modal{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    margin: 250px auto;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    border: black 1px solid;
+    box-shadow: black 1px 1px 8px;
+}
+
+.content-modal .close{
+    background-color: red;
+    border: black solid 1px;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0 4px;
+    position: relative;
+    top: -18px;
+    right: -155px;
+    cursor: pointer;
+}
+
+.content-modal input{
+    margin: 10px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.inconsistency{
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+    
+}
+
+.error{
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
+    color: red;
+}
+
+.warn{
+    background-color: #ff4400c0;
+    border: 2px solid yellow;
+    color: yellow;
+}
+
+button + label{
+    background-color: blueviolet;
+}
+
+

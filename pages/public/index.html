@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <link rel="stylesheet" href="../src/styles/style3.css">
+
+  <title>Parte diaria</title>
+</head>
+
+<body>
+
+  <main>
+    <span class="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</span>
+    <table>
+      <thead>
+        <tr>
+          <th class="no-editable" rowspan="2" colspan="2"><img src="https://rionegronet.com.br/wp-content/uploads/2020/05/cropped-logo-rio-negro.jpg" alt="RIO NEGRO"></th>
+          <th class="no-editable" colspan="9">PARTE DIÁRIA OPERACIONAL</th>
+        </tr>
+        <tr>
+          <th class="no-editable">PLACA</th>
+          <th id="plate"></th>
+          <th class="no-editable">Carro</th>
+          <th id="car"></th>
+          <th class="no-editable">DATA</th>
+          <th id="date"></th>
+          <th class="no-editable">CLIENTE</th>
+          <th colspan="2" id="client"></th>
+        </tr>
+        <tr>
+          <th class="no-editable" rowspan="2">Nº 001301</th>
+          <th class="no-editable" colspan="7">IDENTIFIÇÃO DO MOTORISTA</th>
+          <th class="no-editable" colspan="2">HORÀRIO DE TRABALHO</th>
+        </tr>
+        <tr>
+          <th class="no-editable">MATRIC</th>
+          <th id="registration"></th>
+          <th class="no-editable">NOME</th>
+          <th colspan="4" id="name"></th>
+          <th class="no-editable" class="flex">ENT.</th>
+          <th class="no-editable" class="flex">SAI.</th>
+        </tr>
+        <tr>
+          <th class="no-editable">ATEND.</th>
+          <th class="no-editable" colspan="2">HORÁRIO</th>
+          <th class="no-editable" colspan="2">KM</th>
+          <th class="no-editable" rowspan="2">TOTAL KM</th>
+          <th class="no-editable" rowspan="2">QTD PASSG.</th>
+          <th class="no-editable" colspan="4">SERVIÇO EXECUTADO</th>
+        </tr>
+        <tr>
+          <th class="no-editable">LINHA</th>
+          <th class="no-editable">INICIAL</th>
+          <th class="no-editable">FINAL</th>
+          <th class="no-editable">INICIAL</th>
+          <th class="no-editable">FINAL</th>
+          <th class="no-editable" colspan="2">ORIGEM</th>
+          <th class="no-editable" colspan="2">DESTINO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-js="line-1"></td>
+          <td data-js="start-time-1"></td>
+          <td data-js="end-time-1"></td>
+          <td data-js="start-km-1"></td>
+          <td data-js="end-km-1"></td>
+          <td></td>
+          <td data-js="amount-passenger-1"></td>
+          <td colspan="2" data-js="origin-1"></td>
+          <td colspan="2" data-js="destiny-1"></td>
+        </tr>
+        <tr>
+          <td data-js="line2"></td>
+          <td data-js="start-time2"></td>
+          <td data-js="end-time2"></td>
+          <td data-js="start-km2"></td>
+          <td data-js="end-km2"></td>
+          <td></td>
+          <td data-js="amount-passenger2"></td>
+          <td colspan="2" data-js="origin2"></td>
+          <td colspan="2" data-js="destiny2"></td>
+        </tr>
+        <tr>
+          <td data-js="line3"></td>
+          <td data-js="start-time3"></td>
+          <td data-js="end-time3"></td>
+          <td data-js="start-km3"></td>
+          <td data-js="end-km3"></td>
+          <td></td>
+          <td data-js="amount-passenger3"></td>
+          <td colspan="2" data-js="origin3"></td>
+          <td colspan="2" data-js="destiny3"></td>
+        </tr>
+        <tr>
+          <td data-js="line4"></td>
+          <td data-js="start-time4"></td>
+          <td data-js="end-time4"></td>
+          <td data-js="start-km4"></td>
+          <td data-js="end-km4"></td>
+          <td></td>
+          <td data-js="amount-passenger4"></td>
+          <td colspan="2" data-js="origin4"></td>
+          <td colspan="2" data-js="destiny4"></td>
+        </tr>
+        <tr>
+          <td data-js="line5"></td>
+          <td data-js="start-time5"></td>
+          <td data-js="end-time5"></td>
+          <td data-js="start-km5"></td>
+          <td data-js="end-km5"></td>
+          <td></td>
+          <td data-js="amount-passenger5"></td>
+          <td colspan="2" data-js="origin5"></td>
+          <td colspan="2" data-js="destiny5"></td>
+        </tr>
+        <tr>
+          <td data-js="line6"></td>
+          <td data-js="start-time6"></td>
+          <td data-js="end-time6"></td>
+          <td data-js="start-km6"></td>
+          <td data-js="end-km6"></td>
+          <td></td>
+          <td data-js="amount-passenger6"></td>
+          <td colspan="2" data-js="origin6"></td>
+          <td colspan="2" data-js="destiny6"></td>
+        </tr>
+        <tr>
+          <td data-js="line7"></td>
+          <td data-js="start-time7"></td>
+          <td data-js="end-time7"></td>
+          <td data-js="start-km7"></td>
+          <td data-js="end-km7"></td>
+          <td></td>
+          <td data-js="amount-passenger7"></td>
+          <td colspan="2" data-js="origin7"></td>
+          <td colspan="2" data-js="destiny7"></td>
+        </tr>
+        <tr>
+          <td data-js="line8"></td>
+          <td data-js="start-time8"></td>
+          <td data-js="end-time8"></td>
+          <td data-js="start-km8"></td>
+          <td data-js="end-km8"></td>
+          <td></td>
+          <td data-js="amount-passenger8"></td>
+          <td colspan="2" data-js="origin8"></td>
+          <td colspan="2" data-js="destiny8"></td>
+        </tr>
+        <tr>
+          <td data-js="line9"></td>
+          <td data-js="start-time9"></td>
+          <td data-js="end-time9"></td>
+          <td data-js="start-km9"></td>
+          <td data-js="end-km9"></td>
+          <td></td>
+          <td data-js="amount-passenger9"></td>
+          <td colspan="2" data-js="origin9"></td>
+          <td colspan="2" data-js="destiny9"></td>
+        </tr>
+        <tr>
+          <td data-js="line-10"></td>
+          <td data-js="start-time-10"></td>
+          <td data-js="end-time-10"></td>
+          <td data-js="start-km-10"></td>
+          <td data-js="end-km-10"></td>
+          <td></td>
+          <td data-js="amount-passenger-10"></td>
+          <td colspan="2" data-js="origin-10"></td>
+          <td colspan="2" data-js="destiny-10"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <div class="modal">
+    <div class="content-modal">
+      <span class="close">x</span>
+      <label></label>
+      <input type="text" data-js="data" placeholder="Toque aqui para digitar" list="list">
+      <datalist id="list">
+        <!--option value="">faixa etária:</option>
+        <option value="-18">menor de idade</option>
+        <option value="+18">maior de idade</option>
+        <option value="+60">idoso</option-->
+      </datalist>
+      <span class="inconsistency"></span>
+      <button>OK</button>
+    </div>
+  </div>
+
+  <script src="../src//scripts/script.js"></script>
+</body>
+
+</html>
