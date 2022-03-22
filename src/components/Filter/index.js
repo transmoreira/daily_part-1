@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { dateFormated } from "../../utils/dates"
-import * as dailyPart from "../../data/dailyPart.json"
+import { dateFormated } from "../../utils/utils"
+import dailyPart from "../../data/dailyPart.json"
 import * as clientsJSON from "../../data/clients.json"
 
 
@@ -58,8 +58,7 @@ const Filter = (props) => {
     }
 
     const newFilter = () => {
-        
-        const newList = dailyPart.filter(item => {
+        const newList = dailyPart.filter((item, index) => {
             
             return new Date(item.date).getTime() > filterDatas.timeCourse.start.getTime() &&
                 new Date(item.date).getTime() < filterDatas.timeCourse.end.getTime() &&
@@ -87,19 +86,19 @@ const Filter = (props) => {
                 Cliente:
                 <select id="client" onChange={onChange}>
                     <option value={0}></option>
-                    {clients.map((item, index)=><option value={index+1}>{item}</option>)}
+                    {clients.map((item, index)=><option key={index} value={index+1}>{item}</option>)}
                 </select>
                 Linha:
                 <input id="line" onChange={onChange}  list="list"/>
                 <datalist id="list">
-                    {lines.map((item, index)=><option>{item}</option>)}
+                    {lines.map((item, index)=><option key={index} >{item}</option>)}
                 </datalist>
             </div>
             <div>
                 <input type="button" value="Filtrar" onClick={newFilter} />
             </div>
         </form>
-
+        <span>{listDailyParts.length} parte(s) diaria(s)</span>
     </article >
 }
 

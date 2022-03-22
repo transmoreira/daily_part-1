@@ -119,7 +119,10 @@
     },
     {
         "name": "Fiat",
-        "lines": []
+        "lines": [
+            {"name":"D303","type":"ADMINISTRATIVO","origin":"ITABIRITO","destiny":"CMT"},
+            {"name":"L33","type":"ADMINISTRATIVO","origin":"ITABIRITO","destiny":"CMT"}
+        ]
     },
     {
         "name": "H Pardini",

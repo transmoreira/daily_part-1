@@ -1,4 +1,4 @@
-import { dateFormated } from "../../utils/dates"
+import { dateFormated } from "../../utils/utils"
 
 export default (props) => {
 
