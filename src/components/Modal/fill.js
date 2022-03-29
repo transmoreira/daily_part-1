@@ -4,12 +4,12 @@ import cars from "../../data/cars.json"
 
 const fill = async (dailyPart/*fieldForUpdate*/) => {
 
-    try {
+    /*try {
         /*if (fieldForUpdate) {
             const dataForUpdate = await modalShow("Alterar dados!", null, "text", false, fieldForUpdate.innerText)
             fieldForUpdate.innerText = dataForUpdate
             return
-        }*/
+        }
 
         if (!dailyPart.driver) {
             const list = employees.map(item => item.registration)
@@ -81,7 +81,7 @@ const fill = async (dailyPart/*fieldForUpdate*/) => {
                 fieldsForFill[1].innerText = startTime
                 fieldsForFill[3].innerText = startKM
                 fieldsForFill[7].innerText = origin
-                fieldsForFill[8].innerText = destiny*/
+                fieldsForFill[8].innerText = destiny
 
                 modalClose.style.display = "block"
 
@@ -103,7 +103,7 @@ const fill = async (dailyPart/*fieldForUpdate*/) => {
                 /*fieldsForFill[2].innerText = endTime
                 fieldsForFill[4].innerText = endKM
                 fieldsForFill[5].innerText = endKM - travel.startKM
-                fieldsForFill[6].innerText = amountPassenger*/
+                fieldsForFill[6].innerText = amountPassenger
                 console.log(JSON.stringify(dailyPart))
 
                 modalClose.style.display = "block"
@@ -112,7 +112,7 @@ const fill = async (dailyPart/*fieldForUpdate*/) => {
         }
     } catch (error) {
         console.log(error)
-    }
+    }*/
 }
 
 
