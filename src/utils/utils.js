@@ -2,10 +2,19 @@ const dateFormated = (date, brazil=true) => {
     const day = date.getDate()
     const month = date.getMonth() + 1
     const year = date.getFullYear()
+    
 
     return brazil ?
      `${day <= 9 ? "0" + day : day}/${month <= 9 ? "0" + month : month}/${year}` :
      `${year}-${month <= 9 ? "0" + month : month}-${day <= 9 ? "0" + day : day}`
+}
+
+const timeFormated = (time) => {
+    console.log(time)
+    const hour = time.getHours()
+    const minute = time.getMinutes()
+
+    return `${hour <= 9 ? "0" + hour : hour}:${minute <= 9 ? "0" + minute : minute}`
 }
 
 const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
@@ -16,4 +25,4 @@ const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
             (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
     })
 
-export {dateFormated, filter}
+export {dateFormated, timeFormated, filter}

@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { dateFormated } from "../../utils/utils"
-import dailyPart from "../../data/dailyPart.json"
 import * as clientsJSON from "../../data/clients.json"
 
 
@@ -17,14 +16,18 @@ const filterDatas = {
     client: "",
     line: ""
 }
+let dailyPart
+const getDailyInDataBase = (async () => {
+    const response = await fetch("api/dailyPart?start=2022-03-20&end=2022-03-23")
+    dailyPart = await response.json()
+})()
 
 const Filter = (props) => {
+    
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
-
-
-    const clients = clientsJSON.default.map(item=>item.name)  
-
+    
+    const clients = clientsJSON.default.map(item => item.name)
 
     const onChange = (event) => {
         const element = event.target
@@ -47,25 +50,23 @@ const Filter = (props) => {
                 break
             case "client":
                 filterDatas.client = element.children[element.value].innerText
-                const lines = element.value > 0 ? clientsJSON.default[element.value-1].lines.map(item=>item.name) : []
+                const lines = element.value > 0 ? clientsJSON.default[element.value - 1].lines.map(item => item.name) : []
                 setLines(lines)
                 break;
             case "line":
                 filterDatas.line = element.value
                 break;
         }
-
     }
 
     const newFilter = () => {
+        
         const newList = dailyPart.filter((item, index) => {
-            
             return new Date(item.date).getTime() > filterDatas.timeCourse.start.getTime() &&
                 new Date(item.date).getTime() < filterDatas.timeCourse.end.getTime() &&
-                (filterDatas.client == ""|| item.client == filterDatas.client) &&
+                (filterDatas.client == "" || item.client == filterDatas.client) &&
                 (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
         })
-
         setListDailyParts(newList)
     }
 
@@ -86,12 +87,12 @@ const Filter = (props) => {
                 Cliente:
                 <select id="client" onChange={onChange}>
                     <option value={0}></option>
-                    {clients.map((item, index)=><option key={index} value={index+1}>{item}</option>)}
+                    {clients.map((item, index) => <option key={index} value={index + 1}>{item}</option>)}
                 </select>
                 Linha:
-                <input id="line" onChange={onChange}  list="list"/>
+                <input id="line" onChange={onChange} list="list" />
                 <datalist id="list">
-                    {lines.map((item, index)=><option key={index} >{item}</option>)}
+                    {lines.map((item, index) => <option key={index} >{item}</option>)}
                 </datalist>
             </div>
             <div>

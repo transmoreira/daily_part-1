@@ -1,10 +1,10 @@
-import { dateFormated } from "../../utils/utils"
+import {dateFormated, timeFormated } from "../../utils/utils"
 
 export default (props) => {
 
     const { id, client, date, driver, car, travels } = props.dailyPart
     
-    
+    console.log(props.dailyPart)
 
     return <section className="table">
         <table>
@@ -27,15 +27,15 @@ export default (props) => {
                 </tr>
                 <tr>
                     <th className="no-editable" rowSpan="2">Nº {id}</th>
-                    <th className="no-editable" colSpan="7">IDENTIFIÇÃO DO MOTORISTA</th>
-                    <th className="no-editable" colSpan="2">HORÀRIO DE TRABALHO</th>
+                    <th className="no-editable" colSpan="6">IDENTIFIÇÃO DO MOTORISTA</th>
+                    <th className="no-editable" colSpan="3">HORÀRIO DE TRABALHO</th>
                 </tr>
                 <tr>
                     <th className="no-editable">MATRIC</th>
                     <th id="registration">{driver.registration}</th>
                     <th className="no-editable">NOME</th>
-                    <th colSpan="4" id="name">{driver.name}</th>
-                    <th className="no-editable">ENT.</th>
+                    <th colSpan="3" id="name">{driver.name}</th>
+                    <th colSpan="2" className="no-editable">ENT.</th>
                     <th className="no-editable">SAI.</th>
                 </tr>
                 <tr>
@@ -60,8 +60,8 @@ export default (props) => {
                 {travels.map((item, index) =>
                     <tr key={index}>
                         <td >{item.line}</td>
-                        <td >{item.startTime}</td>
-                        <td >{item.endTime}</td>
+                        <td >{timeFormated(new Date(item.startTime))}</td>
+                        <td >{timeFormated(new Date(item.endTime))}</td>
                         <td >{item.startKM}</td>
                         <td >{item.endKM}</td>
                         <td>{item.endKM - item.startKM}</td>
