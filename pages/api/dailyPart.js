@@ -1,7 +1,7 @@
-import connect from "../connect"
+import connect from "./connect"
 
 const dailyPart = (request, response) => {
-    console.log(request)
+    
     if (request.method === "GET") {
         const {start, end} = request.query
         const sql = `SELECT 

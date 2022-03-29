@@ -1,4 +1,4 @@
-import connect from "../connect"
+import connect from "./connect"
 
 const dailyPart = (request, response) => {
     
