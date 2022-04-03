@@ -1,5 +1,5 @@
 import connect from "./connect"
-import { headers } from "./next.config"
+
 
 const dailyPart = (request, response) => {
 
