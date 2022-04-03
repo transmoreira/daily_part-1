@@ -1,6 +1,8 @@
 import connect from "./connect"
 
 const dailyPart = (request, response) => {
+
+    request.setHeader("access-control-allow-origin","*")
     
     if (request.method === "GET") {
         const {start, end} = request.query
@@ -20,8 +22,8 @@ const dailyPart = (request, response) => {
                         endTime,
                         endKM,
                         direction
-                     FROM travels
-                     INNER JOIN daily_part ON daily_part.id = travels.id_daily_part
+                     FROM daily_part
+                     LEFT JOIN travels ON daily_part.id = travels.id_daily_part or travels.id_daily_part IS NULL
                      WHERE startTime >= '${start} 00:00:00' AND startTime <= '${end} 23:59:59'
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
 
