@@ -13,11 +13,7 @@ module.exports = {
             },
             
         ]
-    }
+    },
 }
 
-module.exports = {
-    httpAgentOptions: {
-    keepAlive: false,
-  }
-}
+
