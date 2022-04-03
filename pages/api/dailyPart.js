@@ -2,7 +2,7 @@ import connect from "./connect"
 
 const dailyPart = (request, response) => {
 
-    request.setHeader("https://dahoracartaodeponto.com/","*")
+    request.setHeader("access-control-allow-origin","https://dahoracartaodeponto.com/")
     request.setHeader("Access-Control-Allow-Methods",["GET", "POST", "PUT"])
     
     if (request.method === "GET") {
