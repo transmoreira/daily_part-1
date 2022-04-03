@@ -1,7 +1,7 @@
 export default  headers=> {
     return [
         {
-            source: '/dailyPart',
+            source: '/api',
             headers: [
                 {
                     key: 'access-control-allow-origin',

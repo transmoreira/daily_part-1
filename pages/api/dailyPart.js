@@ -3,7 +3,7 @@ import { headers } from "./next.config"
 
 const dailyPart = (request, response) => {
 
-    headers()
+  
             
     //request.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET")
     
