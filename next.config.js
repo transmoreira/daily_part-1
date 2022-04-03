@@ -1,7 +1,7 @@
 export default  headers=> {
     return [
         {
-            source: '/api',
+            source: '/',
             headers: [
                 {
                     key: 'access-control-allow-origin',
