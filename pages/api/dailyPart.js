@@ -3,6 +3,7 @@ import connect from "./connect"
 const dailyPart = (request, response) => {
 
     request.setHeader("access-control-allow-origin","https://dahoracartaodeponto.com/")
+    request.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET")
     
     if (request.method === "GET") {
         const {start, end} = request.query
