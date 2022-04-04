@@ -97,7 +97,7 @@ const Modal = () => {
             state.dailyPart.client = client
 
             const response = await fetch(
-                "https://daily-part-rho.vercel.app/api/dailyPart",
+                "api/dailyPart",
                 {
                     method:"POST",
                     body:JSON.stringify(state.dailyPart)
@@ -163,7 +163,7 @@ const Modal = () => {
             state.dailyPart.travels.splice(state.dailyPart.travels.length-1,0,travel)
 
             const response = await fetch(
-                "https://daily-part-rho.vercel.app/api/travels",
+                "api/travels",
                 {
                     method:"POST",
                     body:JSON.stringify(travel)
