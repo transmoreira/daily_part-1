@@ -1,4 +1,5 @@
 const dateFormated = (date, brazil=true) => {
+    
     const day = date.getDate()
     const month = date.getMonth() + 1
     const year = date.getFullYear()
@@ -10,9 +11,13 @@ const dateFormated = (date, brazil=true) => {
 }
 
 const timeFormated = (time) => {
-    console.log(time)
+    
     const hour = time.getHours()
     const minute = time.getMinutes()
+    //console.log(time)
+    if(!hour|| !minute){
+        return ""
+    }
 
     return `${hour <= 9 ? "0" + hour : hour}:${minute <= 9 ? "0" + minute : minute}`
 }

@@ -1,17 +1,17 @@
 import {dateFormated, timeFormated } from "../../utils/utils"
+import logo from "../../img/logo-rio-negro.jpg"
+import Image from "next/image"
 
 export default (props) => {
 
-    const { id, client, date, driver, car, travels } = props.dailyPart
+    const { id, client, date, driver, car, travels } = props.dailyPart  
     
-    console.log(props.dailyPart)
-
     return <section className="table">
-        <table>
+        <table onClick={props.onClick}>
             <thead>
                 <tr>
                     <th rowSpan="2" colSpan="2">
-                        <img src="https://rionegronet.com.br/wp-content/uploads/2020/05/cropped-logo-rio-negro.jpg" alt="RIO NEGRO" />
+                        <Image src={logo} alt="RIO NEGRO" />
                     </th>
                     <th className="no-editable" colSpan="9">PARTE DIÁRIA OPERACIONAL</th>
                 </tr>
@@ -26,7 +26,7 @@ export default (props) => {
                     <th colSpan="2" id="client">{client}</th>
                 </tr>
                 <tr>
-                    <th className="no-editable" rowSpan="2">Nº {id}</th>
+                    <th className="no-editable" rowSpan="2">Nº <span className="colorRed">{id}</span></th>
                     <th className="no-editable" colSpan="6">IDENTIFIÇÃO DO MOTORISTA</th>
                     <th className="no-editable" colSpan="3">HORÀRIO DE TRABALHO</th>
                 </tr>

@@ -20,7 +20,6 @@ let dailyPart
 const getDailyInDataBase = (async () => {
     const response = await fetch("api/dailyPart?start=2022-03-20&end=2022-03-23")
     dailyPart = await response.json()
-    console.log(dailyPart)
 })()
 
 const Filter = (props) => {

@@ -81,6 +81,11 @@ td, th{
     max-width: 100px;
 }
 
+.colorRed{
+    color: red;
+    font-weight: bold;
+}
+
 .min-200{
     min-width: 150px;
 }
