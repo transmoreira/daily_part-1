@@ -1,12 +1,12 @@
 import { useState } from "react"
+import  clientsJSON from "../../data/clients.json"
 import { dateFormated } from "../../utils/utils"
-import * as clientsJSON from "../../data/clients.json"
 
 
 const starDate = new Date()
-starDate.setHours(0)
-starDate.setMinutes(0)
-starDate.setSeconds(0)
+starDate.setTime(new Date(starDate.toLocaleDateString()).getTime())//zerando HH:mm:ss:mmm
+
+
 const endDate = new Date(starDate)
 endDate.setDate(endDate.getDate() + 1)
 endDate.setSeconds(endDate.getSeconds() - 1)
@@ -16,18 +16,14 @@ const filterDatas = {
     client: "",
     line: ""
 }
-let dailyPart
-const getDailyInDataBase = (async () => {
-    const response = await fetch("api/dailyPart?start=2022-03-20&end=2022-03-23")
-    dailyPart = await response.json()
-})()
+let dailyPart = []
 
 const Filter = (props) => {
-    
+   
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
     
-    const clients = clientsJSON.default.map(item => item.name)
+    const clients = clientsJSON.map(item => item.name)
 
     const onChange = (event) => {
         const element = event.target
@@ -50,7 +46,7 @@ const Filter = (props) => {
                 break
             case "client":
                 filterDatas.client = element.children[element.value].innerText
-                const lines = element.value > 0 ? clientsJSON.default[element.value - 1].lines.map(item => item.name) : []
+                const lines = element.value > 0 ? clientsJSON[element.value - 1].lines.map(item => item.name) : []
                 setLines(lines)
                 break;
             case "line":
@@ -59,14 +55,34 @@ const Filter = (props) => {
         }
     }
 
+    const getDailyPartsInDataBase = async () => {
+        const dateStart = new Date()
+        const dateEnd = new Date()
+        dateStart.setDate(dateStart.getDate()-60)
+        
+        const response = await fetch(`api/dailyPart?start=${dateFormated(dateStart,false)}&end=${dateFormated(dateEnd,false)}`)
+        dailyPart = await response.json()
+        
+        newFilter()
+    }
+
+    if(!dailyPart.length){
+        getDailyPartsInDataBase()
+    }
+
     const newFilter = () => {
         
         const newList = dailyPart.filter((item, index) => {
-            return new Date(item.date).getTime() > filterDatas.timeCourse.start.getTime() &&
-                new Date(item.date).getTime() < filterDatas.timeCourse.end.getTime() &&
+           console.log(filterDatas.timeCourse.start.getTime() , filterDatas.timeCourse.end.getTime())
+            return new Date(item.date).getTime() >= filterDatas.timeCourse.start.getTime() &&
+                new Date(item.date).getTime() <= filterDatas.timeCourse.end.getTime() &&
                 (filterDatas.client == "" || item.client == filterDatas.client) &&
                 (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
         })
+        
+        if(!newList.length){
+            alert("Nada encontrado")
+        }
         setListDailyParts(newList)
     }
 
@@ -78,9 +94,9 @@ const Filter = (props) => {
             <div>
 
                 Período:
-                <input type="date" id="start" defaultValue={dateFormated(filterDatas.timeCourse.start, false)} onChange={onChange} />
+                <input type="date" id="start"  onChange={onChange} />
                 à
-                <input type="date" id="end" defaultValue={dateFormated(filterDatas.timeCourse.end, false)} onChange={onChange} />
+                <input type="date" id="end" onChange={onChange} />
 
             </div>
             <div>

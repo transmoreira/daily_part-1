@@ -37,8 +37,8 @@ const Modal = () => {
         }
     })
 
-    const [error, setError] = useState({msg:"", type:""})
-    
+    const [error, setError] = useState({ msg: "", type: "" })
+
     //onChange = onChange
 
 
@@ -51,7 +51,7 @@ const Modal = () => {
 
         state.close = ""
         state.closable = true
-        
+
         if (!state.dailyPart.driver.registration) {
             const list = employees.map(item => item.registration)
             state.label = <>Qual é sua <b>MATRÍCULA</b>?</>
@@ -92,30 +92,38 @@ const Modal = () => {
             state.type = "text"
             setState({ ...state })
             const client = await getData(list, "Cliente não encontrado")
-            
+
             lines.push(...clients[list.indexOf(client)].lines)
             state.dailyPart.client = client
+            try {
 
-            const response = await fetch(
-                "api/dailyPart",
-                {
-                    method:"POST",
-                    body:JSON.stringify(state.dailyPart)
-                }
-            )
-            state.dailyPart.id = await response.json().insertId
-            addTravel(lines)
+
+                const response = await fetch(
+                    "api/dailyPart",
+                    {
+                        method: "POST",
+                        body: JSON.stringify(state.dailyPart)
+                    }
+                )
+                const result = await response.json()
+                console.log(result)
+                state.dailyPart.id = result.insertId
+                setState({ ...state })
+                addTravel(lines)
+            } catch (e) {
+                console.log(e)
+            }
             return
         }
 
         closeMadal()
-        
+
     }
 
-    const addTravel = async (lines)=>{
-        
+    const addTravel = async (lines) => {
+
         state.closable = false
-        
+
         if (!state.dailyPart.travels.destiny) {
             const list = lines.map(item => item.name)
 
@@ -124,8 +132,8 @@ const Modal = () => {
             state.type = "text"
             setState({ ...state })
             const line = await getData(list, "Linha não encontrada")
-            const {origin,destiny} = lines[list.indexOf(line)]
-            console.log(origin,destiny)
+            const { origin, destiny } = lines[list.indexOf(line)]
+            console.log(origin, destiny)
             state.label = <>A viagem começou que <b>HORAS</b>?</>
             state.type = "time"
             setState({ ...state })
@@ -134,77 +142,82 @@ const Modal = () => {
             state.label = <>A viagem começou com qual <b>KM</b>?</>
             state.type = "number"
             state.list = []
-            setState({ ...state })            
+            setState({ ...state })
             const startKM = await getData()
 
             state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
             state.type = "text"
             state.list = [origin, destiny]
-            setState({ ...state })            
-            
-            const direction = state.list.indexOf(await getData(state.list, "Origem nao encontrada!"))==1?1:2
+            setState({ ...state })
+
+            const direction = state.list.indexOf(await getData(state.list, "Origem nao encontrada!")) == 1 ? 1 : 2
 
             const hourDailyPart = new Date(state.date).getHours()
             const actualDate = new Date()
             actualDate.setHours(startTime.split(":")[0])
             actualDate.setMinutes(startTime.split(":")[1])
             const timeTravel = new Date(actualDate)
-            
-                const travel = {
-                    line,
-                    startKM,
-                    startTime:timeTravel,
-                    direction,
-                    destiny,
-                    origin,
-                    endKM:startKM
-                }
 
-            state.dailyPart.travels.splice(state.dailyPart.travels.length-1,0,travel)
-
-            const response = await fetch(
-                "api/travels",
-                {
-                    method:"POST",
-                    body:JSON.stringify(travel)
-                }
-            )
-
-            const result = await response.json().insertId
-            if(insertId){
-                setState({...state})
+            const travel = {
+                line,
+                startKM,
+                startTime: timeTravel,
+                direction,
+                destiny,
+                origin,
+                endKM: startKM
             }
+
+            state.dailyPart.travels.splice(state.dailyPart.travels.length - 1, 0, travel)
+
+            try {
+                const response = await fetch(
+                    "api/travels",
+                    {
+                        method: "POST",
+                        body: JSON.stringify(travel)
+                    }
+                )
+
+                const result = await response.json()
+                    console.log(result)
+                setState({ ...state })
+            } catch (error) {
+                console.log(error)
+            }
+
+
 
         }
         closeMadal()
     }
 
-    const getData = (list = null, msgError="") => {
+    const getData = (list = null, msgError = "") => {
 
         return new Promise((resolve, reject) => {
             const interval = setInterval(() => {
                 if (valueInserted) {
-                    if(!list || list.includes(valueInserted)){
+                    if (!list || list.includes(valueInserted)) {
                         clearInterval(interval)
                         resolve(valueInserted)
                         valueInserted = null
-                    }else{                        
+                    } else {
                         error.msg = msgError
                         error.type = "error"
-                        setError({...error})
+                        setError({ ...error })
                     }
                 }
             }, 100)
         })
     }
 
-    const clicked = () => {        
+    const clicked = () => {
         valueInserted = state.value
     }
 
     const onChange = (event) => {
         state.value = event.target.value
-        setState({...state})
+        setState({ ...state })
     }
 
 
@@ -217,7 +230,7 @@ const Modal = () => {
 
         <div className={`modal ${state.close}`}>
             <div className="content-modal">
-                {state.closable?<span className="close" onClick={closeMadal}>x</span>:""}
+                {state.closable ? <span className="close" onClick={closeMadal}>x</span> : ""}
                 <label>{state.label}</label>
                 <input
                     type={state.type}
@@ -225,14 +238,14 @@ const Modal = () => {
                     placeholder="Toque aqui para digitar"
                     list="list"
                     onChange={onChange}
-                    value={state.value}/>
+                    value={state.value} />
                 <datalist id="list">{state.list.map((item, index) => <option key={index}>{item}</option>)}</datalist>
                 <span className={`inconsistency ${error.type}`}>{error.msg}</span>
                 <button onClick={clicked}>OK</button>
 
             </div>
         </div>
-        
+
     </>
 }
 

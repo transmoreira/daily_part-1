@@ -1,25 +1,22 @@
 const dateFormated = (date, brazil=true) => {
     
-    const day = date.getDate()
-    const month = date.getMonth() + 1
-    const year = date.getFullYear()
-    
+    const day = (date.getDate()).toString().padStart(2,"0")
+    const month = (date.getMonth() + 1).toString().padStart(2,"0")
+    const year = date.getFullYear()    
 
-    return brazil ?
-     `${day <= 9 ? "0" + day : day}/${month <= 9 ? "0" + month : month}/${year}` :
-     `${year}-${month <= 9 ? "0" + month : month}-${day <= 9 ? "0" + day : day}`
+    return brazil ? `${day}/${month}/${year}` : `${year}-${month}-${day}`
 }
 
 const timeFormated = (time) => {
     
-    const hour = time.getHours()
-    const minute = time.getMinutes()
+    const hour = time.getHours().toString().padStart(2,"0")
+    const minute = time.getMinutes().toString().padStart(2,"0")
     //console.log(time)
     if(!hour|| !minute){
         return ""
     }
 
-    return `${hour <= 9 ? "0" + hour : hour}:${minute <= 9 ? "0" + minute : minute}`
+    return `${hour}:${minute }`
 }
 
 const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {

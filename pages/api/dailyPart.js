@@ -4,12 +4,12 @@ import connect from "./connect"
 
 const dailyPart = (request, response) => {
 
-  
-            
+
+
     //request.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET")
-    
+
     if (request.method === "GET") {
-        const {start, end} = request.query
+        const { start, end } = request.query
         const sql = `SELECT 
                         daily_part.id AS id,
                         client, 
@@ -34,21 +34,21 @@ const dailyPart = (request, response) => {
         connect(sql).then(data => {
 
             const newData = data.reduce((acc, item, index) => {
-                
-                if (acc.length===0 || acc[acc.length-1].id !== item.id) {
+
+                if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
                     acc.push({
-                        id:item.id,
-                         client:item.client,
-                         date:item.date,
-                         driver:{
-                             registration:item.registration,
-                             name:item.name
-                         },
-                         car:{
-                             number:item.number,
-                             plate:item.plate
-                         },
-                         travels:[{
+                        id: item.id,
+                        client: item.client,
+                        date: item.date,
+                        driver: {
+                            registration: item.registration,
+                            name: item.name
+                        },
+                        car: {
+                            number: item.number,
+                            plate: item.plate
+                        },
+                        travels: [{
                             line: item.line,
                             startTime: item.startTime,
                             startKM: item.startKM,
@@ -58,9 +58,9 @@ const dailyPart = (request, response) => {
                             endKM: item.endKM,
                             direction: item.direction
                         }]
-                 })
-                }else {
-                    acc[acc.length-1].travels.push({
+                    })
+                } else {
+                    acc[acc.length - 1].travels.push({
                         line: item.line,
                         startTime: item.startTime,
                         startKM: item.startKM,
@@ -79,8 +79,9 @@ const dailyPart = (request, response) => {
         })
 
     } else if (request.method === "POST") {
-       
-        const { client, date, driver, car } = request.body
+
+        const { client, date, driver, car } = JSON.parse(request.body)
+        console.log(typeof request.body)
         const sql = `INSERT INTO 
                         daily_part( 
                             client, 
@@ -98,7 +99,7 @@ const dailyPart = (request, response) => {
                             '${car.number}', 
                             '${car.plate}'
                         )`
-        
+
         const result = connect(sql)
             .then(data => {
                 const { insertId } = data
@@ -115,7 +116,7 @@ const dailyPart = (request, response) => {
 
 
     } else if (request.method === "PUT") {
-        const { id, client, date, driver, car } = request.body
+        const { id, client, date, driver, car } = JSON.parse(request.body)
         const sql = `UPDATE daily_part 
                         SET client='${client}',
                             date='${date}',
@@ -125,7 +126,7 @@ const dailyPart = (request, response) => {
                             plate='${car.plate}' 
                         WHERE id = ${id}`
 
-        const result = connect(sql)
+        connect(sql)
             .then(data => {
                 const { insertId } = data
                 console.log(data)
