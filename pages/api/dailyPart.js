@@ -115,7 +115,7 @@ const dailyPart = (request, response) => {
             })
 
 
-    } else if (request.method === "PUT") {
+    } /*else if (request.method === "PUT") {
         const { id, client, date, driver, car } = JSON.parse(request.body)
         const sql = `UPDATE daily_part 
                         SET client='${client}',
@@ -140,7 +140,7 @@ const dailyPart = (request, response) => {
                     error: error.message
                 })
             })
-    } else {
+    }*/ else {
         response.status(404).json({ erro: true })
     }
 }

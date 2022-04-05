@@ -2,7 +2,7 @@ import connect from "./connect"
 
 const dailyPart = (request, response) => {
     
-    if (request.method === "GET") {
+    /*if (request.method === "GET") {
 
         const sql = `SELECT client, date, registration, name, number, plate
                         FROM travels
@@ -14,8 +14,8 @@ const dailyPart = (request, response) => {
             response.status(200).json(data)
         })
 
-    } else if (request.method === "POST") {
-        const {id_daily_part, line, startTime, startKM, origin, destiny, endTime, endKM, direction} = request.body
+    } else*/ if (request.method === "POST") {
+        const {id_daily_part, line, startTime, startKM, origin, destiny, endTime, endKM, direction} = JSON.parse(request.body)
         const sql = `INSERT INTO 
                         travels( 
                             id_daily_part, 
@@ -55,7 +55,7 @@ const dailyPart = (request, response) => {
         
         
     } else if (request.method === "PUT") {
-        const {id, id_daily_part, line, startTime, startKM, origin, destiny, endTime, endKM, direction} = request.body
+        const {id, id_daily_part, line, startTime, startKM, origin, destiny, endTime, endKM, direction} = JSON.parse(request.body)
         const sql = `UPDATE travels 
                         SET id_daily_part=${id_daily_part}, 
                         line='${line}', 

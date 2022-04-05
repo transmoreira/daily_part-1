@@ -11,8 +11,8 @@ const timeFormated = (time) => {
     
     const hour = time.getHours().toString().padStart(2,"0")
     const minute = time.getMinutes().toString().padStart(2,"0")
-    //console.log(time)
-    if(!hour|| !minute){
+    
+    if(hour == "NaN"|| minute == "NaN"){
         return ""
     }
 

@@ -84,7 +84,7 @@ const Modal = () => {
         }
 
         const lines = []
-        if (!state.client) {
+        if (!state.dailyPart.client) {
             const list = clients.map(item => item.name)
 
             state.label = <>Qual a empresa <b>CLIENTE</b>?</>
@@ -116,79 +116,133 @@ const Modal = () => {
             return
         }
 
+        const countTravels = state.dailyPart.travels.length
+        const actualtravel = state.dailyPart.travels[countTravels-2]
+        
+        if (!actualtravel.destiny) {
+            addTravel(lines)
+        }else{
+            updateTravel(actualtravel)
+        }            
+
         closeMadal()
 
+    }
+
+    const updateTravel = async () => {
+
+        state.label = <>A viagem terminou que <b>HORAS</b>?</>
+        state.type = "time"
+        state.list = []
+        setState({ ...state })
+        const endTime = await getData()
+
+        state.label = <>A viagem terminou com qual <b>KM</b>?</>
+        state.type = "number"
+        state.list = []
+        setState({ ...state })
+        const endKM = await getData()
+
+        state.label = <>Quantos <b>passageiros</b> embarcaram?</>
+        state.type = "number"
+        setState({ ...state })
+        const passenger = await getData()
+        
+        const travel = {
+            ...actualtravel,
+            endTime,
+            endKM,
+            passenger
+        }
+
+        try {
+            const response = await fetch(
+                "api/travels",
+                {
+                    method: "PUT",
+                    body: JSON.stringify(travel)
+                }
+            )
+
+            const result = await response.json()            
+            travel.id = result.insertId
+            state.dailyPart.travels[state.dailyPart.travels-2] = travel
+            setState({ ...state })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const addTravel = async (lines) => {
 
         state.closable = false
 
-        if (!state.dailyPart.travels.destiny) {
-            const list = lines.map(item => item.name)
 
-            state.label = <>Qual é a <b>LINHA</b>?</>
-            state.list = list
-            state.type = "text"
-            setState({ ...state })
-            const line = await getData(list, "Linha não encontrada")
-            const { origin, destiny } = lines[list.indexOf(line)]
-            console.log(origin, destiny)
-            state.label = <>A viagem começou que <b>HORAS</b>?</>
-            state.type = "time"
-            setState({ ...state })
-            const startTime = await getData()
+        const list = lines.map(item => item.name)
 
-            state.label = <>A viagem começou com qual <b>KM</b>?</>
-            state.type = "number"
-            state.list = []
-            setState({ ...state })
-            const startKM = await getData()
+        state.label = <>Qual é a <b>LINHA</b>?</>
+        state.list = list
+        state.type = "text"
+        setState({ ...state })
+        const line = await getData(list, "Linha não encontrada")
 
-            state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
-            state.type = "text"
-            state.list = [origin, destiny]
-            setState({ ...state })
+        const { origin, destiny } = lines[list.indexOf(line)]
+        
+        state.label = <>A viagem começou que <b>HORAS</b>?</>
+        state.type = "time"
+        state.list = []
+        setState({ ...state })
+        const startTime = await getData()
 
-            const direction = state.list.indexOf(await getData(state.list, "Origem nao encontrada!")) == 1 ? 1 : 2
+        state.label = <>A viagem começou com qual <b>KM</b>?</>
+        state.type = "number"
+        state.list = []
+        setState({ ...state })
+        const startKM = await getData()
 
-            const hourDailyPart = new Date(state.date).getHours()
-            const actualDate = new Date()
-            actualDate.setHours(startTime.split(":")[0])
-            actualDate.setMinutes(startTime.split(":")[1])
-            const timeTravel = new Date(actualDate)
+        state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
+        state.type = "text"
+        state.list = [origin, destiny]
+        setState({ ...state })
 
-            const travel = {
-                line,
-                startKM,
-                startTime: timeTravel,
-                direction,
-                destiny,
-                origin,
-                endKM: startKM
-            }
+        const direction = state.list.indexOf(await getData(state.list, "Origem nao encontrada!")) == 1 ? 1 : 2
 
-            state.dailyPart.travels.splice(state.dailyPart.travels.length - 1, 0, travel)
+        const hourDailyPart = new Date(state.date).getHours()
+        const actualDate = new Date()
+        actualDate.setHours(startTime.split(":")[0])
+        actualDate.setMinutes(startTime.split(":")[1])
+        const timeTravel = new Date(actualDate)
 
-            try {
-                const response = await fetch(
-                    "api/travels",
-                    {
-                        method: "POST",
-                        body: JSON.stringify(travel)
-                    }
-                )
-
-                const result = await response.json()
-                    console.log(result)
-                setState({ ...state })
-            } catch (error) {
-                console.log(error)
-            }
-
-
-
+        const travel = {
+            id_daily_part:state.dailyPart.id,
+            line,
+            startKM,
+            startTime: timeTravel,
+            direction,
+            destiny,
+            origin,
+            endKM: startKM
         }
+
+        
+
+        try {
+            const response = await fetch(
+                "api/travels",
+                {
+                    method: "POST",
+                    body: JSON.stringify(travel)
+                }
+            )
+
+            const result = await response.json()            
+            travel.id = result.insertId
+            state.dailyPart.travels.splice(state.dailyPart.travels.length - 1, 0, travel)
+            setState({ ...state })
+        } catch (error) {
+            console.log(error)
+        }
+
         closeMadal()
     }
 
