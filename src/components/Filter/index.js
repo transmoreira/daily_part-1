@@ -56,22 +56,22 @@ const Filter = (props) => {
     }
 
     const getDailyPartsInDataBase = async () => {
-        const dateStart = new Date()
+        /*const dateStart = new Date()
         const dateEnd = new Date()
-        dateStart.setDate(dateStart.getDate()-60)
+        dateStart.setDate(dateStart.getDate()-60)*/
         
-        const response = await fetch(`api/dailyPart?start=${dateFormated(dateStart,false)}&end=${dateFormated(dateEnd,false)}`)
+        const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start,false)}&end=${dateFormated(filterDatas.timeCourse.end,false)}`)
         dailyPart = await response.json()
         
-        newFilter()
+       
     }
 
     if(!dailyPart.length){
         getDailyPartsInDataBase()
     }
 
-    const newFilter = () => {
-        
+    const newFilter = async () => {
+        await getDailyPartsInDataBase()
         const newList = dailyPart.filter((item, index) => {
            console.log(filterDatas.timeCourse.start.getTime() , filterDatas.timeCourse.end.getTime())
             return new Date(item.date).getTime() >= filterDatas.timeCourse.start.getTime() &&

@@ -1,11 +1,11 @@
-import {dateFormated, timeFormated } from "../../utils/utils"
+import { dateFormated, timeFormated } from "../../utils/utils"
 import logo from "../../img/logo-rio-negro.jpg"
 import Image from "next/image"
 
 export default (props) => {
 
-    const { id, client, date, driver, car, travels } = props.dailyPart  
-    
+    const { id, client, date, driver, car, travels, passenger } = props.dailyPart
+
     return <section className="table">
         <table onClick={props.onClick}>
             <thead>
@@ -59,17 +59,39 @@ export default (props) => {
             <tbody>
                 {travels.map((item, index) =>
                     <tr key={index}>
-                        <td >{item.line}</td>
-                        <td >{timeFormated(new Date(item.startTime))}</td>
-                        <td >{timeFormated(new Date(item.endTime))}</td>
-                        <td >{item.startKM}</td>
-                        <td >{item.endKM}</td>
+                        <td>{item.line}</td>
+                        <td>{timeFormated(new Date(item.startTime))}</td>
+                        <td>{timeFormated(new Date(item.endTime))}</td>
+                        <td>{item.startKM}</td>
+                        <td>{item.endKM}</td>
                         <td>{item.endKM - item.startKM}</td>
-                        <td >{item.amountPesenger}</td>
+                        <td>{item.passenger}</td>
                         <td colSpan="2" className="min-200">{item.origin}</td>
                         <td colSpan="2" className="min-200">{item.destiny}</td>
                     </tr>
                 )}
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colSpan="2" className="min-200"></td>
+                <td colSpan="2" className="min-200"></td>
+                </tr>
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colSpan="2" className="min-200"></td>
+                <td colSpan="2" className="min-200"></td>
+                </tr>
             </tbody>
         </table>
     </section>

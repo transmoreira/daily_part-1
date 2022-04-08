@@ -2,14 +2,31 @@
 import connect from "./connect"
 
 
-const dailyPart = (request, response) => {
+const dailyPart = async (request, response) => {
 
+    
 
+    const getResult = async (sql) => {
+        try {
+            const data = await connect(sql)
+            console.log(data)
+            if (request.method === "GET") {
+                return data
+            } else {
+                const { insertId } = data
+                response.status(201).json({
+                    insertId
+                })
+            }
 
-    //request.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET")
+        } catch (error) {
+            console.log(error)
+            response.status(400).json({...error,sql:""})
+        }
+    }
 
     if (request.method === "GET") {
-        const { start, end } = request.query
+        const { start, end, registration, plate } = request.query
         const sql = `SELECT 
                         daily_part.id AS id,
                         client, 
@@ -25,16 +42,23 @@ const dailyPart = (request, response) => {
                         destiny,
                         endTime,
                         endKM,
-                        direction
+                        direction,
+                        travels.id AS idTravel,
+                        passenger
                      FROM daily_part
                      LEFT JOIN travels ON daily_part.id = travels.id_daily_part or travels.id_daily_part IS NULL
-                     WHERE startTime >= '${start} 00:00:00' AND startTime <= '${end} 23:59:59'
+                     WHERE startTime >= '${start} 00:00:00' AND
+                         startTime <= '${end} 23:59:59' 
+                         ${
+                            registration? `AND registration LIKE '%${registration}%' AND plate LIKE '%${plate}%'` : ""
+                         }                           
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
-
-        connect(sql).then(data => {
+                         
+        const data = await getResult(sql)
+       
+        if (data && !data.errno) {
 
             const newData = data.reduce((acc, item, index) => {
-
                 if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
                     acc.push({
                         id: item.id,
@@ -56,7 +80,9 @@ const dailyPart = (request, response) => {
                             destiny: item.destiny,
                             endTime: item.endTime,
                             endKM: item.endKM,
-                            direction: item.direction
+                            direction: item.direction,
+                            id:item.idTravel,
+                            passenger:item.passenger
                         }]
                     })
                 } else {
@@ -68,7 +94,9 @@ const dailyPart = (request, response) => {
                         destiny: item.destiny,
                         endTime: item.endTime,
                         endKM: item.endKM,
-                        direction: item.direction
+                        direction: item.direction,
+                        id:item.idTravel,
+                        passenger:item.passenger
                     })
                 }
 
@@ -76,12 +104,14 @@ const dailyPart = (request, response) => {
             }, [])
 
             response.status(200).json(newData)
-        })
+        } else {
 
+            response.status(400).json({...data,sql:""})
+        }
     } else if (request.method === "POST") {
 
         const { client, date, driver, car } = JSON.parse(request.body)
-        console.log(typeof request.body)
+
         const sql = `INSERT INTO 
                         daily_part( 
                             client, 
@@ -100,49 +130,19 @@ const dailyPart = (request, response) => {
                             '${car.plate}'
                         )`
 
-        const result = connect(sql)
-            .then(data => {
-                const { insertId } = data
-                response.status(201).json({
-                    insertId
-                })
-            })
-            .catch(error => {
-                console.log(error)
-                response.status(400).json({
-                    error: error.message
-                })
-            })
+        getResult(sql)
 
-
-    } /*else if (request.method === "PUT") {
-        const { id, client, date, driver, car } = JSON.parse(request.body)
-        const sql = `UPDATE daily_part 
-                        SET client='${client}',
-                            date='${date}',
-                            registration=${driver.registration},
-                            name='${driver.name}',
-                            number='${car.number}',
-                            plate='${car.plate}' 
-                        WHERE id = ${id}`
-
-        connect(sql)
-            .then(data => {
-                const { insertId } = data
-                console.log(data)
-                response.status(201).json({
-                    insertId
-                })
-            })
-            .catch(error => {
-                console.log(error)
-                response.status(400).json({
-                    error: error.message
-                })
-            })
-    }*/ else {
+    } else {
         response.status(404).json({ erro: true })
     }
+    
 }
 
+
+
 export default dailyPart
+
+
+
+
+
