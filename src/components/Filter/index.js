@@ -74,9 +74,10 @@ const Filter = (props) => {
         await getDailyPartsInDataBase()
         const newList = dailyPart.filter((item, index) => {
            //console.log(filterDatas.timeCourse.start.getTime() , filterDatas.timeCourse.end.getTime())
-           item.date.setUTCHours(3)
-            return new Date(item.date).getTime() >= filterDatas.timeCourse.start.getTime() &&
-                new Date(item.date).getTime() <= filterDatas.timeCourse.end.getTime() &&
+           const date = new Date(item.date)
+           date.setUTCHours(3)
+            return date.getTime() >= filterDatas.timeCourse.start.getTime() &&
+                date.getTime() <= filterDatas.timeCourse.end.getTime() &&
                 (filterDatas.client == "" || item.client == filterDatas.client) &&
                 (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
         })
