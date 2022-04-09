@@ -56,8 +56,9 @@ const dailyPart = async (request, response) => {
 
         try {
             const data = await getResult(sql)
+            response.status(400).json({ sql })
         } catch (error) {
-            response.status(400).json({ ...error })
+            response.status(400).json({ error })
             return
         }
 
