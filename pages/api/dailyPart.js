@@ -4,7 +4,7 @@ import connect from "./connect"
 
 const dailyPart = async (request, response) => {
 
-    
+
 
     const getResult = async (sql) => {
         try {
@@ -21,12 +21,12 @@ const dailyPart = async (request, response) => {
 
         } catch (error) {
             console.log(error)
-            response.status(400).json({...error,sql:""})
+            response.status(400).json({ ...error, sql: "" })
         }
     }
 
     if (request.method === "GET") {
-        console.log("###################################################################")
+
         const { start, end, registration, plate } = request.query
         const sql = `SELECT 
                         daily_part.id AS id,
@@ -50,18 +50,22 @@ const dailyPart = async (request, response) => {
                      LEFT JOIN travels ON daily_part.id = travels.id_daily_part or travels.id_daily_part IS NULL
                      WHERE startTime >= '${start} 00:00:00' AND
                          startTime <= '${end} 23:59:59' 
-                         ${
-                            registration? `AND registration LIKE '%${registration}%' AND plate LIKE '%${plate}%'` : ""
-                         }                           
+                         ${registration ? `AND registration LIKE '%${registration}%' AND plate LIKE '%${plate}%'` : ""
+            }                           
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
-                         
-        const data = await getResult(sql)
-       console.log(data)
+
+        try {
+            const data = await getResult(sql)
+        } catch (error) {
+            response.status(400).json({ ...error })
+            return
+        }
+
         if (data && !data.errno) {
 
             const newData = data.reduce((acc, item, index) => {
                 if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
-                    console.log(item)   
+                    console.log(item)
                     acc.push({
                         id: item.id,
                         client: item.client,
@@ -83,8 +87,8 @@ const dailyPart = async (request, response) => {
                             endTime: item.endTime,
                             endKM: item.endKM,
                             direction: item.direction,
-                            id:item.idTravel,
-                            passenger:item.passenger
+                            id: item.idTravel,
+                            passenger: item.passenger
                         }]
                     })
                 } else {
@@ -97,8 +101,8 @@ const dailyPart = async (request, response) => {
                         endTime: item.endTime,
                         endKM: item.endKM,
                         direction: item.direction,
-                        id:item.idTravel,
-                        passenger:item.passenger
+                        id: item.idTravel,
+                        passenger: item.passenger
                     })
                 }
 
@@ -108,7 +112,7 @@ const dailyPart = async (request, response) => {
             response.status(200).json(newData)
         } else {
 
-            response.status(400).json({...data,sql:""})
+            response.status(400).json({ ...data, sql: "" })
         }
     } else if (request.method === "POST") {
 
@@ -137,7 +141,7 @@ const dailyPart = async (request, response) => {
     } else {
         response.status(404).json({ erro: true })
     }
-    
+
 }
 
 
