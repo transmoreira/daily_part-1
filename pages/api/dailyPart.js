@@ -56,29 +56,38 @@ const dailyPart = async (request, response) => {
                      
         try {
             const data = await getResult(sql)
-        } catch (error) {
-            response.status(400).json(error)
-            return
-        }
-
-        if (data && !data.errno) {
-
-            const newData = data.reduce((acc, item, index) => {
-                if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
-                    console.log(item)
-                    acc.push({
-                        id: item.id,
-                        client: item.client,
-                        date: item.date,
-                        driver: {
-                            registration: item.registration,
-                            name: item.name
-                        },
-                        car: {
-                            number: item.number,
-                            plate: item.plate
-                        },
-                        travels: [{
+            if (data && !data.errno) {
+    
+                const newData = data.reduce((acc, item, index) => {
+                    if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
+                        console.log(item)
+                        acc.push({
+                            id: item.id,
+                            client: item.client,
+                            date: item.date,
+                            driver: {
+                                registration: item.registration,
+                                name: item.name
+                            },
+                            car: {
+                                number: item.number,
+                                plate: item.plate
+                            },
+                            travels: [{
+                                line: item.line,
+                                startTime: item.startTime,
+                                startKM: item.startKM,
+                                origin: item.origin,
+                                destiny: item.destiny,
+                                endTime: item.endTime,
+                                endKM: item.endKM,
+                                direction: item.direction,
+                                id: item.idTravel,
+                                passenger: item.passenger
+                            }]
+                        })
+                    } else {
+                        acc[acc.length - 1].travels.push({
                             line: item.line,
                             startTime: item.startTime,
                             startKM: item.startKM,
@@ -89,31 +98,21 @@ const dailyPart = async (request, response) => {
                             direction: item.direction,
                             id: item.idTravel,
                             passenger: item.passenger
-                        }]
-                    })
-                } else {
-                    acc[acc.length - 1].travels.push({
-                        line: item.line,
-                        startTime: item.startTime,
-                        startKM: item.startKM,
-                        origin: item.origin,
-                        destiny: item.destiny,
-                        endTime: item.endTime,
-                        endKM: item.endKM,
-                        direction: item.direction,
-                        id: item.idTravel,
-                        passenger: item.passenger
-                    })
-                }
-
-                return acc
-            }, [])
-
-            response.status(200).json(newData)
-        } else {
-
-            response.status(400).json({ ...data, sql: "" })
+                        })
+                    }
+    
+                    return acc
+                }, [])
+    
+                response.status(200).json(newData)
+            } else {
+                response.status(400).json({ ...data, sql: "" })
+            }
+        } catch (error) {
+            response.status(400).json(error)
+            return
         }
+
     } else if (request.method === "POST") {
 
         const { client, date, driver, car } = JSON.parse(request.body)
