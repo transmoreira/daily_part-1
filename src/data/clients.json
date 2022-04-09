@@ -7,6 +7,38 @@
         "name": "Vale",
         "lines": [
             {
+                "name": "CDM-A1-BHSHOP",
+                "type": "ADMINISTRATIVO",
+                "direction": [
+                    "BELO HORIZONTE",
+                    "CDM"
+                ]
+            },
+            {
+                "name": "CDM-A2-BIGSHOP",
+                "type": "ADMINISTRATIVO",
+                "direction": [
+                    "CONTAGEM",
+                    "CDM"
+                ]
+            },
+            {
+                "name": "CDM-A3-CID.ADM",
+                "type": "ADMINISTRATIVO",
+                "direction": [
+                    "BELO HORIZONTE",
+                    "CDM"
+                ]
+            },
+            {
+                "name": "CDM-A5-CAETE",
+                "type": "ADMINISTRATIVO",
+                "direction": [
+                    "CAETE",
+                    "CDM"
+                ]
+            },
+            {
                 "name": "A31",
                 "type": "ADMINISTRATIVO",
                 "direction": [
