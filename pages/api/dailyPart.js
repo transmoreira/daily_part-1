@@ -26,6 +26,7 @@ const dailyPart = async (request, response) => {
     }
 
     if (request.method === "GET") {
+        console.log("###################################################################")
         const { start, end, registration, plate } = request.query
         const sql = `SELECT 
                         daily_part.id AS id,
@@ -55,12 +56,12 @@ const dailyPart = async (request, response) => {
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
                          
         const data = await getResult(sql)
-       
+       console.log(data)
         if (data && !data.errno) {
 
             const newData = data.reduce((acc, item, index) => {
                 if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
-                                        
+                    console.log(item)   
                     acc.push({
                         id: item.id,
                         client: item.client,
