@@ -53,12 +53,11 @@ const dailyPart = async (request, response) => {
                          ${registration ? `AND registration LIKE '%${registration}%' AND plate LIKE '%${plate}%'` : ""
             }                           
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
-                     response.status(400).json({ sql })
+                     
         try {
             const data = await getResult(sql)
-            response.status(400).json({ sql })
         } catch (error) {
-            response.status(400).json({ error })
+            response.status(400).json(error)
             return
         }
 
