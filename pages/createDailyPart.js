@@ -84,6 +84,7 @@ const Modal = () => {
 
             const dailyPart = await response.json()
             if (dailyPart.length) {
+                
                 state.dailyPart = dailyPart[0]
                 setState({ ...state })
             }
