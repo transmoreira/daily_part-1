@@ -13,30 +13,30 @@ export default (props) => {
                     <th rowSpan="2" colSpan="2">
                         <Image src={logo} alt="RIO NEGRO" />
                     </th>
-                    <th className="no-editable" colSpan="9">PARTE DIÁRIA OPERACIONAL</th>
+                    <th className="no-editable" colSpan="8">PARTE DIÁRIA OPERACIONAL</th>
+                    <th id="date">{dateFormated(new Date(date))}</th>
                 </tr>
                 <tr>
                     <th className="no-editable">PLACA</th>
                     <th id="plate">{car.plate}</th>
                     <th className="no-editable">Carro</th>
                     <th id="car">{car.number}</th>
-                    <th className="no-editable">DATA</th>
-                    <th id="date">{dateFormated(new Date(date))}</th>
-                    <th className="no-editable">CLIENTE</th>
+                    {/*<th className="no-editable">DATA</th>*/}
+                    <th className="no-editable" colSpan={3}>CLIENTE</th>
                     <th colSpan="2" id="client">{client}</th>
                 </tr>
                 <tr>
-                    <th className="no-editable" rowSpan="2">Nº <span className="colorRed">{id}</span></th>
-                    <th className="no-editable" colSpan="6">IDENTIFIÇÃO DO MOTORISTA</th>
-                    <th className="no-editable" colSpan="3">HORÀRIO DE TRABALHO</th>
+                    <th className="no-editable" rowSpan="2" colSpan={2}>Nº <span className="colorRed">{id}</span></th>
+                    <th className="no-editable" colSpan="69">IDENTIFIÇÃO DO MOTORISTA</th>
+                    {/*<th className="no-editable" colSpan="3">HORÀRIO DE TRABALHO</th>*/}
                 </tr>
                 <tr>
-                    <th className="no-editable">MATRIC</th>
+                    <th className="no-editable" colSpan={2}>MATRÍCULA</th>
                     <th id="registration">{driver.registration}</th>
-                    <th className="no-editable">NOME</th>
-                    <th colSpan="3" id="name">{driver.name}</th>
-                    <th colSpan="2" className="no-editable">ENT.</th>
-                    <th className="no-editable">SAI.</th>
+                    <th className="no-editable" colSpan={2}>NOME</th>
+                    <th colSpan={4} id="name" >{driver.name}</th>
+                    {/*<th colSpan="2" className="no-editable">ENT.</th>
+                    <th className="no-editable">SAI.</th>*/}
                 </tr>
                 <tr>
                     <th className="no-editable">ATEND.</th>
@@ -71,26 +71,26 @@ export default (props) => {
                     </tr>
                 )}
                 <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colSpan="2" className="min-200"></td>
-                <td colSpan="2" className="min-200"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colSpan="2" className="min-200"></td>
+                    <td colSpan="2" className="min-200"></td>
                 </tr>
                 <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colSpan="2" className="min-200"></td>
-                <td colSpan="2" className="min-200"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colSpan="2" className="min-200"></td>
+                    <td colSpan="2" className="min-200"></td>
                 </tr>
             </tbody>
         </table>

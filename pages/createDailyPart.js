@@ -138,13 +138,13 @@ const Modal = () => {
             state.list = []
             setState({ ...state })
             const endTime = await getData()
-
+           
             state.label = <>A viagem terminou com qual <b>KM</b>?</>
             state.type = "number"
             state.list = []
             setState({ ...state })
             const endKM = await getData()
-
+           
             state.label = <>Quantos <b>passageiros</b> embarcaram?</>
             state.type = "number"
             setState({ ...state })
@@ -159,7 +159,7 @@ const Modal = () => {
                 endKM,
                 passenger
             }
-            
+           
 
             try {
                 const response = await fetch(
@@ -169,10 +169,10 @@ const Modal = () => {
                         body: JSON.stringify(travel)
                     }
                 )
-
+                
                 const result = await response.json()
                 travel.id = result.insertId
-                state.dailyPart.travels[state.dailyPart.travels - 1] = travel
+                state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
                 setState({ ...state })
             } catch (error) {
                 console.log(error)
@@ -195,31 +195,34 @@ const Modal = () => {
 
         state.label = <>Qual é a <b>LINHA</b>?</>
         state.list = list
-        state.type = "text"
-        setState({ ...state })
+        state.type = "text"        
         const line = await getData(list, "Linha não encontrada")
 
-        const { origin, destiny } = lines[list.indexOf(line)]
         state.closable = false
         state.label = <>A viagem começou que <b>HORAS</b>?</>
         state.type = "time"
         state.list = []
-        setState({ ...state })
+        
         const startTime = await getData()
 
         state.label = <>A viagem começou com qual <b>KM</b>?</>
         state.type = "number"
-        state.list = []
-        setState({ ...state })
+        state.list = []        
         const startKM = await getData()
+
+        const direction = lines.filter(item=>item.name==line)[0].direction
 
         state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
         state.type = "text"
-        state.list = [origin, destiny]
-        setState({ ...state })
-
-        const direction = state.list.indexOf(await getData(state.list, "Origem nao encontrada!")) == 1 ? 1 : 2
-
+        state.list = direction      
+        const origin = await getData(state.list, "Origem nao encontrada!")
+        
+        const destinys = [...direction.filter(item=>item!=origin)]
+        state.label = <>Para onde<b>(PONTO FINAL)</b> vai a viagem?</>
+        state.list =destinys
+        const destiny = destinys.length == 1 ? destinys[0] : await getData(destinys, "Destino nao encontrado!")
+        
+        
         const actualDate = new Date()
         const timeTravel = `${dateFormated(actualDate, false)} ${startTime}:00`
 
@@ -228,7 +231,6 @@ const Modal = () => {
             line,
             startKM,
             startTime: timeTravel,
-            direction,
             destiny,
             origin,
             endKM: null
@@ -247,9 +249,9 @@ const Modal = () => {
 
             const result = await response.json()
             travel.id = result.insertId
-            state.dailyPart.travels.unshift(travel)
+            state.dailyPart.travels.push(travel)
             setState({ ...state })
-            console.log(state)
+           
         } catch (error) {
             console.log(error)
         }
@@ -268,8 +270,9 @@ const Modal = () => {
             const interval = setInterval(() => {
                 
                 if (valueInserted) {
+                    
                     if (!list || list.includes(valueInserted)) {
-                        //clearInterval(interval)
+                        clearInterval(interval)
                         resolve(valueInserted)
                         valueInserted = null
                         closeMadal()
@@ -302,9 +305,10 @@ const Modal = () => {
 
     return <>
         <main>
-            <span className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</span>
+            <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
             <Table onClick={inputValue} dailyPart={state.dailyPart} />
-
+            <textarea placeholder="Descreva aqui observações sobre a viagem"/>
+                   
         </main>
 
         <div className={`modal ${state.close}`}>

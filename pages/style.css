@@ -1,3 +1,12 @@
+@media only screen and (max-width: 600px){
+    body{
+        zoom: 2;
+    }
+
+    
+}
+
+
 
 body{
     padding-top: 20px;
@@ -57,13 +66,17 @@ main{
     text-align: center;
 }
 
+textarea{
+    width: 650px;
+}
+
 .table{    
     background-color: white;
     box-shadow: gray 0 5px 15px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 5px;
     width: max-content;
-    
+    font-size: small;
 }
 
 table{    
@@ -73,13 +86,14 @@ table{
 
 td, th{
     border: solid 1px gray;
-    max-width: 70px;
+    max-width: 50px;
     height: 25px;
-    padding-right: 10px;
+    padding: 0 10px;    
     font-weight: normal;
     text-align: center;
-    max-width: 100px;
 }
+
+
 
 .colorRed{
     color: red;
@@ -87,7 +101,7 @@ td, th{
 }
 
 .min-200{
-    min-width: 150px;
+    min-width: 100px;
 }
 
 input{
@@ -101,6 +115,8 @@ input{
     background-color: rgba(255, 255, 0, 0.5);
     color: red;
     border: orange 2px solid;
+    width: 650px;
+    margin: auto;
 }
 
 img{
@@ -135,15 +151,24 @@ img{
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 150px;
     background-color: white;
-    margin: 250px auto;
+    margin: 50px auto;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     align-items: center;
     border: black 1px solid;
     box-shadow: black 1px 1px 8px;
+    background-color: gainsboro;
+}
+
+button{
+    background-color: rgb(27, 128, 245);
+    color: white;
+    font-weight: bold;
+    padding: 8px 50px;
+    border: none;
+    border-radius: 8px;
 }
 
 .content-modal .close{
@@ -165,6 +190,9 @@ img{
     height: 30px;
     font-size: 15px;
     text-align: center;
+    border-radius: 5px;
+    background-color: white;
+
 }
 
 .inconsistency{
@@ -188,9 +216,7 @@ img{
     color: yellow;
 }
 
-button + label{
-    background-color: blueviolet;
-}
+
 
 @media print{
     .no-print{
