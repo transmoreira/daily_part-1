@@ -66,9 +66,9 @@ const Filter = (props) => {
        
     }
 
-    if(!dailyPart.length){
+    /*if(!dailyPart.length){
         getDailyPartsInDataBase()
-    }
+    }*/
 
     const newFilter = async () => {
         await getDailyPartsInDataBase()

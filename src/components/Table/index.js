@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default (props) => {
 
-    const { id, client, date, driver, car, travels, passenger } = props.dailyPart
+    const { id, client, date, driver, car, travels, passenger, obs } = props.dailyPart
 
     return <section className="table">
         <table onClick={props.onClick}>
@@ -93,6 +93,13 @@ export default (props) => {
                     <td colSpan="2" className="min-200"></td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colSpan={11}>
+                    {obs}
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </section>
 }

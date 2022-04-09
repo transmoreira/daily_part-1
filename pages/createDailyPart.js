@@ -6,6 +6,8 @@ import Table from "../src/components/Table"
 import { dateFormated } from "../src/utils/utils"
 
 let valueInserted
+let timeout
+
 const Modal = () => {
 
 
@@ -84,14 +86,14 @@ const Modal = () => {
 
             const dailyPart = await response.json()
             if (dailyPart.length) {
-                
+
                 state.dailyPart = dailyPart[0]
                 setState({ ...state })
             }
 
         }
 
-        
+
         if (!state.dailyPart.client) {
             const list = clients.map(item => item.name)
 
@@ -101,7 +103,7 @@ const Modal = () => {
             setState({ ...state })
             const client = await getData(list, "Cliente não encontrado")
 
-            
+
             state.dailyPart.client = client
             try {
 
@@ -124,11 +126,11 @@ const Modal = () => {
             return
         }
 
-        
+
 
         const countTravels = state.dailyPart.travels.length
         const actualtravel = state.dailyPart.travels[countTravels - 1]
-        
+
         if (!actualtravel.destiny || actualtravel.endKM) {
             addTravel()
 
@@ -139,13 +141,13 @@ const Modal = () => {
             state.list = []
             setState({ ...state })
             const endTime = await getData()
-           
+
             state.label = <>A viagem terminou com qual <b>KM</b>?</>
             state.type = "number"
             state.list = []
             setState({ ...state })
             const endKM = await getData()
-           
+
             state.label = <>Quantos <b>passageiros</b> embarcaram?</>
             state.type = "number"
             setState({ ...state })
@@ -160,7 +162,7 @@ const Modal = () => {
                 endKM,
                 passenger
             }
-           
+
 
             try {
                 const response = await fetch(
@@ -170,7 +172,7 @@ const Modal = () => {
                         body: JSON.stringify(travel)
                     }
                 )
-                
+
                 const result = await response.json()
                 travel.id = result.insertId
                 state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
@@ -196,34 +198,34 @@ const Modal = () => {
 
         state.label = <>Qual é a <b>LINHA</b>?</>
         state.list = list
-        state.type = "text"        
+        state.type = "text"
         const line = await getData(list, "Linha não encontrada")
 
         state.closable = false
         state.label = <>A viagem começou que <b>HORAS</b>?</>
         state.type = "time"
         state.list = []
-        
+
         const startTime = await getData()
 
         state.label = <>A viagem começou com qual <b>KM</b>?</>
         state.type = "number"
-        state.list = []        
+        state.list = []
         const startKM = await getData()
 
-        const direction = lines.filter(item=>item.name==line)[0].direction
+        const direction = lines.filter(item => item.name == line)[0].direction
 
         state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
         state.type = "text"
-        state.list = direction      
+        state.list = direction
         const origin = await getData(state.list, "Origem nao encontrada!")
-        
-        const destinys = [...direction.filter(item=>item!=origin)]
+
+        const destinys = [...direction.filter(item => item != origin)]
         state.label = <>Para onde<b>(PONTO FINAL)</b> vai a viagem?</>
-        state.list =destinys
+        state.list = destinys
         const destiny = destinys.length == 1 ? destinys[0] : await getData(destinys, "Destino nao encontrado!")
-        
-        
+
+
         const actualDate = new Date()
         const timeTravel = `${dateFormated(actualDate, false)} ${startTime}:00`
 
@@ -252,7 +254,7 @@ const Modal = () => {
             travel.id = result.insertId
             state.dailyPart.travels.push(travel)
             setState({ ...state })
-           
+
         } catch (error) {
             console.log(error)
         }
@@ -261,17 +263,17 @@ const Modal = () => {
     }
 
     const getData = (list = null, msgError = "") => {
-        
-                
-            
-        
+
+
+
+
         return new Promise((resolve, reject) => {
             state.close = ""
             setState({ ...state })
             const interval = setInterval(() => {
-                
+
                 if (valueInserted) {
-                    
+
                     if (!list || list.includes(valueInserted)) {
                         clearInterval(interval)
                         resolve(valueInserted)
@@ -302,14 +304,46 @@ const Modal = () => {
         setState({ ...state })
     }
 
+    
+    const debounce = (event) => {
+        
+
+        const callback = () => {
+            
+            clearTimeout(timeout)
+
+            try {
+                fetch(
+                    "api/dailyPart",
+                    {
+                        method: "PUT",
+                        body: JSON.stringify(state.dailyPart)
+                    }
+                )
+            } catch (e) {
+                console.log(e)
+            }
+            
+        }
+        
+        state.dailyPart.obs = event.target.value
+        setState({ ...state })       
+        clearTimeout(timeout)        
+        timeout = setTimeout(callback, 3000);
+       
+    }
+
 
 
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
             <Table onClick={inputValue} dailyPart={state.dailyPart} />
-            <textarea placeholder="Descreva aqui observações sobre a viagem"/>
-                   
+            <textarea
+                placeholder="Descreva aqui observações sobre a viagem"
+                onChange={debounce}
+                value={state.dailyPart.obs} />
+
         </main>
 
         <div className={`modal ${state.close}`}>
@@ -318,7 +352,6 @@ const Modal = () => {
                 <label>{state.label}</label>
                 <input
                     type={state.type}
-                    data-js="data"
                     placeholder="Toque aqui para digitar"
                     list="list"
                     onChange={onChange}

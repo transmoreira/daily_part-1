@@ -45,7 +45,8 @@ const dailyPart = async (request, response) => {
                         endKM,
                         direction,
                         travels.id AS idTravel,
-                        passenger
+                        passenger,
+                        obs
                      FROM daily_part
                      LEFT JOIN travels ON daily_part.id = travels.id_daily_part or travels.id_daily_part IS NULL
                      WHERE startTime >= '${start} 00:00:00' AND
@@ -65,6 +66,7 @@ const dailyPart = async (request, response) => {
                             id: item.id,
                             client: item.client,
                             date: item.date,
+                            obs:item.obs,
                             driver: {
                                 registration: item.registration,
                                 name: item.name
@@ -137,7 +139,15 @@ const dailyPart = async (request, response) => {
 
         getResult(sql)
 
-    } else {
+    } else if(request.method === "PUT") {
+        const { id, obs} = JSON.parse(request.body)
+        const sql = `UPDATE daily_part  
+                        SET obs='${obs}'
+                    WHERE id = ${id}`
+
+        getResult(sql)
+    }
+    else {
         response.status(404).json({ erro: true })
     }
 
