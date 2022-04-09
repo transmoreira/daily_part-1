@@ -1,10 +1,10 @@
 const dateFormated = (date, brazil=true) => {
     
-    const day = (date.getDate())
+    const day = (date.getDate()).toString().padStart(2,"0")
     const month = (date.getMonth() + 1).toString().padStart(2,"0")
     const year = date.getFullYear()    
 
-    return brazil ? `${(day).toString().padStart(2,"0")}/${month}/${year}` : `${year}-${month}-${day}`
+    return brazil ? `${day}/${month}/${year}` : `${year}-${month}-${day}`
 }
 
 const timeFormated = (time) => {
