@@ -60,6 +60,8 @@ const dailyPart = async (request, response) => {
 
             const newData = data.reduce((acc, item, index) => {
                 if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
+                    item.date.setUTCHours(3)
+                    
                     acc.push({
                         id: item.id,
                         client: item.client,
