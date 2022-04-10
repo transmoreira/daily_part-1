@@ -1,28 +1,46 @@
 import { useState } from "react"
-import  clientsJSON from "../../data/clients.json"
+import clientsJSON from "../../data/clients.json"
+import carsJSON from "../../data/cars.json"
+import employeesJSON from "../../data/employees.json"
 import { dateFormated } from "../../utils/utils"
 
 
+
 const starDate = new Date()
-starDate.setTime(new Date(starDate.toLocaleDateString()).getTime())//zerando HH:mm:ss:mmm
+starDate.setUTCHours(3)
+starDate.setHours(0)
+starDate.setMinutes(0)
+starDate.setSeconds(0)
 
 
-const endDate = new Date(starDate)
-endDate.setDate(endDate.getDate() + 1)
-endDate.setSeconds(endDate.getSeconds() - 1)
+const endDate = new Date()
+endDate.setUTCHours(3)
+endDate.setHours(23)
+endDate.setMinutes(59)
+endDate.setSeconds(59)
 
 const filterDatas = {
     timeCourse: { start: starDate, end: endDate },
     client: "",
-    line: ""
+    line: "",
+    driver:"",
+    car:""
 }
 let dailyPart = []
 
+const getDailyPartsInDataBase = async () => {
+
+    const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}`)
+    dailyPart = await response.json()
+  
+}
+
+
 const Filter = (props) => {
-   
+
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
-    
+
     const clients = clientsJSON.map(item => item.name)
 
     const onChange = (event) => {
@@ -32,15 +50,28 @@ const Filter = (props) => {
             case "start":
             case "end":
                 const newDate = new Date(element.value)
-                newDate.setHours(newDate.getHours() + 3)
+                newDate.setUTCHours(3)
+
+                const shouldUpdatedata = 
+                        newDate.getTime() < filterDatas.timeCourse.start.getTime() ||
+                        newDate.getTime() > filterDatas.timeCourse.end.getTime()
+                console.log(shouldUpdatedata)
+                
                 switch (element.id) {
+
                     case "start":
                         filterDatas.timeCourse.start = newDate
+                        if(shouldUpdatedata){
+                            update()
+                        }
                         break;
                     case "end":
                         newDate.setSeconds(newDate.getSeconds() - 1)
                         newDate.setDate(newDate.getDate() + 1)
                         filterDatas.timeCourse.end = newDate
+                        if(shouldUpdatedata){
+                            update()
+                        }
                         break;
                 }
                 break
@@ -52,39 +83,53 @@ const Filter = (props) => {
             case "line":
                 filterDatas.line = element.value
                 break;
+            case "driver":
+                filterDatas.driver = element.value
+                break;
+            case "car":
+                filterDatas.car = element.value
+                break;
         }
+
+        newFilter()
     }
 
-    const getDailyPartsInDataBase = async () => {
-        /*const dateStart = new Date()
-        const dateEnd = new Date()
-        dateStart.setDate(dateStart.getDate()-60)*/
-        
-        const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start,false)}&end=${dateFormated(filterDatas.timeCourse.end,false)}`)
-        dailyPart = await response.json()
-        
-       
-    }
 
-    /*if(!dailyPart.length){
-        getDailyPartsInDataBase()
-    }*/
-
-    const newFilter = async () => {
+    const update = async ()=>{
         await getDailyPartsInDataBase()
-        const newList = dailyPart.filter((item, index) => {
-           //console.log(filterDatas.timeCourse.start.getTime() , filterDatas.timeCourse.end.getTime())
-           const date = new Date(item.date)
-           date.setUTCHours(3)
-            return date.getTime() >= filterDatas.timeCourse.start.getTime() &&
-                date.getTime() <= filterDatas.timeCourse.end.getTime() &&
-                (filterDatas.client == "" || item.client == filterDatas.client) &&
-                (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
-        })
+        newFilter()
+    }
+
+
+
+    const newFilter = () => {
         
-        if(!newList.length){
-            alert("Nada encontrado")
-        }
+        console.log(dailyPart)
+        const newList = dailyPart.filter((item, index) => {           
+            const date = new Date(item.date)            
+            date.setUTCHours(3)
+
+            const isBetweenDate = date.getTime() >= 
+                filterDatas.timeCourse.start.getTime() &&
+                date.getTime() <= filterDatas.timeCourse.end.getTime()
+
+            const hasClient = (filterDatas.client == "" ||
+                item.client == filterDatas.client)
+            
+            const hasDriver = (filterDatas.driver == "" || 
+                item.driver.name == filterDatas.driver)
+
+            const hasCar = (filterDatas.car == "" || 
+                item.car.number == filterDatas.car)
+
+            const hasLine = (filterDatas.line == "" || 
+                item.travels
+                    .map(item => item.line)
+                    .filter(item => item == filterDatas.line).length > 0)
+
+            return isBetweenDate && hasClient && hasDriver && hasCar && hasLine
+        })
+
         setListDailyParts(newList)
     }
 
@@ -96,7 +141,7 @@ const Filter = (props) => {
             <div>
 
                 Período:
-                <input type="date" id="start"  onChange={onChange} />
+                <input type="date" id="start" onChange={onChange} />
                 à
                 <input type="date" id="end" onChange={onChange} />
 
@@ -105,16 +150,29 @@ const Filter = (props) => {
                 Cliente:
                 <select id="client" onChange={onChange}>
                     <option value={0}></option>
-                    {clients.map((item, index) => <option key={index} value={index + 1}>{item}</option>)}
+                    {clients.map((item, index) =>
+                        <option key={index} value={index + 1}>{item}</option>)}
                 </select>
                 Linha:
-                <input id="line" onChange={onChange} list="list" />
-                <datalist id="list">
-                    {lines.map((item, index) => <option key={index} >{item}</option>)}
+                <input id="line" onChange={onChange} list="listLine" />
+                <datalist id="listLine">
+                    {lines.map((item, index) =>
+                        <option key={index} >{item}</option>)}
                 </datalist>
             </div>
             <div>
-                <input type="button" value="Filtrar" onClick={newFilter} />
+                Carro:
+                <input id="car" onChange={onChange} list="listCars" />
+                <datalist id="listCars">
+                    {carsJSON.map((car, index) =>
+                        <option key={index} >{car.number}</option>)}
+                </datalist>
+                Motorista:
+                <input id="driver" onChange={onChange} list="listDriver" />
+                <datalist id="listDriver">
+                    {employeesJSON.map((employee, index) =>
+                        <option key={index} >{employee.name}</option>)}
+                </datalist>
             </div>
         </form>
         <span>{listDailyParts.length} parte(s) diaria(s)</span>

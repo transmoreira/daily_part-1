@@ -9,8 +9,7 @@ let valueInserted
 let timeout
 
 const Modal = () => {
-
-
+    const [error, setError] = useState({ msg: "", type: "" })
     const [state, setState] = useState({
         label: "",
         close: "close",
@@ -31,18 +30,12 @@ const Modal = () => {
         }
     })
 
-    const [error, setError] = useState({ msg: "", type: "" })
-
-    //onChange = onChange
-
-
     const closeMadal = () => {
         state.close = "close"
         setState({ ...state })
     }
 
     const inputValue = async () => {
-
 
         state.closable = true
 
@@ -146,7 +139,7 @@ const Modal = () => {
             state.type = "number"
             state.list = []
             setState({ ...state })
-            const endKM = await getData()
+            const endKM = parseInt(await getData(null, "Verifique se o KM está correto.", true))
 
             state.label = <>Quantos <b>passageiros</b> embarcaram?</>
             state.type = "number"
@@ -180,13 +173,8 @@ const Modal = () => {
             } catch (error) {
                 console.log(error)
             }
-
         }
-
-
-
     }
-
 
     const addTravel = async () => {
 
@@ -208,10 +196,12 @@ const Modal = () => {
 
         const startTime = await getData()
 
+
         state.label = <>A viagem começou com qual <b>KM</b>?</>
         state.type = "number"
         state.list = []
-        const startKM = await getData()
+        const msg = "Verifique se o KM está correto."
+        const startKM = parseInt(await getData(null, msg, true))
 
         const direction = lines.filter(item => item.name == line)[0].direction
 
@@ -223,7 +213,9 @@ const Modal = () => {
         const destinys = [...direction.filter(item => item != origin)]
         state.label = <>Para onde<b>(PONTO FINAL)</b> vai a viagem?</>
         state.list = destinys
-        const destiny = destinys.length == 1 ? destinys[0] : await getData(destinys, "Destino nao encontrado!")
+        const destiny = destinys.length == 1 ?
+            destinys[0] :
+            await getData(destinys, "Destino nao encontrado!")
 
 
         const actualDate = new Date()
@@ -262,25 +254,44 @@ const Modal = () => {
 
     }
 
-    const getData = (list = null, msgError = "") => {
+    const getData = (list = null, msgError = "", shouldCheckKM = false) =>
+        new Promise((resolve, reject) => {
+            const checkKM = (km) => {
+                const countTravels = state.dailyPart.travels.length
+                if (countTravels === 0) {
+                    return km > 0//TEMP buscar km dia anterior ou algo parecido
+                }
 
+                //const travel = state.dailyPart.travels[countTravels - 1]
 
+                //const halfDistance = Math.floor(distance/2)
+                const minimumDistance = 1//distance - halfDistance
+                const maximumDistance = 120//distance + halfDistance
+                const previousKM = state.dailyPart.travels[countTravels - 1].endKM ||
+                    state.dailyPart.travels[countTravels - 1].startKM
 
-
-        return new Promise((resolve, reject) => {
+                console.log(previousKM)
+                return km >= (previousKM + minimumDistance) &&
+                    km <= (previousKM + maximumDistance)
+            }
             state.close = ""
+            state.value = ""
             setState({ ...state })
             const interval = setInterval(() => {
 
                 if (valueInserted) {
-
                     if (!list || list.includes(valueInserted)) {
-                        clearInterval(interval)
-                        resolve(valueInserted)
-                        valueInserted = null
-                        closeMadal()
-                        error.msg = ""
-                        error.type = ""
+                        if (shouldCheckKM && !checkKM(valueInserted)) {
+                            error.msg = msgError
+                            error.type = "error"
+                        } else {
+                            clearInterval(interval)
+                            resolve(valueInserted)
+                            valueInserted = null
+                            closeMadal()
+                            error.msg = ""
+                            error.type = ""
+                        }
                         setError({ ...error })
                     } else {
                         error.msg = msgError
@@ -293,28 +304,21 @@ const Modal = () => {
                 }
             }, 100)
         })
-    }
 
-    const clicked = () => {
+    const onclickOK = () => {
         valueInserted = state.value
     }
 
-    const onChange = (event) => {
+    const onChangeInput = (event) => {
         state.value = event.target.value
         setState({ ...state })
     }
 
-    
-    const debounce = (event) => {
-        
-
+    const onChangeObs = (event) => {
         const callback = () => {
-            
             clearTimeout(timeout)
-
             try {
-                fetch(
-                    "api/dailyPart",
+                fetch("api/dailyPart",
                     {
                         method: "PUT",
                         body: JSON.stringify(state.dailyPart)
@@ -323,17 +327,15 @@ const Modal = () => {
             } catch (e) {
                 console.log(e)
             }
-            
+
         }
-        
+
         state.dailyPart.obs = event.target.value
-        setState({ ...state })       
-        clearTimeout(timeout)        
-        timeout = setTimeout(callback, 3000);
-       
+        setState({ ...state })
+        clearTimeout(timeout)
+        timeout = setTimeout(callback, 1000);
+
     }
-
-
 
     return <>
         <main>
@@ -341,24 +343,32 @@ const Modal = () => {
             <Table onClick={inputValue} dailyPart={state.dailyPart} />
             <textarea
                 placeholder="Descreva aqui observações sobre a viagem"
-                onChange={debounce}
+                onChange={onChangeObs}
                 value={state.dailyPart.obs} />
 
         </main>
 
         <div className={`modal ${state.close}`}>
             <div className="content-modal">
-                {state.closable ? <span className="close" onClick={closeMadal}>x</span> : ""}
+                {state.closable ? <span className="close"
+                    onClick={closeMadal}>x</span> : ""}
                 <label>{state.label}</label>
                 <input
                     type={state.type}
                     placeholder="Toque aqui para digitar"
                     list="list"
-                    onChange={onChange}
+                    onChange={onChangeInput}
                     value={state.value} />
-                <datalist id="list">{state.list.map((item, index) => <option key={index}>{item}</option>)}</datalist>
-                <span className={`inconsistency ${error.type}`}>{error.msg}</span>
-                <button onClick={clicked}>OK</button>
+                <datalist id="list">
+                    {
+                        state.list.map((item, index) =>
+                            <option key={index}>{item}</option>)
+                    }
+                </datalist>
+                <span className={`inconsistency ${error.type}`}>
+                    {error.msg}
+                </span>
+                <button onClick={onclickOK}>OK</button>
 
             </div>
         </div>
