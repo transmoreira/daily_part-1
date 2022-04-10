@@ -331,10 +331,10 @@ const Modal = () => {
         }
 
         state.dailyPart.obs = event.target.value
-        setState({ ...state })
-        clearTimeout(timeout)
-        timeout = setTimeout(callback, 1000);
 
+        setState({ ...state })       
+        clearTimeout(timeout)        
+        timeout = setTimeout(callback, 1000);
     }
 
     return <>
