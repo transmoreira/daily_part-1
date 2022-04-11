@@ -95,7 +95,8 @@ const Filter = (props) => {
     }
 
 
-    const update = async ()=>{
+    const update = async (event)=>{
+        event.preventDefault()
         await getDailyPartsInDataBase()
         newFilter()
     }
