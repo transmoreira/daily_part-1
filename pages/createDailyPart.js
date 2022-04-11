@@ -83,7 +83,7 @@ const Modal = () => {
                     setState({ ...state })
                 }
             } catch (erro) {
-                alert("Houve um erro, tente novamente")
+                alert(erro.message)
                 location.reload(true)
             }
 
@@ -116,8 +116,8 @@ const Modal = () => {
                 state.dailyPart.id = result.insertId
                 setState({ ...state })
                 addTravel()
-            } catch (e) {
-                alert("Houve um erro, tente novamente")
+            } catch (erro) {
+                alert(erro.message)
                 location.reload(true)
             }
             return
@@ -175,7 +175,7 @@ const Modal = () => {
                 state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
                 setState({ ...state })
             } catch (error) {
-                alert(JSON.stringify(travel))
+                alert(error.message)
                 location.reload(true)
             }
         }
@@ -252,7 +252,7 @@ const Modal = () => {
             setState({ ...state })
 
         } catch (error) {
-            alert("Houve um erro, tente novamente")
+            alert(error.message)
             location.reload(true)
         }
 
@@ -270,7 +270,7 @@ const Modal = () => {
                 //const travel = state.dailyPart.travels[countTravels - 1]
 
                 //const halfDistance = Math.floor(distance/2)
-                const minimumDistance = 1//distance - halfDistance
+                const minimumDistance = 0//distance - halfDistance
                 const maximumDistance = 120//distance + halfDistance
                 const previousKM = state.dailyPart.travels[countTravels - 1].endKM ||
                     state.dailyPart.travels[countTravels - 1].startKM
