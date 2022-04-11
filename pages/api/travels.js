@@ -52,8 +52,8 @@ const dailyPart = async (request, response) => {
         const { id, endTime, endKM, passenger } = JSON.parse(request.body)
         const sql = `UPDATE travels  
                         SET endTime='${endTime}',
-                        endKM=${endKM},
-                        passenger=${passenger}
+                        endKM=${parseInt(endKM)},
+                        passenger=${parseInt(passenger)}
                     WHERE id = ${id}`
 
         getResult(sql)
