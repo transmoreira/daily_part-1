@@ -4,10 +4,10 @@ module.exports = {
             {
                 source: '/api',
                 headers: [
-                    /*{
+                    {
                         key: 'access-control-allow-origin',
                         value: '*',
-                    },*/
+                    },
                     {
                         key: 'Access-Control-Request-Method',
                         value: 'GET,POST,PUT',

@@ -5,18 +5,15 @@ const dailyPart = async (request, response) => {
     const getResult = async (sql) => {
         try {
             const data = await connect(sql)
-            if (request.method === "GET") {
-                return data
-            } else {
-                const { insertId } = data
-                response.status(201).json({
-                    insertId
-                })
-            }
+            const { insertId } = data
+            response.status(201).json({
+                insertId
+            })
+
 
         } catch (error) {
             console.log(error)
-            response.status(400).json({...error,sql:""})
+            response.status(400).json({ ...error, sql: "" })
         }
     }
 
@@ -45,7 +42,7 @@ const dailyPart = async (request, response) => {
                             '${endKM}',
                             '${direction}'
                         )`
-        getResult(sql)
+        await getResult(sql)
 
 
     } else if (request.method === "PUT") {
@@ -56,7 +53,8 @@ const dailyPart = async (request, response) => {
                         passenger=${parseInt(passenger)}
                     WHERE id = ${id}`
 
-        getResult(sql)
+
+        await getResult(sql)
     }
 
 }

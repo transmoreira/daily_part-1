@@ -8,7 +8,7 @@ const dateFormated = (date, brazil=true) => {
 }
 
 const timeFormated = (time) => {
-    //time.setHours(time.getHours()+3)
+    time.setHours(time.getHours()+3)
     const hour = (time.getHours()).toString().padStart(2,"0")
     const minute = time.getMinutes().toString().padStart(2,"0")
     
