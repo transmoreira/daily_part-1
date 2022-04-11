@@ -74,17 +74,17 @@ const Modal = () => {
             const plate = state.dailyPart.car.plate
 
             const registration = state.dailyPart.driver.registration
-            try{
-            const response = await fetch(`api/dailyPart?start=${dateFormated(dateStart, false)}&end=${dateFormated(dateEnd, false)}&plate=${plate}&registration=${registration}`)
+            try {
+                const response = await fetch(`api/dailyPart?start=${dateFormated(dateStart, false)}&end=${dateFormated(dateEnd, false)}&plate=${plate}&registration=${registration}`)
 
-            const dailyPart = await response.json()
-            if (dailyPart.length) {
-
-                state.dailyPart = dailyPart[0]
-                setState({ ...state })
-            }
-            }catch(erro){
-                alert("Houve um erro, tente novamente")   
+                const dailyPart = await response.json()
+                if (dailyPart.length) {
+                    state.dailyPart = dailyPart[0]
+                    setState({ ...state })
+                }
+            } catch (erro) {
+                alert("Houve um erro, tente novamente")
+                location.reload(true)
             }
 
         }
@@ -117,7 +117,8 @@ const Modal = () => {
                 setState({ ...state })
                 addTravel()
             } catch (e) {
-                console.log(e)
+                alert("Houve um erro, tente novamente")
+                location.reload(true)
             }
             return
         }
@@ -175,7 +176,7 @@ const Modal = () => {
                 setState({ ...state })
             } catch (error) {
                 alert(JSON.stringify(travel))
-                console.log(error)
+                location.reload(true)
             }
         }
     }
@@ -235,7 +236,6 @@ const Modal = () => {
             endKM: null
         }
 
-        console.log(travel)
 
         try {
             const response = await fetch(
@@ -252,7 +252,8 @@ const Modal = () => {
             setState({ ...state })
 
         } catch (error) {
-            console.log(error)
+            alert("Houve um erro, tente novamente")
+            location.reload(true)
         }
 
 
@@ -336,8 +337,8 @@ const Modal = () => {
 
         state.dailyPart.obs = event.target.value
 
-        setState({ ...state })       
-        clearTimeout(timeout)        
+        setState({ ...state })
+        clearTimeout(timeout)
         timeout = setTimeout(callback, 1000);
     }
 
