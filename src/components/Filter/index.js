@@ -174,6 +174,10 @@ const Filter = (props) => {
                         <option key={employee.registration} value={employee.name}>{employee.registration}</option>)}
                 </datalist>
             </div>
+    <div>
+
+                <button className="red" onClick={update}>Atualizar</button>
+            </div>
         </form>
         <span>{listDailyParts.length} parte(s) diaria(s)</span>
     </article >
