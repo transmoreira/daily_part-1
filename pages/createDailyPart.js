@@ -74,7 +74,7 @@ const Modal = () => {
             const plate = state.dailyPart.car.plate
 
             const registration = state.dailyPart.driver.registration
-
+            try{
             const response = await fetch(`api/dailyPart?start=${dateFormated(dateStart, false)}&end=${dateFormated(dateEnd, false)}&plate=${plate}&registration=${registration}`)
 
             const dailyPart = await response.json()
@@ -82,6 +82,9 @@ const Modal = () => {
 
                 state.dailyPart = dailyPart[0]
                 setState({ ...state })
+            }
+            }catch(erro){
+                alert("Houve um erro, tente novamente")   
             }
 
         }
