@@ -174,6 +174,7 @@ const Modal = () => {
                 state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
                 setState({ ...state })
             } catch (error) {
+                alert(travel.toString())
                 console.log(error)
             }
         }
