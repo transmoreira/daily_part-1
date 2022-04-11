@@ -8,8 +8,8 @@ const dateFormated = (date, brazil=true) => {
 }
 
 const timeFormated = (time) => {
-    time.setUTCHours(0)
-    const hour = time.getHours().toString().padStart(2,"0")
+    
+    const hour = (time.getHours()+3).toString().padStart(2,"0")
     const minute = time.getMinutes().toString().padStart(2,"0")
     
     if(hour == "NaN"|| minute == "NaN"){
