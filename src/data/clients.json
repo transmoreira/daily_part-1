@@ -3,7 +3,7 @@
     "name": "AVG",
     "lines": [
       {
-        "name": "36017 BRUMADINHO TURNO",
+        "name": "BRUMADINHO TURNO",
         "type": "TURNO",
         "direction": [
           "BRUMADINHO",
@@ -13,7 +13,7 @@
         ]
       },
       {
-        "name": "47015 BRUMADINHO ADM",
+        "name": "BRUMADINHO ADM",
         "type": "TURNO",
         "direction": [
           "BRUMADINHO",
@@ -21,7 +21,7 @@
         ]
       },
       {
-        "name": "31814 CONTAGEM ADM",
+        "name": "CONTAGEM ADM",
         "type": "TURNO",
         "direction": [
           "Contagem",
@@ -30,7 +30,7 @@
         ]
       },
       {
-        "name": "46615 CONTAGEM TURNO",
+        "name": "CONTAGEM TURNO",
         "type": "TURNO",
         "direction": [
           "CID. IND",
