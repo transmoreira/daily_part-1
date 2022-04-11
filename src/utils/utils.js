@@ -1,5 +1,5 @@
 const dateFormated = (date, brazil=true) => {
-    date.setUTCHours(0)
+    date.setUTCHours(3)
     const day = (date.getDate()).toString().padStart(2,"0")
     const month = (date.getMonth() + 1).toString().padStart(2,"0")
     const year = date.getFullYear()    
@@ -8,7 +8,7 @@ const dateFormated = (date, brazil=true) => {
 }
 
 const timeFormated = (time) => {
-    
+    time.setUTCHours(3)
     const hour = time.getHours().toString().padStart(2,"0")
     const minute = time.getMinutes().toString().padStart(2,"0")
     
