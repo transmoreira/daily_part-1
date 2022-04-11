@@ -171,7 +171,7 @@ const Filter = (props) => {
                 <input id="driver" onChange={onChange} list="listDriver" />
                 <datalist id="listDriver">
                     {employeesJSON.map((employee, index) =>
-                        <option key={index} >{employee.name}</option>)}
+                        <option key={employee.registration} value={employee.name}>{employee.registration}</option>)}
                 </datalist>
             </div>
         </form>
