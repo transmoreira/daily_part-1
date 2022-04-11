@@ -1,916 +1,700 @@
 [
-    {
-        "name": "Valourec",
-        "lines": []
-    },
-    {
-        "name": "Vale",
-        "lines": [
-            {
-                "name": "CDM-A1-BHSHOP",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CDM"
-                ]
-            },
-            {
-                "name": "CDM-A2-BIGSHOP",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "CDM"
-                ]
-            },
-            {
-                "name": "CDM-A3-CID.ADM",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CDM"
-                ]
-            },
-            {
-                "name": "CDM-A5-CAETE",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CAETE",
-                    "CDM"
-                ]
-            },
-            {
-                "name": "A31",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A32",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "CMT",
-                    "TOD"
-                ]
-            },
-            {
-                "name": "A38",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BRUMADINHO",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A40",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A44",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A45",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BETIM",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "H1",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "H8",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "H14",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "T8",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "T14",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A01",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A02",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BRUMADINHO",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A03",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "SABARA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A04",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "SANTA LUZIA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A05",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A06",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A07",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A08",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A09",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A10",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "SARZEDO",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A11",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "IBIRITE",
-                    "TOD"
-                ]
-            },
-            {
-                "name": "A12",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BETIM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A13",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A15",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RAPOSOS",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A16",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RIO ACIMA",
-                    "TOD"
-                ]
-            },
-            {
-                "name": "A17",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RAPOSOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A18",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RIO ACIMA",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A19",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RAPOSOS",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A20",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RIO ACIMA",
-                    "CMT"
-                ]
-            },
-            {
-                "name": "A21",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "RAPOSOS",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "A22",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "NOVA LIMA",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "A23",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "IBIRITE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A24",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A25",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "A26",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A27",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "H5A",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H5B",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H5C",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H5D",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A30",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "A34",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "A36",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "A39",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "SABARA",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "A43",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "IBIRITE",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "A46",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CTF"
-                ]
-            },
-            {
-                "name": "OP1A",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "RIO ACIMA",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP1B",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "RIO ACIMA",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP2",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "SABARA",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP3A",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP3B",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP4A",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "SARZEDO",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP4B",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "SARZEDO",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP5A",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "BETIM",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "OP5B",
-                "type": "OPERACIONAL",
-                "direction": [
-                    "CONTAGEM",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "A28",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "A29",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H1A",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H1B",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H1C",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H1D",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H2A",
-                "type": "TURNO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H2B",
-                "type": "TURNO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H2C",
-                "type": "TURNO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H2D",
-                "type": "TURNO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H3A",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H3B",
-                "type": "TURNO",
-                "direction": [
-                    "BETIM",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H3C",
-                "type": "TURNO",
-                "direction": [
-                    "BETIM",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H3D",
-                "type": "TURNO",
-                "direction": [
-                    "BETIM",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "H4A",
-                "type": "TURNO",
-                "direction": [
-                    "SABARA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "H4B",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "H4C",
-                "type": "TURNO",
-                "direction": [
-                    "SABARA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "H4D",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "H9",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "T1A",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T1B",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T1C",
-                "type": "TURNO",
-                "direction": [
-                    "NOVA LIMA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T1C",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T2A",
-                "type": "TURNO",
-                "direction": [
-                    "IBIRITE",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "T2C",
-                "type": "TURNO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "T2D",
-                "type": "TURNO",
-                "direction": [
-                    "MARIO CAMPOS",
-                    "MUT"
-                ]
-            },
-            {
-                "name": "T3A",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T3B",
-                "type": "TURNO",
-                "direction": [
-                    "BETIM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T3C",
-                "type": "TURNO",
-                "direction": [
-                    "IBIRITE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T3D",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T4A",
-                "type": "TURNO",
-                "direction": [
-                    "SABARA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T4B",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T4D",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T6B",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T6D",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "CPX"
-                ]
-            },
-            {
-                "name": "T9",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "MAZ"
-                ]
-            },
-            {
-                "name": "H13",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "PIC"
-                ]
-            },
-            {
-                "name": "T13",
-                "type": "TURNO",
-                "direction": [
-                    "RIO ACIMA",
-                    "PIC"
-                ]
-            },
-            {
-                "name": "A33",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "ITABIRITO",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "A37",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "CONTAGEM",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "A41",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "SANTA LUZIA",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "A42",
-                "type": "ADMINISTRATIVO",
-                "direction": [
-                    "IBIRITE",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "H2",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "H3",
-                "type": "TURNO",
-                "direction": [
-                    "ITABIRITO",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "T2",
-                "type": "TURNO",
-                "direction": [
-                    "CONTAGEM",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "T3",
-                "type": "TURNO",
-                "direction": [
-                    "ITABIRITO",
-                    "TAM"
-                ]
-            },
-            {
-                "name": "H4",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "VGR"
-                ]
-            },
-            {
-                "name": "H7",
-                "type": "TURNO",
-                "direction": [
-                    "IBIRITE",
-                    "VGR"
-                ]
-            },
-            {
-                "name": "H12",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "ABO"
-                ]
-            },
-            {
-                "name": "T4",
-                "type": "TURNO",
-                "direction": [
-                    "BELO HORIZONTE",
-                    "VGR"
-                ]
-            },
-            {
-                "name": "T7",
-                "type": "TURNO",
-                "direction": [
-                    "IBIRITE",
-                    "VGR"
-                ]
-            },
-            {
-                "name": "T12",
-                "type": "TURNO",
-                "direction": [
-                    "RAPOSOS",
-                    "ABO"
-                ]
-            }
+  {
+    "name": "Valourec",
+    "lines": []
+  },
+  {
+    "name": "Vale",
+    "lines": [
+      {
+        "name": "CDM-A1-BHSHOP",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CDM"
         ]
-    },
-    {
-        "name": "Fiat",
-        "lines": []
-    },
-    {
-        "name": "H Pardini",
-        "lines": []
-    }
+      },
+      {
+        "name": "CDM-A2-BIGSHOP",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CONTAGEM",
+          "CDM"
+        ]
+      },
+      {
+        "name": "CDM-A3-CID.ADM",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CDM"
+        ]
+      },
+      {
+        "name": "CDM-A5-CAETE",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CAETE",
+          "CDM"
+        ]
+      },
+      {
+        "name": "A31",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A32",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "CMT",
+          "TOD"
+        ]
+      },
+      {
+        "name": "A38",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BRUMADINHO",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A40",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A44",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CONTAGEM",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A45",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BETIM",
+          "CMT"
+        ]
+      },
+      {
+        "name": "H1",
+        "type": "TURNO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CMT"
+        ]
+      },
+      {
+        "name": "H8",
+        "type": "TURNO",
+        "direction": [
+          "RAPOSOS",
+          "CMT"
+        ]
+      },
+      {
+        "name": "H14",
+        "type": "TURNO",
+        "direction": [
+          "RIO ACIMA",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A01",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A02",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BRUMADINHO",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A03",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "SABARA",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A04",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "SANTA LUZIA",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A05",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A08",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CONTAGEM",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A10",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "SARZEDO",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A11",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "IBIRITE",
+          "TOD"
+        ]
+      },
+      {
+        "name": "A12",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BETIM",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A15",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RAPOSOS",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A16",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RIO ACIMA",
+          "TOD"
+        ]
+      },
+      {
+        "name": "A17",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RAPOSOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A18",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RIO ACIMA",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A19",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RAPOSOS",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A20",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RIO ACIMA",
+          "CMT"
+        ]
+      },
+      {
+        "name": "A21",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "RAPOSOS",
+          "TAM"
+        ]
+      },
+      {
+        "name": "A22",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "NOVA LIMA",
+          "CTF"
+        ]
+      },
+      {
+        "name": "A23",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "IBIRITE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A24",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A25",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CONTAGEM",
+          "CPX"
+        ]
+      },
+      {
+        "name": "A27",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CONTAGEM",
+          "CPX"
+        ]
+      },
+      {
+        "name": "H5A",
+        "type": "TURNO",
+        "direction": [
+          "RIO ACIMA",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A30",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "CTF"
+        ]
+      },
+      {
+        "name": "A34",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "CTF"
+        ]
+      },
+      {
+        "name": "A36",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CTF"
+        ]
+      },
+      {
+        "name": "A39",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "SABARA",
+          "CTF"
+        ]
+      },
+      {
+        "name": "A43",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "IBIRITE",
+          "CTF"
+        ]
+      },
+      {
+        "name": "A46",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CTF"
+        ]
+      },
+      {
+        "name": "OP5B",
+        "type": "OPERACIONAL",
+        "direction": [
+          "CONTAGEM",
+          "MAZ"
+        ]
+      },
+      {
+        "name": "A28",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A28 REFORÇO FIM DE SEMANA E FERIADO",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "MUT"
+        ]
+      },
+      {
+        "name": "A29",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H1A",
+        "type": "TURNO",
+        "direction": [
+          "RAPOSOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H2A",
+        "type": "TURNO",
+        "direction": [
+          "MARIO CAMPOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H2B",
+        "type": "TURNO",
+        "direction": [
+          "MARIO CAMPOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H2C",
+        "type": "TURNO",
+        "direction": [
+          "MARIO CAMPOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H2D",
+        "type": "TURNO",
+        "direction": [
+          "MARIO CAMPOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H3A",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H3B",
+        "type": "TURNO",
+        "direction": [
+          "BETIM",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H3C",
+        "type": "TURNO",
+        "direction": [
+          "BETIM",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H3D",
+        "type": "TURNO",
+        "direction": [
+          "BETIM",
+          "MUT"
+        ]
+      },
+      {
+        "name": "H4A",
+        "type": "TURNO",
+        "direction": [
+          "SABARA",
+          "CPX"
+        ]
+      },
+      {
+        "name": "H4B",
+        "type": "TURNO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "H4C",
+        "type": "TURNO",
+        "direction": [
+          "SABARA",
+          "CPX"
+        ]
+      },
+      {
+        "name": "H4D",
+        "type": "TURNO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "H9",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "MAZ"
+        ]
+      },
+      {
+        "name": "T1A",
+        "type": "TURNO",
+        "direction": [
+          "RAPOSOS",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T2A",
+        "type": "TURNO",
+        "direction": [
+          "IBIRITE",
+          "MUT"
+        ]
+      },
+      {
+        "name": "T2C",
+        "type": "TURNO",
+        "direction": [
+          "MARIO CAMPOS",
+          "MUT"
+        ]
+      },
+      {
+        "name": "T3A",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T3B",
+        "type": "TURNO",
+        "direction": [
+          "BETIM",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T3C",
+        "type": "TURNO",
+        "direction": [
+          "IBIRITE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T3D",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T4A",
+        "type": "TURNO",
+        "direction": [
+          "SABARA",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T4B",
+        "type": "TURNO",
+        "direction": [
+          "BELO HORIZONTE",
+          "CPX"
+        ]
+      },
+      {
+        "name": "T9",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "MAZ"
+        ]
+      },
+      {
+        "name": "H13",
+        "type": "TURNO",
+        "direction": [
+          "RIO ACIMA",
+          "PIC"
+        ]
+      },
+      {
+        "name": "T13",
+        "type": "TURNO",
+        "direction": [
+          "RIO ACIMA",
+          "PIC"
+        ]
+      },
+      {
+        "name": "A33",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "ITABIRITO",
+          "TAM"
+        ]
+      },
+      {
+        "name": "A37",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "CONTAGEM",
+          "TAM"
+        ]
+      },
+      {
+        "name": "A41",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "SANTA LUZIA",
+          "TAM"
+        ]
+      },
+      {
+        "name": "A42",
+        "type": "ADMINISTRATIVO",
+        "direction": [
+          "IBIRITE",
+          "TAM"
+        ]
+      },
+      {
+        "name": "H2",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "TAM"
+        ]
+      },
+      {
+        "name": "H3",
+        "type": "TURNO",
+        "direction": [
+          "ITABIRITO",
+          "TAM"
+        ]
+      },
+      {
+        "name": "T2",
+        "type": "TURNO",
+        "direction": [
+          "CONTAGEM",
+          "TAM"
+        ]
+      },
+      {
+        "name": "T3",
+        "type": "TURNO",
+        "direction": [
+          "ITABIRITO",
+          "TAM"
+        ]
+      },
+      {
+        "name": "H4",
+        "type": "TURNO",
+        "direction": [
+          "BELO HORIZONTE",
+          "VGR"
+        ]
+      },
+      {
+        "name": "H7",
+        "type": "TURNO",
+        "direction": [
+          "IBIRITE",
+          "VGR"
+        ]
+      },
+      {
+        "name": "H12",
+        "type": "TURNO",
+        "direction": [
+          "RAPOSOS",
+          "ABO"
+        ]
+      },
+      {
+        "name": "T4",
+        "type": "TURNO",
+        "direction": [
+          "BELO HORIZONTE",
+          "VGR"
+        ]
+      },
+      {
+        "name": "T7",
+        "type": "TURNO",
+        "direction": [
+          "IBIRITE",
+          "VGR"
+        ]
+      },
+      {
+        "name": "T12",
+        "type": "TURNO",
+        "direction": [
+          "RAPOSOS",
+          "ABO"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fiat",
+    "lines": []
+  },
+  {
+    "name": "H Pardini",
+    "lines": []
+  }
 ]
