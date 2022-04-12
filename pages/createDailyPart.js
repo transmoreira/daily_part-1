@@ -85,8 +85,8 @@ const Modal = () => {
                     setState({ ...state })
                 }
             } catch (erro) {
-                alert(erro.message)
-                location.reload(true)
+                console.log(erro.message)
+                'location.reload(true)
             }
 
         }
@@ -119,8 +119,8 @@ const Modal = () => {
                 setState({ ...state })
                 addTravel()
             } catch (erro) {
-                alert(erro.message)
-                location.reload(true)
+                 console.log(erro.message)
+                'location.reload(true)
             }
             return
         }
@@ -177,8 +177,8 @@ const Modal = () => {
                 state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
                 setState({ ...state })
             } catch (error) {
-                alert(error.message)
-                location.reload(true)
+                 console.log(erro.message)
+                'location.reload(true)
             }
         }
     }
@@ -254,8 +254,8 @@ const Modal = () => {
             setState({ ...state })
 
         } catch (error) {
-            alert(error.message)
-            location.reload(true)
+             console.log(erro.message)
+                'location.reload(true)
         }
 
 
