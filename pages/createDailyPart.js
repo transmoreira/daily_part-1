@@ -150,7 +150,7 @@ const Modal = () => {
             state.label = <>Quantos <b>passageiros</b> embarcaram?</>
             state.type = "number"
             setState({ ...state })
-            const passenger = await getData()
+            const passenger = parseInt(await getData())
 
             
             const timeTravel = `${dateFormated(actualDate, false)} ${endTime}:00`
