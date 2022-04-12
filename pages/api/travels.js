@@ -3,22 +3,22 @@ import connect from "./connect"
 const dailyPart = async (request, response) => {
 
     const getResult = async (sql) => {
-        try {
-            const data = await connect(sql)
-            const { insertId } = data
+        try {            
+            
             response.status(201).json({
-                insertId
+                ///insertId
+                ...await connect(sql)
             })
 
 
         } catch (error) {
             console.log(error)
-            response.status(400).json({ ...error, sql: "" })
+            response.status(400).json(...error)
         }
     }
 
     if (request.method === "POST") {
-        const { id_daily_part, line, startTime, startKM, origin, destiny, endTime, endKM, direction } = JSON.parse(request.body)
+        const { id_daily_part, line, startTime, startKM, origin, destiny, direction } = JSON.parse(request.body)
         const sql = `INSERT INTO 
                         travels( 
                             id_daily_part, 
@@ -27,8 +27,6 @@ const dailyPart = async (request, response) => {
                             startKM,
                             origin,
                             destiny,
-                            endTime,
-                            endKM,
                             direction
                         ) 
                         VALUES (
@@ -38,8 +36,6 @@ const dailyPart = async (request, response) => {
                             '${startKM}',
                             '${origin}',
                             '${destiny}',
-                            '${endTime}',
-                            '${endKM}',
                             '${direction}'
                         )`
         await getResult(sql)
@@ -47,6 +43,7 @@ const dailyPart = async (request, response) => {
 
     } else if (request.method === "PUT") {
         const { id, endTime, endKM, passenger } = JSON.parse(request.body)
+     
         const sql = `UPDATE travels  
                         SET endTime='${endTime}',
                         endKM=${parseInt(endKM)},

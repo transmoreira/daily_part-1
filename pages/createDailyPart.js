@@ -342,6 +342,8 @@ const Modal = () => {
         timeout = setTimeout(callback, 1000);
     }
 
+    inputValue()
+
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
