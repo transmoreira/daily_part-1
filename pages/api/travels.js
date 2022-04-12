@@ -4,16 +4,15 @@ const dailyPart = async (request, response) => {
 
     const getResult = async (sql) => {
         try {            
+
+            const data = await connect(sql)
             
-            response.status(201).json({
-                ///insertId
-                ...await connect(sql)
-            })
+            response.status(201).json(data)
 
 
         } catch (error) {
-            console.log(error)
-            response.status(400).json(...error)
+            //console.log(error)
+            response.status(400).json(error)
         }
     }
 
