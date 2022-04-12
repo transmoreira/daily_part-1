@@ -86,7 +86,7 @@ const Modal = () => {
                 }
             } catch (erro) {
                 console.log(erro.message)
-                'location.reload(true)
+                //location.reload(true)
             }
 
         }
@@ -120,7 +120,7 @@ const Modal = () => {
                 addTravel()
             } catch (erro) {
                  console.log(erro.message)
-                'location.reload(true)
+                //location.reload(true)
             }
             return
         }
@@ -178,7 +178,7 @@ const Modal = () => {
                 setState({ ...state })
             } catch (error) {
                  console.log(erro.message)
-                'location.reload(true)
+                //location.reload(true)
             }
         }
     }
@@ -255,7 +255,7 @@ const Modal = () => {
 
         } catch (error) {
              console.log(erro.message)
-                'location.reload(true)
+                //location.reload(true)
         }
 
 
