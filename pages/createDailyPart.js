@@ -342,7 +342,7 @@ const Modal = () => {
         timeout = setTimeout(callback, 1000);
     }
 
-    inputValue()
+   // inputValue()
 
     return <>
         <main>
