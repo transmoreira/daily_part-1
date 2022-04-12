@@ -21,7 +21,7 @@ const Modal = () => {
         dailyPart: {
             car: { number: '', plate: '' },
             client: "",
-            date: dateFormated(actualDate false),
+            date: dateFormated(actualDate, false),
             driver: {
                 name: "",
                 registration: null
