@@ -5,6 +5,8 @@ import clients from "../src/data/clients.json"
 import Table from "../src/components/Table"
 import { dateFormated } from "../src/utils/utils"
 
+const actualDate = new Date()
+actualDate.setHours(11)
 let valueInserted
 let timeout
 
@@ -19,7 +21,7 @@ const Modal = () => {
         dailyPart: {
             car: { number: '', plate: '' },
             client: "",
-            date: dateFormated(new Date(), false),
+            date: dateFormated(actualDate false),
             driver: {
                 name: "",
                 registration: null
@@ -69,8 +71,8 @@ const Modal = () => {
             }
 
 
-            const dateStart = new Date()
-            const dateEnd = new Date()
+            const dateStart = actualDate
+            const dateEnd = actualDate
             const plate = state.dailyPart.car.plate
 
             const registration = state.dailyPart.driver.registration
@@ -150,7 +152,7 @@ const Modal = () => {
             setState({ ...state })
             const passenger = await getData()
 
-            const actualDate = new Date()
+            
             const timeTravel = `${dateFormated(actualDate, false)} ${endTime}:00`
 
             const travel = {
@@ -223,7 +225,7 @@ const Modal = () => {
             await getData(destinys, "Destino nao encontrado!")
 
 
-        const actualDate = new Date()
+        
         const timeTravel = `${dateFormated(actualDate, false)} ${startTime}:00`
 
         const travel = {
