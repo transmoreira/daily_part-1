@@ -7,8 +7,8 @@ const dateFormated = (date, brazil=true) => {
     return brazil ? date.toLocaleDateString() : `${year}-${month}-${day}`
 }
 
-const timeFormated = (time) => {
-    time.setHours(time.getHours()+3)
+const timeFormated = (time, utc=0) => {
+    time.setHours(time.getHours()+utc)
     const hour = (time.getHours()).toString().padStart(2,"0")
     const minute = time.getMinutes().toString().padStart(2,"0")
     
