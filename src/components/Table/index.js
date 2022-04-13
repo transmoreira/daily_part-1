@@ -58,11 +58,11 @@ export default (props) => {
                 </tr>
             </thead>
             <tbody>
-                {travels.map((item, index) =>                    
+                {travels.map((item, index,array) =>                    
                     <tr key={index}>
                         <td>{item.line}</td>
-                        <td>{timeFormated(new Date(item.startTime))}</td>
-                        <td>{timeFormated(new Date(item.endTime))}</td>
+                        <td>{timeFormated(new Date(item.startTime),array.length)}</td>
+                        <td>{timeFormated(new Date(item.endTime),array.length)}</td>
                         <td>{item.startKM}</td>
                         <td>{item.endKM}</td>
                         <td>{item.endKM - item.startKM}</td>
