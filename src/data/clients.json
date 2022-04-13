@@ -3,6 +3,7 @@
   {
     "name": "AVG",
     "lines": [
+      
       {
         "name": "BRUM. T.",
         "type": "T.",
@@ -43,7 +44,142 @@
   {
     "name": "Vale",
     "lines": [
-      
+      {
+        "name": "MAC-CIRCULAR",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-T7-IBIRITE",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-T6D-ARANHA",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-T5-ELDORADO",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-T2-PROGRESSO",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-T1-ITAGUA",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-A7-A.BRANCA",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-A5-C.ITAGUA",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-A4-S.CONRADO",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-A3-PROGRESSO",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-A2-BH SHOP",
+        "type": "T.",
+        "direction": [
+          "BELO HORIZONTE",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-A1-V.NOVA",
+        "type": "T.",
+        "direction": [
+          "V.NOVA",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-3-INTERNO",
+        "type": "T.",
+        "direction": [
+          "CONTAGEM",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-2-INTERNO",
+        "type": "T.",
+        "direction": [
+          "CONTAGEM",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-1-INTERNO",
+        "type": "T.",
+        "direction": [
+          "CONTAGEM",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-12X36-ELDOR",
+        "type": "T.",
+        "direction": [
+          "CONTAGEM",
+          "JGD"
+        ]
+      },
+      {
+        "name": "JGD-12X36-C.ITAG",
+        "type": "T.",
+        "direction": [
+          "BRUMADINHO",
+          "JGD"
+        ]
+      },
       {
         "name": "MARAVILHAS3",
         "type": "ADMINISTRATIVO",
