@@ -71,23 +71,11 @@ const Modal = () => {
             }
 
 
-            const dateStart = actualDate
-            const dateEnd = actualDate
+            
             const plate = state.dailyPart.car.plate
 
             const registration = state.dailyPart.driver.registration
-            try {
-                const response = await fetch(`api/dailyPart?start=${dateFormated(dateStart, false)}&end=${dateFormated(dateEnd, false)}&plate=${plate}&registration=${registration}`)
-
-                const dailyPart = await response.json()
-                if (dailyPart.length) {
-                    state.dailyPart = dailyPart[0]
-                    setState({ ...state })
-                }
-            } catch (erro) {
-                console.log(erro.message)
-                //location.reload(true)
-            }
+            getDailyPart(plate,registration)
 
         }
 
@@ -167,6 +155,22 @@ const Modal = () => {
         }
     }
     
+    const getDailyPart = async (plate,registration)=>{
+     try {
+                const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}`)
+
+                const dailyPart = await response.json()
+                if (dailyPart.length) {
+                    state.dailyPart = dailyPart[0]
+                    setState({ ...state })
+                }
+            } catch (erro) {
+                console.log(erro.message)
+                //location.reload(true)
+                getDailyPart(plate,registration)
+            }   
+    }
+    
     const updateTravel async (travel)=>{
      try {
                 const response = await fetch(
@@ -244,7 +248,13 @@ const Modal = () => {
         }
 
 
-        try {
+        setTraveal(travel)
+
+
+    }
+    
+    const setTraveal = async (travel)=>{
+      try {
             const response = await fetch(
                 "api/travels",
                 {
@@ -261,9 +271,8 @@ const Modal = () => {
         } catch (erro) {
              console.log(erro.message)
                 //location.reload(true)
-        }
-
-
+            setTraveal(travel)
+        }  
     }
 
     const getData = (list = null, msgError = "", shouldCheckKM = false) =>
