@@ -176,7 +176,7 @@ const Modal = () => {
                 travel.id = result.insertId
                 state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
                 setState({ ...state })
-            } catch (error) {
+            } catch (erro) {
                  console.log(erro.message)
                 //location.reload(true)
             }
@@ -253,7 +253,7 @@ const Modal = () => {
             state.dailyPart.travels.push(travel)
             setState({ ...state })
 
-        } catch (error) {
+        } catch (erro) {
              console.log(erro.message)
                 //location.reload(true)
         }
