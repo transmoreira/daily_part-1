@@ -163,7 +163,12 @@ const Modal = () => {
             }
 
 
-            try {
+            updateTravel(travel)
+        }
+    }
+    
+    const updateTravel async (travel)=>{
+     try {
                 const response = await fetch(
                     "api/travels",
                     {
@@ -179,8 +184,8 @@ const Modal = () => {
             } catch (erro) {
                  console.log(erro.message)
                 //location.reload(true)
-            }
-        }
+                updateTravel(travel)
+            }   
     }
 
     const addTravel = async () => {
