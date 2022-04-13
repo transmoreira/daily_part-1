@@ -12,7 +12,7 @@ const dailyPart = async (request, response) => {
 
         } catch (error) {
             //console.log(error)
-            response.status(400).json(error)
+            response.status(400).json({sql})
             //getResult(sql)
         }
     }
