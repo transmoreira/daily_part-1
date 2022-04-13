@@ -5,7 +5,7 @@ import Image from "next/image"
 export default (props) => {
 
     const { id, client, date, driver, car, travels, passenger, obs } = props.dailyPart
- 
+    const utc = props.utc
     
     return <section className="table">
         <table onClick={props.onClick}>
@@ -61,8 +61,8 @@ export default (props) => {
                 {travels.map((item, index,array) =>                    
                     <tr key={index}>
                         <td>{item.line}</td>
-                        <td>{timeFormated(new Date(item.startTime),array.length)}</td>
-                        <td>{timeFormated(new Date(item.endTime),array.length)}</td>
+                        <td>{timeFormated(new Date(item.startTime),utc)}</td>
+                        <td>{timeFormated(new Date(item.endTime),utc)}</td>
                         <td>{item.startKM}</td>
                         <td>{item.endKM}</td>
                         <td>{item.endKM - item.startKM}</td>
