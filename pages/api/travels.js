@@ -12,7 +12,8 @@ const dailyPart = async (request, response) => {
 
         } catch (error) {
             //console.log(error)
-            response.status(400).json({error:true,msg:error.message})
+            //response.status(400).json({error:true,msg:error.message})
+            getResult(sql)
         }
     }
 
