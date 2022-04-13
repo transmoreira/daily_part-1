@@ -170,7 +170,7 @@ const Modal = () => {
             }   
     }
     
-    const updateTravel async (travel)=>{
+    const updateTravel = async (travel)=>{
         try {
             const response = await fetch(
                 "api/travels",
