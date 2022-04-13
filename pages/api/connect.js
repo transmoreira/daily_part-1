@@ -8,9 +8,13 @@ const mysql = require('serverless-mysql')({
   })
 
 const connect = async (sql)=>{
-    const result = await mysql.query(sql)
-    mysql.end()
-    return result       
+    try{
+        const result = await mysql.query(sql)
+        mysql.end()
+        return result    
+    }catch(erro){
+        connect(sql)
+    }
 }
 
 export default connect
