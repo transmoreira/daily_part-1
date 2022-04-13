@@ -50,8 +50,11 @@ const dailyPart = async (request, response) => {
                         passenger=${parseInt(passenger)}
                     WHERE id = ${id}`
 
-
-        await getResult(sql)
+        try{
+            await getResult(sql)
+        }catch(erro){
+            response.status(202).send(erro)
+        }
     }
 
 }
