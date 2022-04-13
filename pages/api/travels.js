@@ -53,7 +53,7 @@ const dailyPart = async (request, response) => {
         try{
             await getResult(sql)
         }catch(erro){
-            response.status(202).send(erro)
+            response.json({sql})
         }
     }
 
