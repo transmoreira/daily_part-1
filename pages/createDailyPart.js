@@ -150,13 +150,12 @@ const Modal = () => {
                 passenger
             }
 
-
             updateTravel(travel)
         }
     }
     
     const getDailyPart = async (plate,registration)=>{
-     try {
+           try {
                 const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}`)
 
                 const dailyPart = await response.json()
@@ -172,24 +171,24 @@ const Modal = () => {
     }
     
     const updateTravel async (travel)=>{
-     try {
-                const response = await fetch(
-                    "api/travels",
-                    {
-                        method: "PUT",
-                        body: JSON.stringify(travel)
-                    }
-                )
+        try {
+            const response = await fetch(
+                "api/travels",
+                {
+                    method: "PUT",
+                    body: JSON.stringify(travel)
+                }
+            )
 
-                const result = await response.json()
-                travel.id = result.insertId
-                state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
-                setState({ ...state })
-            } catch (erro) {
-                 console.log(erro.message)
-                //location.reload(true)
-                updateTravel(travel)
-            }   
+            const result = await response.json()
+            travel.id = result.insertId
+            state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
+            setState({ ...state })
+        } catch (erro) {
+             console.log(erro.message)
+            //location.reload(true)
+            updateTravel(travel)
+        }   
     }
 
     const addTravel = async () => {
