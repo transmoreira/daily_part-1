@@ -15,7 +15,7 @@ const Home = () => {
         </Head>
         {<Filter state={[listDailyParts, setListDailyParts]} />}
         <main>
-            {listDailyParts.map((item, index) => <Table key={index} dailyPart={item} />)}
+            {listDailyParts.map((item, index) => <Table key={index} dailyPart={item} utc="3"/>)}
         </main>
     </>
 }
