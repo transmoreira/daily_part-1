@@ -9,7 +9,7 @@ const dateFormated = (date, brazil=true) => {
 
 const timeFormated = (time, utc=0) => {
     //console.log(utc)
-    //time.setHours(time.getHours()+utc)
+    time.setHours(time.getHours()+utc)
     //time.setUTCHours(3)
     
     const options = {
