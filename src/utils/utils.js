@@ -8,8 +8,9 @@ const dateFormated = (date, brazil=true) => {
 }
 
 const timeFormated = (time, utc=0) => {
-    console.log(utc)
-    time.setHours(time.getHours()+utc)
+    //console.log(utc)
+    //time.setHours(time.getHours()+utc)
+    time.setUTCHours(3)
     const hour = (time.getHours()).toString().padStart(2,"0")
     const minute = time.getMinutes().toString().padStart(2,"0")
     
