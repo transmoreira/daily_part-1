@@ -75,7 +75,7 @@ const Modal = () => {
             const plate = state.dailyPart.car.plate
 
             const registration = state.dailyPart.driver.registration
-            getDailyPart(plate,registration)
+            await getDailyPart(plate,registration)
 
         }
 
