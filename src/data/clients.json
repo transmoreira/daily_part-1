@@ -1035,5 +1035,210 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Vale Viga",
+    "lines": [
+      {
+        "name": "ABC",
+        "type": "T.",
+        "direction": [
+          "ABC MINA VIGA",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "ABC",
+        "type": "T.",
+        "direction": [
+          "ABC CONGONHAS ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "ALMOCO",
+        "type": "T.",
+        "direction": [
+          "REFEITORIO MINA",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-A01",
+        "type": "T.",
+        "direction": [
+          "ADM CONS. ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-A02",
+        "type": "T.",
+        "direction": [
+          "ADM CONS. ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-A03",
+        "type": "T.",
+        "direction": [
+          "ADM CONS. ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-A04",
+        "type": "T.",
+        "direction": [
+          "ADM CONS. ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-A05",
+        "type": "T.",
+        "direction": [
+          "ADM CONS. ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-T01",
+        "type": "T.",
+        "direction": [
+          "TURNO CONS.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-T02",
+        "type": "T.",
+        "direction": [
+          "TURNO CONS.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-T03",
+        "type": "T.",
+        "direction": [
+          "TURNO CONS.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-T04",
+        "type": "T.",
+        "direction": [
+          "TURNO CONS.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CL-T05",
+        "type": "T.",
+        "direction": [
+          "TURNO CONS.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-A01",
+        "type": "T.",
+        "direction": [
+          "ADM CONG",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-A02",
+        "type": "T.",
+        "direction": [
+          "ADM CONG",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-A03",
+        "type": "T.",
+        "direction": [
+          "ADM CONG",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-A04",
+        "type": "T.",
+        "direction": [
+          "ADM CONG",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-T01",
+        "type": "T.",
+        "direction": [
+          "TURNO CONG.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-T02",
+        "type": "T.",
+        "direction": [
+          "TURNO CONG.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "CO-T03",
+        "type": "T.",
+        "direction": [
+          "TURNO CONG.",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "JC-A01",
+        "type": "T.",
+        "direction": [
+          "ADM JECEABA",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "JT 01",
+        "type": "T.",
+        "direction": [
+          "TURNO JECEABA",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "OB-A01",
+        "type": "T.",
+        "direction": [
+          "ADM OURO BRANCO ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "VALE ",
+        "type": "T.",
+        "direction": [
+          "REFEITORIO USINA ",
+          "VALE VIGA "
+        ]
+      },
+{
+        "name": "VALE ",
+        "type": "T.",
+        "direction": [
+          "VALE",
+          "VALE VIGA "
+        ]
+      }      
+    ]
   }
 ]
