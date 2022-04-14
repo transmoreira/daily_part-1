@@ -144,24 +144,27 @@
         "name": "JGD-3-INTERNO",
         "type": "T.",
         "direction": [
-          "CONTAGEM",
-          "JGD"
+          "TR5",
+          "JGD",
+          "CFJ"
         ]
       },
       {
         "name": "JGD-2-INTERNO",
         "type": "T.",
         "direction": [
-          "CONTAGEM",
-          "JGD"
+          "TR5",
+          "JGD",
+          "CFJ"
         ]
       },
       {
         "name": "JGD-1-INTERNO",
         "type": "T.",
         "direction": [
-          "CONTAGEM",
-          "JGD"
+          "TR5",
+          "JGD",
+          "CFJ"
         ]
       },
       {
