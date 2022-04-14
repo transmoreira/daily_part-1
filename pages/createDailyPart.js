@@ -166,7 +166,7 @@ const Modal = () => {
             } catch (erro) {
                 console.log(erro.message)
                 //location.reload(true)
-                getDailyPart(plate,registration)
+                await getDailyPart(plate,registration)
             }   
     }
     
