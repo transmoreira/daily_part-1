@@ -149,7 +149,7 @@ const Modal = () => {
                 endKM,
                 passenger
             }
-
+            
             updateTravel(travel)
         }
     }
@@ -245,10 +245,10 @@ const Modal = () => {
             origin,
             endKM: null
         }
-
+        
 
         setTraveal(travel)
-
+        console.log(state.dailyPart.travels)
 
     }
     
