@@ -16,18 +16,19 @@ const timeFormated = (time, utc=0) => {
     }
     //time.setUTCHours(3)
     
-    const options = {
+    /*const options = {
       hour: 'numeric', minute: 'numeric',
       hour12: false,
       timeZone: 'America/sao_paulo'
-    }
+    }*/
    
     
    /* if(hour == "NaN"|| minute == "NaN"){
         return ""
     }*/
     try{
-        return new Intl.DateTimeFormat('pt-BR',options).format(time);
+        //return new Intl.DateTimeFormat('pt-BR',options).format(time);
+        return time.toString().substring(11,5)
     }catch(erro){
         return ""
     }
