@@ -22,7 +22,7 @@ const timeFormated = (time, utc=0) => {
         return ""
     }*/
 
-    return new Intl.DateTimeFormat('pt-BR',options).format(time));
+    return new Intl.DateTimeFormat('pt-BR',options).format(time);
 }
 
 const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
