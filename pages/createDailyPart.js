@@ -362,7 +362,7 @@ const Modal = () => {
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
-            <Table onClick={inputValue} dailyPart={state.dailyPart} />
+            <Table onClick={inputValue} dailyPart={state.dailyPart} utc="0"/>
             <textarea
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}
