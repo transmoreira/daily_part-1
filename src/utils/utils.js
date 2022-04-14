@@ -9,9 +9,10 @@ const dateFormated = (date, brazil=true) => {
 
 const timeFormated = (time, utc=0) => {
     //console.log(utc)
+    
     if(utc){
-        console.log(utc)
-        time.setHours(time.getHours()+utc)
+        //console.log(utc)
+        //time.setHours(time.getHours()+utc)
     }
     //time.setUTCHours(3)
     
@@ -26,7 +27,7 @@ const timeFormated = (time, utc=0) => {
         return ""
     }*/
     try{
-        return new Intl.DateTimeFormat('pt-BR',options).format(time);
+        return new Intl.DateTimeFormat('pt-BR',options).format(new Date(time.valueOf() - time.getTimezoneOffset() * 60000));
     }catch(erro){
         return ""
     }
