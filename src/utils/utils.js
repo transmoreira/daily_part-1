@@ -11,14 +11,18 @@ const timeFormated = (time, utc=0) => {
     //console.log(utc)
     //time.setHours(time.getHours()+utc)
     //time.setUTCHours(3)
-    const hour = (time.getHours()).toString().padStart(2,"0")
-    const minute = time.getMinutes().toString().padStart(2,"0")
+    
+    const options = {
+          hour: 'numeric',
+          minute: 'numeric'
+        }
+   
     
     if(hour == "NaN"|| minute == "NaN"){
         return ""
     }
 
-    return `${hour}:${minute }`
+    return new Intl.DateTimeFormat('pt-BR',options).format(time));
 }
 
 const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
