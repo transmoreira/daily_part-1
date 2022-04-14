@@ -16,9 +16,10 @@ const timeFormated = (time, utc=0) => {
     //time.setUTCHours(3)
     
     const options = {
-          hour: 'numeric',
-          minute: 'numeric'
-        }
+      hour: 'numeric', minute: 'numeric',
+      hour12: false,
+      timeZone: 'America/sao_paulo'
+    }
    
     
    /* if(hour == "NaN"|| minute == "NaN"){
