@@ -27,7 +27,7 @@ const timeFormated = (time, utc=0) => {
         return ""
     }*/
     try{
-        return new Intl.DateTimeFormat('pt-BR',options).format(new Date(time.valueOf() - time.getTimezoneOffset() * 60000));
+        return new Intl.DateTimeFormat('pt-BR',options).format(time);
     }catch(erro){
         return ""
     }
