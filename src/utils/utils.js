@@ -21,8 +21,11 @@ const timeFormated = (time, utc=0) => {
    /* if(hour == "NaN"|| minute == "NaN"){
         return ""
     }*/
-
-    return new Intl.DateTimeFormat('pt-BR',options).format(time);
+    try{
+        return new Intl.DateTimeFormat('pt-BR',options).format(time);
+    }catch(erro){
+        return ""
+    }
 }
 
 const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
