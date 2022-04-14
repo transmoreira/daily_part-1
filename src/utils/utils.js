@@ -28,7 +28,7 @@ const timeFormated = (time, utc=0) => {
     }*/
     try{
         //return new Intl.DateTimeFormat('pt-BR',options).format(time);
-        return time.toString().substring(11,5)
+        return time.toString().substr(11,5)
     }catch(erro){
         return ""
     }
