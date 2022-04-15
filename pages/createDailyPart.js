@@ -7,6 +7,10 @@ import { dateFormated } from "../src/utils/utils"
 
 const actualDate = new Date()
 actualDate.setHours(11)
+
+console.log(actualDate)
+console.log(new Date())
+
 let valueInserted
 let timeout
 
