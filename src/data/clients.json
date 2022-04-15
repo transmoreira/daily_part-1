@@ -1,9 +1,7 @@
 [
-  
   {
     "name": "AVG",
     "lines": [
-      
       {
         "name": "BRUM. T.",
         "type": "T.",
@@ -39,7 +37,8 @@
           "EMESA",
           "Almoço | Aprendiz"
         ]
-      }]
+      }
+    ]
   },
   {
     "name": "Vale",
@@ -292,7 +291,6 @@
         ]
       },
       {
-
         "name": "DERD23",
         "type": "ADMINISTRATIVO",
         "direction": [
@@ -307,8 +305,8 @@
           "BELO HORIZONTE",
           "FEIJAO"
         ]
-      },{
-
+      },
+      {
         "name": "DERD07",
         "type": "ADMINISTRATIVO",
         "direction": [
@@ -339,7 +337,7 @@
           "VENDA NOVA",
           "FEIJAO"
         ]
-      }, 
+      },
       {
         "name": "A09 CONCREMAT",
         "type": "ADMINISTRATIVO",
@@ -1043,205 +1041,231 @@
     "name": "Vale Viga",
     "lines": [
       {
-        "name": "ABC",
+        "name": "INTERNO 1",
         "type": "T.",
         "direction": [
-          "ABC MINA VIGA",
-          "VALE VIGA "
+          "INTERNO",
+          "INTERNO"
         ]
       },
-{
-        "name": "ABC",
+      {
+        "name": "INTERNO 2",
         "type": "T.",
         "direction": [
-          "ABC CONGONHAS ",
-          "VALE VIGA "
+          "INTERNO",
+          "INTERNO"
         ]
       },
-{
+      {
+        "name": "ABC LAFAIETE",
+        "type": "T.",
+        "direction": [
+          "LAFAIETE",
+          "VALE VIGA"
+        ]
+      },
+      {
+        "name": "ABC CONGONHAS",
+        "type": "T.",
+        "direction": [
+          "CONGONHAS",
+          "VALE VIGA"
+        ]
+      },
+      {
+        "name": "JANTA",
+        "type": "T.",
+        "direction": [
+          "REFEITORIO MINA",
+          "CONCONHAS",
+          "LAFAIETE",
+          "JECEABA"
+        ]
+      },
+      {
         "name": "ALMOCO",
         "type": "T.",
         "direction": [
           "REFEITORIO MINA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-A01",
         "type": "T.",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-A02",
         "type": "T.",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-A03",
         "type": "T.",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-A04",
         "type": "T.",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-A05",
         "type": "T.",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-T01",
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-T02",
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-T03",
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-T04",
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CL-T05",
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-A01",
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-A02",
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-A03",
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-A04",
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-T01",
         "type": "T.",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-T02",
         "type": "T.",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "CO-T03",
         "type": "T.",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "JC-A01",
         "type": "T.",
         "direction": [
           "ADM JECEABA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "JT 01",
         "type": "T.",
         "direction": [
           "TURNO JECEABA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
-{
+      {
         "name": "OB-A01",
         "type": "T.",
         "direction": [
-          "ADM OURO BRANCO ",
-          "VALE VIGA "
+          "ADM OURO BRANCO",
+          "VALE VIGA"
         ]
       },
-{
-        "name": "VALE ",
+      {
+        "name": "VALE",
         "type": "T.",
         "direction": [
-          "REFEITORIO USINA ",
-          "VALE VIGA "
+          "REFEITORIO USINA",
+          "VALE VIGA"
         ]
       },
-{
-        "name": "VALE ",
+      {
+        "name": "VALE",
         "type": "T.",
         "direction": [
           "VALE",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
-      }      
+      }
     ]
   }
 ]
