@@ -1,16 +1,13 @@
 @media only screen and (max-width: 600px){
     body{
         zoom: 2;
-    }
-
-    
+    }    
 }
 
 *{
     margin: 0;
     padding: 0;
 }
-
 
 article.filter{
     width: max-content;
@@ -22,8 +19,8 @@ article.filter{
     position: fixed;
     z-index: 1;
 }
-article form{
-    
+
+article form{    
     display: flex;
     flex-direction: column;
 }
@@ -60,7 +57,6 @@ article.filter div{
     width: max-content;
 }
 
-
 article.filter form{
     display: flex;
     text-align: center;
@@ -70,7 +66,6 @@ form div{
     display: flex;
     flex-direction: column;
 }
-
 
 main{
     text-align: center;
@@ -103,9 +98,9 @@ td, th{
     text-align: center;
 }
 
-
-
-
+.disable{
+    display: none;
+}
 
 .colorRed{
     color: red;
@@ -181,6 +176,7 @@ button{
     padding: 8px 50px;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .content-modal .close{
@@ -204,16 +200,13 @@ button{
     text-align: center;
     border-radius: 5px;
     background-color: white;
-
 }
 
 .inconsistency{
     padding: 10px;
     font-weight: bold;
     border-radius: 10px;
-
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;    
 }
 
 .error{
@@ -227,8 +220,6 @@ button{
     border: 2px solid yellow;
     color: yellow;
 }
-
-
 
 @media print{
     .no-print{

@@ -23,8 +23,8 @@ const filterDatas = {
     timeCourse: { start: starDate, end: endDate },
     client: "",
     line: "",
-    driver:"",
-    car:""
+    driver: "",
+    car: ""
 }
 let dailyPart = []
 
@@ -32,7 +32,7 @@ const getDailyPartsInDataBase = async () => {
 
     const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}`)
     dailyPart = await response.json()
-  
+
 }
 
 
@@ -52,16 +52,16 @@ const Filter = (props) => {
                 const newDate = new Date(element.value)
                 newDate.setUTCHours(3)
 
-                const shouldUpdatedata = 
-                        newDate.getTime() < filterDatas.timeCourse.start.getTime() ||
-                        newDate.getTime() > filterDatas.timeCourse.end.getTime()
+                const shouldUpdatedata =
+                    newDate.getTime() < filterDatas.timeCourse.start.getTime() ||
+                    newDate.getTime() > filterDatas.timeCourse.end.getTime()
                 console.log(shouldUpdatedata)
-                
+
                 switch (element.id) {
 
                     case "start":
                         filterDatas.timeCourse.start = newDate
-                        if(shouldUpdatedata){
+                        if (shouldUpdatedata) {
                             update()
                         }
                         break;
@@ -69,7 +69,7 @@ const Filter = (props) => {
                         newDate.setSeconds(newDate.getSeconds() - 1)
                         newDate.setDate(newDate.getDate() + 1)
                         filterDatas.timeCourse.end = newDate
-                        if(shouldUpdatedata){
+                        if (shouldUpdatedata) {
                             update()
                         }
                         break;
@@ -95,37 +95,42 @@ const Filter = (props) => {
     }
 
 
-    const update = async (event)=>{
-        if(event){
+    const update = async (event) => {        
+        if (event) {
             event.preventDefault()
+            event.target.classList.add("disable")
         }
+        
         await getDailyPartsInDataBase()
         newFilter()
+        if(event){
+            event.target.classList.remove("disable")
+        }
     }
 
 
 
     const newFilter = () => {
+
         
-        console.log(dailyPart)
-        const newList = dailyPart.filter((item, index) => {           
-            const date = new Date(item.date)            
+        const newList = dailyPart.filter((item, index) => {
+            const date = new Date(item.date)
             date.setUTCHours(3)
 
-            const isBetweenDate = date.getTime() >= 
+            const isBetweenDate = date.getTime() >=
                 filterDatas.timeCourse.start.getTime() &&
                 date.getTime() <= filterDatas.timeCourse.end.getTime()
 
             const hasClient = (filterDatas.client == "" ||
                 item.client == filterDatas.client)
-            
-            const hasDriver = (filterDatas.driver == "" || 
+
+            const hasDriver = (filterDatas.driver == "" ||
                 item.driver.name == filterDatas.driver)
 
-            const hasCar = (filterDatas.car == "" || 
+            const hasCar = (filterDatas.car == "" ||
                 item.car.number == filterDatas.car)
 
-            const hasLine = (filterDatas.line == "" || 
+            const hasLine = (filterDatas.line == "" ||
                 item.travels
                     .map(item => item.line)
                     .filter(item => item == filterDatas.line).length > 0)
@@ -177,9 +182,9 @@ const Filter = (props) => {
                         <option key={employee.registration} value={employee.name}>{employee.registration}</option>)}
                 </datalist>
             </div>
-    <div>
+            <div>
 
-                <button className="red" onClick={update}>Atualizar</button>
+                <button onClick={update}>Atualizar</button>
             </div>
         </form>
         <span>{listDailyParts.length} parte(s) diaria(s)</span>

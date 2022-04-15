@@ -7,10 +7,15 @@ import { dateFormated } from "../src/utils/utils"
 
 const actualDate = new Date()
 actualDate.setHours(11)
+
+
 let valueInserted
 let timeout
+const varTeste = "Divanir de jesus Silva"
 
-const Modal = () => {
+const CreateDailyPart = (props) => {
+
+    const company = props.company || "RN"
     const [error, setError] = useState({ msg: "", type: "" })
     const [state, setState] = useState({
         label: "",
@@ -38,6 +43,11 @@ const Modal = () => {
     }
 
     const inputValue = async () => {
+
+        const dailyPartImcompleted = JSON.parse(localStorage.getItem("dailyPart"))
+        if(dailyPartImcompleted){
+            state.dailyPart = dailyPartImcompleted
+        }
 
         state.closable = true
 
@@ -71,11 +81,11 @@ const Modal = () => {
             }
 
 
-            
+
             const plate = state.dailyPart.car.plate
 
             const registration = state.dailyPart.driver.registration
-            await getDailyPart(plate,registration)
+            await getDailyPart(plate, registration)
 
         }
 
@@ -107,7 +117,7 @@ const Modal = () => {
                 setState({ ...state })
                 addTravel()
             } catch (erro) {
-                 console.log(erro.message)
+                console.log(erro.message)
                 //location.reload(true)
             }
             return
@@ -123,8 +133,14 @@ const Modal = () => {
 
         } else {
 
+            const minTime = actualtravel.startTime
+            const maxTime = new Date(minTime)
+            maxTime.setHours(maxTime.getHours()+3)
+            
             state.label = <>A viagem terminou que <b>HORAS</b>?</>
-            state.type = "time"
+            state.type = "datetime-local"
+            state.min = minTime
+            state.max = maxTime.toISOString().substring(0,16)
             state.list = []
             setState({ ...state })
             const endTime = await getData()
@@ -140,8 +156,8 @@ const Modal = () => {
             setState({ ...state })
             const passenger = parseInt(await getData())
 
-            
-            const timeTravel = `${dateFormated(actualDate, false)} ${endTime}:00`
+
+            const timeTravel = `${endTime}:00`
 
             const travel = {
                 ...actualtravel,
@@ -149,28 +165,28 @@ const Modal = () => {
                 endKM,
                 passenger
             }
-            
+
             updateTravel(travel)
         }
     }
-    
-    const getDailyPart = async (plate,registration)=>{
-           try {
-                const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}`)
 
-                const dailyPart = await response.json()
-                if (dailyPart.length) {
-                    state.dailyPart = dailyPart[0]
-                    setState({ ...state })
-                }
-            } catch (erro) {
-                console.log(erro.message)
-                //location.reload(true)
-                await getDailyPart(plate,registration)
-            }   
+    const getDailyPart = async (plate, registration) => {
+        try {
+            const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}`)
+
+            const dailyPart = await response.json()
+            if (dailyPart.length) {
+                state.dailyPart = dailyPart[0]
+                setState({ ...state })
+            }
+        } catch (erro) {
+            console.log(erro.message)
+            //location.reload(true)
+            await getDailyPart(plate, registration)
+        }
     }
-    
-    const updateTravel = async (travel)=>{
+
+    const updateTravel = async (travel) => {
         try {
             const response = await fetch(
                 "api/travels",
@@ -185,10 +201,10 @@ const Modal = () => {
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
             setState({ ...state })
         } catch (erro) {
-             console.log(erro.message)
+            console.log(erro.message)
             //location.reload(true)
             updateTravel(travel)
-        }   
+        }
     }
 
     const addTravel = async () => {
@@ -204,9 +220,15 @@ const Modal = () => {
         state.type = "text"
         const line = await getData(list, "Linha não encontrada")
 
+        const now = new Date()
+        const yesterday = new Date()
+        yesterday.setDate(yesterday.getDate()-1)
+        
+        state.min = yesterday.toISOString().split("T")[0] + "T23:00"
+        state.max = now.toISOString().substring(0,16)
         state.closable = false
         state.label = <>A viagem começou que <b>HORAS</b>?</>
-        state.type = "time"
+        state.type = "datetime-local"
         state.list = []
 
         const startTime = await getData()
@@ -233,8 +255,8 @@ const Modal = () => {
             await getData(destinys, "Destino nao encontrado!")
 
 
-        
-        const timeTravel = `${dateFormated(actualDate, false)} ${startTime}:00`
+
+        const timeTravel = `${startTime}:00`
 
         const travel = {
             id_daily_part: state.dailyPart.id,
@@ -245,15 +267,15 @@ const Modal = () => {
             origin,
             endKM: null
         }
-        
+
 
         setTraveal(travel)
         console.log(state.dailyPart.travels)
 
     }
-    
-    const setTraveal = async (travel)=>{
-      try {
+
+    const setTraveal = async (travel) => {
+        try {
             const response = await fetch(
                 "api/travels",
                 {
@@ -266,12 +288,12 @@ const Modal = () => {
             travel.id = result.insertId
             state.dailyPart.travels.push(travel)
             setState({ ...state })
-
+            localStorage.setItem("dailyPart", JSON.stringify(state.dailyPart))
         } catch (erro) {
-             console.log(erro.message)
-                //location.reload(true)
+            console.log(erro.message)
+            //location.reload(true)
             setTraveal(travel)
-        }  
+        }
     }
 
     const getData = (list = null, msgError = "", shouldCheckKM = false) =>
@@ -344,6 +366,7 @@ const Modal = () => {
                         body: JSON.stringify(state.dailyPart)
                     }
                 )
+                localStorage.setItem("dailyPart", null)
             } catch (e) {
                 console.log(e)
             }
@@ -357,12 +380,12 @@ const Modal = () => {
         timeout = setTimeout(callback, 1000);
     }
 
-   // inputValue()
+    // inputValue()
 
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
-            <Table onClick={inputValue} dailyPart={state.dailyPart} utc="0"/>
+            <Table onClick={inputValue} dailyPart={state.dailyPart} company={company} />
             <textarea
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}
@@ -375,12 +398,16 @@ const Modal = () => {
                 {state.closable ? <span className="close"
                     onClick={closeMadal}>x</span> : ""}
                 <label>{state.label}</label>
+
                 <input
                     type={state.type}
                     placeholder="Toque aqui para digitar"
                     list="list"
                     onChange={onChangeInput}
-                    value={state.value} />
+                    value={state.value}
+                    min={state.min}
+                    max={state.max}
+                />
                 <datalist id="list">
                     {
                         state.list.map((item, index) =>
@@ -391,7 +418,6 @@ const Modal = () => {
                     {error.msg}
                 </span>
                 <button onClick={onclickOK}>OK</button>
-
             </div>
         </div>
 
@@ -399,4 +425,4 @@ const Modal = () => {
 }
 
 
-export default Modal
+export default CreateDailyPart
