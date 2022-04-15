@@ -8,7 +8,6 @@ import { dateFormated } from "../src/utils/utils"
 const actualDate = new Date()
 actualDate.setHours(11)
 
-
 let valueInserted
 let timeout
 const varTeste = "Divanir de jesus Silva"
