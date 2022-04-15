@@ -220,7 +220,8 @@ const CreateDailyPart = (props) => {
         const line = await getData(list, "Linha não encontrada")
 
         const now = new Date()
-        now.setUTCHours(-3)
+        //now.setUTCHours(-3)
+        now.setHours(now.getHours() -3)
         const yesterday = new Date()
         yesterday.setDate(yesterday.getDate()-1)
         
