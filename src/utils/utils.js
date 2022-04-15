@@ -4,7 +4,7 @@ const dateFormated = (date, brazil=true) => {
     const month = (date.getMonth() + 1).toString().padStart(2,"0")
     const year = date.getFullYear()    
     
-    return brazil ? date.toLocaleDateString() : `${year}-${month}-${day}`
+    return brazil ? d`${day}/${month}/${year}` : `${year}-${month}-${day}`
 }
 
 const timeFormated = (time, utc=0) => {
