@@ -4,30 +4,13 @@ const dateFormated = (date, brazil=true) => {
     const month = (date.getMonth() + 1).toString().padStart(2,"0")
     const year = date.getFullYear()    
     
-    return brazil ? d`${day}/${month}/${year}` : `${year}-${month}-${day}`
+    return brazil ? `${day}/${month}/${year}` : `${year}-${month}-${day}`
 }
 
-const timeFormated = (time, utc=0) => {
-    //console.log(utc)
-    
-    if(utc){
-        //console.log(utc)
-        //time.setHours(time.getHours()+utc)
-    }
-    //time.setUTCHours(3)
-    
-    /*const options = {
-      hour: 'numeric', minute: 'numeric',
-      hour12: false,
-      timeZone: 'America/sao_paulo'
-    }*/
+const timeFormated = (time) => {
    
-    
-   /* if(hour == "NaN"|| minute == "NaN"){
-        return ""
-    }*/
     try{
-        //return new Intl.DateTimeFormat('pt-BR',options).format(time);
+        
         const timeString = time.toString().substr(11,5)
         return timeString != "00:00" ? timeString : ""
     }catch(erro){
