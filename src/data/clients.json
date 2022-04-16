@@ -4,7 +4,6 @@
     "lines": [
       {
         "name": "BRUM. T.",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "EMESA",
@@ -14,7 +13,6 @@
       },
       {
         "name": "BRUM. ADM",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "EMESA"
@@ -22,7 +20,6 @@
       },
       {
         "name": "CONTAGEM ADM",
-        "type": "T.",
         "direction": [
           "Contagem",
           "EMESA",
@@ -31,7 +28,6 @@
       },
       {
         "name": "CONTAGEM T.",
-        "type": "T.",
         "direction": [
           "CID. IND",
           "EMESA",
@@ -171,7 +167,6 @@
       },
       {
         "name": "MAC-CIRCULAR",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -179,7 +174,6 @@
       },
       {
         "name": "JGD-T7-IBIRITE",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -187,7 +181,6 @@
       },
       {
         "name": "JGD-T6D-ARANHA",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -195,7 +188,6 @@
       },
       {
         "name": "JGD-T5-ELDORADO",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -203,7 +195,6 @@
       },
       {
         "name": "JGD-T2-PROGRESSO",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -211,7 +202,6 @@
       },
       {
         "name": "JGD-T1-ITAGUA",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -219,7 +209,6 @@
       },
       {
         "name": "JGD-A7-A.BRANCA",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -227,7 +216,6 @@
       },
       {
         "name": "JGD-A5-C.ITAGUA",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -235,7 +223,6 @@
       },
       {
         "name": "JGD-A4-S.CONRADO",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -243,7 +230,6 @@
       },
       {
         "name": "JGD-A3-PROGRESSO",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -251,7 +237,6 @@
       },
       {
         "name": "JGD-A2-BH SHOP",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "JGD"
@@ -259,7 +244,6 @@
       },
       {
         "name": "JGD-A1-V.NOVA",
-        "type": "T.",
         "direction": [
           "V.NOVA",
           "JGD"
@@ -267,7 +251,6 @@
       },
       {
         "name": "JGD-3-INTERNO",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "JGD"
@@ -275,7 +258,6 @@
       },
       {
         "name": "JGD-2-INTERNO",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "JGD"
@@ -283,7 +265,6 @@
       },
       {
         "name": "JGD-1-INTERNO",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "JGD"
@@ -291,7 +272,6 @@
       },
       {
         "name": "JGD-12X36-ELDOR",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "JGD"
@@ -299,7 +279,6 @@
       },
       {
         "name": "JGD-12X36-C.ITAG",
-        "type": "T.",
         "direction": [
           "BRUMADINHO",
           "JGD"
@@ -307,7 +286,6 @@
       },
       {
         "name": "MARAVILHAS3",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "MARAVILHAS3",
           "ITABIRITO"
@@ -315,7 +293,6 @@
       },
       {
         "name": "DERD06",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "CMM"
@@ -323,7 +300,6 @@
       },
       {
         "name": "DERD03",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BRUMADINHO",
           "AURORA",
@@ -333,7 +309,6 @@
       },
       {
         "name": "10 BARAO C",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BARAO DE COCAIS",
           "MINA TORTO"
@@ -341,7 +316,6 @@
       },
       {
         "name": "09 SAO CONCALO",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "SAO G. RIO ABAIXO",
           "MINA TORTO"
@@ -349,7 +323,6 @@
       },
       {
         "name": "08 MINA FABRICA",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "C LAFAIETE",
           "MINA FABRICA"
@@ -357,7 +330,6 @@
       },
       {
         "name": "06 MINA FABRICA",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "C LAFAIETE",
           "MINA FABRICA"
@@ -365,7 +337,6 @@
       },
       {
         "name": "07 MINA FABRICA",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "C LAFAIETE",
           "PROGEN"
@@ -373,7 +344,6 @@
       },
       {
         "name": "05 GONGO SOCO",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BARAO DE COCAIS",
           "GONGO SOCO"
@@ -381,7 +351,6 @@
       },
       {
         "name": "02 CAUE",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRA",
           "CAUE",
@@ -390,7 +359,6 @@
       },
       {
         "name": "MEMORIAL",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "MEMORIAL",
           "CONCREMAT",
@@ -399,7 +367,6 @@
       },
       {
         "name": "SODEXO",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CFJ",
           "JANGADA"
@@ -407,7 +374,6 @@
       },
       {
         "name": "ALMOCO CONCREMAT",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ALMOCO",
           "CONCREMAT"
@@ -415,7 +381,6 @@
       },
       {
         "name": "DERD23",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "BRUMADINHO"
@@ -423,7 +388,6 @@
       },
       {
         "name": "DERD08",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "FEIJAO"
@@ -431,7 +395,6 @@
       },
       {
         "name": "DERD07",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CID. INDUSTRIAL",
           "AURORA"
@@ -439,7 +402,6 @@
       },
       {
         "name": "DERD05",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "PEDRO II",
           "FEIJAO"
@@ -447,7 +409,6 @@
       },
       {
         "name": "DERD02",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "FEIJAO"
@@ -455,7 +416,6 @@
       },
       {
         "name": "A01 CONCREMAT",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "VENDA NOVA",
           "FEIJAO"
@@ -463,7 +423,6 @@
       },
       {
         "name": "A09 CONCREMAT",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BRUMADINHO",
           "FEIJAO"
@@ -471,7 +430,6 @@
       },
       {
         "name": "A08 CONCREMAT R.",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CID. INDUSTRIAL",
           "FEIJAO"
@@ -479,7 +437,6 @@
       },
       {
         "name": "CDM-A1-BHSHOP",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CDM"
@@ -487,7 +444,6 @@
       },
       {
         "name": "CDM-A2-BIGSHOP",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "CDM"
@@ -495,7 +451,6 @@
       },
       {
         "name": "CDM-A3-CID.ADM",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CDM"
@@ -503,7 +458,6 @@
       },
       {
         "name": "CDM-A5-CAETE",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CAETE",
           "CDM"
@@ -511,7 +465,6 @@
       },
       {
         "name": "A31",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "CMT"
@@ -519,7 +472,6 @@
       },
       {
         "name": "A32",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "CMT",
@@ -528,7 +480,6 @@
       },
       {
         "name": "A38",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BRUMADINHO",
           "CMT"
@@ -536,7 +487,6 @@
       },
       {
         "name": "A40",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CMT"
@@ -544,7 +494,6 @@
       },
       {
         "name": "A44",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "CMT"
@@ -552,7 +501,6 @@
       },
       {
         "name": "A45",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BETIM",
           "CMT"
@@ -560,7 +508,6 @@
       },
       {
         "name": "H1",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "CMT"
@@ -568,7 +515,6 @@
       },
       {
         "name": "H8",
-        "type": "T.",
         "direction": [
           "RAPOSOS",
           "CMT"
@@ -576,7 +522,6 @@
       },
       {
         "name": "H14",
-        "type": "T.",
         "direction": [
           "RIO ACIMA",
           "CMT"
@@ -584,7 +529,6 @@
       },
       {
         "name": "A01",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CPX"
@@ -592,7 +536,6 @@
       },
       {
         "name": "A02",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BRUMADINHO",
           "CPX"
@@ -600,7 +543,6 @@
       },
       {
         "name": "A03",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "SABARA",
           "CPX"
@@ -608,7 +550,6 @@
       },
       {
         "name": "A04",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "SANTA LUZIA",
           "CPX"
@@ -616,7 +557,6 @@
       },
       {
         "name": "A05",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CPX"
@@ -624,7 +564,6 @@
       },
       {
         "name": "A08",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "MUT"
@@ -632,7 +571,6 @@
       },
       {
         "name": "A10",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "SARZEDO",
           "MUT"
@@ -640,7 +578,6 @@
       },
       {
         "name": "A11",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "IBIRITE",
           "TOD"
@@ -648,7 +585,6 @@
       },
       {
         "name": "A12",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BETIM",
           "CPX"
@@ -656,7 +592,6 @@
       },
       {
         "name": "A15",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RAPOSOS",
           "CPX"
@@ -664,7 +599,6 @@
       },
       {
         "name": "A16",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RIO ACIMA",
           "TOD"
@@ -672,7 +606,6 @@
       },
       {
         "name": "A17",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RAPOSOS",
           "MUT"
@@ -680,7 +613,6 @@
       },
       {
         "name": "A18",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RIO ACIMA",
           "MUT"
@@ -688,7 +620,6 @@
       },
       {
         "name": "A19",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RAPOSOS",
           "CMT"
@@ -696,7 +627,6 @@
       },
       {
         "name": "A20",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RIO ACIMA",
           "CMT"
@@ -704,7 +634,6 @@
       },
       {
         "name": "A21",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "RAPOSOS",
           "TAM"
@@ -712,7 +641,6 @@
       },
       {
         "name": "A22",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "NOVA LIMA",
           "CTF"
@@ -720,7 +648,6 @@
       },
       {
         "name": "A23",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "IBIRITE",
           "CPX"
@@ -728,7 +655,6 @@
       },
       {
         "name": "A24",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CPX"
@@ -736,7 +662,6 @@
       },
       {
         "name": "A25",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "CPX"
@@ -744,7 +669,6 @@
       },
       {
         "name": "A27",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "CPX"
@@ -752,7 +676,6 @@
       },
       {
         "name": "H5A",
-        "type": "T.",
         "direction": [
           "RIO ACIMA",
           "MUT"
@@ -760,7 +683,6 @@
       },
       {
         "name": "A30",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "CTF"
@@ -768,7 +690,6 @@
       },
       {
         "name": "A34",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "CTF"
@@ -776,7 +697,6 @@
       },
       {
         "name": "A36",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CTF"
@@ -784,7 +704,6 @@
       },
       {
         "name": "A39",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "SABARA",
           "CTF"
@@ -792,7 +711,6 @@
       },
       {
         "name": "A43",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "IBIRITE",
           "CTF"
@@ -800,7 +718,6 @@
       },
       {
         "name": "A46",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "BELO HORIZONTE",
           "CTF"
@@ -808,7 +725,6 @@
       },
       {
         "name": "OP5B",
-        "type": "OPERACIONAL",
         "direction": [
           "CONTAGEM",
           "MAZ"
@@ -816,7 +732,6 @@
       },
       {
         "name": "A28",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "MUT"
@@ -824,7 +739,6 @@
       },
       {
         "name": "A28 REFORÇO FIM DE SEMANA E FERIADO",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "MUT"
@@ -832,7 +746,6 @@
       },
       {
         "name": "A29",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "MUT"
@@ -840,7 +753,6 @@
       },
       {
         "name": "H1A",
-        "type": "T.",
         "direction": [
           "RAPOSOS",
           "MUT"
@@ -848,7 +760,6 @@
       },
       {
         "name": "H2A",
-        "type": "T.",
         "direction": [
           "MARIO CAMPOS",
           "MUT"
@@ -856,7 +767,6 @@
       },
       {
         "name": "H2B",
-        "type": "T.",
         "direction": [
           "MARIO CAMPOS",
           "MUT"
@@ -864,7 +774,6 @@
       },
       {
         "name": "H2C",
-        "type": "T.",
         "direction": [
           "MARIO CAMPOS",
           "MUT"
@@ -872,7 +781,6 @@
       },
       {
         "name": "H2D",
-        "type": "T.",
         "direction": [
           "MARIO CAMPOS",
           "MUT"
@@ -880,7 +788,6 @@
       },
       {
         "name": "H3A",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "MUT"
@@ -888,7 +795,6 @@
       },
       {
         "name": "H3B",
-        "type": "T.",
         "direction": [
           "BETIM",
           "MUT"
@@ -896,7 +802,6 @@
       },
       {
         "name": "H3C",
-        "type": "T.",
         "direction": [
           "BETIM",
           "MUT"
@@ -904,7 +809,6 @@
       },
       {
         "name": "H3D",
-        "type": "T.",
         "direction": [
           "BETIM",
           "MUT"
@@ -912,7 +816,6 @@
       },
       {
         "name": "H4A",
-        "type": "T.",
         "direction": [
           "SABARA",
           "CPX"
@@ -920,7 +823,6 @@
       },
       {
         "name": "H4B",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "CPX"
@@ -928,7 +830,6 @@
       },
       {
         "name": "H4C",
-        "type": "T.",
         "direction": [
           "SABARA",
           "CPX"
@@ -936,7 +837,6 @@
       },
       {
         "name": "H4D",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "CPX"
@@ -944,7 +844,6 @@
       },
       {
         "name": "H9",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "MAZ"
@@ -952,7 +851,6 @@
       },
       {
         "name": "T1A",
-        "type": "T.",
         "direction": [
           "RAPOSOS",
           "CPX"
@@ -960,7 +858,6 @@
       },
       {
         "name": "T2A",
-        "type": "T.",
         "direction": [
           "IBIRITE",
           "MUT"
@@ -968,7 +865,6 @@
       },
       {
         "name": "T2C",
-        "type": "T.",
         "direction": [
           "MARIO CAMPOS",
           "MUT"
@@ -976,7 +872,6 @@
       },
       {
         "name": "T3A",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "CPX"
@@ -984,7 +879,6 @@
       },
       {
         "name": "T3B",
-        "type": "T.",
         "direction": [
           "BETIM",
           "CPX"
@@ -992,7 +886,6 @@
       },
       {
         "name": "T3C",
-        "type": "T.",
         "direction": [
           "IBIRITE",
           "CPX"
@@ -1000,7 +893,6 @@
       },
       {
         "name": "T3D",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "CPX"
@@ -1008,7 +900,6 @@
       },
       {
         "name": "T4A",
-        "type": "T.",
         "direction": [
           "SABARA",
           "CPX"
@@ -1016,7 +907,6 @@
       },
       {
         "name": "T4B",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "CPX"
@@ -1024,7 +914,6 @@
       },
       {
         "name": "T9",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "MAZ"
@@ -1032,7 +921,6 @@
       },
       {
         "name": "H13",
-        "type": "T.",
         "direction": [
           "RIO ACIMA",
           "PIC"
@@ -1040,7 +928,6 @@
       },
       {
         "name": "T13",
-        "type": "T.",
         "direction": [
           "RIO ACIMA",
           "PIC"
@@ -1048,7 +935,6 @@
       },
       {
         "name": "A33",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "ITABIRITO",
           "TAM"
@@ -1056,7 +942,6 @@
       },
       {
         "name": "A37",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "CONTAGEM",
           "TAM"
@@ -1064,7 +949,6 @@
       },
       {
         "name": "A41",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "SANTA LUZIA",
           "TAM"
@@ -1072,7 +956,6 @@
       },
       {
         "name": "A42",
-        "type": "ADMINISTRATIVO",
         "direction": [
           "IBIRITE",
           "TAM"
@@ -1080,7 +963,6 @@
       },
       {
         "name": "H2",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "TAM"
@@ -1088,7 +970,6 @@
       },
       {
         "name": "H3",
-        "type": "T.",
         "direction": [
           "ITABIRITO",
           "TAM"
@@ -1096,7 +977,6 @@
       },
       {
         "name": "T2",
-        "type": "T.",
         "direction": [
           "CONTAGEM",
           "TAM"
@@ -1104,7 +984,6 @@
       },
       {
         "name": "T3",
-        "type": "T.",
         "direction": [
           "ITABIRITO",
           "TAM"
@@ -1112,7 +991,6 @@
       },
       {
         "name": "H4",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "VGR"
@@ -1120,7 +998,6 @@
       },
       {
         "name": "H7",
-        "type": "T.",
         "direction": [
           "IBIRITE",
           "VGR"
@@ -1128,7 +1005,6 @@
       },
       {
         "name": "H12",
-        "type": "T.",
         "direction": [
           "RAPOSOS",
           "ABO"
@@ -1136,7 +1012,6 @@
       },
       {
         "name": "T4",
-        "type": "T.",
         "direction": [
           "BELO HORIZONTE",
           "VGR"
@@ -1144,7 +1019,6 @@
       },
       {
         "name": "T7",
-        "type": "T.",
         "direction": [
           "IBIRITE",
           "VGR"
@@ -1152,7 +1026,6 @@
       },
       {
         "name": "T12",
-        "type": "T.",
         "direction": [
           "RAPOSOS",
           "ABO"
@@ -1165,7 +1038,6 @@
     "lines": [
       {
         "name": "ABC",
-        "type": "T.",
         "direction": [
           "ABC MINA VIGA",
           "VALE VIGA "
@@ -1173,7 +1045,6 @@
       },
       {
         "name": "ABC",
-        "type": "T.",
         "direction": [
           "ABC CONGONHAS ",
           "VALE VIGA "
@@ -1181,7 +1052,6 @@
       },
       {
         "name": "ALMOCO",
-        "type": "T.",
         "direction": [
           "REFEITORIO MINA",
           "VALE VIGA "
@@ -1189,7 +1059,6 @@
       },
       {
         "name": "CL-A01",
-        "type": "T.",
         "direction": [
           "ADM CONS. ",
           "VALE VIGA "
@@ -1197,7 +1066,6 @@
       },
       {
         "name": "CL-A02",
-        "type": "T.",
         "direction": [
           "ADM CONS. ",
           "VALE VIGA "
@@ -1205,7 +1073,6 @@
       },
       {
         "name": "CL-A03",
-        "type": "T.",
         "direction": [
           "ADM CONS. ",
           "VALE VIGA "
@@ -1213,7 +1080,6 @@
       },
       {
         "name": "CL-A04",
-        "type": "T.",
         "direction": [
           "ADM CONS. ",
           "VALE VIGA "
@@ -1221,7 +1087,6 @@
       },
       {
         "name": "CL-A05",
-        "type": "T.",
         "direction": [
           "ADM CONS. ",
           "VALE VIGA "
@@ -1229,7 +1094,6 @@
       },
       {
         "name": "CL-T01",
-        "type": "T.",
         "direction": [
           "TURNO CONS.",
           "VALE VIGA "
@@ -1237,7 +1101,6 @@
       },
       {
         "name": "CL-T02",
-        "type": "T.",
         "direction": [
           "TURNO CONS.",
           "VALE VIGA "
@@ -1245,7 +1108,6 @@
       },
       {
         "name": "CL-T03",
-        "type": "T.",
         "direction": [
           "TURNO CONS.",
           "VALE VIGA "
@@ -1253,7 +1115,6 @@
       },
       {
         "name": "CL-T04",
-        "type": "T.",
         "direction": [
           "TURNO CONS.",
           "VALE VIGA "
@@ -1261,7 +1122,6 @@
       },
       {
         "name": "CL-T05",
-        "type": "T.",
         "direction": [
           "TURNO CONS.",
           "VALE VIGA "
@@ -1269,7 +1129,6 @@
       },
       {
         "name": "CO-A01",
-        "type": "T.",
         "direction": [
           "ADM CONG",
           "VALE VIGA "
@@ -1277,7 +1136,6 @@
       },
       {
         "name": "CO-A02",
-        "type": "T.",
         "direction": [
           "ADM CONG",
           "VALE VIGA "
@@ -1285,7 +1143,6 @@
       },
       {
         "name": "CO-A03",
-        "type": "T.",
         "direction": [
           "ADM CONG",
           "VALE VIGA "
@@ -1293,7 +1150,6 @@
       },
       {
         "name": "CO-A04",
-        "type": "T.",
         "direction": [
           "ADM CONG",
           "VALE VIGA "
@@ -1301,7 +1157,6 @@
       },
       {
         "name": "CO-T01",
-        "type": "T.",
         "direction": [
           "TURNO CONG.",
           "VALE VIGA "
@@ -1309,7 +1164,6 @@
       },
       {
         "name": "CO-T02",
-        "type": "T.",
         "direction": [
           "TURNO CONG.",
           "VALE VIGA "
@@ -1317,7 +1171,6 @@
       },
       {
         "name": "CO-T03",
-        "type": "T.",
         "direction": [
           "TURNO CONG.",
           "VALE VIGA "
@@ -1325,7 +1178,6 @@
       },
       {
         "name": "JC-A01",
-        "type": "T.",
         "direction": [
           "ADM JECEABA",
           "VALE VIGA "
@@ -1333,7 +1185,6 @@
       },
       {
         "name": "JT 01",
-        "type": "T.",
         "direction": [
           "TURNO JECEABA",
           "VALE VIGA "
@@ -1341,7 +1192,6 @@
       },
       {
         "name": "OB-A01",
-        "type": "T.",
         "direction": [
           "ADM OURO BRANCO ",
           "VALE VIGA "
@@ -1565,6 +1415,95 @@
         "direction": [
           "ITAGUARA",
           "ESTAÇÃO ELDORADO"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PETROBRÁS",
+    "lines": [
+      {
+        "name": "Linha 01",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 01",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 07",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "LINHA 08",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "LINHA 10",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 12",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 13",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 14",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 15",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 16",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "LINHA 17",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
+        ]
+      },
+      {
+        "name": "Linha 18",
+        "direction": [
+          "BAIRRO",
+          "REGAP"
         ]
       }
     ]
