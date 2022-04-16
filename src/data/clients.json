@@ -1040,161 +1040,161 @@
         "name": "ABC",
         "direction": [
           "ABC MINA VIGA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "ABC",
         "direction": [
-          "ABC CONGONHAS ",
-          "VALE VIGA "
+          "ABC CONGONHAS",
+          "VALE VIGA"
         ]
       },
       {
         "name": "ALMOCO",
         "direction": [
           "REFEITORIO MINA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-A01",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-A02",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-A03",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-A04",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-A05",
         "direction": [
-          "ADM CONS. ",
-          "VALE VIGA "
+          "ADM CONS.",
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-T01",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-T02",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-T03",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-T04",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CL-T05",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-A01",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-A02",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-A03",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-A04",
         "direction": [
           "ADM CONG",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-T01",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-T02",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "CO-T03",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "JC-A01",
         "direction": [
           "ADM JECEABA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "JT 01",
         "direction": [
           "TURNO JECEABA",
-          "VALE VIGA "
+          "VALE VIGA"
         ]
       },
       {
         "name": "OB-A01",
         "direction": [
-          "ADM OURO BRANCO ",
-          "VALE VIGA "
+          "ADM OURO BRANCO",
+          "VALE VIGA"
         ]
       }
     ]
@@ -1212,14 +1212,14 @@
       {
         "name": "001C",
         "direction": [
-          "PARQUE RENASCER ",
+          "PARQUE RENASCER",
           " CIDADE INDUSTRIAL"
         ]
       },
       {
         "name": "170",
         "direction": [
-          "CIRCULAR CONTAGEM ",
+          "CIRCULAR CONTAGEM",
           " VILA MILITAR"
         ]
       },
