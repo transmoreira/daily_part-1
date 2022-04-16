@@ -9,7 +9,6 @@
           "BRUMADINHO",
           "EMESA",
           "JANTAR",
-          "ALMOÇO",
           "JOVENS APRENDIZES"
         ]
       },
@@ -44,6 +43,132 @@
   {
     "name": "Vale",
     "lines": [
+      {
+        "name": "CMT-01-CIRC.VULC",
+        "direction": [
+          "CMT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CMT-01-INTERNO",
+        "direction": [
+          "CMT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CMT-01-INTERNO",
+        "direction": [
+          "CMT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CPX-01-INTERNO",
+        "direction": [
+          "CPX",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CPX-01-INTERNO",
+        "direction": [
+          "CPX",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CPX-02-INTERNO",
+        "direction": [
+          "CPX",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CPX-02-INTERNO",
+        "direction": [
+          "CPX",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CPX-03-INTERNO",
+        "direction": [
+          "CPX",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CPX-03-INTERNO",
+        "direction": [
+          "CPX",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "CTF-01-ALMOCO",
+        "direction": [
+          "CTF",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "INT-CMT/PICO",
+        "direction": [
+          "CMT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "INT-CMT/TAM",
+        "direction": [
+          "CMT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "INT-PAIOL",
+        "direction": [
+          "CMT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "MUT-ALMOCO-USINA",
+        "direction": [
+          "MUT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "MUT-01-ALMOCO",
+        "direction": [
+          "MUT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "MUT-AL-PORT.DIR.",
+        "direction": [
+          "MUT",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "TOD-01-ALMOCO",
+        "direction": [
+          "TOD",
+          "MATRIZ"
+        ]
+      },
+      {
+        "name": "MAC-CIRCULAR",
+        "direction": [
+          "MAC",
+          "MATRIZ"
+        ]
+      },
       {
         "name": "MAC-CIRCULAR",
         "type": "T.",
@@ -144,27 +269,24 @@
         "name": "JGD-3-INTERNO",
         "type": "T.",
         "direction": [
-          "TR5",
-          "JGD",
-          "CFJ"
+          "CONTAGEM",
+          "JGD"
         ]
       },
       {
         "name": "JGD-2-INTERNO",
         "type": "T.",
         "direction": [
-          "TR5",
-          "JGD",
-          "CFJ"
+          "CONTAGEM",
+          "JGD"
         ]
       },
       {
         "name": "JGD-1-INTERNO",
         "type": "T.",
         "direction": [
-          "TR5",
-          "JGD",
-          "CFJ"
+          "CONTAGEM",
+          "JGD"
         ]
       },
       {
@@ -1042,45 +1164,19 @@
     "name": "Vale Viga",
     "lines": [
       {
-        "name": "INTERNO 1",
+        "name": "ABC",
         "type": "T.",
         "direction": [
-          "INTERNO",
-          "INTERNO"
+          "ABC MINA VIGA",
+          "VALE VIGA "
         ]
       },
       {
-        "name": "INTERNO 2",
+        "name": "ABC",
         "type": "T.",
         "direction": [
-          "INTERNO",
-          "INTERNO"
-        ]
-      },
-      {
-        "name": "ABC LAFAIETE",
-        "type": "T.",
-        "direction": [
-          "LAFAIETE",
-          "VALE VIGA"
-        ]
-      },
-      {
-        "name": "ABC CONGONHAS",
-        "type": "T.",
-        "direction": [
-          "CONGONHAS",
-          "VALE VIGA"
-        ]
-      },
-      {
-        "name": "JANTA",
-        "type": "T.",
-        "direction": [
-          "REFEITORIO MINA",
-          "CONCONHAS",
-          "LAFAIETE",
-          "JECEABA"
+          "ABC CONGONHAS ",
+          "VALE VIGA "
         ]
       },
       {
@@ -1088,47 +1184,47 @@
         "type": "T.",
         "direction": [
           "REFEITORIO MINA",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
         "name": "CL-A01",
         "type": "T.",
         "direction": [
-          "ADM CONS.",
-          "VALE VIGA"
+          "ADM CONS. ",
+          "VALE VIGA "
         ]
       },
       {
         "name": "CL-A02",
         "type": "T.",
         "direction": [
-          "ADM CONS.",
-          "VALE VIGA"
+          "ADM CONS. ",
+          "VALE VIGA "
         ]
       },
       {
         "name": "CL-A03",
         "type": "T.",
         "direction": [
-          "ADM CONS.",
-          "VALE VIGA"
+          "ADM CONS. ",
+          "VALE VIGA "
         ]
       },
       {
         "name": "CL-A04",
         "type": "T.",
         "direction": [
-          "ADM CONS.",
-          "VALE VIGA"
+          "ADM CONS. ",
+          "VALE VIGA "
         ]
       },
       {
         "name": "CL-A05",
         "type": "T.",
         "direction": [
-          "ADM CONS.",
-          "VALE VIGA"
+          "ADM CONS. ",
+          "VALE VIGA "
         ]
       },
       {
@@ -1136,7 +1232,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1144,7 +1240,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1152,7 +1248,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1160,7 +1256,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1168,7 +1264,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONS.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1176,7 +1272,7 @@
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1184,7 +1280,7 @@
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1192,7 +1288,7 @@
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1200,7 +1296,7 @@
         "type": "T.",
         "direction": [
           "ADM CONG",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1208,7 +1304,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1216,7 +1312,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1224,7 +1320,7 @@
         "type": "T.",
         "direction": [
           "TURNO CONG.",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1232,7 +1328,7 @@
         "type": "T.",
         "direction": [
           "ADM JECEABA",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
@@ -1240,31 +1336,15 @@
         "type": "T.",
         "direction": [
           "TURNO JECEABA",
-          "VALE VIGA"
+          "VALE VIGA "
         ]
       },
       {
         "name": "OB-A01",
         "type": "T.",
         "direction": [
-          "ADM OURO BRANCO",
-          "VALE VIGA"
-        ]
-      },
-      {
-        "name": "VALE",
-        "type": "T.",
-        "direction": [
-          "REFEITORIO USINA",
-          "VALE VIGA"
-        ]
-      },
-      {
-        "name": "VALE",
-        "type": "T.",
-        "direction": [
-          "VALE",
-          "VALE VIGA"
+          "ADM OURO BRANCO ",
+          "VALE VIGA "
         ]
       }
     ]
