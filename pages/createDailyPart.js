@@ -15,6 +15,7 @@ const varTeste = "Divanir de jesus Silva"
 const CreateDailyPart = (props) => {
 
     const company = props.company || "RN"
+    const isUrban = company === "TM"
     const [error, setError] = useState({ msg: "", type: "" })
     const [state, setState] = useState({
         label: "",
@@ -36,6 +37,11 @@ const CreateDailyPart = (props) => {
         }
     })
 
+    const dailyPartImcompleted = JSON.parse(localStorage.getItem("dailyPart"))
+    if (dailyPartImcompleted) {
+        state.dailyPart = dailyPartImcompleted
+    }
+
     const closeMadal = () => {
         state.close = "close"
         setState({ ...state })
@@ -43,10 +49,6 @@ const CreateDailyPart = (props) => {
 
     const inputValue = async () => {
 
-        const dailyPartImcompleted = JSON.parse(localStorage.getItem("dailyPart"))
-        if(dailyPartImcompleted){
-            state.dailyPart = dailyPartImcompleted
-        }
 
         state.closable = true
 
@@ -134,12 +136,12 @@ const CreateDailyPart = (props) => {
 
             const minTime = actualtravel.startTime
             const maxTime = new Date(minTime)
-            maxTime.setHours(maxTime.getHours()+3)
-            
+            maxTime.setHours(maxTime.getHours() + 3)
+
             state.label = <>A viagem terminou que <b>HORAS</b>?</>
             state.type = "datetime-local"
             state.min = minTime
-            state.max = maxTime.toISOString().substring(0,16)
+            state.max = maxTime.toISOString().substring(0, 16)
             state.list = []
             setState({ ...state })
             const endTime = await getData()
@@ -194,11 +196,12 @@ const CreateDailyPart = (props) => {
                     body: JSON.stringify(travel)
                 }
             )
-
+            
             const result = await response.json()
             travel.id = result.insertId
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
             setState({ ...state })
+            localStorage.removeItem("dailyPart")
         } catch (erro) {
             console.log(erro.message)
             //location.reload(true)
@@ -221,12 +224,12 @@ const CreateDailyPart = (props) => {
 
         const now = new Date()
         //now.setUTCHours(-3)
-        now.setHours(now.getHours() -3)
+        now.setHours(now.getHours() - 3)
         const yesterday = new Date()
-        yesterday.setDate(yesterday.getDate()-1)
-        
+        yesterday.setDate(yesterday.getDate() - 1)
+
         state.min = yesterday.toISOString().split("T")[0] + "T23:00"
-        state.max = now.toISOString().substring(0,16)
+        state.max = now.toISOString().substring(0, 16)
         state.closable = false
         state.label = <>A viagem começou que <b>HORAS</b>?</>
         state.type = "datetime-local"
@@ -367,7 +370,7 @@ const CreateDailyPart = (props) => {
                         body: JSON.stringify(state.dailyPart)
                     }
                 )
-                localStorage.setItem("dailyPart", null)
+                
             } catch (e) {
                 console.log(e)
             }

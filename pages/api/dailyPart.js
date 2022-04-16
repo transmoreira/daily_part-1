@@ -9,7 +9,7 @@ const dailyPart = async (request, response) => {
     const getResult = async (sql) => {
         try {
             const data = await connect(sql)
-            console.log(data)
+            
             if (request.method === "GET") {
                 return data
             } else {
@@ -20,14 +20,14 @@ const dailyPart = async (request, response) => {
             }
 
         } catch (error) {
-            console.log(error)
+            console.log(error, sql)
             response.status(400).json({ ...error, sql: "" })
         }
     }
 
     if (request.method === "GET") {
 
-        const { start, end, registration, plate } = request.query
+        const { start, end, registration, plate, company = "RN" } = request.query
         const sql = `SELECT 
                         daily_part.id AS id,
                         client, 
@@ -46,22 +46,25 @@ const dailyPart = async (request, response) => {
                         direction,
                         travels.id AS idTravel,
                         passenger,
+                        startTicket,
+                        endTicket
                         obs
                      FROM daily_part
                      LEFT JOIN travels ON daily_part.id = travels.id_daily_part or travels.id_daily_part IS NULL
-                     WHERE startTime >= '${start} 00:00:00' AND
+                     WHERE company = '${company}' AND startTime >= '${start} 00:00:00' AND
                          startTime <= '${end} 23:59:59' 
                          ${registration ? `AND registration LIKE '%${registration}%' AND plate LIKE '%${plate}%'` : ""
             }                           
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
                      
         try {
+            
             const data = await getResult(sql)
             if (data && !data.errno) {
     
                 const newData = data.reduce((acc, item, index) => {
                     if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
-                        console.log(item)
+                        
                         acc.push({
                             id: item.id,
                             client: item.client,

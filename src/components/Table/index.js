@@ -2,12 +2,11 @@ import { dateFormated, timeFormated } from "../../utils/utils"
 import logoRN from "../../img/logo-rio-negro.jpg"
 import logoTM from "../../img/transmoreira.png"
 import Image from "next/image"
-import company from "../../../pages/[company]"
 
 export default (props) => {
 
     const { id, client, date, driver, car, travels, passenger, obs } = props.dailyPart
-    const company = props.company
+    const company = props.company || "RN"
     const isUrban = company == "TM"
     const logo = isUrban ? logoRN : logoRN
 

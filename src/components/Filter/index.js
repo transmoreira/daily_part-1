@@ -6,6 +6,7 @@ import { dateFormated } from "../../utils/utils"
 
 
 
+
 const starDate = new Date()
 starDate.setUTCHours(3)
 starDate.setHours(0)
@@ -28,9 +29,9 @@ const filterDatas = {
 }
 let dailyPart = []
 
-const getDailyPartsInDataBase = async () => {
+const getDailyPartsInDataBase = async (company="RN") => {
 
-    const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}`)
+    const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
     dailyPart = await response.json()
 
 }
@@ -40,7 +41,8 @@ const Filter = (props) => {
 
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
-
+    const company = props.company
+    
     const clients = clientsJSON.map(item => item.name)
 
     const onChange = (event) => {
@@ -101,7 +103,7 @@ const Filter = (props) => {
             event.target.classList.add("disable")
         }
         
-        await getDailyPartsInDataBase()
+        await getDailyPartsInDataBase(company)
         newFilter()
         if(event){
             event.target.classList.remove("disable")
