@@ -10,7 +10,7 @@ actualDate.setHours(11)
 
 let valueInserted
 let timeout
-const varTeste = "Divanir de jesus Silva"
+
 
 const CreateDailyPart = (props) => {
 
@@ -37,10 +37,7 @@ const CreateDailyPart = (props) => {
         }
     })
 
-    const dailyPartImcompleted = JSON.parse(localStorage.getItem("dailyPart"))
-    if (dailyPartImcompleted) {
-        state.dailyPart = dailyPartImcompleted
-    }
+    
 
     const closeMadal = () => {
         state.close = "close"
@@ -49,6 +46,10 @@ const CreateDailyPart = (props) => {
 
     const inputValue = async () => {
 
+        const dailyPartImcompleted = localStorage.getItem("dailyPart")
+        if (dailyPartImcompleted) {
+            state.dailyPart = JSON.parse(dailyPartImcompleted)
+        }
 
         state.closable = true
 
