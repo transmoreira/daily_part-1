@@ -1348,5 +1348,225 @@
         ]
       }
     ]
+  },
+  {
+    "name": "urbano",
+    "lines": [
+      {
+        "name": "001B",
+        "direction": [
+          "CIRCULAR CONTAGEM",
+          "CIRCULAR CONTAGEM"
+        ]
+      },
+      {
+        "name": "001C",
+        "direction": [
+          "PARQUE RENASCER ",
+          " CIDADE INDUSTRIAL"
+        ]
+      },
+      {
+        "name": "170",
+        "direction": [
+          "CIRCULAR CONTAGEM ",
+          " VILA MILITAR"
+        ]
+      },
+      {
+        "name": "1600",
+        "direction": [
+          "PETROLINA",
+          "ESTACAO ELDORADO"
+        ]
+      },
+      {
+        "name": "1620",
+        "direction": [
+          "JARDIM DAS ROSAS VIA BR-381",
+          "ESTACAO ELDORADO"
+        ]
+      },
+      {
+        "name": "1621",
+        "direction": [
+          "JARDIM DAS ROSAS",
+          "ESTAÇÃO ELDORADO VIA CASCATA"
+        ]
+      },
+      {
+        "name": "1630",
+        "direction": [
+          "CASCATA",
+          "ESTACAO ELDORADO"
+        ]
+      },
+      {
+        "name": "1640",
+        "direction": [
+          "OURO NEGRO",
+          "ESTACAO ELDORADO"
+        ]
+      },
+      {
+        "name": "1650",
+        "direction": [
+          "MONTREAL VIA OURO NEGRO",
+          "CIDADE INDUSTRIAL"
+        ]
+      },
+      {
+        "name": "1660",
+        "direction": [
+          "MONTREAL VIA OURO NEGRO",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "1661",
+        "direction": [
+          "MONTREAL",
+          "PETROVALE",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "1670",
+        "direction": [
+          "MONTREAL",
+          "ESTAÇÃO ELDORADO"
+        ]
+      },
+      {
+        "name": "1671",
+        "direction": [
+          "MONTREAL",
+          "PETROVALE",
+          "ESTAÇÃO ELDORADO"
+        ]
+      },
+      {
+        "name": "1680",
+        "direction": [
+          "PETROVALE",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "1690",
+        "direction": [
+          "CASCATA",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "1700",
+        "direction": [
+          "BAIRRO ELDORADO VIA BR-381",
+          "ESTACAO ELDORADO"
+        ]
+      },
+      {
+        "name": "1710",
+        "direction": [
+          "PETROVALE",
+          "ESTACAO ELDORADO"
+        ]
+      },
+      {
+        "name": "1720",
+        "direction": [
+          "RECANTO DA LAGOA",
+          "MONTREAL",
+          "OURO"
+        ]
+      },
+      {
+        "name": "1730",
+        "direction": [
+          "ESTACAO DIAMANTE",
+          "CONTAGEM",
+          "ALVORADA"
+        ]
+      },
+      {
+        "name": "1740",
+        "direction": [
+          "CONTAGEM",
+          "ESTACAO DIAMANTE"
+        ]
+      },
+      {
+        "name": "1750",
+        "direction": [
+          "AGUIA DOURADA",
+          "ESTACAO DIAMANTE"
+        ]
+      },
+      {
+        "name": "1751",
+        "direction": [
+          "VISTA ALEGRE",
+          "ESTAÇÃO BARREIRO"
+        ]
+      },
+      {
+        "name": "1752",
+        "direction": [
+          "VISTA ALEGRE",
+          "ESTAÇÃO DIAMANTE",
+          "ATENDIMENTO IFMG"
+        ]
+      },
+      {
+        "name": "1760",
+        "direction": [
+          "MILIONARIOS",
+          "MAKRO"
+        ]
+      },
+      {
+        "name": "1770",
+        "direction": [
+          "NOSSA SENHORA DE LOURDES",
+          "ESTACAO DIAMANTE"
+        ]
+      },
+      {
+        "name": "1771",
+        "direction": [
+          "NOSSA SENHORA DE LOURDES",
+          "ESTAÇÃO BARREIRO"
+        ]
+      },
+      {
+        "name": "7900",
+        "direction": [
+          "SANTA CRUZ",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "7905",
+        "direction": [
+          "SANTA CRUZ VIA VULO",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "3992",
+        "direction": [
+          "ITAGUARA",
+          "BELO HORIZONTE"
+        ]
+      },
+      {
+        "name": "3993",
+        "direction": [
+          "ITAGUARA",
+          "ESTAÇÃO ELDORADO"
+        ]
+      }
+    ]
   }
 ]
