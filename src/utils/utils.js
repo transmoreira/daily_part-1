@@ -1,3 +1,5 @@
+
+
 const dateFormated = (date, brazil=true) => {
     date.setUTCHours(3)
     const day = (date.getDate()).toString().padStart(2,"0")
@@ -25,5 +27,6 @@ const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
             (filterDatas.client == ""|| item.client == filterDatas.client) &&
             (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
     })
+
 
 export {dateFormated, timeFormated, filter}
