@@ -8,7 +8,7 @@ export default (props) => {
     const { id, client, date, driver, car, travels, passenger, obs } = props.dailyPart
     const company = props.company || "RN"
     const isUrban = company == "TM"
-    const logo = isUrban ? logoRN : logoRN
+    const logo = isUrban ? logoTM : logoRN
 
     return <section className="table">
         <table onClick={props.onClick}>
@@ -88,8 +88,8 @@ export default (props) => {
                         <td>{item.endKM - item.startKM}</td>
                         {isUrban &&
                             <>
-                                <th>{item.start.ticketGate}</th>
-                                <th>{item.ticketGate}</th>
+                                <th>{item.startTicket}</th>
+                                <th>{item.endTicket}</th>
                             </>
                         }
                         <td>{item.passenger}</td>
@@ -97,7 +97,7 @@ export default (props) => {
                         <td colSpan="2" className="min-200">{item.destiny}</td>
                     </tr>
                 )}
-                <tr>
+                <tr key={100}>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -114,7 +114,7 @@ export default (props) => {
                     <td colSpan="2" className="min-200"></td>
                     <td colSpan="2" className="min-200"></td>
                 </tr>
-                <tr>
+                <tr key={101}>
                     <td></td>
                     <td></td>
                     <td></td>

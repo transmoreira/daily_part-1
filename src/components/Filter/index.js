@@ -159,13 +159,13 @@ const Filter = (props) => {
             <div>
                 Cliente:
                 <select id="client" onChange={onChange}>
-                    <option value={0}></option>
+                    <option key={0} value={0}></option>
                     {clients.map((item, index) =>
                         <option key={index} value={index + 1}>{item}</option>)}
                 </select>
                 Linha:
                 <input id="line" onChange={onChange} list="listLine" />
-                <datalist id="listLine">
+                <datalist  key={1} id="listLine">
                     {lines.map((item, index) =>
                         <option key={index} >{item}</option>)}
                 </datalist>
@@ -173,13 +173,13 @@ const Filter = (props) => {
             <div>
                 Carro:
                 <input id="car" onChange={onChange} list="listCars" />
-                <datalist id="listCars">
+                <datalist  key={2} id="listCars">
                     {carsJSON.map((car, index) =>
                         <option key={index} >{car.number}</option>)}
                 </datalist>
                 Motorista:
                 <input id="driver" onChange={onChange} list="listDriver" />
-                <datalist id="listDriver">
+                <datalist  key={3} id="listDriver">
                     {employeesJSON.map((employee, index) =>
                         <option key={employee.registration} value={employee.name}>{employee.registration}</option>)}
                 </datalist>

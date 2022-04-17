@@ -37,7 +37,7 @@ const CreateDailyPart = (props) => {
         }
     })
 
-    
+
 
     const closeMadal = () => {
         state.close = "close"
@@ -95,17 +95,20 @@ const CreateDailyPart = (props) => {
         if (!state.dailyPart.client) {
             const list = clients.map(item => item.name)
 
-            state.label = <>Qual a empresa <b>CLIENTE</b>?</>
-            state.list = list
-            state.type = "text"
-            setState({ ...state })
-            const client = await getData(list, "Cliente não encontrado")
+            if (!isUrban) {
+                state.label = <>Qual a empresa <b>CLIENTE</b>?</>
+                state.list = list
+                state.type = "text"
+                setState({ ...state })
+                const client = await getData(list, "Cliente não encontrado")
+                state.dailyPart.client = client
+            } else {
+                state.dailyPart.client = "urbano"
+                state.dailyPart.company = "TM"
+                
+            }
 
-
-            state.dailyPart.client = client
             try {
-
-
                 const response = await fetch(
                     "api/dailyPart",
                     {
@@ -153,11 +156,22 @@ const CreateDailyPart = (props) => {
             setState({ ...state })
             const endKM = parseInt(await getData(null, "Verifique se o KM está correto.", true))
 
+            let endTicket = 0
+            if (isUrban) {
+                state.label = <>Qual a <b>roleta</b> final?</>
+                state.type = "number"
+                state.list = []
+                endTicket = parseInt(await getData())
+            }
+
             state.label = <>Quantos <b>passageiros</b> embarcaram?</>
             state.type = "number"
             setState({ ...state })
-            const passenger = parseInt(await getData())
+            const passenger = isUrban 
+                ? endTicket - actualtravel.startTicket 
+                : parseInt(await getData())
 
+            
 
             const timeTravel = `${endTime}:00`
 
@@ -165,8 +179,11 @@ const CreateDailyPart = (props) => {
                 ...actualtravel,
                 endTime: timeTravel,
                 endKM,
-                passenger
+                passenger,
+                endTicket
             }
+
+
 
             updateTravel(travel)
         }
@@ -174,7 +191,7 @@ const CreateDailyPart = (props) => {
 
     const getDailyPart = async (plate, registration) => {
         try {
-            const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}`)
+            const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}&company=${company}`)
 
             const dailyPart = await response.json()
             if (dailyPart.length) {
@@ -188,7 +205,7 @@ const CreateDailyPart = (props) => {
         }
     }
 
-    const updateTravel = async (travel) => {
+    const updateTravel = async (travel, shoulTryAgain = true) => {
         try {
             const response = await fetch(
                 "api/travels",
@@ -197,16 +214,28 @@ const CreateDailyPart = (props) => {
                     body: JSON.stringify(travel)
                 }
             )
-            
+
             const result = await response.json()
             travel.id = result.insertId
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
             setState({ ...state })
+
+            const date = new Date(JSON.parse(localStorage.getItem("dailyPart")).date).getDate()
+            const today = new Date().getDate()
+
             localStorage.removeItem("dailyPart")
+           
+            alert("Viagem gravada com sucesso!")
+            if(date != today){
+                location.reload()
+            }
+            
         } catch (erro) {
             console.log(erro.message)
             //location.reload(true)
-            updateTravel(travel)
+            if(shoulTryAgain){
+                updateTravel(travel,false)
+            }
         }
     }
 
@@ -215,7 +244,9 @@ const CreateDailyPart = (props) => {
         state.closable = true
 
         const listClients = clients.map(item => item.name)
-        const lines = clients[listClients.indexOf(state.dailyPart.client)].lines
+        const lines = clients[listClients.indexOf(
+            isUrban ? "urbano" : state.dailyPart.client
+        )].lines
         const list = lines.map(item => item.name)
 
         state.label = <>Qual é a <b>LINHA</b>?</>
@@ -247,18 +278,34 @@ const CreateDailyPart = (props) => {
 
         const direction = lines.filter(item => item.name == line)[0].direction
 
+
         state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
         state.type = "text"
         state.list = direction
-        const origin = await getData(state.list, "Origem nao encontrada!")
+        const origin = direction.length == 1
+            ? direction[0]
+            : await getData(state.list, "Origem nao encontrada!")
 
         const destinys = [...direction.filter(item => item != origin)]
+
         state.label = <>Para onde<b>(PONTO FINAL)</b> vai a viagem?</>
         state.list = destinys
-        const destiny = destinys.length == 1 ?
-            destinys[0] :
-            await getData(destinys, "Destino nao encontrado!")
+        const destiny = destinys.length > 1
+            ? await getData(destinys, "Destino nao encontrado!")
+            : destinys[0]
+            || direction[0]
 
+        let startTicket = 0
+
+        if (isUrban) {
+            state.label = <>Qual a <b>roleta</b> inicial?</>
+            state.type = "number"
+            state.list = []
+            startTicket = state.dailyPart.travels.length 
+                ? state.dailyPart.travels[state.dailyPart.travels.length-1].endTicket
+                : parseInt(await getData())
+                || parseInt(await getData())
+        }
 
 
         const timeTravel = `${startTime}:00`
@@ -270,8 +317,11 @@ const CreateDailyPart = (props) => {
             startTime: timeTravel,
             destiny,
             origin,
-            endKM: null
+            endKM: null,
+            startTicket
         }
+
+
 
 
         setTraveal(travel)
@@ -371,7 +421,7 @@ const CreateDailyPart = (props) => {
                         body: JSON.stringify(state.dailyPart)
                     }
                 )
-                
+
             } catch (e) {
                 console.log(e)
             }
@@ -394,7 +444,7 @@ const CreateDailyPart = (props) => {
             <textarea
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}
-                value={state.dailyPart.obs} />
+                value={state.dailyPart.obs || ""} />
 
         </main>
 

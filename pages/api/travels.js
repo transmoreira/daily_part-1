@@ -18,7 +18,7 @@ const dailyPart = async (request, response) => {
     }
 
     if (request.method === "POST") {
-        const { id_daily_part, line, startTime, startKM, origin, destiny, direction } = JSON.parse(request.body)
+        const { id_daily_part, line, startTime, startKM, origin, destiny, direction, startTicket = 0 } = JSON.parse(request.body)
         const sql = `INSERT INTO 
                         travels( 
                             id_daily_part, 
@@ -27,7 +27,9 @@ const dailyPart = async (request, response) => {
                             startKM,
                             origin,
                             destiny,
-                            direction
+                            direction,
+                            startTicket
+
                         ) 
                         VALUES (
                             '${id_daily_part}', 
@@ -36,18 +38,20 @@ const dailyPart = async (request, response) => {
                             '${startKM}',
                             '${origin}',
                             '${destiny}',
-                            '${direction}'
+                            '${direction}',
+                            '${startTicket}'
                         )`
         await getResult(sql)
 
 
     } else if (request.method === "PUT") {
-        const { id, endTime, endKM, passenger } = JSON.parse(request.body)
+        const { id, endTime, endKM, passenger, endTicket = 0 } = JSON.parse(request.body)
      
         const sql = `UPDATE travels  
                         SET endTime='${endTime}',
                         endKM=${parseInt(endKM)},
-                        passenger=${parseInt(passenger)}
+                        passenger=${parseInt(passenger)},
+                        endTicket=${parseInt(endTicket)}
                     WHERE id = ${id}`
 
         try{

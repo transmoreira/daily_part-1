@@ -9,7 +9,7 @@ const dailyPart = async (request, response) => {
     const getResult = async (sql) => {
         try {
             const data = await connect(sql)
-            
+
             if (request.method === "GET") {
                 return data
             } else {
@@ -47,8 +47,9 @@ const dailyPart = async (request, response) => {
                         travels.id AS idTravel,
                         passenger,
                         startTicket,
-                        endTicket
-                        obs
+                        endTicket,
+                        obs,
+                        company
                      FROM daily_part
                      LEFT JOIN travels ON daily_part.id = travels.id_daily_part or travels.id_daily_part IS NULL
                      WHERE company = '${company}' AND startTime >= '${start} 00:00:00' AND
@@ -56,20 +57,34 @@ const dailyPart = async (request, response) => {
                          ${registration ? `AND registration LIKE '%${registration}%' AND plate LIKE '%${plate}%'` : ""
             }                           
                      ORDER BY travels.id_daily_part ASC, travels.startTime ASC`
-                     
+
         try {
-            
+
             const data = await getResult(sql)
             if (data && !data.errno) {
-    
+
                 const newData = data.reduce((acc, item, index) => {
+                    const travel = {
+                        line: item.line,
+                        startTime: item.startTime,
+                        startKM: item.startKM,
+                        origin: item.origin,
+                        destiny: item.destiny,
+                        endTime: item.endTime,
+                        endKM: item.endKM,
+                        startTicket: item.startTicket,
+                        endTicket: item.endTicket,
+                        direction: item.direction,
+                        id: item.idTravel,
+                        passenger: item.passenger
+                    }
                     if (acc.length === 0 || acc[acc.length - 1].id !== item.id) {
-                        
+
                         acc.push({
                             id: item.id,
                             client: item.client,
                             date: item.date,
-                            obs:item.obs,
+                            obs: item.obs,
                             driver: {
                                 registration: item.registration,
                                 name: item.name
@@ -78,37 +93,15 @@ const dailyPart = async (request, response) => {
                                 number: item.number,
                                 plate: item.plate
                             },
-                            travels: [{
-                                line: item.line,
-                                startTime: item.startTime,
-                                startKM: item.startKM,
-                                origin: item.origin,
-                                destiny: item.destiny,
-                                endTime: item.endTime,
-                                endKM: item.endKM,
-                                direction: item.direction,
-                                id: item.idTravel,
-                                passenger: item.passenger
-                            }]
+                            travels: [travel]
                         })
                     } else {
-                        acc[acc.length - 1].travels.push({
-                            line: item.line,
-                            startTime: item.startTime,
-                            startKM: item.startKM,
-                            origin: item.origin,
-                            destiny: item.destiny,
-                            endTime: item.endTime,
-                            endKM: item.endKM,
-                            direction: item.direction,
-                            id: item.idTravel,
-                            passenger: item.passenger
-                        })
+                        acc[acc.length - 1].travels.push(travel)
                     }
-    
+
                     return acc
                 }, [])
-    
+
                 response.status(200).json(newData)
             } else {
                 response.status(400).json({ ...data, sql: "" })
@@ -120,7 +113,7 @@ const dailyPart = async (request, response) => {
 
     } else if (request.method === "POST") {
 
-        const { client, date, driver, car } = JSON.parse(request.body)
+        const { client, date, driver, car, company = "RN" } = JSON.parse(request.body)
 
         const sql = `INSERT INTO 
                         daily_part( 
@@ -129,7 +122,8 @@ const dailyPart = async (request, response) => {
                             registration, 
                             name, 
                             number, 
-                            plate
+                            plate,
+                            company
                         ) 
                         VALUES (
                             '${client}', 
@@ -137,13 +131,14 @@ const dailyPart = async (request, response) => {
                             ${driver.registration}, 
                             '${driver.name}', 
                             '${car.number}', 
-                            '${car.plate}'
+                            '${car.plate}', 
+                            '${company}'
                         )`
 
         getResult(sql)
 
-    } else if(request.method === "PUT") {
-        const { id, obs} = JSON.parse(request.body)
+    } else if (request.method === "PUT") {
+        const { id, obs } = JSON.parse(request.body)
         const sql = `UPDATE daily_part  
                         SET obs='${obs}'
                     WHERE id = ${id}`
