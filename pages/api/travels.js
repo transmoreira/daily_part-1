@@ -60,7 +60,6 @@ const dailyPart = async (request, response) => {
             response.json(error)
         }
     }
-
 }
 
 
