@@ -261,7 +261,7 @@ const CreateDailyPart = (props) => {
         const yesterday = new Date()
         yesterday.setDate(yesterday.getDate() - 1)
 
-        state.min = yesterday.toISOString().split("T")[0] + "T23:00"
+        state.min = yesterday.toISOString().split("T")[0] + "T22:00"
         state.max = now.toISOString().substring(0, 16)
         state.closable = false
         state.label = <>A viagem começou que <b>HORAS</b>?</>
