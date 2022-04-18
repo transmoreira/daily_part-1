@@ -254,15 +254,15 @@ const CreateDailyPart = (props) => {
         state.type = "text"
         const line = await getData(list, "Linha não encontrada")
 
-        const now = new Date()
-        now.setMinutes(now.getMinutes()+15)
-        //now.setUTCHours(-3)
-        now.setHours(now.getHours() - 3)
-        const yesterday = new Date()
-        yesterday.setDate(yesterday.getDate() - 1)
+        const endRangeTime = new Date()
+        endRangeTime.setMinutes(endRangeTime.getMinutes()+20)
+        //endRangeTime.setUTCHours(-3)
+        endRangeTime.setHours(endRangeTime.getHours() - 3)
+        const startRangeTime = endRangeTime
+        startRangeTime.setDate(startRangeTime.getDate() - 1)
 
-        state.min = yesterday.toISOString().split("T")[0] + "T22:00"
-        state.max = now.toISOString().substring(0, 16)
+        state.min = startRangeTime.toISOString().substring(0, 16)
+        state.max = endRangeTime.toISOString().substring(0, 16)
         state.closable = false
         state.label = <>A viagem começou que <b>HORAS</b>?</>
         state.type = "datetime-local"
