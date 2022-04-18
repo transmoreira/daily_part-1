@@ -258,7 +258,9 @@ const CreateDailyPart = (props) => {
         endRangeTime.setMinutes(endRangeTime.getMinutes()+20)
         //endRangeTime.setUTCHours(-3)
         endRangeTime.setHours(endRangeTime.getHours() - 3)
-        const startRangeTime = endRangeTime
+
+        const startRangeTime = new Date()
+        startRangeTime.setHours(startRangeTime.getHours() - 3)
         startRangeTime.setDate(startRangeTime.getDate() - 1)
 
         state.min = startRangeTime.toISOString().substring(0, 16)
