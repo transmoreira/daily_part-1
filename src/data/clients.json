@@ -2,19 +2,19 @@
   {
     "name": "HEXAGONO",
     "lines": [
-      {"name": "LINHA 01","direction": ["RAPOSOS", "MUTUCA"]},
+      {"name": "LINHA 01","direction": ["RAPOSOS", "MUTUCA"]}
     ]
   },
   {
     "name": "FM2C",
     "lines": [
-      {"name": "LINHA 01","direction": ["RAPOSOS", "PICO"]},
+      {"name": "LINHA 01","direction": ["RAPOSOS", "PICO"]}
     ]
   },
   {
     "name": "VALLOREC",
     "lines": [
-      {"name": "LINHA 01","direction": ["SANTA RITA", "MINA P. BRANCO"]},
+      {"name": "LINHA 01","direction": ["SANTA RITA", "MINA P. BRANCO"]}
     ]
   },
   {
@@ -29,10 +29,8 @@
   {
     "name": "MILPLAN",
     "lines": [
-      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]
-      },
-      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]
-      },
+      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]},
+      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]},
       {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO"]
       }
     ]
@@ -48,456 +46,235 @@
   {
     "name": "MILPLAN",
     "lines": [
-      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]
-      },
-      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]
-      },
-      {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO"]
-      }
+      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]},
+      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]},
+      {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO"]}
     ]
   },
   {
     "name": "AVG",
     "lines": [
-      {"name": "BRUM. T.","direction": [  "BRUMADINHO",  "EMESA",  "JANTAR",  "JOVENS APRENDIZES"]
-      },
-      {"name": "BRUM. ADM","direction": [  "BRUMADINHO",  "EMESA"]
-      },
-      {"name": "CONTAGEM ADM","direction": [  "Contagem",  "EMESA",  "Almoço | Aprendiz"]
-      },
-      {"name": "CONTAGEM T.","direction": [  "CID. IND",  "EMESA",  "Almoço | Aprendiz"]
-      }
+      {"name": "BRUM. T.","direction": ["BRUMADINHO",  "EMESA",  "JANTAR",  "JOVENS APRENDIZES"]},
+      {"name": "BRUM. ADM","direction": ["BRUMADINHO",  "EMESA"]},
+      {"name": "CONTAGEM ADM","direction": ["Contagem",  "EMESA",  "Almoço | Aprendiz"]},
+      {"name": "CONTAGEM T.","direction": ["CID. IND",  "EMESA",  "Almoço | Aprendiz"]}
     ]
   },
   {
     "name": "Vale",
-    "lines": [
-      {"name": "CMT-01-CIRC.VULC","direction": [  "CMT",  "MATRIZ"]
-      },
-      {"name": "CMT-01-INTERNO","direction": [  "CMT",  "MATRIZ"]
-      },
-      {"name": "CMT-01-INTERNO","direction": [  "CMT",  "MATRIZ"]
-      },
-      {"name": "CPX-01-INTERNO","direction": [  "CPX",  "MATRIZ"]
-      },
-      {"name": "CPX-01-INTERNO","direction": [  "CPX",  "MATRIZ"]
-      },
-      {"name": "CPX-02-INTERNO","direction": [  "CPX",  "MATRIZ"]
-      },
-      {"name": "CPX-02-INTERNO","direction": [  "CPX",  "MATRIZ"]
-      },
-      {"name": "CPX-03-INTERNO","direction": [  "CPX",  "MATRIZ"]
-      },
-      {"name": "CPX-03-INTERNO","direction": [  "CPX",  "MATRIZ"]
-      },
-      {"name": "CTF-01-ALMOCO","direction": [  "CTF",  "MATRIZ"]
-      },
-      {"name": "INT-CMT/PICO","direction": [  "CMT",  "MATRIZ"]
-      },
-      {"name": "INT-CMT/TAM","direction": [  "CMT",  "MATRIZ"]
-      },
-      {"name": "INT-PAIOL","direction": [  "CMT",  "MATRIZ"]
-      },
-      {"name": "MUT-ALMOCO-USINA","direction": [  "MUT",  "MATRIZ"]
-      },
-      {"name": "MUT-01-ALMOCO","direction": [  "MUT",  "MATRIZ"]
-      },
-      {"name": "MUT-AL-PORT.DIR.","direction": [  "MUT",  "MATRIZ"]
-      },
-      {"name": "TOD-01-ALMOCO","direction": [  "TOD",  "MATRIZ"]
-      },
-      {"name": "MAC-CIRCULAR","direction": [  "MAC",  "MATRIZ"]
-      },
-      {"name": "MAC-CIRCULAR","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-T7-IBIRITE","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-T6D-ARANHA","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-T5-ELDORADO","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-T2-PROGRESSO","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-T1-ITAGUA","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-A7-A.BRANCA","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-A5-C.ITAGUA","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-A4-S.CONRADO","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-A3-PROGRESSO","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "JGD-A2-BH SHOP","direction": [  "BELO HORIZONTE",  "JGD"]
-      },
-      {"name": "JGD-A1-V.NOVA","direction": [  "V.NOVA",  "JGD"]
-      },
-      {"name": "JGD-3-INTERNO","direction": [  "CONTAGEM",  "JGD"]
-      },
-      {"name": "JGD-2-INTERNO","direction": [  "CONTAGEM",  "JGD"]
-      },
-      {"name": "JGD-1-INTERNO","direction": [  "CONTAGEM",  "JGD"]
-      },
-      {"name": "JGD-12X36-ELDOR","direction": [  "CONTAGEM",  "JGD"]
-      },
-      {"name": "JGD-12X36-C.ITAG","direction": [  "BRUMADINHO",  "JGD"]
-      },
-      {"name": "MARAVILHAS3","direction": [  "MARAVILHAS3",  "ITABIRITO"]
-      },
-      {"name": "DERD06","direction": [  "ITABIRITO",  "CMM"]
-      },
-      {"name": "DERD03","direction": [  "BRUMADINHO",  "AURORA",  "CENTRO",  "OBRA"]
-      },
-      {"name": "10 BARAO C","direction": [  "BARAO DE COCAIS",  "MINA TORTO"]
-      },
-      {"name": "09 SAO CONCALO","direction": [  "SAO G. RIO ABAIXO",  "MINA TORTO"]
-      },
-      {"name": "08 MINA FABRICA","direction": [  "C LAFAIETE",  "MINA FABRICA"]
-      },
-      {"name": "06 MINA FABRICA","direction": [  "C LAFAIETE",  "MINA FABRICA"]
-      },
-      {"name": "07 MINA FABRICA","direction": [  "C LAFAIETE",  "PROGEN"]
-      },
-      {"name": "05 GONGO SOCO","direction": [  "BARAO DE COCAIS",  "GONGO SOCO"]
-      },
-      {"name": "02 CAUE","direction": [  "ITABIRA",  "CAUE",  "ALMOCO"]
-      },
-      {"name": "MEMORIAL","direction": [  "MEMORIAL",  "CONCREMAT",  "ALMOCO"]
-      },
-      {"name": "SODEXO","direction": [  "CFJ",  "JANGADA"]
-      },
-      {"name": "ALMOCO CONCREMAT","direction": [  "ALMOCO",  "CONCREMAT"]
-      },
-      {"name": "DERD23","direction": [  "BELO HORIZONTE",  "BRUMADINHO"]
-      },
-      {"name": "DERD08","direction": [  "BELO HORIZONTE",  "FEIJAO"]
-      },
-      {"name": "DERD07","direction": [  "CID. INDUSTRIAL",  "AURORA"]
-      },
-      {"name": "DERD05","direction": [  "PEDRO II",  "FEIJAO"]
-      },
-      {"name": "DERD02","direction": [  "CONTAGEM",  "FEIJAO"]
-      },
-      {"name": "A01 CONCREMAT","direction": [  "VENDA NOVA",  "FEIJAO"]
-      },
-      {"name": "A09 CONCREMAT","direction": [  "BRUMADINHO",  "FEIJAO"]
-      },
-      {"name": "A08 CONCREMAT R.","direction": [  "CID. INDUSTRIAL",  "FEIJAO"]
-      },
-      {"name": "CDM-A1-BHSHOP","direction": [  "BELO HORIZONTE",  "CDM"]
-      },
-      {"name": "CDM-A2-BIGSHOP","direction": [  "CONTAGEM",  "CDM"]
-      },
-      {"name": "CDM-A3-CID.ADM","direction": [  "BELO HORIZONTE",  "CDM"]
-      },
-      {"name": "CDM-A5-CAETE","direction": [  "CAETE",  "CDM"]
-      },
-      {"name": "A31","direction": [  "ITABIRITO",  "CMT"]
-      },
-      {"name": "A32","direction": [  "ITABIRITO",  "CMT",  "TOD"]
-      },
-      {"name": "A38","direction": [  "BRUMADINHO",  "CMT"]
-      },
-      {"name": "A40","direction": [  "BELO HORIZONTE",  "CMT"]
-      },
-      {"name": "A44","direction": [  "CONTAGEM",  "CMT"]
-      },
-      {"name": "A45","direction": [  "BETIM",  "CMT"]
-      },
-      {"name": "H1","direction": [  "BELO HORIZONTE",  "CMT"]
-      },
-      {"name": "H8","direction": [  "RAPOSOS",  "CMT"]
-      },
-      {"name": "H14","direction": [  "RIO ACIMA",  "CMT"]
-      },
-      {"name": "A01","direction": [  "BELO HORIZONTE",  "CPX"]
-      },
-      {"name": "A02","direction": [  "BRUMADINHO",  "CPX"]
-      },
-      {"name": "A03","direction": [  "SABARA",  "CPX"]
-      },
-      {"name": "A04","direction": [  "SANTA LUZIA",  "CPX"]
-      },
-      {"name": "A05","direction": [  "BELO HORIZONTE",  "CPX"]
-      },
-      {"name": "A08","direction": [  "CONTAGEM",  "MUT"]
-      },
-      {"name": "A10","direction": [  "SARZEDO",  "MUT"]
-      },
-      {"name": "A11","direction": [  "IBIRITE",  "TOD"]
-      },
-      {"name": "A12","direction": [  "BETIM",  "CPX"]
-      },
-      {"name": "A15","direction": [  "RAPOSOS",  "CPX"]
-      },
-      {"name": "A16","direction": [  "RIO ACIMA",  "TOD"]
-      },
-      {"name": "A17","direction": [  "RAPOSOS",  "MUT"]
-      },
-      {"name": "A18","direction": [  "RIO ACIMA",  "MUT"]
-      },
-      {"name": "A19","direction": [  "RAPOSOS",  "CMT"]
-      },
-      {"name": "A20","direction": [  "RIO ACIMA",  "CMT"]
-      },
-      {"name": "A21","direction": [  "RAPOSOS",  "TAM"]
-      },
-      {"name": "A22","direction": [  "NOVA LIMA",  "CTF"]
-      },
-      {"name": "A23","direction": [  "IBIRITE",  "CPX"]
-      },
-      {"name": "A24","direction": [  "BELO HORIZONTE",  "CPX"]
-      },
-      {"name": "A25","direction": [  "CONTAGEM",  "CPX"]
-      },
-      {"name": "A27","direction": [  "CONTAGEM",  "CPX"]
-      },
-      {"name": "H5A","direction": [  "RIO ACIMA",  "MUT"]
-      },
-      {"name": "A30","direction": [  "ITABIRITO",  "CTF"]
-      },
-      {"name": "A34","direction": [  "ITABIRITO",  "CTF"]
-      },
-      {"name": "A36","direction": [  "BELO HORIZONTE",  "CTF"]
-      },
-      {"name": "A39","direction": [  "SABARA",  "CTF"]
-      },
-      {"name": "A43","direction": [  "IBIRITE",  "CTF"]
-      },
-      {"name": "A46","direction": [  "BELO HORIZONTE",  "CTF"]
-      },
-      {"name": "OP5B","direction": [  "CONTAGEM",  "MAZ"]
-      },
-      {"name": "A28","direction": [  "ITABIRITO",  "MUT"]
-      },
-      {"name": "A28 REFORÇO FIM DE SEMANA E FERIADO","direction": [  "ITABIRITO",  "MUT"]
-      },
-      {"name": "A29","direction": [  "ITABIRITO",  "MUT"]
-      },
-      {"name": "H1A","direction": [  "RAPOSOS",  "MUT"]
-      },
-      {"name": "H2A","direction": [  "MARIO CAMPOS",  "MUT"]
-      },
-      {"name": "H2B","direction": [  "MARIO CAMPOS",  "MUT"]
-      },
-      {"name": "H2C","direction": [  "MARIO CAMPOS",  "MUT"]
-      },
-      {"name": "H2D","direction": [  "MARIO CAMPOS",  "MUT"]
-      },
-      {"name": "H3A","direction": [  "CONTAGEM",  "MUT"]
-      },
-      {"name": "H3B","direction": [  "BETIM",  "MUT"]
-      },
-      {"name": "H3C","direction": [  "BETIM",  "MUT"]
-      },
-      {"name": "H3D","direction": [  "BETIM",  "MUT"]
-      },
-      {"name": "H4A","direction": [  "SABARA",  "CPX"]
-      },
-      {"name": "H4B","direction": [  "BELO HORIZONTE",  "CPX"]
-      },
-      {"name": "H4C","direction": [  "SABARA",  "CPX"]
-      },
-      {"name": "H4D","direction": [  "BELO HORIZONTE",  "CPX"]
-      },
-      {"name": "H9","direction": [  "CONTAGEM",  "MAZ"]
-      },
-      {"name": "T1A","direction": [  "RAPOSOS",  "CPX"]
-      },
-      {"name": "T2A","direction": [  "IBIRITE",  "MUT"]
-      },
-      {"name": "T2C","direction": [  "MARIO CAMPOS",  "MUT"]
-      },
-      {"name": "T3A","direction": [  "CONTAGEM",  "CPX"]
-      },
-      {"name": "T3B","direction": [  "BETIM",  "CPX"]
-      },
-      {"name": "T3C","direction": [  "IBIRITE",  "CPX"]
-      },
-      {"name": "T3D","direction": [  "CONTAGEM",  "CPX"]
-      },
-      {"name": "T4A","direction": [  "SABARA",  "CPX"]
-      },
-      {"name": "T4B","direction": [  "BELO HORIZONTE",  "CPX"]
-      },
-      {"name": "T9","direction": [  "CONTAGEM",  "MAZ"]
-      },
-      {"name": "H13","direction": [  "RIO ACIMA",  "PIC"]
-      },
-      {"name": "T13","direction": [  "RIO ACIMA",  "PIC"]
-      },
-      {"name": "A33","direction": [  "ITABIRITO",  "TAM"]
-      },
-      {"name": "A37","direction": [  "CONTAGEM",  "TAM"]
-      },
-      {"name": "A41","direction": [  "SANTA LUZIA",  "TAM"]
-      },
-      {"name": "A42","direction": [  "IBIRITE",  "TAM"]
-      },
-      {"name": "H2","direction": [  "CONTAGEM",  "TAM"]
-      },
-      {"name": "H3","direction": [  "ITABIRITO",  "TAM"]
-      },
-      {"name": "T2","direction": [  "CONTAGEM",  "TAM"]
-      },
-      {"name": "T3","direction": [  "ITABIRITO",  "TAM"]
-      },
-      {"name": "H4","direction": [  "BELO HORIZONTE",  "VGR"]
-      },
-      {"name": "H7","direction": [  "IBIRITE",  "VGR"]
-      },
-      {"name": "H12","direction": [  "RAPOSOS",  "ABO"]
-      },
-      {"name": "T4","direction": [  "BELO HORIZONTE",  "VGR"]
-      },
-      {"name": "T7","direction": [  "IBIRITE",  "VGR"]
-      },
-      {"name": "T12","direction": [  "RAPOSOS",  "ABO"]
-      }
+    "lines": [     
+      {"name": "CMT-01-CIRC.VULC","direction": [ "CMT",  "VGR", "PIC"]},
+      {"name": "CPX - INTERNO","direction": ["CMT", "CPX", "VGR", "CTF", "TAM", "MUT", "MRZ", "PIC"]},
+      {"name": "CTF-01-ALMOCO","direction": ["CTF"]},
+      {"name": "INT-CMT/PICO","direction": ["CMT",  "PIC"]},
+      {"name": "INT-CMT/TAM","direction": ["CMT",  "TAM"]},
+      {"name": "INT-PAIOL","direction": ["CMT",  "PAIOL"]},
+      {"name": "MUT-ALMOCO-USINA","direction": [ "MUT"]},
+      {"name": "MUT-01-ALMOCO","direction": ["MUT"]},
+      {"name": "MUT-AL-PORT.DIR.","direction": ["MUT"]},
+      {"name": "TOD-01-ALMOCO","direction": ["TOD"]},
+      {"name": "MAC-CIRCULAR","direction": ["MAC"]},
+      {"name": "JGD-T7-IBIRITE","direction": ["BARREIRO",  "JGD"]},
+      {"name": "JGD-T6D-ARANHA","direction": ["BRUMADINHO",  "JGD"]},
+      {"name": "JGD-T5-ELDORADO","direction": ["CONTAGEM",  "JGD"]},
+      {"name": "JGD-T2-PROGRESSO","direction": ["BRUMADINHO",  "JGD"]},
+      {"name": "JGD-T1-ITAGUA","direction": ["BRUMADINHO",  "JGD"]},
+      {"name": "JGD-A7-A.BRANCA","direction": ["CONTAGEM",  "JGD"]},
+      {"name": "JGD-A5-C.ITAGUA","direction": ["BRUMADINHO",  "JGD"]},
+      {"name": "JGD-A4-S.CONRADO","direction": ["BRUMADINHO",  "JGD"]},
+      {"name": "JGD-A3-PROGRESSO","direction": ["BRUMADINHO",  "JGD"]},
+      {"name": "JGD-A2-BH SHOP","direction": ["BELO HORIZONTE",  "JGD"]},
+      {"name": "JGD-A1-V.NOVA","direction": ["BELO HORIZONTE",  "JGD"]},
+      {"name": "JGD - INTERNO","direction": [ "CFJ",  "JGD", "TR5"]},
+      {"name": "JGD-12X36","direction": ["CONTAGEM", "JGD","BRUMADINHO"]},
+      {"name": "MARAVILHAS3","direction": ["MARAVILHAS3",  "ITABIRITO"]},
+      {"name": "DERD06","direction": ["ITABIRITO",  "CMM"]},
+      {"name": "DERD03","direction": ["BRUMADINHO",  "AURORA",  "CENTRO",  "OBRA"]},
+      {"name": "10 BARAO C","direction": ["BARAO DE COCAIS",  "MINA TORTO"]},
+      {"name": "09 SAO CONCALO","direction": ["SAO G. RIO ABAIXO",  "MINA TORTO"]},
+      {"name": "08 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
+      {"name": "06 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
+      {"name": "07 MINA FABRICA","direction": ["C LAFAIETE",  "PROGEN"]},
+      {"name": "05 GONGO SOCO","direction": ["BARAO DE COCAIS",  "GONGO SOCO"]},
+      {"name": "02 CAUE","direction": ["ITABIRA",  "CAUE",  "ALMOCO"]},
+      {"name": "MEMORIAL","direction": ["MEMORIAL",  "BASE BRAVO",  "ALMOCO"]},
+      {"name": "SODEXO","direction": ["SODEXO",  "JANGADA"]},
+      {"name": "ALMOCO CONCREMAT","direction": ["ALMOCO",  "CONCREMAT"]},
+      {"name": "DERD23","direction": ["BELO HORIZONTE",  "BRUMADINHO"]},
+      {"name": "DERD08","direction": ["BELO HORIZONTE",  "FEIJAO"]},
+      {"name": "DERD07","direction": ["CID. INDUSTRIAL",  "AURORA"]},
+      {"name": "DERD05","direction": ["PEDRO II",  "FEIJAO"]},
+      {"name": "DERD02","direction": ["CONTAGEM",  "FEIJAO"]},
+      {"name": "DERD09.","direction": ["CID. INDUSTRIAL",  "FEIJAO"]},
+      {"name": "A01 CONCREMAT","direction": ["VENDA NOVA",  "FEIJAO"]},
+      {"name": "A09 CONCREMAT","direction": ["AURORA",  "FEIJAO", "CON. ITAGUA"]},
+      {"name": "CDM-A1-BHSHOP","direction": ["BELO HORIZONTE",  "CDM"]},
+      {"name": "CDM-A2-BIGSHOP","direction": ["CONTAGEM",  "CDM"]},
+      {"name": "CDM-A3-CID.ADM","direction": ["BELO HORIZONTE",  "CDM"]},
+      {"name": "CDM-A5-CAETE","direction": ["CAETE",  "CDM"]},
+      {"name": "A31","direction": ["ITABIRITO",  "CMT"]},
+      {"name": "A32","direction": ["ITABIRITO",  "CMT",  "TOD"]},
+      {"name": "A38","direction": ["BRUMADINHO",  "CMT"]},
+      {"name": "A40","direction": ["BELO HORIZONTE",  "CMT"]},
+      {"name": "A44","direction": ["CONTAGEM",  "CMT"]},
+      {"name": "A45","direction": ["BETIM",  "CMT"]},
+      {"name": "H1","direction": ["BELO HORIZONTE",  "CMT"]},
+      {"name": "H8","direction": ["RAPOSOS",  "CMT"]},
+      {"name": "H14","direction": ["RIO ACIMA",  "CMT"]},
+      {"name": "A01","direction": ["BELO HORIZONTE",  "CPX"]},
+      {"name": "A02","direction": ["BRUMADINHO",  "CPX"]},
+      {"name": "A03","direction": ["SABARA",  "CPX"]},
+      {"name": "A04","direction": ["SANTA LUZIA",  "CPX"]},
+      {"name": "A05","direction": ["BELO HORIZONTE",  "CPX"]},
+      {"name": "A08","direction": ["CONTAGEM",  "MUT"]},
+      {"name": "A10","direction": ["SARZEDO",  "MUT"]},
+      {"name": "A11","direction": ["IBIRITE",  "TOD"]},
+      {"name": "A12","direction": ["BETIM",  "CPX"]},
+      {"name": "A15","direction": ["RAPOSOS",  "CPX"]},
+      {"name": "A16","direction": ["RIO ACIMA",  "TOD"]},
+      {"name": "A17","direction": ["RAPOSOS",  "MUT"]},
+      {"name": "A18","direction": ["RIO ACIMA",  "MUT"]},
+      {"name": "A19","direction": ["RAPOSOS",  "CMT"]},
+      {"name": "A20","direction": ["RIO ACIMA",  "CMT"]},
+      {"name": "A21","direction": ["RAPOSOS",  "TAM"]},
+      {"name": "A22","direction": ["NOVA LIMA",  "CTF"]},
+      {"name": "A23","direction": ["IBIRITE",  "CPX"]},
+      {"name": "A24","direction": ["BELO HORIZONTE",  "CPX"]},
+      {"name": "A25","direction": ["CONTAGEM",  "CPX"]},
+      {"name": "A27","direction": ["CONTAGEM",  "CPX"]},
+      {"name": "H5A","direction": ["RIO ACIMA",  "MUT"]},
+      {"name": "A30","direction": ["ITABIRITO",  "CTF"]},
+      {"name": "A34","direction": ["ITABIRITO",  "CTF"]},
+      {"name": "A36","direction": ["BELO HORIZONTE",  "CTF"]},
+      {"name": "A39","direction": ["SABARA",  "CTF"]},
+      {"name": "A43","direction": ["IBIRITE",  "CTF"]},
+      {"name": "A46","direction": ["BELO HORIZONTE",  "CTF"]},
+      {"name": "OP5B","direction": ["CONTAGEM",  "MAZ"]},
+      {"name": "A28","direction": ["ITABIRITO",  "MUT"]},
+      {"name": "A28 REFORÇO FIM DE SEMANA E FERIADO","direction": ["ITABIRITO",  "MUT"]},
+      {"name": "A29","direction": ["ITABIRITO",  "MUT"]},
+      {"name": "H1A","direction": ["RAPOSOS",  "MUT"]},
+      {"name": "H2A","direction": ["MARIO CAMPOS",  "MUT"]},
+      {"name": "H2B","direction": ["MARIO CAMPOS",  "MUT"]},
+      {"name": "H2C","direction": ["MARIO CAMPOS",  "MUT"]},
+      {"name": "H2D","direction": ["MARIO CAMPOS",  "MUT"]},
+      {"name": "H3A","direction": ["CONTAGEM",  "MUT"]},
+      {"name": "H3B","direction": ["BETIM",  "MUT"]},
+      {"name": "H3C","direction": ["BETIM",  "MUT"]},
+      {"name": "H3D","direction": ["BETIM",  "MUT"]},
+      {"name": "H4A","direction": ["SABARA",  "CPX"]},
+      {"name": "H4B","direction": ["BELO HORIZONTE",  "CPX"]},
+      {"name": "H4C","direction": ["SABARA",  "CPX"]},
+      {"name": "H4D","direction": ["BELO HORIZONTE",  "CPX"]},
+      {"name": "H9","direction": ["CONTAGEM",  "MAZ"]},
+      {"name": "T1A","direction": ["RAPOSOS",  "CPX"]},
+      {"name": "T2A","direction": ["IBIRITE",  "MUT"]},
+      {"name": "T2C","direction": ["MARIO CAMPOS",  "MUT"]},
+      {"name": "T3A","direction": ["CONTAGEM",  "CPX"]},
+      {"name": "T3B","direction": ["BETIM",  "CPX"]},
+      {"name": "T3C","direction": ["IBIRITE",  "CPX"]},
+      {"name": "T3D","direction": ["CONTAGEM",  "CPX"]},
+      {"name": "T4A","direction": ["SABARA",  "CPX"]},
+      {"name": "T4B","direction": ["BELO HORIZONTE",  "CPX"]},
+      {"name": "T9","direction": ["CONTAGEM",  "MAZ"]},
+      {"name": "H13","direction": ["RIO ACIMA",  "PIC"]},
+      {"name": "T13","direction": ["RIO ACIMA",  "PIC"]},
+      {"name": "A33","direction": ["ITABIRITO",  "TAM"]},
+      {"name": "A37","direction": ["CONTAGEM",  "TAM"]},
+      {"name": "A41","direction": ["SANTA LUZIA",  "TAM"]},
+      {"name": "A42","direction": ["IBIRITE",  "TAM"]},
+      {"name": "H2","direction": ["CONTAGEM",  "TAM"]},
+      {"name": "H3","direction": ["ITABIRITO",  "TAM"]},
+      {"name": "T2","direction": ["CONTAGEM",  "TAM"]},
+      {"name": "T3","direction": ["ITABIRITO",  "TAM"]},
+      {"name": "H4","direction": ["BELO HORIZONTE",  "VGR"]},
+      {"name": "H7","direction": ["IBIRITE",  "VGR"]},
+      {"name": "H12","direction": ["RAPOSOS",  "ABO"]},
+      {"name": "T4","direction": ["BELO HORIZONTE",  "VGR"]},
+      {"name": "T7","direction": ["IBIRITE",  "VGR"]},
+      {"name": "T12","direction": ["RAPOSOS",  "ABO"]}
     ]
   },
   {
     "name": "Vale Viga",
     "lines": [
-      {"name": "ABC","direction": [  "ABC MINA VIGA",  "VALE VIGA"]
-      },
-      {"name": "ABC","direction": [  "ABC CONGONHAS",  "VALE VIGA"]
-      },
-      {"name": "ALMOCO","direction": [  "REFEITORIO MINA",  "VALE VIGA"]
-      },
-      {"name": "CL-A01","direction": [  "ADM CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-A02","direction": [  "ADM CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-A03","direction": [  "ADM CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-A04","direction": [  "ADM CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-A05","direction": [  "ADM CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-T01","direction": [  "TURNO CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-T02","direction": [  "TURNO CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-T03","direction": [  "TURNO CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-T04","direction": [  "TURNO CONS.",  "VALE VIGA"]
-      },
-      {"name": "CL-T05","direction": [  "TURNO CONS.",  "VALE VIGA"]
-      },
-      {"name": "CO-A01","direction": [  "ADM CONG",  "VALE VIGA"]
-      },
-      {"name": "CO-A02","direction": [  "ADM CONG",  "VALE VIGA"]
-      },
-      {"name": "CO-A03","direction": [  "ADM CONG",  "VALE VIGA"]
-      },
-      {"name": "CO-A04","direction": [  "ADM CONG",  "VALE VIGA"]
-      },
-      {"name": "CO-T01","direction": [  "TURNO CONG.",  "VALE VIGA"]
-      },
-      {"name": "CO-T02","direction": [  "TURNO CONG.",  "VALE VIGA"]
-      },
-      {"name": "CO-T03","direction": [  "TURNO CONG.",  "VALE VIGA"]
-      },
-      {"name": "JC-A01","direction": [  "ADM JECEABA",  "VALE VIGA"]
-      },
-      {"name": "JT 01","direction": [  "TURNO JECEABA",  "VALE VIGA"]
-      },
-      {"name": "OB-A01","direction": [  "ADM OURO BRANCO",  "VALE VIGA"]
+      {"name": "ABC","direction": ["ABC MINA VIGA",  "VALE VIGA"]},
+      {"name": "ABC","direction": ["ABC CONGONHAS",  "VALE VIGA"]},
+      {"name": "ALMOCO","direction": ["REFEITORIO MINA",  "VALE VIGA"]},
+      {"name": "CL-A01","direction": ["ADM CONS.",  "VALE VIGA"]},
+      {"name": "CL-A02","direction": ["ADM CONS.",  "VALE VIGA"]},
+      {"name": "CL-A03","direction": ["ADM CONS.",  "VALE VIGA"]},
+      {"name": "CL-A04","direction": ["ADM CONS.",  "VALE VIGA"]},
+      {"name": "CL-A05","direction": ["ADM CONS.",  "VALE VIGA"]},
+      {"name": "CL-T01","direction": ["TURNO CONS.",  "VALE VIGA"]},
+      {"name": "CL-T02","direction": ["TURNO CONS.",  "VALE VIGA"]},
+      {"name": "CL-T03","direction": ["TURNO CONS.",  "VALE VIGA"]},
+      {"name": "CL-T04","direction": ["TURNO CONS.",  "VALE VIGA"]},
+      {"name": "CL-T05","direction": ["TURNO CONS.",  "VALE VIGA"]},
+      {"name": "CO-A01","direction": ["ADM CONG",  "VALE VIGA"]},
+      {"name": "CO-A02","direction": ["ADM CONG",  "VALE VIGA"]},
+      {"name": "CO-A03","direction": ["ADM CONG",  "VALE VIGA"]},
+      {"name": "CO-A04","direction": ["ADM CONG",  "VALE VIGA"]},
+      {"name": "CO-T01","direction": ["TURNO CONG.",  "VALE VIGA"]},
+      {"name": "CO-T02","direction": ["TURNO CONG.",  "VALE VIGA"]},
+      {"name": "CO-T03","direction": ["TURNO CONG.",  "VALE VIGA"]},
+      {"name": "JC-A01","direction": ["ADM JECEABA",  "VALE VIGA"]},
+      {"name": "JT 01","direction": ["TURNO JECEABA",  "VALE VIGA"]},
+      {"name": "OB-A01","direction": ["ADM OURO BRANCO",  "VALE VIGA"]
       }
     ]
   },
   {
     "name": "urbano",
     "lines": [
-      {"name": "001B","direction": [  "CIRCULAR CONTAGEM"]
-      },
-      {"name": "001C","direction": [  "PARQUE RENASCER",  " CIDADE INDUSTRIAL"]
-      },
-      {"name": "170","direction": [  "CIRCULAR CONTAGEM",  " VILA MILITAR"]
-      },
-      {"name": "1600","direction": [  "PETROLINA",  "ESTACAO ELDORADO"]
-      },
-      {"name": "1620","direction": [  "JARDIM DAS ROSAS VIA BR-381",  "ESTACAO ELDORADO"]
-      },
-      {"name": "1621","direction": [  "JARDIM DAS ROSAS",  "ESTAÇÃO ELDORADO VIA CASCATA"]
-      },
-      {"name": "1630","direction": [  "CASCATA",  "ESTACAO ELDORADO"]
-      },
-      {"name": "1640","direction": [  "OURO NEGRO",  "ESTACAO ELDORADO"]
-      },
-      {"name": "1650","direction": [  "MONTREAL VIA OURO NEGRO",  "CIDADE INDUSTRIAL"]
-      },
-      {"name": "1660","direction": [  "MONTREAL VIA OURO NEGRO",  "BELO HORIZONTE"]
-      },
-      {"name": "1661","direction": [  "MONTREAL",  "PETROVALE",  "BELO HORIZONTE"]
-      },
-      {"name": "1670","direction": [  "MONTREAL",  "ESTAÇÃO ELDORADO"]
-      },
-      {"name": "1671","direction": [  "MONTREAL",  "PETROVALE",  "ESTAÇÃO ELDORADO"]
-      },
-      {"name": "1680","direction": [  "PETROVALE",  "BELO HORIZONTE"]
-      },
-      {"name": "1690","direction": [  "CASCATA",  "BELO HORIZONTE"]
-      },
-      {"name": "1700","direction": [  "BAIRRO ELDORADO VIA BR-381",  "ESTACAO ELDORADO"]
-      },
-      {"name": "1710","direction": [  "PETROVALE",  "ESTACAO ELDORADO"]
-      },
-      {"name": "1720","direction": [  "RECANTO DA LAGOA",  "MONTREAL",  "OURO"]
-      },
-      {"name": "1730","direction": [  "ESTACAO DIAMANTE",  "CONTAGEM",  "ALVORADA"]
-      },
-      {"name": "1740","direction": [  "CONTAGEM",  "ESTACAO DIAMANTE"]
-      },
-      {"name": "1750","direction": [  "AGUIA DOURADA",  "ESTACAO DIAMANTE"]
-      },
-      {"name": "1751","direction": [  "VISTA ALEGRE",  "ESTAÇÃO BARREIRO"]
-      },
-      {"name": "1752","direction": [  "VISTA ALEGRE",  "ESTAÇÃO DIAMANTE",  "ATENDIMENTO IFMG"]
-      },
-      {"name": "1760","direction": [  "MILIONARIOS",  "MAKRO"]
-      },
-      {"name": "1770","direction": [  "NOSSA SENHORA DE LOURDES",  "ESTACAO DIAMANTE"]
-      },
-      {"name": "1771","direction": [  "NOSSA SENHORA DE LOURDES",  "ESTAÇÃO BARREIRO"]
-      },
-      {"name": "7900","direction": [  "SANTA CRUZ",  "BELO HORIZONTE"]
-      },
-      {"name": "7905","direction": [  "SANTA CRUZ VIA VULO",  "BELO HORIZONTE"]
-      },
-      {"name": "3992","direction": [  "ITAGUARA",  "BELO HORIZONTE"]
-      },
-      {"name": "3993","direction": [  "ITAGUARA",  "ESTAÇÃO ELDORADO"]
+      {"name": "001B","direction": ["CIRCULAR CONTAGEM"]},
+      {"name": "001C","direction": ["PARQUE RENASCER",  " CIDADE INDUSTRIAL"]},
+      {"name": "170","direction": ["CIRCULAR CONTAGEM",  " VILA MILITAR"]},
+      {"name": "1600","direction": ["PETROLINA",  "ESTACAO ELDORADO"]},
+      {"name": "1620","direction": ["JARDIM DAS ROSAS VIA BR-381",  "ESTACAO ELDORADO"]},
+      {"name": "1621","direction": ["JARDIM DAS ROSAS",  "ESTAÇÃO ELDORADO VIA CASCATA"]},
+      {"name": "1630","direction": ["CASCATA",  "ESTACAO ELDORADO"]},
+      {"name": "1640","direction": ["OURO NEGRO",  "ESTACAO ELDORADO"]},
+      {"name": "1650","direction": ["MONTREAL VIA OURO NEGRO",  "CIDADE INDUSTRIAL"]},
+      {"name": "1660","direction": ["MONTREAL VIA OURO NEGRO",  "BELO HORIZONTE"]},
+      {"name": "1661","direction": ["MONTREAL",  "PETROVALE",  "BELO HORIZONTE"]},
+      {"name": "1670","direction": ["MONTREAL",  "ESTAÇÃO ELDORADO"]},
+      {"name": "1671","direction": ["MONTREAL",  "PETROVALE",  "ESTAÇÃO ELDORADO"]},
+      {"name": "1680","direction": ["PETROVALE",  "BELO HORIZONTE"]},
+      {"name": "1690","direction": ["CASCATA",  "BELO HORIZONTE"]},
+      {"name": "1700","direction": ["BAIRRO ELDORADO VIA BR-381",  "ESTACAO ELDORADO"]},
+      {"name": "1710","direction": ["PETROVALE",  "ESTACAO ELDORADO"]},
+      {"name": "1720","direction": ["RECANTO DA LAGOA",  "MONTREAL",  "OURO"]},
+      {"name": "1730","direction": ["ESTACAO DIAMANTE",  "CONTAGEM",  "ALVORADA"]},
+      {"name": "1740","direction": ["CONTAGEM",  "ESTACAO DIAMANTE"]},
+      {"name": "1750","direction": ["AGUIA DOURADA",  "ESTACAO DIAMANTE"]},
+      {"name": "1751","direction": ["VISTA ALEGRE",  "ESTAÇÃO BARREIRO"]},
+      {"name": "1752","direction": ["VISTA ALEGRE",  "ESTAÇÃO DIAMANTE",  "ATENDIMENTO IFMG"]},
+      {"name": "1760","direction": ["MILIONARIOS",  "MAKRO"]},
+      {"name": "1770","direction": ["NOSSA SENHORA DE LOURDES",  "ESTACAO DIAMANTE"]},
+      {"name": "1771","direction": ["NOSSA SENHORA DE LOURDES",  "ESTAÇÃO BARREIRO"]},
+      {"name": "7900","direction": ["SANTA CRUZ",  "BELO HORIZONTE"]},
+      {"name": "7905","direction": ["SANTA CRUZ VIA VULO",  "BELO HORIZONTE"]},
+      {"name": "3992","direction": ["ITAGUARA",  "BELO HORIZONTE"]},
+      {"name": "3993","direction": ["ITAGUARA",  "ESTAÇÃO ELDORADO"]
       }
     ]
   },
   {
     "name": "PETROBRÁS",
     "lines": [
-      {"name": "Linha 01","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 01","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 07","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "LINHA 08","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "LINHA 10","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 12","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 13","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 14","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 15","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 16","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "LINHA 17","direction": [  "BAIRRO",  "REGAP"]
-      },
-      {"name": "Linha 18","direction": [  "BAIRRO",  "REGAP"]
+      {"name": "Linha 01","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 01","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 07","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "LINHA 08","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "LINHA 10","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 12","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 13","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 14","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 15","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 16","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "LINHA 17","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 18","direction": ["BAIRRO",  "REGAP"]
       }
     ]
   }
