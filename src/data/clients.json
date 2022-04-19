@@ -1,5 +1,42 @@
 [
   {
+    "name": "HEXAGONO",
+    "lines": [
+      {"name": "LINHA 01","direction": ["RAPOSOS", "MUTUCA"]},
+    ]
+  },
+  {
+    "name": "FM2C",
+    "lines": [
+      {"name": "LINHA 01","direction": ["RAPOSOS", "PICO"]},
+    ]
+  },
+  {
+    "name": "VALLOREC",
+    "lines": [
+      {"name": "LINHA 01","direction": ["SANTA RITA", "MINA P. BRANCO"]},
+    ]
+  },
+  {
+    "name": "MANSERV",
+    "lines": [
+      {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
+      {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
+      {"name": "LINHA 03","direction": ["LAGOA", "ANADAIME"]},
+      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA"]}
+    ]
+  },
+  {
+    "name": "MILPLAN",
+    "lines": [
+      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]
+      },
+      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]
+      },
+      {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO"]
+      }
+    ]
+  },{
     "name": "MANSERV",
     "lines": [
       {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
