@@ -2,7 +2,7 @@
   {
     "name": "FERREIRA GUEDES",
     "lines": [
-      {"name": "LINHA 01","direction": ["LEÃO 13", "CANTEIRO"]},
+      {"name": "LINHA 01","direction": ["LEÃO 13", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER"]},
       {"name": "LINHA 02","direction": ["LEÃO 13", "CANTEIRO"]},
       {"name": "LINHA 06","direction": ["LEÃO 13", "CANTEIRO"]},
       {"name": "LINHA 05","direction": ["CHACARA", "CANTEIRO"]},
@@ -41,7 +41,7 @@
       {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
       {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
       {"name": "LINHA 03","direction": ["LAGOA", "ANADAIME"]},
-      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA"]}
+      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA", "FAZ. TABATINGA", "FAZ. M. VERMELHO", "FAZ. QUIABO", "ALMOÇO"]}
     ]
   },
   {
