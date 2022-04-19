@@ -1,5 +1,23 @@
 [
   {
+    "name": "FERREIRA GUEDES",
+    "lines": [
+      {"name": "LINHA 01","direction": ["LEÃO 13", "CANTEIRO"]},
+      {"name": "LINHA 02","direction": ["LEÃO 13", "CANTEIRO"]},
+      {"name": "LINHA 06","direction": ["LEÃO 13", "CANTEIRO"]},
+      {"name": "LINHA 05","direction": ["CHACARA", "CANTEIRO"]},
+      {"name": "LINHA 16","direction": ["COCAIS", "CANTEIRO"]},
+      {"name": "LINHA 18","direction": ["CANTEIRO", "ANDAME"]},
+      {"name": "LINHA 15","direction": ["MAE D'ÁGUA", "CANTEIRO"]},
+      {"name": "LINHA 03","direction": ["SANTA BÁRBARA", "CANTEIRO"]},
+      {"name": "LINHA 08","direction": ["SANTA BÁRBARA", "CANTEIRO"]},
+      {"name": "LINHA 10","direction": ["ADM BARÃO COCAIS", "CANTEIRO"]},
+      {"name": "LINHA 11","direction": ["BARÃO COCAIS", "CANTEIRO"]},
+      {"name": "LINHA 12","direction": ["VIÚVA ", "CANTEIRO"]}
+
+    ]
+  },
+  {
     "name": "HEXAGONO",
     "lines": [
       {"name": "LINHA 01","direction": ["RAPOSOS", "MUTUCA"]}
