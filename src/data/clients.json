@@ -2,14 +2,10 @@
   {
     "name": "MANSERV",
     "lines": [
-      {"name": "LINHA 01","direction": ["SAO BARBARA", "CD"]
-      },
-      {"name": "LINHA 02","direction": ["ITABIRA", "CD"]
-      },
-      {"name": "LINHA 03","direction": ["BARAO DE COCAIS", "CD"]
-      },
-      {"name": "LINHA 04","direction": ["__", "CD"]
-      }
+      {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
+      {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
+      {"name": "LINHA 03","direction": ["LAGOA", "ANADAIME"]},
+      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA"]}
     ]
   },
   {
