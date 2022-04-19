@@ -72,10 +72,10 @@
   {
     "name": "AVG",
     "lines": [
-      {"name": "BRUM. T.","direction": ["BRUMADINHO",  "EMESA",  "JANTAR",  "JOVENS APRENDIZES"]},
-      {"name": "BRUM. ADM","direction": ["BRUMADINHO",  "EMESA"]},
-      {"name": "CONTAGEM ADM","direction": ["Contagem",  "EMESA",  "Almoço | Aprendiz"]},
-      {"name": "CONTAGEM T.","direction": ["CID. IND",  "EMESA",  "Almoço | Aprendiz"]}
+      {"name": "BRUM. T.","direction": ["BRUMADINHO",  "EMESA", "ALMOÇO", "JANTAR",  "JOVENS APRENDIZES",  "Almoço | Aprendiz"]},
+      {"name": "BRUM. ADM","direction": ["BRUMADINHO",  "EMESA", "ALMOÇO", "JANTAR",  "JOVENS APRENDIZES",  "Almoço | Aprendiz"]},
+      {"name": "CONTAGEM ADM","direction": ["Contagem",  "EMESA", "ALMOÇO", "JANTAR",  "JOVENS APRENDIZES",  "Almoço | Aprendiz"]},
+      {"name": "CONTAGEM T.","direction": ["CID. IND",  "EMESA", "ALMOÇO", "JANTAR",  "JOVENS APRENDIZES",  "Almoço | Aprendiz"]}
     ]
   },
   {
