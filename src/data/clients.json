@@ -59,8 +59,8 @@
       {"name": "BRUM. ADM","direction": ["BRUMADINHO",  "EMESA"]},
       {"name": "CONTAGEM ADM","direction": ["Contagem",  "EMESA"]},
       {"name": "CONTAGEM T.","direction": ["CID. IND",  "EMESA"]},
-      {"name": "ALMOÇO.","direction": ["EMESA"},
-      {"name": "JANTA","direction": ["EMESA"},
+      {"name": "ALMOÇO.","direction": ["EMESA"]},
+      {"name": "JANTA","direction": ["EMESA"]},
       {"name": "JOVENS APRENDIZES","direction": [ "EMESA", "BRUMADINHO"]}
     ]
   },
