@@ -41,24 +41,7 @@
       {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
       {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
       {"name": "LINHA 03","direction": ["LAGOA", "ANADAIME"]},
-      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA", "FAZ. TABATINGA", "FAZ. M. VERMELHO", "FAZ. QUIABO", "ALMOÇO"]}
-    ]
-  },
-  {
-    "name": "MILPLAN",
-    "lines": [
-      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]},
-      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]},
-      {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO"]
-      }
-    ]
-  },{
-    "name": "MANSERV",
-    "lines": [
-      {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
-      {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
-      {"name": "LINHA 03","direction": ["LAGOA", "ANADAIME"]},
-      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA"]}
+      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA", "FAZ. TABATINGA", "FAZ. M. VERMELHO", "FAZ. QUIABO", "ALMOÇO", "SAO GONÇALO", "BARAO DE COCAIS"]}
     ]
   },
   {
