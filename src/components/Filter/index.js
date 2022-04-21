@@ -97,7 +97,8 @@ const Filter = (props) => {
     }
 
 
-    const update = async (event) => {        
+    const update = async (event) => {   
+        console.log(filterDatas)
         if (event) {
             event.preventDefault()
             event.target.classList.add("disable")
