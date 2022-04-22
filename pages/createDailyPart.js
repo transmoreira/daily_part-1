@@ -245,7 +245,7 @@ const CreateDailyPart = (props) => {
         state.closable = true
 
         const listClients = clients.map(item => item.name)
-        const lines = [unproductiveKm, ...clients[listClients.indexOf(
+        const lines = [unproductiveKm(), ...clients[listClients.indexOf(
             isUrban ? "urbano" : state.dailyPart.client
         )].lines]
         const list = lines.map(item => item.name)
