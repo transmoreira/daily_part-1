@@ -245,13 +245,13 @@ const CreateDailyPart = (props) => {
         state.closable = true
 
         const listClients = clients.map(item => item.name)
-        const lines = clients[listClients.indexOf(
+        const lines = [unproductiveKm, ...clients[listClients.indexOf(
             isUrban ? "urbano" : state.dailyPart.client
-        )].lines
+        )].lines]
         const list = lines.map(item => item.name)
 
         state.label = <>Qual é a <b>LINHA</b>?</>
-        state.list = [unproductiveKm, ...list]
+        state.list = list
         state.type = "text"
         const line = await getData(list, "Linha não encontrada")
 
