@@ -81,6 +81,7 @@
       {"name": "CMT-01-CIRC.VULC","direction": [ "CMT",  "VGR", "PIC"]},
       {"name": "CPX - INTERNO","direction": ["CMT", "CPX", "VGR", "CTF", "TAM", "MUT", "MRZ", "PIC"]},
       {"name": "CTF-01-ALMOCO","direction": ["CTF"]},
+      {"name": "BOMBOEIROS","direction": ["BELO HORIZONTE","BRUMADINHO"]},
       {"name": "INT-CMT/PICO","direction": ["CMT",  "PIC"]},
       {"name": "INT-CMT/TAM","direction": ["CMT",  "TAM"]},
       {"name": "INT-PAIOL","direction": ["CMT",  "PAIOL"]},
