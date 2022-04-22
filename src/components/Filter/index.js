@@ -146,7 +146,7 @@ const Filter = (props) => {
 
 
 
-    return <article className="filter">
+    return <article className="filter no-print">
         < p > Filtros</p >
         <form>
             <div>
