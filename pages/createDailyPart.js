@@ -3,7 +3,8 @@ import employees from "../src/data/employees.json"
 import cars from "../src/data/cars.json"
 import clients from "../src/data/clients.json"
 import Table from "../src/components/Table"
-import { dateFormated } from "../src/utils/utils"
+import { dateFormated, unproductiveKm } from "../src/utils/utils"
+
 
 const actualDate = new Date()
 actualDate.setHours(11)
@@ -250,7 +251,7 @@ const CreateDailyPart = (props) => {
         const list = lines.map(item => item.name)
 
         state.label = <>Qual é a <b>LINHA</b>?</>
-        state.list = list
+        state.list = [unproductiveKm, ...list]
         state.type = "text"
         const line = await getData(list, "Linha não encontrada")
 
