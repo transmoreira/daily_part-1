@@ -226,8 +226,8 @@ const CreateDailyPart = (props) => {
 
             localStorage.removeItem("dailyPart")
            
-            alert("Viagem gravada com sucesso!")
             console.log("Date: " + date , "Today: "+today)
+            alert("Viagem gravada com sucesso!")
             if(date != today){
                 location.reload()
             }
