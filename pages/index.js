@@ -2,7 +2,7 @@ import Head from "next/head"
 import { useState } from "react"
 import Table from "../src/components/Table"
 import Filter from "../src/components/Filter"
-import Admin from "./admin"
+
 import cars from "../src/data/cars.json"
 import employees from "../src/data/employees.json"
 import clients from "../src/data/clients.json"
