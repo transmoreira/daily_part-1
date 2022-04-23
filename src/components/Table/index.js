@@ -6,14 +6,16 @@ import Image from "next/image"
 export default (props) => {
 
     const { id, client, date, driver, car, travels, passenger, obs } = props.dailyPart
-    const {unproductive,productive} = props.kms
+    const { unproductive, productive } = props.kms || { unproductive: -1, productive: -1 }
     const company = props.company || "RN"
     const isUrban = company == "TM"
     const logo = isUrban ? logoTM : logoRN
 
     return <section className="table">
-        <span className="success "> {productive} KM PRODUTIVO</span>
-        <span className="error"> {unproductive} KM IMPRODUTIVO</span>
+        {unproductive>=0 &&<>
+            <span className="success "> {productive} KM PRODUTIVO</span>
+            <span className="error"> {unproductive} KM IMPRODUTIVO</span>
+        </>}
         <table onClick={props.onClick}>
             <thead>
                 <tr>
@@ -137,7 +139,7 @@ export default (props) => {
             </tbody>
             <tfoot>
                 <tr>
-                    
+
                     <td colSpan={isUrban ? 14 : 12}>
                         {obs}
                     </td>
