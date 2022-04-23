@@ -98,7 +98,7 @@ export default (props) => {
                     </tr>
                 )}
                 <tr key={100}>
-                    <td></td>
+                    <td className="min-200"></td>
                     <td></td>
                     <td></td>
                     <td></td>

@@ -28,5 +28,16 @@ const filter = (dailyPart, filterDatas) =>  dailyPart.filter((item, index) => {
             (filterDatas.line == "" || item.travels.map(item => item.line).filter(item => item == filterDatas.line).length > 0)
     })
 
+const exportCsv = (dailyParts)=>{
+    const contentCSV =
+        dailyParts.reduce((acc,dailyPart)=>{
+            dailyPart.travels.forEach(travel=>{
+                acc.push([travel.line,travel.origin,travel.destiny,travel.startTime,travel.endTime,travel.startKM,travel.endKM,travel.endKM-travel.startKM,dailyPart.car.number,dailyPart.driver.name])
+            })
+            return acc
+        },[])
+    
+    return contentCSV
+}
 
-export {dateFormated, timeFormated, filter}
+export {dateFormated, timeFormated, filter, exportCsv}

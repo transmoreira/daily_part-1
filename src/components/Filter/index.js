@@ -2,8 +2,7 @@ import { useState } from "react"
 import clientsJSON from "../../data/clients.json"
 import carsJSON from "../../data/cars.json"
 import employeesJSON from "../../data/employees.json"
-import { dateFormated } from "../../utils/utils"
-
+import { dateFormated, exportCsv } from "../../utils/utils"
 
 
 
@@ -29,7 +28,7 @@ const filterDatas = {
 }
 let dailyPart = []
 
-const getDailyPartsInDataBase = async (company="RN") => {
+const getDailyPartsInDataBase = async (company = "RN") => {
 
     const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
     dailyPart = await response.json()
@@ -42,7 +41,7 @@ const Filter = (props) => {
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
     const company = props.company
-    
+
     const clients = clientsJSON.map(item => item.name)
 
     const onChange = (event) => {
@@ -57,7 +56,7 @@ const Filter = (props) => {
                 const shouldUpdatedata =
                     newDate.getTime() < filterDatas.timeCourse.start.getTime() ||
                     newDate.getTime() > filterDatas.timeCourse.end.getTime()
-                console.log(shouldUpdatedata)
+                
 
                 switch (element.id) {
 
@@ -68,8 +67,9 @@ const Filter = (props) => {
                         }
                         break;
                     case "end":
-                        newDate.setSeconds(newDate.getSeconds() - 1)
-                        newDate.setDate(newDate.getDate() + 1)
+                        newDate.setHours(23)
+                        newDate.setMinutes(59)
+                        newDate.setSeconds(59)
                         filterDatas.timeCourse.end = newDate
                         if (shouldUpdatedata) {
                             update()
@@ -97,15 +97,19 @@ const Filter = (props) => {
     }
 
 
-    const update = async (event) => {        
+    const update = async (event) => {
+        console.log(filterDatas)
         if (event) {
             event.preventDefault()
             event.target.classList.add("disable")
         }
-        
-        await getDailyPartsInDataBase(company)
-        newFilter()
-        if(event){
+        try{
+            await getDailyPartsInDataBase(company)
+            newFilter()
+        }catch(erro){
+
+        }
+        if (event) {
             event.target.classList.remove("disable")
         }
     }
@@ -114,7 +118,7 @@ const Filter = (props) => {
 
     const newFilter = () => {
 
-        
+
         const newList = dailyPart.filter((item, index) => {
             const date = new Date(item.date)
             date.setUTCHours(3)
@@ -143,9 +147,17 @@ const Filter = (props) => {
         setListDailyParts(newList)
     }
 
+    const csvData = exportCsv(listDailyParts)
 
+    console.log(csvData)
+    const getCountTravels = () => {
 
-    return <article className="filter">
+        return listDailyParts.reduce((acc, dailyPart) => acc + dailyPart.travels.length, 0)
+    }
+
+    
+
+    return <article className="filter .no-print">
         < p > Filtros</p >
         <form>
             <div>
@@ -165,7 +177,7 @@ const Filter = (props) => {
                 </select>
                 Linha:
                 <input id="line" onChange={onChange} list="listLine" />
-                <datalist  key={1} id="listLine">
+                <datalist key={1} id="listLine">
                     {lines.map((item, index) =>
                         <option key={index} >{item}</option>)}
                 </datalist>
@@ -173,13 +185,13 @@ const Filter = (props) => {
             <div>
                 Carro:
                 <input id="car" onChange={onChange} list="listCars" />
-                <datalist  key={2} id="listCars">
+                <datalist key={2} id="listCars">
                     {carsJSON.map((car, index) =>
                         <option key={index} >{car.number}</option>)}
                 </datalist>
                 Motorista:
                 <input id="driver" onChange={onChange} list="listDriver" />
-                <datalist  key={3} id="listDriver">
+                <datalist key={3} id="listDriver">
                     {employeesJSON.map((employee, index) =>
                         <option key={employee.registration} value={employee.name}>{employee.registration}</option>)}
                 </datalist>
@@ -189,7 +201,11 @@ const Filter = (props) => {
                 <button onClick={update}>Atualizar</button>
             </div>
         </form>
-        <span>{listDailyParts.length} parte(s) diaria(s)</span>
+        <span>{listDailyParts.length} parte(s) diaria(s)</span><br />
+        <span>{getCountTravels()} viagens</span><br />
+        
+        
+
     </article >
 }
 
