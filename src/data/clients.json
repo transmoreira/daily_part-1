@@ -214,8 +214,10 @@
   {
     "name": "Vale Viga",
     "lines": [
-      {"name": "ABC","direction": ["ABC MINA VIGA",  "VALE VIGA"]},
-      {"name": "ABC","direction": ["ABC CONGONHAS",  "VALE VIGA"]},
+      {"name": "ABC LAFAIETE","direction": ["LAFAIETE",  "VALE VIGA"]},
+      {"name": "ABC CONGONHAS","direction": ["CONGONHAS",  "VALE VIGA"]},
+      {"name": "INTERNO 1","direction": ["INTERNO"]},
+      {"name": "INTERNO 2","direction": ["INTERNO"]},
       {"name": "ALMOCO","direction": ["REFEITORIO MINA",  "VALE VIGA"]},
       {"name": "CL-A01","direction": ["ADM CONS.",  "VALE VIGA"]},
       {"name": "CL-A02","direction": ["ADM CONS.",  "VALE VIGA"]},
