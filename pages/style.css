@@ -107,8 +107,12 @@ td, th{
     font-weight: bold;
 }
 
-.min-120{
-    min-width: 120px;
+.min-100{
+    min-width: 100px;
+}
+
+.min-80{
+    min-width: 50px;
 }
 
 .min{
@@ -125,17 +129,17 @@ input{
 }
 
 td[data-js="remove"]{    
-    color: white;
+    color: red;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
     width: 30px;
-
+    
 }
 
 td[data-js="remove"] span{ 
-    background-color: red;
+    /*background-color: red;*/
     border-radius: 50%;
-    padding: 0 5px;
     cursor: pointer;
   }
 
@@ -234,9 +238,17 @@ button{
 }
 
 .error{
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.2);
     border: 2px solid red;
     color: red;
+    padding: 0 10px;
+}
+
+.success{
+    background-color: rgba(0, 255, 0, 0.2);
+    border: 2px solid green;
+    color: green;
+    padding: 0 10px;
 }
 
 .warn{
@@ -278,6 +290,33 @@ button{
 .modal form table{
     width: 95%;
 } 
+
+.lines{
+   
+    border: black solid 1px;
+    position: fixed;
+    z-index: 2;
+    max-height: 90vh;
+    top: 20px;
+    right: 10px;
+    width: 240px;
+    overflow-y: scroll;
+    box-shadow: 10px 10px 50px black;
+}
+
+.lines td{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.lines thead{
+    background-color: cadetblue;
+}
+
+.text-left{
+    text-align: left;
+}
+
 
 @media print{
     .no-print{

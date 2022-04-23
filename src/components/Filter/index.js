@@ -147,9 +147,7 @@ const Filter = (props) => {
         setListDailyParts(newList)
     }
 
-    const csvData = exportCsv(listDailyParts)
 
-    console.log(csvData)
     const getCountTravels = () => {
 
         return listDailyParts.reduce((acc, dailyPart) => acc + dailyPart.travels.length, 0)

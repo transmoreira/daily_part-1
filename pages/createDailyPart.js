@@ -3,7 +3,8 @@ import employees from "../src/data/employees.json"
 import cars from "../src/data/cars.json"
 import clients from "../src/data/clients.json"
 import Table from "../src/components/Table"
-import { dateFormated } from "../src/utils/utils"
+import { dateFormated, unproductiveKm } from "../src/utils/utils"
+
 
 const actualDate = new Date()
 actualDate.setHours(11)
@@ -220,11 +221,12 @@ const CreateDailyPart = (props) => {
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
             setState({ ...state })
 
-            const date = new Date(JSON.parse(localStorage.getItem("dailyPart")).date).getDate()
+            const date = JSON.parse(localStorage.getItem("dailyPart")).date.toString().substr(8,2)
             const today = new Date().getDate()
 
             localStorage.removeItem("dailyPart")
            
+            console.log("Date: " + date , "Today: "+today)
             alert("Viagem gravada com sucesso!")
             if(date != today){
                 location.reload()
@@ -244,9 +246,9 @@ const CreateDailyPart = (props) => {
         state.closable = true
 
         const listClients = clients.map(item => item.name)
-        const lines = clients[listClients.indexOf(
+        const lines = [unproductiveKm(), ...clients[listClients.indexOf(
             isUrban ? "urbano" : state.dailyPart.client
-        )].lines
+        )].lines]
         const list = lines.map(item => item.name)
 
         state.label = <>Qual é a <b>LINHA</b>?</>

@@ -1,5 +1,16 @@
 [
   {
+    "name": "COLARES-LINHARES",
+    "lines": [
+      {"name": "LINHA 01","direction": ["LARANJEIRAS", "CANTEIRO"]},
+      {"name": "LINHA 02","direction": ["SERRA VERDE", "CANTEIRO"]},
+      {"name": "LINHA 03","direction": ["SERRA VERDE", "CANTEIRO"]},
+      {"name": "LINHA 04","direction": ["VALE JATOBÁ", "CANTEIRO"]},
+      {"name": "LINHA 05","direction": ["ESCRITORIO", "CANTEIRO"]},
+      {"name": "LINHA 06","direction": ["CANTEIRO"]}
+    ]
+  },
+  {
     "name": "FERREIRA GUEDES",
     "lines": [
       {"name": "LINHA 01","direction": ["ALMOCO", "LEÃO 13", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
@@ -57,7 +68,7 @@
     "lines": [
       {"name": "BRUM. T.","direction": ["BRUMADINHO",  "EMESA"]},
       {"name": "BRUM. ADM","direction": ["BRUMADINHO",  "EMESA"]},
-      {"name": "CONTAGEM ADM","direction": ["CONTAGEM",  "EMESA"]},
+      {"name": "CONTAGEM ADM","direction": ["CONTAGEM",  "EMESA", "BURITIS"]},
       {"name": "CONTAGEM T.","direction": ["CID. IND",  "EMESA"]},
       {"name": "ALMOÇO.","direction": ["EMESA"]},
       {"name": "JANTA","direction": ["EMESA"]},
@@ -70,6 +81,7 @@
       {"name": "CMT-01-CIRC.VULC","direction": [ "CMT",  "VGR", "PIC"]},
       {"name": "CPX - INTERNO","direction": ["CMT", "CPX", "VGR", "CTF", "TAM", "MUT", "MRZ", "PIC"]},
       {"name": "CTF-01-ALMOCO","direction": ["CTF"]},
+      {"name": "BOMBOEIROS","direction": ["BELO HORIZONTE","BRUMADINHO"]},
       {"name": "INT-CMT/PICO","direction": ["CMT",  "PIC"]},
       {"name": "INT-CMT/TAM","direction": ["CMT",  "TAM"]},
       {"name": "INT-PAIOL","direction": ["CMT",  "PAIOL"]},
@@ -93,7 +105,7 @@
       {"name": "JGD-12X36","direction": ["CONTAGEM", "JGD","BRUMADINHO"]},
       {"name": "MARAVILHAS3","direction": ["MARAVILHAS3",  "ITABIRITO"]},
       {"name": "DERD06","direction": ["ITABIRITO",  "CMM"]},
-      {"name": "DERD03","direction": ["BRUMADINHO",  "AURORA",  "CENTRO",  "OBRA"]},
+      {"name": "DERD03","direction": ["BRUMADINHO",  "AURORA",  "CENTRO",  "OBRA", "ALMOCO", "CANTEIRO", "RESTAURANTE"]},
       {"name": "10 BARAO C","direction": ["BARAO DE COCAIS",  "MINA TORTO"]},
       {"name": "09 SAO CONCALO","direction": ["SAO G. RIO ABAIXO",  "MINA TORTO"]},
       {"name": "08 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
@@ -111,7 +123,7 @@
       {"name": "DERD02","direction": ["CONTAGEM",  "FEIJAO"]},
       {"name": "DERD09.","direction": ["CID. INDUSTRIAL",  "FEIJAO"]},
       {"name": "A01 CONCREMAT","direction": ["VENDA NOVA",  "FEIJAO"]},
-      {"name": "A09 CONCREMAT","direction": ["AURORA",  "FEIJAO", "CON. ITAGUA"]},
+      {"name": "A09 CONCREMAT","direction": ["AURORA",  "FEIJAO", "CON. ITAGUA", "ALMOCO", "BALDEIO", "CANTEIRO", "MEMORIAL"]},
       {"name": "CDM-A1-BHSHOP","direction": ["BELO HORIZONTE",  "CDM"]},
       {"name": "CDM-A2-BIGSHOP","direction": ["CONTAGEM",  "CDM"]},
       {"name": "CDM-A3-CID.ADM","direction": ["BELO HORIZONTE",  "CDM"]},

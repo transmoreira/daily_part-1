@@ -6,11 +6,14 @@ import Image from "next/image"
 export default (props) => {
 
     const { id, client, date, driver, car, travels, passenger, obs } = props.dailyPart
+    const {unproductive,productive} = props.kms
     const company = props.company || "RN"
     const isUrban = company == "TM"
     const logo = isUrban ? logoTM : logoRN
 
     return <section className="table">
+        <span className="success "> {productive} KM PRODUTIVO</span>
+        <span className="error"> {unproductive} KM IMPRODUTIVO</span>
         <table onClick={props.onClick}>
             <thead>
                 <tr>
@@ -93,12 +96,12 @@ export default (props) => {
                             </>
                         }
                         <td>{item.passenger}</td>
-                        <td colSpan="2" className="min-200">{item.origin}</td>
-                        <td colSpan="2" className="min-200">{item.destiny}</td>
+                        <td colSpan="2" className="min-100">{item.origin}</td>
+                        <td colSpan="2" className="min-100">{item.destiny}</td>
                     </tr>
                 )}
                 <tr key={100}>
-                    <td className="min-200"></td>
+                    <td className="min-100"></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -111,8 +114,8 @@ export default (props) => {
                             <th></th>
                         </>
                     }
-                    <td colSpan="2" className="min-200"></td>
-                    <td colSpan="2" className="min-200"></td>
+                    <td colSpan="2" className="min-100"></td>
+                    <td colSpan="2" className="min-100"></td>
                 </tr>
                 <tr key={101}>
                     <td></td>
@@ -128,8 +131,8 @@ export default (props) => {
                             <th></th>
                         </>
                     }
-                    <td colSpan="2" className="min-200"></td>
-                    <td colSpan="2" className="min-200"></td>
+                    <td colSpan="2" className="min-100"></td>
+                    <td colSpan="2" className="min-100"></td>
                 </tr>
             </tbody>
             <tfoot>

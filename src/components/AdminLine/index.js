@@ -1,13 +1,11 @@
 const AdminLine = () => {
     return <>
         <section>
-            <tabe>
-                
+            <tabe>                
                     <tr>
                         <th>Nome</th>
                         <th>Número</th>
-                    </tr>
-                                  
+                    </tr>                                  
                     <tr>
                         <td>
                             12321
@@ -23,8 +21,7 @@ const AdminLine = () => {
                         <td>
                             SFD2G54
                         </td>
-                    </tr>
-                
+                    </tr>                
             </tabe>
         </section>
     </>
