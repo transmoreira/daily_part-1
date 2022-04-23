@@ -9,7 +9,7 @@ export default (props) => {
     const { unproductive, productive } = props.kms || { unproductive: -1, productive: -1 }
     const company = props.company || "RN"
     const isUrban = company == "TM"
-    const logo = isUrban ? logoTM : logoRN
+    const logo = (isUrban || client == "PETROBRÁS") ? logoTM : logoRN
 
     return <section className="table">
         {unproductive>=0 &&<>
