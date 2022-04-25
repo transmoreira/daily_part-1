@@ -368,7 +368,7 @@ const CreateDailyPart = (props) => {
 
                 //const halfDistance = Math.floor(distance/2)
                 const minimumDistance = 0//distance - halfDistance
-                const maximumDistance = 120//distance + halfDistance
+                const maximumDistance = 300//distance + halfDistance
                 const previousKM = state.dailyPart.travels[countTravels - 1].endKM ||
                     state.dailyPart.travels[countTravels - 1].startKM
 
