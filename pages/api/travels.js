@@ -6,8 +6,8 @@ const dailyPart = async (request, response) => {
         try {            
 
             const data = await connect(sql)
-            
-            response.status(201).json(data)
+            console.log(data, sql)
+            response.status(201).json({...data})
 
 
         } catch (error) {
@@ -59,6 +59,10 @@ const dailyPart = async (request, response) => {
         }catch(erro){
             response.json(error)
         }
+    }else if(request.method === "DELETE"){
+        const { id } = JSON.parse(request.body)
+        const sql = "DELETE FROM travels WHERE id  = " + id
+        getResult(sql)
     }
 }
 

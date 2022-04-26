@@ -1,4 +1,5 @@
 import { dateFormated, timeFormated } from "../../utils/utils"
+import { AiTwotoneDelete, AiFillDelete } from "react-icons/ai"
 import logoRN from "../../img/logo-rio-negro.jpg"
 import logoTM from "../../img/transmoreira.png"
 import Image from "next/image"
@@ -10,9 +11,10 @@ export default (props) => {
     const company = props.company || "RN"
     const isUrban = company == "TM"
     const logo = (isUrban || client == "PETROBRÁS") ? logoTM : logoRN
+    const edit = props.edit || false
 
     return <section className="table">
-        {unproductive>=0 &&<>
+        {unproductive >= 0 && <>
             <span className="success "> {productive} KM PRODUTIVO</span>
             <span className="error"> {unproductive} KM IMPRODUTIVO</span>
         </>}
@@ -44,7 +46,7 @@ export default (props) => {
                 </tr>
                 <tr>
                     <th className="no-editable" rowSpan="2" colSpan={2}>Nº <span className="colorRed">{id}</span></th>
-                    <th className="no-editable" colSpan="69">IDENTIFIÇÃO DO MOTORISTA</th>
+                    <th className="no-editable" colSpan={isUrban ? 11 : 9}>IDENTIFIÇÃO DO MOTORISTA</th>
                 </tr>
                 <tr>
                     <th className="no-editable" colSpan={2}>MATRÍCULA</th>
@@ -100,6 +102,11 @@ export default (props) => {
                         <td>{item.passenger}</td>
                         <td colSpan="2" className="min-100">{item.origin}</td>
                         <td colSpan="2" className="min-100">{item.destiny}</td>
+                        {edit &&
+                            <td className="delete" data-js={item.id}>
+                                <AiFillDelete data-js={item.id} className="delete" color="red" size="25px" />
+                            </td>
+                        }
                     </tr>
                 )}
                 <tr key={100}>
@@ -140,7 +147,7 @@ export default (props) => {
             <tfoot>
                 <tr>
 
-                    <td colSpan={isUrban ? 14 : 12}>
+                    <td colSpan={isUrban ? 13 : 11}>
                         {obs}
                     </td>
                 </tr>

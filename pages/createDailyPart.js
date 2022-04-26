@@ -45,8 +45,43 @@ const CreateDailyPart = (props) => {
         setState({ ...state })
     }
 
-    const inputValue = async () => {
+    const inputValue = async (event) => {
+        const shouldDelete = event.target.className == "delete"
+            || event.target.parentElement.parentElement.className == "delete"
+        if(shouldDelete){
+            const idDelete = event.target.dataset["js"]
+            || event.target.parentElement.parentElement.dataset["js"]
+            const travel = state.dailyPart.travels.filter(travel=>travel.id == idDelete)[0]
+            const indexTravel = state.dailyPart.travels.indexOf(travel)
+          
+            const responseUse = confirm(`Tem certeza que deseja apagar a viagem de ${travel.startTime}?`)
+            if(responseUse){
+                const response = await fetch(
+                    "api/travels",
+                    {
+                        method: "DELETE",
+                        body: JSON.stringify({id:idDelete})
+                    }
+                )
+                const result = await response.json()
+                if(result.affectedRows){
+                    if(!travel.endKM){
+                       localStorage.removeItem("dailyPart")
+                    }
+                    state.dailyPart.travels.splice(indexTravel, 1);
+                    setState({ ...state })
+                }else{
+                    alert("Erro ao deletar viagem. Tente novamente.")
+                }
 
+
+
+
+            }
+            return
+        }
+
+        
         const dailyPartImcompleted = localStorage.getItem("dailyPart")
         if (dailyPartImcompleted) {
             state.dailyPart = JSON.parse(dailyPartImcompleted)
@@ -57,6 +92,8 @@ const CreateDailyPart = (props) => {
         if (!state.dailyPart.driver.registration) {
             const list = employees.map(item => item.registration)
             state.label = <>Qual é sua <b>MATRÍCULA</b>?</>
+            state.min = 0
+            state.max = 10
             state.list = []
             state.type = "number"
             setState({ ...state })
@@ -141,7 +178,7 @@ const CreateDailyPart = (props) => {
 
             const minTime = actualtravel.startTime
             const maxTime = new Date(minTime)
-            maxTime.setHours(maxTime.getHours() + 3)
+            maxTime.setHours(maxTime.getHours() + 6)
 
             state.label = <>A viagem terminou que <b>HORAS</b>?</>
             state.type = "datetime-local"
@@ -166,6 +203,8 @@ const CreateDailyPart = (props) => {
             }
 
             state.label = <>Quantos <b>passageiros</b> embarcaram?</>
+            state.min = 0
+            state.max = 59
             state.type = "number"
             setState({ ...state })
             const passenger = isUrban 
@@ -445,7 +484,7 @@ const CreateDailyPart = (props) => {
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
-            <Table onClick={inputValue} dailyPart={state.dailyPart} company={company} />
+            <Table onClick={inputValue} dailyPart={state.dailyPart} company={company} edit={true}/>
             <textarea
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}

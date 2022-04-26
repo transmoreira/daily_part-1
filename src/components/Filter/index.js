@@ -150,7 +150,14 @@ const Filter = (props) => {
 
     const getCountTravels = () => {
 
-        return listDailyParts.reduce((acc, dailyPart) => acc + dailyPart.travels.length, 0)
+        return listDailyParts.reduce((acc, dailyPart) => {            
+            dailyPart.travels.forEach(travel => {
+                if(travel.line!="DESLOCAMENTO OCIOSO"){
+                    acc++
+                }
+            });
+            return acc
+        }, 0)
     }
 
     
