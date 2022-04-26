@@ -31,7 +31,8 @@ const unproductiveKm = ()=>({
         "INICIO DE ROTA",
         "FIM DE ROTA",
         "CASA",
-        'GARAGEM'
+        'GARAGEM',
+        "UNIDADE VALE"
     ]
 })
 
