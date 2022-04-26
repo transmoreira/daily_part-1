@@ -37,7 +37,8 @@
   {
     "name": "FM2C",
     "lines": [
-      {"name": "LINHA 01","direction": ["RAPOSOS", "PICO"]}
+      {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO"]},
+      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO"]}
     ]
   },
   {

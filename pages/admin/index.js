@@ -4,6 +4,10 @@ export default (props) => {
     const { headers, data, title } = props
     const [state, setState] = useState(data)
 
+    if(!headers){
+        return <h1>Página em construção</h1>
+    }
+
     const filter = (event) => {
         const inputValue = event.target.value.toUpperCase()
         const resultFilter = data.filter(
