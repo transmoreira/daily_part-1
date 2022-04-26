@@ -128,6 +128,7 @@
       {"name": "CDM-A2-BIGSHOP","direction": ["CONTAGEM",  "CDM"]},
       {"name": "CDM-A3-CID.ADM","direction": ["BELO HORIZONTE",  "CDM"]},
       {"name": "CDM-A5-CAETE","direction": ["CAETE",  "CDM"]},
+      {"name": "CDM - INTERNO","direction": ["CDM"]},
       {"name": "A31","direction": ["ITABIRITO",  "CMT"]},
       {"name": "A32","direction": ["ITABIRITO",  "CMT",  "TOD"]},
       {"name": "A38","direction": ["BRUMADINHO",  "CMT"]},
