@@ -28,6 +28,7 @@ const filterDatas = {
 }
 let dailyPart = []
 
+
 const getDailyPartsInDataBase = async (company = "RN") => {
 
     const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
@@ -40,36 +41,42 @@ const Filter = (props) => {
 
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
-    const company = props.company
+    const company = props.company || "RN"
 
+    const kms = props.kms.reduce((acc, km) => {
+        acc.productive += km.productive
+        acc.unproductive += km.unproductive
+        return acc
+    }, { unproductive: 0, productive: 0 })
+   
     const clients = clientsJSON.map(item => item.name)
 
     const onChange = (event) => {
+        console.log(filterDatas)
         const element = event.target
 
         switch (element.id) {
             case "start":
             case "end":
                 const newDate = new Date(element.value)
-                newDate.setUTCHours(3)
+                //newDate.setUTCHours(3)
 
                 const shouldUpdatedata =
                     newDate.getTime() < filterDatas.timeCourse.start.getTime() ||
                     newDate.getTime() > filterDatas.timeCourse.end.getTime()
-                
+
 
                 switch (element.id) {
 
                     case "start":
+                        newDate.setUTCHours(0,0,0,0)
                         filterDatas.timeCourse.start = newDate
                         if (shouldUpdatedata) {
                             update()
                         }
                         break;
                     case "end":
-                        newDate.setHours(23)
-                        newDate.setMinutes(59)
-                        newDate.setSeconds(59)
+                        newDate.setUTCHours(23,59,59,999)
                         filterDatas.timeCourse.end = newDate
                         if (shouldUpdatedata) {
                             update()
@@ -96,17 +103,15 @@ const Filter = (props) => {
         newFilter()
     }
 
-
     const update = async (event) => {
-        console.log(filterDatas)
         if (event) {
             event.preventDefault()
             event.target.classList.add("disable")
         }
-        try{
+        try {
             await getDailyPartsInDataBase(company)
             newFilter()
-        }catch(erro){
+        } catch (erro) {
 
         }
         if (event) {
@@ -114,6 +119,11 @@ const Filter = (props) => {
         }
     }
 
+    const geraCSV = async (event) => {
+        event.preventDefault()
+        
+        exportCsv(listDailyParts)
+    }
 
 
     const newFilter = () => {
@@ -150,9 +160,9 @@ const Filter = (props) => {
 
     const getCountTravels = () => {
 
-        return listDailyParts.reduce((acc, dailyPart) => {            
+        return listDailyParts.reduce((acc, dailyPart) => {
             dailyPart.travels.forEach(travel => {
-                if(travel.line!="DESLOCAMENTO OCIOSO"){
+                if (travel.line != "DESLOCAMENTO OCIOSO") {
                     acc++
                 }
             });
@@ -160,17 +170,17 @@ const Filter = (props) => {
         }, 0)
     }
 
-    
 
-    return <article className="filter .no-print">
+
+    return <article className="filter no-print">
         < p > Filtros</p >
         <form>
             <div>
 
                 Período:
-                <input type="date" id="start" onChange={onChange} />
+                <input type="date" id="start" onChange={onChange} value={filterDatas.timeCourse.start.toISOString().substring(0,10)}/>
                 à
-                <input type="date" id="end" onChange={onChange} />
+                <input type="date" id="end" onChange={onChange} value={filterDatas.timeCourse.end.toISOString().substring(0,10)}/>
 
             </div>
             <div>
@@ -204,12 +214,17 @@ const Filter = (props) => {
             <div>
 
                 <button onClick={update}>Atualizar</button>
+                <button onClick={geraCSV}>Baixar CSV</button>
             </div>
         </form>
-        <span>{listDailyParts.length} parte(s) diaria(s)</span><br />
-        <span>{getCountTravels()} viagens</span><br />
-        
-        
+        <div>
+            <span><strong>{listDailyParts.length}</strong> parte(s) diaria(s)</span>
+            <span><strong>{getCountTravels()}</strong> viagens</span>
+            <span><strong>{kms.productive.toLocaleString('pt-BR')}</strong> KM's produtivos</span>
+            <span><strong>{kms.unproductive.toLocaleString('pt-BR')}</strong> KM's improdutivos</span>
+        </div>
+
+
 
     </article >
 }

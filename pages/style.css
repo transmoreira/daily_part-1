@@ -1,7 +1,24 @@
-@media only screen and (max-width: 600px){
-    body{
-        zoom: 2;
-    }    
+@media only screen and (max-width: 900px){
+        .lines{
+            display: none;
+        }
+        
+        article.filter{
+            height: 150px;
+            top: 0;
+        }
+
+        article form{    
+            flex-direction: row !important;
+        }
+
+        article.filter>div{
+            flex-direction: row !important;    
+        }
+
+        main{
+            margin-top: 190px;
+        }
 }
 
 *{
@@ -57,9 +74,22 @@ article.filter div{
     width: max-content;
 }
 
+article.filter>div{
+    display: flex;
+    flex-direction: column;    
+}
+
+article.filter>div span{
+    margin: 5px;
+}
+
 article.filter form{
     display: flex;
     text-align: center;
+}
+
+article.filter span{
+    color: #345;
 }
 
 form div{
@@ -205,6 +235,7 @@ button{
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .content-modal .close{

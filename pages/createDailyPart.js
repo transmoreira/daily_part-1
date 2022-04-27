@@ -38,8 +38,6 @@ const CreateDailyPart = (props) => {
         }
     })
 
-
-
     const closeMadal = () => {
         state.close = "close"
         setState({ ...state })

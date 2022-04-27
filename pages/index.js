@@ -67,14 +67,13 @@ const Home = (props) => {
     })
 
 
-
     return <>
         <Head>
             <title>Parte Diaria</title>
             <link rel="icon" href="/favicon.png" />
         </Head>
 
-        {<Filter state={[listDailyParts, setListDailyParts]} company={company} />}
+        {<Filter state={[listDailyParts, setListDailyParts]} company={company} kms={kms}/>}
         <main>
             {
                 listDailyParts.map((item, index) =>
@@ -87,7 +86,7 @@ const Home = (props) => {
             }
             {/*<Admin {...csvReport}></Admin>*/}
         </main>
-        <div className="lines">
+        <div className="lines no-print">
             <table>
                 <thead>
                     <tr>
@@ -97,9 +96,9 @@ const Home = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {countTravelsForLine.map(item=>{
+                    {countTravelsForLine.map((item,index)=>{
                         
-                        return <tr className={!item.countTravels && "error"}>
+                        return <tr key={index} className={!item.countTravels && "error"}>
                             <td className="text-left min-80">{item.client}</td>
                             <td className="text-left">{item.line}</td>
                             <td >{item.countTravels}</td>
