@@ -43,7 +43,7 @@
   {
     "name": "FM2C",
     "lines": [
-      {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO"]},
+      {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VRG"]},
       {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO"]}
     ]
   },
