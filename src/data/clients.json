@@ -1,5 +1,11 @@
 [
   {
+    "name": "FIAT",
+    "lines": [
+      {"name": "BHNO08","direction": ["BELO HORIZONTE", "FIAT"]}
+    ]
+  },
+  {
     "name": "COLARES-LINHARES",
     "lines": [
       {"name": "LINHA 01","direction": ["LARANJEIRAS", "CANTEIRO"]},
