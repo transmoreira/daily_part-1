@@ -65,9 +65,9 @@
   {
     "name": "MILPLAN",
     "lines": [
-      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO"]},
-      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO"]},
-      {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO"]}
+      {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO", "ALMOCO", "INTERNO"]},
+      {"name": "ROTA 02","direction": ["CITROLANDIA", "TICO TICO", "ALMOCO", "INTERNO"]},
+      {"name": "ROTA 03","direction": ["IGAR. NOVO IGARAPE", "TICO TICO", "ALMOCO", "INTERNO"]}
     ]
   },
   {
