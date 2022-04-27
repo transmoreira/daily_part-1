@@ -176,7 +176,7 @@ const CreateDailyPart = (props) => {
 
             const minTime = actualtravel.startTime
             const maxTime = new Date(minTime)
-            maxTime.setHours(maxTime.getHours() + 6)
+            maxTime.setHours(maxTime.getHours() + 13)
 
             state.label = <>A viagem terminou que <b>HORAS</b>?</>
             state.type = "datetime-local"
