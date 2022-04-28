@@ -99,7 +99,7 @@
     "name": "FM2C",
     "lines": [
       {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VRG"]},
-      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO"]}
+      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VRG"]}
     ]
   },
   {
@@ -171,7 +171,7 @@
       {"name": "DERD03","direction": ["BRUMADINHO",  "AURORA",  "CENTRO",  "OBRA", "ALMOCO", "CANTEIRO", "RESTAURANTE"]},
       {"name": "10 BARAO C","direction": ["BARAO DE COCAIS",  "MINA TORTO"]},
       {"name": "09 SAO CONCALO","direction": ["SAO G. RIO ABAIXO",  "MINA TORTO"]},
-      {"name": "08 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
+      {"name": "08 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA", "BARRAGEM JOAO PEREIRA"]},
       {"name": "06 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
       {"name": "07 MINA FABRICA","direction": ["C LAFAIETE",  "PROGEN"]},
       {"name": "05 GONGO SOCO","direction": ["BARAO DE COCAIS",  "GONGO SOCO"]},
