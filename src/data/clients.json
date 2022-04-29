@@ -119,9 +119,9 @@
   {
     "name": "MANSERV",
     "lines": [
-      {"name": "LINHA 01","direction": ["SAO BARBARA", "ANADAIME"]},
+      {"name": "LINHA 01","direction": ["SAO BARBARA", "ANDAIME"]},
       {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
-      {"name": "LINHA 03","direction": ["LAGOA", "ANADAIME"]},
+      {"name": "LINHA 03","direction": ["LAGOA", "ANDAIME"]},
       {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA", "FAZ. TABATINGA", "FAZ. M. VERMELHO", "FAZ. QUIABO", "ALMOÇO", "SAO GONÇALO", "BARAO DE COCAIS"]},
       {"name": "ITABIRITO","direction": ["ITABIRITO", "BRUMADINHO"]},
       {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA"]}
