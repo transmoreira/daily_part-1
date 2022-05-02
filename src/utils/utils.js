@@ -40,8 +40,7 @@ const exportCsv = (data)=>{
             return `${date};${travel.line};${travel.origin};${travel.destiny};${startTime};${endTime};${travel.passenger};${travel.startKM};${travel.endKM};${travel.endKM-travel.startKM};${dailyPart.car.number};${dailyPart.driver.registration};${dailyPart.driver.name}\n`
         }).join("")
     }).join("")
-    
-   
+       
         const blob = new Blob([csvContent], { type: "csv" })
         const a = document.createElement('a')
         a.download = "Parte diaria.csv"
