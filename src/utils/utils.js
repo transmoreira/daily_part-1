@@ -35,7 +35,7 @@ const exportCsv = (data)=>{
         + data.map(dailyPart=>{
         return dailyPart.travels./*filter(travel=>travel.line!="DESLOCAMENTO OCIOSO").*/map(travel=>{
             const date = travel.startTime.toString().substr(0,10)
-            const startTime = travel.startTime.toString().substr(12,5)
+            const startTime = travel.startTime.toString().substr(11,5)
             const endTime = travel.endTime.toString().substr(11,5)
             return `${date};${travel.line};${travel.origin};${travel.destiny};${startTime};${endTime};${travel.passenger};${travel.startKM};${travel.endKM};${travel.endKM-travel.startKM};${dailyPart.car.number};${dailyPart.driver.registration};${dailyPart.driver.name}\n`
         }).join("")
