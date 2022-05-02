@@ -212,6 +212,8 @@ const CreateDailyPart = (props) => {
             
 
             const timeTravel = `${endTime}:00`
+            
+            state.dailyPart.date = timeTravel
 
             const travel = {
                 ...actualtravel,
