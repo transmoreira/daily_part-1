@@ -33,7 +33,7 @@ const exportCsv = (data)=>{
     
     const csvContent = "DATA;LINHA;ORIGEM;DESTINO;HOAR INICIO;HORA FIM;PASSAGEIRO;KM INICIO;KM FIM; TOTAL KM; CARRO;MATRICULA;MOTORISTA\n"
         + data.map(dailyPart=>{
-        return dailyPart.travels.filter(travel=>travel.line!="DESLOCAMENTO OCIOSO").map(travel=>{
+        return dailyPart.travels./*filter(travel=>travel.line!="DESLOCAMENTO OCIOSO").*/map(travel=>{
             const date = travel.startTime.toString().substr(0,10)
             const startTime = travel.startTime.toString().substr(12,5)
             const endTime = travel.endTime.toString().substr(11,5)
