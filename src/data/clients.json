@@ -58,7 +58,10 @@
       {"name": "37L3","direction": ["ITACOLOMI", "FIAT"]},
       {"name": "08 L2","direction": ["N. CONTAGEM", "FIAT"]},
       {"name": "37 L2","direction": ["M CAMPOS", "FIAT"]},
-      {"name": "03 T1","direction": ["M CAMPOS", "FIAT"]}
+      {"name": "03 T1","direction": ["BONSUCESSO", "FIAT"]},
+      {"name": "08 T2","direction": ["TROPICAL", "FIAT"]},
+      {"name": "37 T1","direction": ["SARZEDO", "FIAT"]},
+      {"name": "37 T2","direction": ["J. MONTANHES", "FIAT"]}
     ]
   },
   {
@@ -145,7 +148,14 @@
   {
     "name": "VALLOREC",
     "lines": [
-      {"name": "LINHA 01","direction": ["SANTA RITA", "MINA P. BRANCO"]}
+      {"name": "LINHA 01","direction": ["SANTA RITA", "MINA P. BRANCO"]},
+      {"name": "LAFAIETE 01","direction": ["LAFAIETE", "VALLOREC"]},
+      {"name": "LAFAIETE 02","direction": ["LAFAIETE", "VALLOREC"]},
+      {"name": "PAMPULHA","direction": ["PAMPULHA", "VALLOREC"]},
+      {"name": "CARREFOUR","direction": ["CARREFOUR", "VALLOREC"]},
+      {"name": "BARREIRO","direction": ["BARREIRO", "VALLOREC"]},
+      {"name": "IBIRITE VIA F. ROSARIO","direction": ["IBIRITE", "VALLOREC"]},
+      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOREC"]}
     ]
   },
   {
