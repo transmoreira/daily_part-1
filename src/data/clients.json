@@ -415,9 +415,8 @@
       {"name": "Linha 15","direction": ["BAIRRO",  "REGAP"]},
       {"name": "Linha 16","direction": ["BAIRRO",  "REGAP"]},
       {"name": "LINHA 17","direction": ["BAIRRO",  "REGAP"]},
-      {"name": "Linha 18","direction": ["BAIRRO",  "REGAP"],
-      {"name": "Linha 19","direction": ["BAIRRO",  "REGAP"]
-      }
+      {"name": "Linha 18","direction": ["BAIRRO",  "REGAP"]},
+      {"name": "Linha 19","direction": ["BAIRRO",  "REGAP"]}
     ]
   }
 ]
