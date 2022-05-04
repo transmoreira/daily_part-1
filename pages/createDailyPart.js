@@ -358,6 +358,8 @@ const CreateDailyPart = (props) => {
         const timeTravel = `${startTime}:00`
         
         state.dailyPart.date = timeTravel
+        
+        onChangeObs()
 
         const travel = {
             id_daily_part: state.dailyPart.id,
@@ -476,8 +478,10 @@ const CreateDailyPart = (props) => {
             }
 
         }
-
-        state.dailyPart.obs = event.target.value
+        if(event){
+            state.dailyPart.obs = event.target.value
+        }
+        
 
         setState({ ...state })
         clearTimeout(timeout)
