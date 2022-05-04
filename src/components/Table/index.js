@@ -16,7 +16,7 @@ export default (props) => {
     return <section className="table">
         {unproductive >= 0 && <>
             <span className="success "> {productive} KM PRODUTIVO</span>
-            <span className="error"> {unproductive} KM IMPRODUTIVO</span>
+            <span className="error no-print"> {unproductive} KM IMPRODUTIVO</span>
         </>}
         <table onClick={props.onClick}>
             <thead>
