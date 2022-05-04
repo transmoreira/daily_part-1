@@ -213,7 +213,7 @@ const CreateDailyPart = (props) => {
 
             const timeTravel = `${endTime}:00`
             
-            state.dailyPart.date = timeTravel
+            
 
             const travel = {
                 ...actualtravel,
@@ -313,7 +313,7 @@ const CreateDailyPart = (props) => {
 
         const startTime = await getData()
 
-
+        
         state.label = <>A viagem começou com qual <b>KM</b>?</>
         state.type = "number"
         state.list = []
@@ -353,6 +353,8 @@ const CreateDailyPart = (props) => {
 
 
         const timeTravel = `${startTime}:00`
+        
+        state.dailyPart.date = timeTravel
 
         const travel = {
             id_daily_part: state.dailyPart.id,
