@@ -138,9 +138,10 @@ const dailyPart = async (request, response) => {
         getResult(sql)
 
     } else if (request.method === "PUT") {
-        const { id, obs } = JSON.parse(request.body)
+        const { id, obs = "", date } = JSON.parse(request.body)
         const sql = `UPDATE daily_part  
-                        SET obs='${obs}'
+                        SET obs='${obs}',
+                        date='${date}'
                     WHERE id = ${id}`
 
         getResult(sql)
