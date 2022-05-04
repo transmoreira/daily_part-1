@@ -299,10 +299,13 @@ const CreateDailyPart = (props) => {
         endRangeTime.setMinutes(endRangeTime.getMinutes()+20)
         //endRangeTime.setUTCHours(-3)
         endRangeTime.setHours(endRangeTime.getHours() - 3)
+        
+        const numberdaysRetroactive = window. screen. width >= 1200
+            ? 30 : 1
 
         const startRangeTime = new Date()
         startRangeTime.setHours(startRangeTime.getHours() - 3)
-        startRangeTime.setDate(startRangeTime.getDate() - 1)
+        startRangeTime.setDate(startRangeTime.getDate() - numberdaysRetroactive)
 
         state.min = startRangeTime.toISOString().substring(0, 16)
         state.max = endRangeTime.toISOString().substring(0, 16)
