@@ -66,6 +66,10 @@ const unproductiveKm = ()=>({
         'GARAGEM',
         "UNIDADE VALE",
         "G. BRUMADINHO",
+        "G. CONTAGEM",
+        "G. ITABIRITO",
+        "G. SARZEDO",
+        "G. NOVA LIMA",
         "G. CONTAGEM"
     ]
 })
