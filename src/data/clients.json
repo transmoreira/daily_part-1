@@ -250,7 +250,7 @@
       {"name": "DERD07","direction": ["CID. INDUSTRIAL",  "AURORA"]},
       {"name": "DERD05","direction": ["PEDRO II",  "FEIJAO"]},
       {"name": "DERD02","direction": ["CONTAGEM",  "FEIJAO"]},
-      {"name": "DERD09.","direction": ["CID. INDUSTRIAL",  "FEIJAO"]},
+      {"name": "DERD09","direction": ["CID. INDUSTRIAL",  "FEIJAO"]},
       {"name": "A01 CONCREMAT","direction": ["VENDA NOVA",  "FEIJAO"]},
       {"name": "A09 CONCREMAT","direction": ["AURORA",  "FEIJAO", "CON. ITAGUA", "ALMOCO", "BALDEIO", "CANTEIRO", "MEMORIAL"]},
       {"name": "CDM-A1-BHSHOP","direction": ["BELO HORIZONTE",  "CDM"]},
