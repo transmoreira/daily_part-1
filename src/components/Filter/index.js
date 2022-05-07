@@ -138,7 +138,7 @@ const Filter = (props) => {
                 date.getTime() <= filterDatas.timeCourse.end.getTime()
 
             const hasClient = (filterDatas.client == "" ||
-                item.client == filterDatas.client)
+                item.client.toUpperCase() == filterDatas.client.toUpperCase())
 
             const hasDriver = (filterDatas.driver == "" ||
                 item.driver.name == filterDatas.driver)
