@@ -182,6 +182,19 @@
     ]
   },
   {
+    "name": "MASCARENHAS",
+    "lines": [
+      {"name": "L 00","direction": ["CACHOEIRO","ITABIRITO"]},
+      {"name": "L 01","direction": ["SERRA CAPANEMA","ITABIRITO"]},
+      {"name": "L 02","direction": ["SERRA CAPANEMA","ITABIRITO"]},
+      {"name": "L 03","direction": ["SERRA CAPANEMA","ITABIRITO"]},
+      {"name": "L 04","direction": ["SERRA CAPANEMA","ITABIRITO"]},
+      {"name": "L 05","direction": ["SERRA CAPANEMA","ITABIRITO"]},
+      {"name": "L 06","direction": ["SERRA CAPANEMA","ITABIRITO"]},
+      {"name": "L 07","direction": ["SERRA CAPANEMA","ITABIRITO"]}
+    ]
+  },
+  {
     "name": "MILPLAN",
     "lines": [
       {"name": "ROTA 01","direction": ["IGAR. FAROFA", "TICO TICO", "ALMOCO", "INTERNO"]},
@@ -204,7 +217,7 @@
     ]
   },
   {
-    "name": "Vale",
+    "name": "VALE",
     "lines": [     
       {"name": "CMT-01-CIRC.VULC","direction": [ "CMT",  "VGR", "PIC"]},
       {"name": "CMT-01-INTERNO","direction": [ "CMT"]},
@@ -342,7 +355,7 @@
     ]
   },
   {
-    "name": "Vale Viga",
+    "name": "VALE VIGA",
     "lines": [
       {"name": "ABC LAFAIETE","direction": ["LAFAIETE",  "VALE VIGA"]},
       {"name": "ABC CONGONHAS","direction": ["CONGONHAS",  "VALE VIGA"]},
