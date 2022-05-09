@@ -67,7 +67,7 @@ const Home = (props) => {
     })
 
 
-    return <>
+    return <html lang="pt-BR">
         <Head>
             <title>Parte Diaria</title>
             <link rel="icon" href="/favicon.png" />
@@ -107,7 +107,7 @@ const Home = (props) => {
                 </tbody>
             </table>
         </div>
-    </>
+    </html>
 }
 
 
