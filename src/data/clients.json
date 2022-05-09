@@ -49,6 +49,7 @@
       {"name": "CO-EL-02","direction": ["BELA V. CONTAGEM", "FIAT"]},
       {"name": "NOVA-01","direction": ["NOVA LIMA", "FIAT"]},
       {"name": "NOVA-A1","direction": ["RAPOSOS", "FIAT"]},
+      {"name": "NOVA-01 L","direction": ["NOVA LIMA", "FIAT"]},,
       {"name": "RIBE-01","direction": ["BOTAFOGO", "FIAT"]},
       {"name": "RIBE-02","direction": ["MANTIQUEIRA", "FIAT"]},
       {"name": "SANT-02","direction": ["SANTA LUZIA", "FIAT"]},
