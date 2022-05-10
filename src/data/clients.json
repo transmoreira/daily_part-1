@@ -95,6 +95,7 @@
       {"name": "C 101","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 301","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 402","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "C 404","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 405","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 601","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 602","direction": ["BAIRRO", "PARDINI"]},
@@ -150,6 +151,12 @@
     "lines": [
       {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VRG", "INTERNO"]},
       {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VRG"]}
+    ]
+  },
+  {
+    "name": "LOIOLA",
+    "lines": [
+      {"name": "LINHA 01","direction": ["LOIOLA", "BAIRRO DA GRACA"]}
     ]
   },
   {
