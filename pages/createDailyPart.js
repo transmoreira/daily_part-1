@@ -200,7 +200,7 @@ const CreateDailyPart = (props) => {
                 }
             }
             
-            state.list = listKM
+            state.list = []
             setState({ ...state })
             const endKM = listKM.length > 0
                 ? parseInt(await getData(listKM, "KM muito grande para deslocameno ocioso."))
@@ -232,7 +232,7 @@ const CreateDailyPart = (props) => {
                     listPassenger.push(i)
                 }
 
-                state.list = listPassenger
+                state.list = []//listPassenger
                 setState({ ...state })
                 const passenger = isUrban 
                     ? endTicket - actualtravel.startTicket 
