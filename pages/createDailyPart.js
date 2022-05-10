@@ -46,6 +46,7 @@ const CreateDailyPart = (props) => {
     const inputValue = async (event) => {
         const shouldDelete = event.target.className == "delete"
             || event.target.parentElement.parentElement.className == "delete"
+
         if(shouldDelete){
             const idDelete = event.target.dataset["js"]
             || event.target.parentElement.parentElement.dataset["js"]
@@ -54,24 +55,28 @@ const CreateDailyPart = (props) => {
           
             const responseUse = confirm(`Tem certeza que deseja apagar a viagem de ${travel.startTime}?`)
             if(responseUse){
-                const response = await fetch(
-                    "api/travels",
-                    {
-                        method: "DELETE",
-                        body: JSON.stringify({id:idDelete})
+                try {                   
+                
+                    const response = await fetch(
+                        "api/travels",
+                        {
+                            method: "DELETE",
+                            body: JSON.stringify({id:idDelete})
+                        }
+                    )
+                    const result = await response.json()
+                    if(result.affectedRows){
+                        if(!travel.endKM){
+                        localStorage.removeItem("dailyPart")
+                        }
+                        state.dailyPart.travels.splice(indexTravel, 1);
+                        setState({ ...state })
+                    }else{
+                        alert("Erro ao deletar viagem. Tente novamente.")
                     }
-                )
-                const result = await response.json()
-                if(result.affectedRows){
-                    if(!travel.endKM){
-                       localStorage.removeItem("dailyPart")
-                    }
-                    state.dailyPart.travels.splice(indexTravel, 1);
-                    setState({ ...state })
-                }else{
-                    alert("Erro ao deletar viagem. Tente novamente.")
+                } catch (error) {
+                        
                 }
-
 
 
 

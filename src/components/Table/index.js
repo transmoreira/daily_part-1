@@ -1,5 +1,5 @@
 import { dateFormated, timeFormated } from "../../utils/utils"
-import { AiTwotoneDelete, AiFillDelete } from "react-icons/ai"
+import {  AiFillDelete } from "react-icons/ai"
 import logoRN from "../../img/logo-rio-negro.jpg"
 import logoTM from "../../img/transmoreira.png"
 import Image from "next/image"
