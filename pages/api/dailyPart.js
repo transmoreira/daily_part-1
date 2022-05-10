@@ -104,7 +104,7 @@ const dailyPart = async (request, response) => {
 
                 response.status(200).json(newData)
             } else {
-                response.status(400).json({ ...data, sql: "" })
+                response.status(400).json({ ...data})
             }
         } catch (error) {
             response.status(400).json(error)
