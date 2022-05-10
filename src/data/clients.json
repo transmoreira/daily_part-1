@@ -85,7 +85,6 @@
       {"name": "D 101","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 401","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 402","direction": ["BAIRRO", "PARDINI"]},
-      {"name": "D 404","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 405","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 601","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 701","direction": ["BAIRRO", "PARDINI"]},
@@ -105,7 +104,14 @@
       {"name": "C 703","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 901","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 403","direction": ["BAIRRO", "PARDINI"]},
-      {"name": "P 701","direction": ["BAIRRO", "PARDINI"]}
+      {"name": "P 701","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "P 102","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "P 401","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "N 201","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "N 301","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "N 401","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "N 701","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "N 901","direction": ["BAIRRO", "PARDINI"]}
     ]
   },
   {
