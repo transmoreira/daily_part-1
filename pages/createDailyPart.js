@@ -224,6 +224,8 @@ const CreateDailyPart = (props) => {
             const timeTravel = `${endTime}:00`
             setState({ ...state })
 
+            let passenger = ""
+
             if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
 
                 const listPassenger = []
@@ -234,7 +236,7 @@ const CreateDailyPart = (props) => {
 
                 state.list = []//listPassenger
                 setState({ ...state })
-                const passenger = isUrban 
+                passenger = isUrban 
                     ? endTicket - actualtravel.startTicket 
                     : parseInt(await getData(listPassenger, "Quantidade muito grande de passageiro"))
 
@@ -245,7 +247,7 @@ const CreateDailyPart = (props) => {
                 ...actualtravel,
                 endTime: timeTravel,
                 endKM,
-                passenger: passenger || "",
+                passenger: passenger,
                 endTicket
             }
 
