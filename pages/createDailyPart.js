@@ -194,7 +194,7 @@ const CreateDailyPart = (props) => {
             state.label = <>A viagem terminou com qual <b>KM</b>?</>
             state.type = "number"
             const listKM = []
-            if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
+            if(actualtravel.line == "DESLOCAMENTO OCIOSO"){
                 for(let i = 0; i <=50 ;i++){
                     listKM.push(actualtravel.startKM + i)
                 }
