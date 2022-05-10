@@ -193,9 +193,18 @@ const CreateDailyPart = (props) => {
 
             state.label = <>A viagem terminou com qual <b>KM</b>?</>
             state.type = "number"
-            state.list = []
+            const listKM = []
+            if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
+                for(let i = 0; i <=50 ;i++){
+                    listKM.push(actualtravel.startKM + i)
+                }
+            }
+            
+            state.list = listKM
             setState({ ...state })
-            const endKM = parseInt(await getData(null, "Verifique se o KM está correto.", true))
+            const endKM = listKM.length > 0
+                ? parseInt(await getData(listKM, "KM muito grande para deslocameno ocioso."))
+                : parseInt(await getData(null, "Verifique se o KM está correto.", true))
 
             let endTicket = 0
             if (isUrban) {
@@ -209,22 +218,34 @@ const CreateDailyPart = (props) => {
             state.min = 0
             state.max = 59
             state.type = "number"
-            setState({ ...state })
-            const passenger = isUrban 
-                ? endTicket - actualtravel.startTicket 
-                : parseInt(await getData())
 
-            
+
 
             const timeTravel = `${endTime}:00`
-            
+            setState({ ...state })
+
+            if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
+
+                const listPassenger = []
+
+                for(let i = 0; i<50;i++){
+                    listPassenger.push(i)
+                }
+
+                state.list = listPassenger
+                setState({ ...state })
+                const passenger = isUrban 
+                    ? endTicket - actualtravel.startTicket 
+                    : parseInt(await getData(listPassenger, "Quantidade muito grande de passageiro"))
+
+            }           
             
 
             const travel = {
                 ...actualtravel,
                 endTime: timeTravel,
                 endKM,
-                passenger,
+                passenger: passenger || "",
                 endTicket
             }
 
