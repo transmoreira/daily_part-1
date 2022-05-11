@@ -92,7 +92,7 @@ export default (props) => {
                         <td>{timeFormated(item.endTime)}</td>
                         <td>{item.startKM}</td>
                         <td>{item.endKM}</td>
-                        <td>{item.endKM - item.startKM}</td>
+                        <td>{item.startKM && item.endKM - item.startKM}</td>
                         {isUrban &&
                             <>
                                 <th>{item.startTicket}</th>

@@ -224,7 +224,7 @@ const CreateDailyPart = (props) => {
             const timeTravel = `${endTime}:00`
             setState({ ...state })
 
-            let passenger = ""
+            let passenger = 0
 
             if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
 
