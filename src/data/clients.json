@@ -146,8 +146,8 @@
   {
     "name": "FM2C",
     "lines": [
-      {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VRG", "INTERNO"]},
-      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VRG"]},
+      {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VARGEM GRANDE", "INTERNO"]},
+      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VARGEM GRANDE"]},
       {"name": "L01","direction": ["ITABIRITO", "VARGEM GRANDE"]},
       {"name": "L02","direction": ["ITABIRITO", "VARGEM GRANDE"]}
     ]
