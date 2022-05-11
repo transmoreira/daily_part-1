@@ -26,15 +26,20 @@ const filterDatas = {
     driver: "",
     car: ""
 }
-let dailyPart = []
+let dailyPart = null
 
 
-const getDailyPartsInDataBase =  (company = "RN") => {
+const getDailyPartsInDataBase =  (newFilter, company = "RN") => {
 
     fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
-        .then(data=>data.json())
+        .then(data=>{
+            console.log(data)
+            data.json()
+        })
         .then(response=>{
+            console.log(response)
             dailyPart = response
+            newFilter()
         })
 
 }
@@ -112,8 +117,8 @@ const Filter = (props) => {
             event.target.classList.add("disable")
         }
         try {
-            getDailyPartsInDataBase(company)
-            newFilter()
+            getDailyPartsInDataBase(newFilter,company)
+            
         } catch (erro) {
 
         }
@@ -131,6 +136,9 @@ const Filter = (props) => {
 
     const newFilter = () => {
 
+        if(!dailyPart){
+            return
+        }
 
         const newList = dailyPart.filter((item, index) => {
             const date = new Date(item.date)
@@ -160,6 +168,7 @@ const Filter = (props) => {
         setListDailyParts(newList)
     }
 
+    getDailyPartsInDataBase(newFilter, company)
 
     const getCountTravels = () => {
 
