@@ -238,7 +238,7 @@
       {"name": "CMT-01-INTERNO","direction": [ "CMT"]},
       {"name": "CPX - INTERNO","direction": ["CMT", "CPX", "VGR", "CTF", "TAM", "MUT", "MRZ", "PIC"]},
       {"name": "CTF-01-ALMOCO","direction": ["CTF"]},
-      {"name": "BOMBOEIROS","direction": ["BELO HORIZONTE","BRUMADINHO"]},
+      {"name": "BOMBEIROS","direction": ["BELO HORIZONTE","BRUMADINHO"]},
       {"name": "INT-CMT/PICO","direction": ["CMT",  "PIC"]},
       {"name": "INT-CMT/TAM","direction": ["CMT",  "TAM"]},
       {"name": "INT-PAIOL","direction": ["CMT",  "PAIOL"]},
@@ -432,12 +432,11 @@
       {"name": "7900","direction": ["SANTA CRUZ",  "BELO HORIZONTE"]},
       {"name": "7905","direction": ["SANTA CRUZ VIA VULO",  "BELO HORIZONTE"]},
       {"name": "3992","direction": ["ITAGUARA",  "BELO HORIZONTE"]},
-      {"name": "3993","direction": ["ITAGUARA",  "ESTAÇÃO ELDORADO"]
-      }
+      {"name": "3993","direction": ["ITAGUARA",  "ESTAÇÃO ELDORADO"]}
     ]
   },
   {
-    "name": "PETROBRÁS",
+    "name": "PETROBRÁS", 
     "lines": [
       {"name": "Linha 01","direction": ["BAIRRO",  "REGAP"]},
       {"name": "Linha 01","direction": ["BAIRRO",  "REGAP"]},
