@@ -228,6 +228,7 @@
       {"name": "CONTAGEM T.","direction": ["CID. IND",  "EMESA"]},
       {"name": "ALMOÇO.","direction": ["EMESA"]},
       {"name": "JANTA","direction": ["EMESA"]},
+      {"name": "TROCA DE TURNO","direction": ["EMESA"]},
       {"name": "JOVENS APRENDIZES","direction": [ "EMESA", "BRUMADINHO"]}
     ]
   },
