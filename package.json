@@ -1,6 +1,7 @@
 {
   "name": "daily_part",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -29,6 +30,5 @@
   },
   "devDependencies": {
     "jest": "^27.5.1"
-  },
-  "description": ""
+  }
 }
