@@ -193,18 +193,18 @@ const CreateDailyPart = (props) => {
 
             state.label = <>A viagem terminou com qual <b>KM</b>?</>
             state.type = "number"
-            const listKM = []
+            /*const listKM = []
             if(actualtravel.line == "DESLOCAMENTO OCIOSO"){
                 for(let i = 1; i <=50 ;i++){
                     listKM.push((actualtravel.startKM + i).toString())
                 }
-            }
+            }*/
             
             state.list = []
             setState({ ...state })
-            const endKM = listKM.length > 0
+            const endKM = /*listKM.length > 0
                 ? parseInt(await getData(listKM, "KM muito grande ou muito pequeno para deslocameno ocioso."))
-                : parseInt(await getData(null, "Verifique se o KM está correto.", true))
+                :*/ parseInt(await getData(null, "Verifique se o KM está correto.", true))
 
             let endTicket = 0
             if (isUrban) {
