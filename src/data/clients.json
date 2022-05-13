@@ -111,6 +111,7 @@
       {"name": "N 301","direction": ["BAIRRO", "PARDINI"]},
       {"name": "N 401","direction": ["BAIRRO", "PARDINI"]},
       {"name": "N 701","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "N 702","direction": ["BAIRRO", "PARDINI"]},
       {"name": "N 901","direction": ["BAIRRO", "PARDINI"]}
     ]
   },
