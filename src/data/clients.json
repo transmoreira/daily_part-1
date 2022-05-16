@@ -368,7 +368,8 @@
       {"name": "H12","direction": ["RAPOSOS",  "ABO"]},
       {"name": "T4","direction": ["BELO HORIZONTE",  "VGR"]},
       {"name": "T7","direction": ["IBIRITE",  "VGR"]},
-      {"name": "T12","direction": ["RAPOSOS",  "ABO"]}
+      {"name": "T12","direction": ["RAPOSOS",  "ABO"]},
+      {"name": "MARIANA","direction": ["CABANA",  "MINA DE FABRICA NOVA"]}
     ]
   },
   {
