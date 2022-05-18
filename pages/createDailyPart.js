@@ -369,7 +369,7 @@ const CreateDailyPart = (props) => {
 
         state.label = <>Para onde vai a viagem?<b>(PONTO FINAL)</b></>
         state.list = destinys
-        const destiny = destinys.length > 1
+        const destiny = destinys.length > 1 || destinys.length == 0
             ? await getData(destinys.length ? destinys:null, "Destino nao encontrado!")
             : destinys[0]
             || direction[0]
