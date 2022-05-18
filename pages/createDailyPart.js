@@ -44,6 +44,7 @@ const CreateDailyPart = (props) => {
     }
 
     const inputValue = async (event) => {
+        console.log(state)
         const shouldDelete = event.target.className == "delete"
             || event.target.parentElement.parentElement.className == "delete"
 
@@ -173,87 +174,88 @@ const CreateDailyPart = (props) => {
 
         const countTravels = state.dailyPart.travels.length
         const actualtravel = state.dailyPart.travels[countTravels - 1]
+        if(actualtravel){
+            if (!actualtravel.destiny || actualtravel.endKM) {
+                addTravel()
 
-        if (!actualtravel.destiny || actualtravel.endKM) {
-            addTravel()
+            } else {
 
-        } else {
+                const minTime = actualtravel.startTime
+                const maxTime = new Date(minTime)
+                maxTime.setHours(maxTime.getHours() + 13)
 
-            const minTime = actualtravel.startTime
-            const maxTime = new Date(minTime)
-            maxTime.setHours(maxTime.getHours() + 13)
-
-            state.label = <>A viagem terminou que <b>HORAS</b>?</>
-            state.type = "datetime-local"
-            state.min = minTime
-            state.max = maxTime.toISOString().substring(0, 16)
-            state.list = []
-            setState({ ...state })
-            const endTime = await getData()
-
-            state.label = <>A viagem terminou com qual <b>KM</b>?</>
-            state.type = "number"
-            /*const listKM = []
-            if(actualtravel.line == "DESLOCAMENTO OCIOSO"){
-                for(let i = 1; i <=50 ;i++){
-                    listKM.push((actualtravel.startKM + i).toString())
-                }
-            }*/
-            
-            state.list = []
-            setState({ ...state })
-            const endKM = /*listKM.length > 0
-                ? parseInt(await getData(listKM, "KM muito grande ou muito pequeno para deslocameno ocioso."))
-                :*/ parseInt(await getData(null, "Verifique se o KM está correto.", true))
-
-            let endTicket = 0
-            if (isUrban) {
-                state.label = <>Qual a <b>roleta</b> final?</>
-                state.type = "number"
+                state.label = <>A viagem terminou que <b>HORAS</b>?</>
+                state.type = "datetime-local"
+                state.min = minTime
+                state.max = maxTime.toISOString().substring(0, 16)
                 state.list = []
-                endTicket = parseInt(await getData())
-            }
+                setState({ ...state })
+                const endTime = await getData()
 
-            state.label = <>Quantos <b>passageiros</b> embarcaram?</>
-            state.min = 0
-            state.max = 59
-            state.type = "number"
+                state.label = <>A viagem terminou com qual <b>KM</b>?</>
+                state.type = "number"
+                /*const listKM = []
+                if(actualtravel.line == "DESLOCAMENTO OCIOSO"){
+                    for(let i = 1; i <=50 ;i++){
+                        listKM.push((actualtravel.startKM + i).toString())
+                    }
+                }*/
+                
+                state.list = []
+                setState({ ...state })
+                const endKM = /*listKM.length > 0
+                    ? parseInt(await getData(listKM, "KM muito grande ou muito pequeno para deslocameno ocioso."))
+                    :*/ parseInt(await getData(null, "Verifique se o KM está correto.", true))
 
-
-
-            const timeTravel = `${endTime}:00`
-            setState({ ...state })
-
-            let passenger = 0
-
-            if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
-
-                const listPassenger = []
-
-                for(let i = 0; i<50;i++){
-                    listPassenger.push(i.toString())
+                let endTicket = 0
+                if (isUrban) {
+                    state.label = <>Qual a <b>roleta</b> final?</>
+                    state.type = "number"
+                    state.list = []
+                    endTicket = parseInt(await getData())
                 }
 
-                state.list = []//listPassenger
+                state.label = <>Quantos <b>passageiros</b> embarcaram?</>
+                state.min = 0
+                state.max = 59
+                state.type = "number"
+
+
+
+                const timeTravel = `${endTime}:00`
                 setState({ ...state })
-                passenger = isUrban 
-                    ? endTicket - actualtravel.startTicket 
-                    : parseInt(await getData(listPassenger, "Quantidade muito grande de passageiro"))
 
-            }           
-            
+                let passenger = 0
 
-            const travel = {
-                ...actualtravel,
-                endTime: timeTravel,
-                endKM,
-                passenger: passenger,
-                endTicket
+                if(actualtravel.line != "DESLOCAMENTO OCIOSO"){
+
+                    const listPassenger = []
+
+                    for(let i = 0; i<50;i++){
+                        listPassenger.push(i.toString())
+                    }
+
+                    state.list = []//listPassenger
+                    setState({ ...state })
+                    passenger = isUrban 
+                        ? endTicket - actualtravel.startTicket 
+                        : parseInt(await getData(listPassenger, "Quantidade muito grande de passageiro"))
+
+                }           
+                
+
+                const travel = {
+                    ...actualtravel,
+                    endTime: timeTravel,
+                    endKM,
+                    passenger: passenger,
+                    endTicket
+                }
+
+
+
+                updateTravel(travel)
             }
-
-
-
-            updateTravel(travel)
         }
     }
 
@@ -314,11 +316,11 @@ const CreateDailyPart = (props) => {
         state.closable = true
 
         const listClients = clients.map(item => item.name)
-        const lines = [unproductiveKm(), ...clients[listClients.indexOf(
+        const lines = [{name:"EXTRA",direction:[]},unproductiveKm(), ...clients[listClients.indexOf(
             isUrban ? "urbano" : state.dailyPart.client
         )].lines]
         const list = lines.map(item => item.name)
-
+            
         state.label = <>Qual é a <b>LINHA</b>?</>
         state.list = list
         state.type = "text"
@@ -355,19 +357,20 @@ const CreateDailyPart = (props) => {
         const direction = lines.filter(item => item.name == line)[0].direction
 
 
-        state.label = <>De onde<b>(PONTO INICIAL)</b> sai a viagem?</>
+        state.label = <>De onde sai a viagem?<b>(PONTO INICIAL)</b></>
         state.type = "text"
         state.list = direction
+        console.log(state.list)
         const origin = direction.length == 1
             ? direction[0]
-            : await getData(state.list, "Origem nao encontrada!")
+            : await getData(state.list.length ? state.list : null, "Origem nao encontrada!")
 
         const destinys = [...direction.filter(item => item != origin)]
 
-        state.label = <>Para onde<b>(PONTO FINAL)</b> vai a viagem?</>
+        state.label = <>Para onde vai a viagem?<b>(PONTO FINAL)</b></>
         state.list = destinys
         const destiny = destinys.length > 1
-            ? await getData(destinys, "Destino nao encontrado!")
+            ? await getData(destinys.length ? destinys:null, "Destino nao encontrado!")
             : destinys[0]
             || direction[0]
 

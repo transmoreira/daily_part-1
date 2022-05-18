@@ -46,6 +46,9 @@ const Filter = (props) => {
     const [lines, setLines] = useState([])
     const company = props.company || "RN"
 
+
+    
+
     const kms = props.kms.reduce((acc, km) => {
         acc.productive += km.productive
         acc.unproductive += km.unproductive
