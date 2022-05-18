@@ -29,13 +29,10 @@ const filterDatas = {
 let dailyPart = []
 
 
-const getDailyPartsInDataBase =  (company = "RN") => {
+const getDailyPartsInDataBase = async (company = "RN") => {
 
-    fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
-        .then(data=>data.json())
-        .then(response=>{
-            dailyPart = response
-        })
+    const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
+    dailyPart = await response.json()
 
 }
 
@@ -109,13 +106,13 @@ const Filter = (props) => {
         newFilter()
     }
 
-    const update =  (event) => {
+    const update = async (event) => {
         if (event) {
             event.preventDefault()
             event.target.classList.add("disable")
         }
         try {
-            getDailyPartsInDataBase(company)
+            await getDailyPartsInDataBase(company)
             newFilter()
         } catch (erro) {
 
@@ -125,7 +122,7 @@ const Filter = (props) => {
         }
     }
 
-    const geraCSV =  (event) => {
+    const geraCSV = async (event) => {
         event.preventDefault()
         
         exportCsv(listDailyParts)
@@ -219,7 +216,7 @@ const Filter = (props) => {
             </div>
             <div>
 
-                {/*<button onClick={update}>Atualizar</button>*/}
+                <button onClick={update}>Atualizar</button>
                 <button onClick={geraCSV}>Baixar CSV</button>
             </div>
         </form>
