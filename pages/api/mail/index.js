@@ -43,7 +43,7 @@ const SendMail = async (request, response) => {
             }
         })
 
-        console.log(transporter)
+        /*console.log(transporter)*/
 
         try {
 
@@ -55,12 +55,19 @@ const SendMail = async (request, response) => {
                 //text: ""
                 html: `<p>
             Segue a lista de partes diarias <strong>não preenchida:</strong></br></br></br>
-            <ol>
-                ${list.map(item => `<li>${item}</li>`)}
-            </ol></br>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>CLIENTE</th>
+                        <th>LINHA</th>
+                    </tr>
+                </thead>
+                ${list.map(item => `<tr>${item}</tr>`).join("")}
+            </table>
             
         </p>`
             })
+            
             response.send({ success: true, rest })
         } catch (error) {
             response.send({ success: false, error })
