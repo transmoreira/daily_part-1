@@ -37,7 +37,7 @@ const exportCsv = (data)=>{
             const date = travel.startTime.toString().substr(0,10)
             const startTime = travel.startTime.toString().substr(11,5)
             const endTime = travel.endTime.toString().substr(11,5)
-            return `${date};${travel.line};${travel.origin};${travel.destiny};${startTime};${endTime};${travel.passenger};${travel.startKM};${travel.endKM};${travel.endKM-travel.startKM};${dailyPart.car.number};${dailyPart.driver.registration};${dailyPart.driver.name};${dailyPart.client}\n`
+            return `${date};${travel.line};${travel.origin};${travel.destiny};${travel.startTime};${travel.endTime};${travel.passenger};${travel.startKM};${travel.endKM};${travel.endKM-travel.startKM};${dailyPart.car.number};${dailyPart.driver.registration};${dailyPart.driver.name};${dailyPart.client}\n`
         }).join("")
     }).join("")
        
