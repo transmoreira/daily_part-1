@@ -74,7 +74,7 @@ const Home = (props) => {
 
                 const rest = fetch("/api/mail",{
                     method:"POST",
-                    body:JSON.stringify(countTravelsForLine.filter(item=>item.countTravels>0).map(item=>`${item.client} - ${item.line}`))
+                    body:JSON.stringify(countTravelsForLine.filter(item=>item.countTravels==0).map(item=>`${item.client} - ${item.line}`))
                 })
             }catch(e){
                 alert("Error: "+ e.message)

@@ -8,23 +8,45 @@ const SendMail = async (request, response) => {
 
         const list = JSON.parse(request.body)
 
-        const mailFrom = "atendimento@alocafacil.com.br"
-        const mailListTo = ["divanirjs@gmail.com", "divanirsilva@rionegronet.com.br"]
+        const mailFrom = "divanirsilva@rionegronet.com.br"
+        const mailListTo = [
+            "suporte02@transmoreira.com.br",
+            "fabiocastro@rionegronet.com.br",
+            "trafegorodoviario@rionegronet.com.br"
+                /*"andreabelario@transmoreira.com.br",
+                "trafegorodoviario@rionegronet.com.br",
+                "brunorangel@rionegronet.com.br",
+                "itabirito@rionegronet.com.br",
+                "fabiocastro@rionegronet.com.br",
+                "saogoncalo@rionegronet.com.br",
+                "jennerleandro@transmoreira.com.br",
+                "sarzedo@rionegronet.com.br",
+                "juniorrocha@rionegronet.com.br",
+                "controlevale@transmoreira.com.br",
+                "novalima@rionegronet.com.br",
+                "brumadinho@rionegronet.com.br",
+                "marcoscamargos@transmoreira.com.br",
+                "igarape@rionegronet.com.br",
+                "reginaldoelias@rionegronet.com.br",
+                "roniemiliano@transmoreira.com.br"*/
+            ]
+
+            
 
         const transporter = nodemailer.createTransport({
-            host: "smtp.hostinger.com",
-            port: 465,
-            secure: true,
+            host: "smtp.office365.com",
+            port: 587,
+            secure: false,
             auth: {
                 user: mailFrom,
-                pass: "#Di18651262"
+                pass: "Vtm@1232"
             },
             tls: {
                 rejectUnauthorized: false
             }
         })
 
-
+        console.log(transporter)
 
         try {
 
