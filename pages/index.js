@@ -1,3 +1,4 @@
+import react from "react"
 import Head from "next/head"
 import { useState } from "react"
 import Table from "../src/components/Table"
@@ -66,6 +67,20 @@ const Home = (props) => {
         }, { unproductive: 0, productive: 0 })
     })
 
+    const eventSendMail = ()=>{
+        if (prompt("Informe a senha...")=="Di1865"){
+            try{
+
+                const rest = fetch("/api/mail",{
+                    method:"POST",
+                    body:JSON.stringify(countTravelsForLine.map(item=>`${item.client} - ${item.line}`))
+                })
+            }catch(e){
+                alert("Error: "+ e.message)
+            }
+        }
+    }
+
 
     return <>
         <Head>
@@ -74,6 +89,7 @@ const Home = (props) => {
         </Head>
 
         {<Filter state={[listDailyParts, setListDailyParts]} company={company} kms={kms}/>}
+        <button onClick={eventSendMail}>Enviar por email</button>
         <main>
             {
                 listDailyParts.map((item, index) =>
