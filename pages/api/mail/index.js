@@ -10,10 +10,7 @@ const SendMail = async (request, response) => {
 
         const mailFrom = "divanirsilva@rionegronet.com.br"
         const mailListTo = [
-            "suporte02@transmoreira.com.br",
-            "fabiocastro@rionegronet.com.br",
-            "trafegorodoviario@rionegronet.com.br"
-                /*"andreabelario@transmoreira.com.br",
+            "andreabelario@transmoreira.com.br",
                 "trafegorodoviario@rionegronet.com.br",
                 "brunorangel@rionegronet.com.br",
                 "itabirito@rionegronet.com.br",
@@ -28,7 +25,7 @@ const SendMail = async (request, response) => {
                 "marcoscamargos@transmoreira.com.br",
                 "igarape@rionegronet.com.br",
                 "reginaldoelias@rionegronet.com.br",
-                "roniemiliano@transmoreira.com.br"*/
+                "roniemiliano@transmoreira.com.br"
             ]
 
             
@@ -61,7 +58,7 @@ const SendMail = async (request, response) => {
             <ol>
                 ${list.map(item => `<li>${item}</li>`)}
             </ol></br>
-            <small>Não responder este email. Email enviado automaticamente</small>
+            
         </p>`
             })
             response.send({ success: true, rest })
