@@ -199,7 +199,7 @@
   {
     "name": "MASCARENHAS",
     "lines": [
-      {"name": "INTERNO","direction": ["INTERNO"]},
+      {"name": "INTERNO","direction": ["INTERNO", "INTERNO"]},
       {"name": "L 00 EXTRA","direction": ["CACHOEIRO","ITABIRITO"]},
       {"name": "L 01","direction": ["SERRA CAPANEMA","ITABIRITO"]},
       {"name": "L 02","direction": ["SERRA CAPANEMA","ITABIRITO"]},
