@@ -332,7 +332,7 @@ const CreateDailyPart = (props) => {
         endRangeTime.setHours(endRangeTime.getHours() - 3)
         
         const numberdaysRetroactive = window. screen. width >= 1200
-            ? 30 : 1
+            ? 30 : 2
 
         const startRangeTime = new Date()
         startRangeTime.setHours(startRangeTime.getHours() - 3)
