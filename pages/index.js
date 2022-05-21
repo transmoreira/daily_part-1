@@ -68,13 +68,13 @@ const Home = (props) => {
     })
 
     const eventSendMail = ()=>{
-        console.log(countTravelsForLine)
+        
         if (prompt("Informe a senha...")=="Di1865"){
             try{
-
-                const rest = fetch("/api/mail",{
+                const body = JSON.stringify(countTravelsForLine.filter(item=>item.countTravels==0).map(item=>`<td>${item.client}</td><td>${item.line}</td>`))
+                fetch("/api/mail",{
                     method:"POST",
-                    body:JSON.stringify(countTravelsForLine.filter(item=>item.countTravels==0).map(item=>`<td>${item.client}</td><td>${item.line}</td>`))
+                    body
                 })
             }catch(e){
                 alert("Error: "+ e.message)
