@@ -72,6 +72,7 @@ const CreateDailyPart = (props) => {
                         }
                         state.dailyPart.travels.splice(indexTravel, 1);
                         setState({ ...state })
+                        console.log(state)
                     }else{
                         alert("Erro ao deletar viagem. Tente novamente.")
                     }
