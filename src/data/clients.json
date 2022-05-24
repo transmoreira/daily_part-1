@@ -79,8 +79,7 @@
   },
   {
     "name": "H. PARDINI",
-    "lines": [
-      {"name": "C 603","direction": ["BAIRRO", "PARDINI"]},
+    "lines": [      
       {"name": "D 301","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 101","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 401","direction": ["BAIRRO", "PARDINI"]},
@@ -90,6 +89,7 @@
       {"name": "D 701","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 702","direction": ["BAIRRO", "PARDINI"]},
       {"name": "D 901","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "C 603","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 201","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 101","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 301","direction": ["BAIRRO", "PARDINI"]},
@@ -102,6 +102,7 @@
       {"name": "C 701","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 702","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 703","direction": ["BAIRRO", "PARDINI"]},
+      {"name": "C 704","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 901","direction": ["BAIRRO", "PARDINI"]},
       {"name": "C 403","direction": ["BAIRRO", "PARDINI"]},
       {"name": "P 701","direction": ["BAIRRO", "PARDINI"]},
@@ -147,16 +148,29 @@
     "name": "FM2C",
     "lines": [
       {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VARGEM GRANDE", "INTERNO"]},
-      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VARGEM GRANDE"]},
-      {"name": "L01","direction": ["ITABIRITO", "VARGEM GRANDE"]},
-      {"name": "L02","direction": ["ITABIRITO", "VARGEM GRANDE"]}
+      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VARGEM GRANDE"]}
     ]
   },
   {
     "name": "BMB",
     "lines": [
-      {"name": "RAPOSOS","direction": ["RAPOSOS", "PICO", "AMOÇO", "VRG", "INTERNO"]},
-      {"name": "ITABIRITO","direction": ["ITABIRITO", "PICO", "AMOÇO", "VRG"]}
+      {"name": "PRACA CEMIG ADM","direction": ["BARREIRO", "BMB", "CIDADE INDUSTRIAL"]},
+      {"name": "PRACA CEMIG B","direction": ["BARREIRO", "BMB", "CIDADE INDUSTRIAL"]},
+      {"name": "CENTRO BH A","direction": ["BMB", "BELO HORIZONTE"]},
+      {"name": "CENTRO BH B","direction": ["BMB", "BELO HORIZONTE"]},
+      {"name": "CENTRO BH C","direction": ["BMB", "BELO HORIZONTE"]},
+      {"name": "SAVASSI","direction": ["BMB", "BELO HORIZONTE"]},
+      {"name": "PEDRO LEOPOLDO ADM","direction": ["BMB", "PEDRO LEOPOLDO"]},
+      {"name": "PEDRO LEOPOLDO C","direction": ["BMB", "PEDRO LEOPOLDO"]},
+      {"name": "VESPASIANO ADM","direction": ["BMB", "CAIEIRAS"]},
+      {"name": "VESPASIANO A","direction": ["BMB", "CAIEIRAS"]},
+      {"name": "VESPASIANO B","direction": ["BMB", "CAIEIRAS"]},
+      {"name": "VESPASIANO D","direction": ["BMB", "CAIEIRAS"]},
+      {"name": "LAGOA SANTA ADM","direction": ["BMB", "LAPINHA"]},
+      {"name": "LAGOA SANTA A","direction": ["BMB", "LAPINHA"]},
+      {"name": "LAGOA SANTA B","direction": ["BMB", "LAPINHA"]},
+      {"name": "LAGOA SANTA C","direction": ["BMB", "LAPINHA"]},
+      {"name": "LAGOA SANTA D","direction": ["BMB", "LAPINHA"]}
     ]
   },
   {
