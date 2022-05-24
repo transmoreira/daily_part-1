@@ -7,10 +7,11 @@ const SendMail = async (request, response) => {
     if (request.method == "POST") {
 
         const {list, date} = JSON.parse(request.body)
+        console.log(date, list)
 
         const mailFrom = "divanirsilva@rionegronet.com.br"
         const mailListTo = [
-            "andreabelario@transmoreira.com.br",
+                "andreabelario@transmoreira.com.br",
                 "trafegorodoviario@rionegronet.com.br",
                 "brunorangel@rionegronet.com.br",
                 "itabirito@rionegronet.com.br",
@@ -25,7 +26,8 @@ const SendMail = async (request, response) => {
                 "marcoscamargos@transmoreira.com.br",
                 "igarape@rionegronet.com.br",
                 "reginaldoelias@rionegronet.com.br",
-                "roniemiliano@transmoreira.com.br"
+                "roniemiliano@transmoreira.com.br",
+                mailFrom
             ]
 
             
@@ -54,7 +56,7 @@ const SendMail = async (request, response) => {
                 subject: "Partes diarias não preenchidas",
                 //text: ""
                 html: `<p>
-            Segue a lista de partes diarias <strong>não preenchida:</strong> no dia ${date}</br></br></br>
+            Segue a lista de partes diarias <strong>não preenchida</strong> no dia ${date}:</br></br></br>
             <table border="1">
                 <thead>
                     <tr>
@@ -68,12 +70,12 @@ const SendMail = async (request, response) => {
         </p>`
             })
             
-            response.send({ success: true, rest })
+            response.send({ success: true, message:"Sucesso...." })
         } catch (error) {
-            response.send({ success: false, error })
+            response.send({ success: false, messasge:error.message })
         }
     }else{
-        response.send({ success: false })
+        response.send({ success: false , message:"Erro ao enviar email"})
     }
 
 }

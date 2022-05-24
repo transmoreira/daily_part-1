@@ -67,7 +67,7 @@ const Home = (props) => {
         }, { unproductive: 0, productive: 0 })
     })
 
-    const eventSendMail = ()=>{
+    const eventSendMail = async ()=>{
         
         if (prompt("Informe a senha...")=="Di1865"){
             const date = prompt("Informe a data")
@@ -79,10 +79,13 @@ const Home = (props) => {
                         list,
                         date
                     })
-                    fetch("/api/mail",{
+                    const response = await fetch("/api/mail",{
                         method:"POST",
                         body
                     })
+                    const res = await response.json()
+                    //debugger
+                    alert(res.message)
                 }catch(e){
                     alert("Error: "+ e.message)
                 }
