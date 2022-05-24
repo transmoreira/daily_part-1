@@ -351,7 +351,6 @@
       {"name": "T3D","direction": ["CONTAGEM",  "CPX"]},
       {"name": "T4A","direction": ["SABARA",  "CPX"]},
       {"name": "T4B","direction": ["BELO HORIZONTE",  "CPX"]},
-      {"name": "T9","direction": ["CONTAGEM",  "MAZ"]},
       {"name": "H13","direction": ["RIO ACIMA",  "PIC"]},
       {"name": "T13","direction": ["RIO ACIMA",  "PIC"]},
       {"name": "A33","direction": ["ITABIRITO",  "TAM"]},
@@ -360,14 +359,9 @@
       {"name": "A42","direction": ["IBIRITE",  "TAM"]},
       {"name": "H2","direction": ["CONTAGEM",  "TAM"]},
       {"name": "H3","direction": ["ITABIRITO",  "TAM"]},
-      {"name": "T2","direction": ["CONTAGEM",  "TAM"]},
-      {"name": "T3","direction": ["ITABIRITO",  "TAM"]},
       {"name": "H4","direction": ["BELO HORIZONTE",  "VGR"]},
       {"name": "H7","direction": ["IBIRITE",  "VGR"]},
       {"name": "H12","direction": ["RAPOSOS",  "ABO"]},
-      {"name": "T4","direction": ["BELO HORIZONTE",  "VGR"]},
-      {"name": "T7","direction": ["IBIRITE",  "VGR"]},
-      {"name": "T12","direction": ["RAPOSOS",  "ABO"]},
       {"name": "MARIANA","direction": ["CABANA",  "MINA DE FABRICA NOVA"]}
     ]
   },
