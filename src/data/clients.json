@@ -168,14 +168,16 @@
   {
     "name": "VALLOREC",
     "lines": [
-      {"name": "LINHA 01","direction": ["SANTA RITA", "MINA P. BRANCO"]},
-      {"name": "LAFAIETE 01","direction": ["LAFAIETE", "VALLOREC"]},
-      {"name": "LAFAIETE 02","direction": ["LAFAIETE", "VALLOREC"]},
-      {"name": "PAMPULHA","direction": ["PAMPULHA", "VALLOREC"]},
-      {"name": "CARREFOUR","direction": ["CARREFOUR", "VALLOREC"]},
-      {"name": "BARREIRO","direction": ["BARREIRO", "VALLOREC"]},
-      {"name": "IBIRITE VIA F. ROSARIO","direction": ["IBIRITE", "VALLOREC"]},
-      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOREC"]}
+      {"name": "LAFAIETE ADM","direction": ["LAFAIETE", "VALLOREC"]},
+      {"name": "LAFAIETE TURNO","direction": ["LAFAIETE", "VALLOREC"]},
+      {"name": "PAMPULHA ADM","direction": ["PAMPULHA", "VALLOREC"]},
+      {"name": "PAMPULHA TURNO","direction": ["PAMPULHA", "VALLOREC"]},
+      {"name": "CARREFOUR ADM","direction": ["CARREFOUR", "VALLOREC"]},
+      {"name": "CARREFOUR TURNO","direction": ["CARREFOUR", "VALLOREC"]},
+      {"name": "BARREIRO ADM","direction": ["BARREIRO", "VALLOREC"]},
+      {"name": "IBIRITE ADM","direction": ["IBIRITE", "VALLOREC"]},
+      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOREC"]},
+      {"name": "INTERNO","direction": [ "VALLOREC"]}
     ]
   },
   {
