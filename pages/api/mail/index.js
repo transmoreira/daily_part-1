@@ -6,7 +6,7 @@ const SendMail = async (request, response) => {
 
     if (request.method == "POST") {
 
-        const list = JSON.parse(request.body)
+        const {list, date} = JSON.parse(request.body)
 
         const mailFrom = "divanirsilva@rionegronet.com.br"
         const mailListTo = [
@@ -54,7 +54,7 @@ const SendMail = async (request, response) => {
                 subject: "Partes diarias não preenchidas",
                 //text: ""
                 html: `<p>
-            Segue a lista de partes diarias <strong>não preenchida:</strong></br></br></br>
+            Segue a lista de partes diarias <strong>não preenchida:</strong> no dia ${date}</br></br></br>
             <table border="1">
                 <thead>
                     <tr>
