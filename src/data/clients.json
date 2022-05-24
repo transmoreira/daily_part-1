@@ -136,12 +136,12 @@
   {
     "name": "HEXAGONO",
     "lines": [
-      {"name": "RAPOSOS","direction": ["RAPOSOS", "MUTUCA"]},
-      {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA"]},
-      {"name": "CONGONHAS","direction": ["CONGONHAS", "VALE FABRICA"]},
-      {"name": "L01","direction": ["SAO JOSE", "CMT"]},
-      {"name": "L02","direction": ["ITABIRITO", "PICO"]},
-      {"name": "L03","direction": ["CONGONHAS", "VARGEM GRANDE"]}
+      {"name": "RAPOSOS","direction": ["RAPOSOS", "MUTUCA", "INTERNO"]},
+      {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA", "INTERNO"]},
+      {"name": "CONGONHAS","direction": ["CONGONHAS", "VALE FABRICA", "INTERNO"]},
+      {"name": "L01","direction": ["SAO JOSE", "CMT", "INTERNO"]},
+      {"name": "L02","direction": ["ITABIRITO", "PICO", "INTERNO"]},
+      {"name": "L03","direction": ["CONGONHAS", "VARGEM GRANDE", "INTERNO"]}
     ]
   },
   {
@@ -182,7 +182,7 @@
   {
     "name": "MONTCALM",
     "lines": [
-      {"name": "CONGONHAS","direction": ["CONGONHAS", "VALE FABRICA"]}
+      {"name": "CONGONHAS","direction": ["OSCAR", "TROPEIRO", "VALE FABRICA"]}
     ]
   },
   {
@@ -193,7 +193,7 @@
       {"name": "LINHA 03","direction": ["LAGOA", "ANDAIME"]},
       {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA", "FAZ. TABATINGA", "FAZ. M. VERMELHO", "FAZ. QUIABO", "ALMOÇO", "SAO GONÇALO", "BARAO DE COCAIS"]},
       {"name": "ITABIRITO","direction": ["ITABIRITO", "BRUMADINHO"]},
-      {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA"]}
+      {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA", "MINA FABRICA", "ALMOCO", "INTERNO"]}
     ]
   },
   {

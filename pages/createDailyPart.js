@@ -355,7 +355,7 @@ const CreateDailyPart = (props) => {
         const msg = "Verifique se o KM está correto."
         const startKM = parseInt(await getData(null, msg, true))
 
-        const direction = lines.filter(item => item.name == line)[0].direction
+        const direction = [...lines.filter(item => item.name == line)[0].direction,...unproductiveKm().direction]
 
 
         state.label = <>De onde sai a viagem?<b>(PONTO INICIAL)</b></>
