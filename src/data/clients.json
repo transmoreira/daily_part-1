@@ -11,7 +11,7 @@
       {"name": "BH-NO-06","direction": ["N. TUPI", "FIAT"]},
       {"name": "BH-NO-07","direction": ["FAZ. SEVERINA", "FIAT"]},
       {"name": "BH-NO-08","direction": ["SERRA AZUL", "FIAT"]},
-      {"name": "BRUM-01","direction": ["RES. BELA VISTA", "FIAT"]},
+      {"name": "BRUM-01","direction": ["RES. BELA VISTA", "BRUMADINHO", "CONCEICAO ITAGUA","FIAT"]},
       {"name": "NOVA-01","direction": ["HON. BICALHO", "FIAT"]},
       {"name": "RIBE-01","direction": ["SERVILHA 1ª SECAO", "FIAT"]},
       {"name": "RIBE-02","direction": ["MENEZES", "FIAT"]},
