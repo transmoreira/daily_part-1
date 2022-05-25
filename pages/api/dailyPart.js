@@ -63,7 +63,7 @@ const dailyPart = async (request, response) => {
             const data = await getResult(sql)
             if (data && !data.errno) {
 
-                /*const newData = data.reduce((acc, item, index) => {
+                const newData = data.reduce((acc, item, index) => {
                     const travel = {
                         line: item.line,
                         startTime: item.startTime,
@@ -102,8 +102,8 @@ const dailyPart = async (request, response) => {
                     return acc
                 }, [])
 
-                response.status(200).json(newData)*/
-                response.status(200).json(data)
+                response.status(200).json(newData)
+                //response.status(200).json(data)
             } else {
                 response.status(400).json({ ...data})
             }
