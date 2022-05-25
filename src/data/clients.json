@@ -78,6 +78,14 @@
     ]
   },
   {
+    "name": "GRAFITE",
+    "lines": [
+      {"name": "TURNO","direction": ["RODOVIARIA", "GRAFITE"]},
+      {"name": "ADM","direction": ["RODOVIARIA", "GRAFITE"]},
+      {"name": "ALMOCO","direction": ["RODOVIARIA", "GRAFITE"]}
+    ]
+  },
+  {
     "name": "H. PARDINI",
     "lines": [      
       {"name": "D 301","direction": ["BAIRRO", "PARDINI"]},
