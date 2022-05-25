@@ -156,7 +156,7 @@ const dailyPart = async (request, response) => {
 export const config = {
     api: {
       bodyParser: {
-        sizeLimit: '1mb',
+        sizeLimit: '8mb',
       },
     },
   }
