@@ -483,7 +483,7 @@ const CreateDailyPart = (props) => {
                     clearInterval(interval)
                     //reject(valueInserted)
                 }
-            }, 100)
+            }, 1000)
         })
 
     const onclickOK = () => {
