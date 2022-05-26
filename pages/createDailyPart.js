@@ -300,7 +300,7 @@ const CreateDailyPart = (props) => {
             alert("Viagem gravada com sucesso!")
             const computer = window. screen. width >= 1200
             if(date != today && !computer){
-                location.reload()
+                //location.reload()
             }
             
         } catch (erro) {
