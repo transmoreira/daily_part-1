@@ -6,6 +6,7 @@
       {"name": "IBIR-06","direction": ["BOSQUE IBIR", "FIAT"]},
       {"name": "IBIR-07","direction": ["V. JATOBTA", "FIAT"]},
       {"name": "IBIR-08","direction": ["V. JATOBTA", "FIAT"]},
+      {"name": "BE-NT-03","direction": ["ITACOLOMI", "FIAT"]},
       {"name": "BE-NT-05","direction": ["ITACOLOMI", "FIAT"]},
       {"name": "BENT-06","direction": ["V. FLORES", "FIAT"]},
       {"name": "BH-NO-06","direction": ["N. TUPI", "FIAT"]},
