@@ -62,7 +62,10 @@
       {"name": "03 T1","direction": ["BONSUCESSO", "FIAT"]},
       {"name": "08 T2","direction": ["TROPICAL", "FIAT"]},
       {"name": "37 T1","direction": ["SARZEDO", "FIAT"]},
-      {"name": "37 T2","direction": ["J. MONTANHES", "FIAT"]}
+      {"name": "37 T2","direction": ["J. MONTANHES", "FIAT"]},
+      {"name": "ROTA 9","direction": ["BH", "FIAT"]},
+      {"name": "ROTA 10","direction": ["BH", "FIAT"]},
+      {"name": "ROTA 16","direction": ["BURITIS", "FIAT"]}
     ]
   },
   {
@@ -72,7 +75,6 @@
       {"name": "LINHA 02","direction": ["SERRA VERDE", "CANTEIRO"]},
       {"name": "LINHA 03","direction": ["SERRA VERDE", "CANTEIRO"]},
       {"name": "LINHA 04","direction": ["VALE JATOBÁ", "CANTEIRO"]},
-      {"name": "LINHA 05","direction": ["ESCRITORIO", "CANTEIRO"]},
       {"name": "LINHA 06","direction": ["CANTEIRO"]}
     ]
   },
