@@ -208,7 +208,8 @@
   {
     "name": "MONTCALM",
     "lines": [
-      {"name": "CONGONHAS","direction": ["OSCAR", "TROPEIRO", "VALE FABRICA"]}
+      {"name": "CONGONHAS","direction": ["DOM OSCAR", "TROPEIRO", "VALE FABRICA"]},
+      {"name": "INTERNO","direction": ["INTERNO", "VALE FABRICA"]}
     ]
   },
   {
