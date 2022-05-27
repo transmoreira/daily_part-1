@@ -389,10 +389,10 @@ const CreateDailyPart = (props) => {
 
 
         const timeTravel = `${startTime}:00`
-        
-        state.dailyPart.date = timeTravel
-        
-        onChangeObs()
+        if (state.dailyPart.travels.length){
+            state.dailyPart.date = timeTravel            
+            onChangeObs()
+        }
 
         const travel = {
             id_daily_part: state.dailyPart.id,

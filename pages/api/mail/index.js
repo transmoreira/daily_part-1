@@ -11,12 +11,12 @@ const SendMail = async (request, response) => {
 
         const mailFrom = "divanirsilva@rionegronet.com.br"
         const mailListTo = [
-                "andreabelario@transmoreira.com.br",
+                /*"andreabelario@transmoreira.com.br",
                 "trafegorodoviario@rionegronet.com.br",
                 "brunorangel@rionegronet.com.br",
-                "itabirito@rionegronet.com.br",
+                "itabirito@rionegronet.com.br",*/
                 "fabiocastro@rionegronet.com.br",
-                "saogoncalo@rionegronet.com.br",
+                /*"saogoncalo@rionegronet.com.br",
                 "jennerleandro@transmoreira.com.br",
                 "sarzedo@rionegronet.com.br",
                 "juniorrocha@rionegronet.com.br",
@@ -27,7 +27,7 @@ const SendMail = async (request, response) => {
                 "igarape@rionegronet.com.br",
                 "reginaldoelias@rionegronet.com.br",
                 "roniemiliano@transmoreira.com.br",
-                mailFrom
+                mailFrom*/
             ]
 
             
