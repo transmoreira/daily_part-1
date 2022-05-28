@@ -389,7 +389,7 @@ const CreateDailyPart = (props) => {
 
 
         const timeTravel = `${startTime}:00`
-        if (state.dailyPart.travels.length){
+        if (!state.dailyPart.travels.length){
             state.dailyPart.date = timeTravel            
             onChangeObs()
         }
