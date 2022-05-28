@@ -192,18 +192,18 @@
     ]
   },
   {
-    "name": "VALLOREC",
+    "name": "VALLOuREC",
     "lines": [
-      {"name": "LAFAIETE ADM","direction": ["LAFAIETE", "VALLOREC"]},
-      {"name": "LAFAIETE TURNO","direction": ["LAFAIETE", "VALLOREC"]},
-      {"name": "PAMPULHA ADM","direction": ["PAMPULHA", "VALLOREC"]},
-      {"name": "PAMPULHA TURNO","direction": ["PAMPULHA", "VALLOREC"]},
-      {"name": "CARREFOUR ADM","direction": ["CARREFOUR", "VALLOREC"]},
-      {"name": "CARREFOUR TURNO","direction": ["CARREFOUR", "VALLOREC"]},
-      {"name": "BARREIRO ADM","direction": ["BARREIRO", "VALLOREC"]},
-      {"name": "IBIRITE ADM","direction": ["IBIRITE", "VALLOREC"]},
-      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOREC"]},
-      {"name": "INTERNO","direction": [ "VALLOREC"]}
+      {"name": "LAFAIETE ADM","direction": ["LAFAIETE", "VALLOuREC"]},
+      {"name": "LAFAIETE TURNO","direction": ["LAFAIETE", "VALLOuREC"]},
+      {"name": "PAMPULHA ADM","direction": ["PAMPULHA", "VALLOuREC"]},
+      {"name": "PAMPULHA TURNO","direction": ["PAMPULHA", "VALLOuREC"]},
+      {"name": "CARREFOUR ADM","direction": ["CARREFOUR", "VALLOuREC"]},
+      {"name": "CARREFOUR TURNO","direction": ["CARREFOUR", "VALLOuREC"]},
+      {"name": "BARREIRO ADM","direction": ["BARREIRO", "VALLOuREC"]},
+      {"name": "IBIRITE ADM","direction": ["IBIRITE", "VALLOuREC"]},
+      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOuREC"]},
+      {"name": "INTERNO","direction": [ "VALLOuREC"]}
     ]
   },
   {
@@ -301,12 +301,8 @@
       {"name": "02 CAUE","direction": ["ITABIRA",  "CAUE",  "ALMOCO"]},
       {"name": "MEMORIAL","direction": ["MEMORIAL",  "BASE BRAVO",  "ALMOCO"]},
       {"name": "ALMOCO CONCREMAT","direction": ["ALMOCO",  "CONCREMAT"]},
-      {"name": "DERD23","direction": ["BELO HORIZONTE",  "BRUMADINHO"]},
       {"name": "DERD08","direction": ["BELO HORIZONTE",  "FEIJAO"]},
       {"name": "DERD07","direction": ["CID. INDUSTRIAL",  "AURORA"]},
-      {"name": "DERD05","direction": ["PEDRO II",  "FEIJAO"]},
-      {"name": "DERD02","direction": ["CONTAGEM",  "FEIJAO"]},
-      {"name": "DERD09","direction": ["CID. INDUSTRIAL",  "FEIJAO"]},
       {"name": "A01 CONCREMAT","direction": ["VENDA NOVA",  "FEIJAO"]},
       {"name": "A09 CONCREMAT","direction": ["AURORA",  "FEIJAO", "CON. ITAGUA", "ALMOCO", "BALDEIO", "CANTEIRO", "MEMORIAL"]},
       {"name": "CDM-A1-BHSHOP","direction": ["BELO HORIZONTE",  "CDM"]},
