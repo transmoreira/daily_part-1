@@ -66,7 +66,8 @@
       {"name": "37 T2","direction": ["J. MONTANHES", "FIAT"]},
       {"name": "ROTA 9","direction": ["HELIOPOLIS", "FIAT"]},
       {"name": "ROTA 10","direction": ["IGARAPE", "FIAT"]},
-      {"name": "ROTA 16","direction": ["BURITIS", "FIAT"]}
+      {"name": "ROTA 16","direction": ["BURITIS", "FIAT"]},
+      {"name": "28 H1","direction": ["CABANA", "FIAT"]}
     ]
   },
   {
