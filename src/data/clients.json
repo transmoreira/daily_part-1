@@ -67,7 +67,9 @@
       {"name": "ROTA 9","direction": ["HELIOPOLIS", "FIAT"]},
       {"name": "ROTA 10","direction": ["IGARAPE", "FIAT"]},
       {"name": "ROTA 16","direction": ["BURITIS", "FIAT"]},
-      {"name": "28 H1","direction": ["CABANA", "FIAT"]}
+      {"name": "28 H1","direction": ["CABANA", "FIAT"]},
+      {"name": "35 H1","direction": ["MORA NOVA", "FIAT"]},
+      {"name": "01 H1","direction": ["MORA NOVA", "FIAT"]}
     ]
   },
   {
@@ -134,6 +136,7 @@
       {"name": "LINHA 05","direction": ["ALMOCO", "CHACARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 18","direction": ["ALMOCO", "CANTEIRO", "ANDAME", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 03","direction": ["ALMOCO", "SANTA BÁRBARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
+      {"name": "LINHA 10","direction": ["VIÚVA", "CANTEIRO", "LEÃO 13", "CARANIRU", "CORREIO"]},
       {"name": "LINHA 12","direction": ["ALMOCO", "VIÚVA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]}
 
     ]
@@ -423,8 +426,8 @@
     "name": "urbano",
     "lines": [
       {"name": "001B","direction": ["CIRCULAR CONTAGEM"]},
-      {"name": "001C","direction": ["PARQUE RENASCER",  " CIDADE INDUSTRIAL"]},
-      {"name": "170","direction": ["CIRCULAR CONTAGEM",  " VILA MILITAR"]},
+      {"name": "001C","direction": ["PARQUE RENASCER",  "CIDADE INDUSTRIAL"]},
+      {"name": "170","direction": ["CIRCULAR CONTAGEM",  "VILA MILITAR"]},
       {"name": "1600","direction": ["PETROLINA",  "ESTACAO ELDORADO"]},
       {"name": "1620","direction": ["JARDIM DAS ROSAS VIA BR-381",  "ESTACAO ELDORADO"]},
       {"name": "1621","direction": ["JARDIM DAS ROSAS",  "ESTAÇÃO ELDORADO VIA CASCATA"]},
