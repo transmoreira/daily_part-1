@@ -67,9 +67,6 @@
       {"name": "ROTA 9","direction": ["HELIOPOLIS", "FIAT"]},
       {"name": "ROTA 10","direction": ["IGARAPE", "FIAT"]},
       {"name": "ROTA 16","direction": ["BURITIS", "FIAT"]},
-      {"name": "28 H1","direction": ["CABANA", "FIAT"]},
-      {"name": "35 H1","direction": ["MORA NOVA", "FIAT"]},
-      {"name": "01 H1","direction": ["MORA NOVA", "FIAT"]},
       {"name": "NOVA-H1-01","direction": ["BAIRRO", "FIAT"]}
     ]
   },
