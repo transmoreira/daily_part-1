@@ -548,6 +548,7 @@ const CreateDailyPart = (props) => {
                     value={state.value}
                     min={state.min}
                     max={state.max}
+                    autoFocus
                 />
                 <datalist id="list">
                     {
