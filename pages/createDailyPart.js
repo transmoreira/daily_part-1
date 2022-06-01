@@ -182,7 +182,7 @@ const CreateDailyPart = (props) => {
             } else {
                
                 if(state.dailyPart.client == "VALE VIGA"){
-                    setAddFuel(true)
+                    //setAddFuel(true)
                 }
 
                 const minTime = actualtravel.startTime
