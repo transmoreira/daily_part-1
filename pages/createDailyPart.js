@@ -4,6 +4,7 @@ import cars from "../src/data/cars.json"
 import clients from "../src/data/clients.json"
 import Table from "../src/components/Table"
 import { dateFormated, unproductiveKm } from "../src/utils/utils"
+import Abastecimento from "./fuelAdd"
 
 
 const actualDate = new Date()
@@ -17,6 +18,8 @@ const CreateDailyPart = (props) => {
 
     const company = props.company || "RN"
     const isUrban = company === "TM"
+
+    const [addFuel, setAddFuel] = useState(false)
     const [error, setError] = useState({ msg: "", type: "" })
     const [state, setState] = useState({
         label: "",
@@ -56,8 +59,7 @@ const CreateDailyPart = (props) => {
           
             const responseUse = confirm(`Tem certeza que deseja apagar a viagem de ${travel.startTime}?`)
             if(responseUse){
-                try {                   
-                
+                try {                                   
                     const response = await fetch(
                         "api/travels",
                         {
@@ -79,8 +81,6 @@ const CreateDailyPart = (props) => {
                 } catch (error) {
                         
                 }
-
-
 
             }
             return
@@ -180,6 +180,10 @@ const CreateDailyPart = (props) => {
                 addTravel()
 
             } else {
+               
+                if(state.dailyPart.client != "VALE VIGA"){
+                    setAddFuel(true)
+                }
 
                 const minTime = actualtravel.startTime
                 const maxTime = new Date(minTime)
@@ -429,9 +433,9 @@ const CreateDailyPart = (props) => {
             setState({ ...state })
             localStorage.setItem("dailyPart", JSON.stringify(state.dailyPart))
         } catch (erro) {
-            console.log(erro.message)
+            alert("Houve um erro ao enviar a parte diaria: "+erro.message)
             //location.reload(true)
-            setTraveal(travel)
+            //setTraveal(travel)
         }
     }
 
@@ -459,7 +463,7 @@ const CreateDailyPart = (props) => {
             state.value = ""
             setState({ ...state })
             const interval = setInterval(() => {
-
+                //console.log(valueInserted)
                 if (valueInserted) {
                     if (!list || list.includes(valueInserted)) {
                         if (shouldCheckKM && !checkKM(valueInserted)) {
@@ -483,7 +487,7 @@ const CreateDailyPart = (props) => {
                     clearInterval(interval)
                     //reject(valueInserted)
                 }
-            }, 1000)
+            }, 1500)
         })
 
     const onclickOK = () => {
@@ -541,6 +545,7 @@ const CreateDailyPart = (props) => {
                 <label>{state.label}</label>
 
                 <input
+
                     type={state.type}
                     placeholder="Toque aqui para digitar"
                     list="list"
@@ -548,6 +553,7 @@ const CreateDailyPart = (props) => {
                     value={state.value}
                     min={state.min}
                     max={state.max}
+                    autoFocus
                 />
                 <datalist id="list">
                     {
@@ -560,8 +566,16 @@ const CreateDailyPart = (props) => {
                 </span>
                 <button onClick={onclickOK}>OK</button>
             </div>
+            <div>
+                {addFuel && <Abastecimento 
+                    CARRO={state.dailyPart.car.number}
+                    DATA={state.dailyPart.date}
+                    ODOMETRO={state.dailyPart.travels[state.dailyPart.travels.length-1].startKM}
+                />}
+            </div>
+            
         </div>
-
+        
     </>
 }
 

@@ -10,7 +10,7 @@ export default (props) => {
     const { unproductive, productive } = props.kms || { unproductive: -1, productive: -1 }
     const company = props.company || "RN"
     const isUrban = company == "TM"
-    const logo = (isUrban || client == "PETROBRÁS") ? logoTM : logoRN
+    const logo = (isUrban || client == "PETROBRÁS" || client == "GRAFITE") ? logoTM : logoRN
     const edit = props.edit || false
 
     return <section className="table">
@@ -146,7 +146,6 @@ export default (props) => {
             </tbody>
             <tfoot>
                 <tr>
-
                     <td colSpan={isUrban ? 13 : 11}>
                         {obs}
                     </td>
