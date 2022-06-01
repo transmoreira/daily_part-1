@@ -6,7 +6,7 @@
       {"name": "IBIR-06","direction": ["BOSQUE IBIR", "FIAT"]},
       {"name": "IBIR-07","direction": ["V. JATOBTA", "FIAT"]},
       {"name": "IBIR-08","direction": ["V. JATOBTA", "FIAT"]},
-      {"name": "BE-NT-03","direction": ["ITACOLOMI", "FIAT"]},
+      {"name": "BE-NT-03 L","direction": ["ITACOLOMI", "FIAT"]},
       {"name": "BE-NT-05","direction": ["ITACOLOMI", "FIAT"]},
       {"name": "BENT-06","direction": ["V. FLORES", "FIAT"]},
       {"name": "BH-NO-06","direction": ["N. TUPI", "FIAT"]},
@@ -37,7 +37,7 @@
       {"name": "BE-CE-03","direction": ["CENTRO BETIM", "FIAT"]},
       {"name": "BE-CI-01","direction": ["PAR. IPIRANGA BETIM", "FIAT"]},
       {"name": "BH-BA-03","direction": ["BONSUCESSO", "FIAT"]},
-      {"name": "BH-CE-03","direction": ["SERRA  BH", "FIAT"]},
+      {"name": "BH-CE-03","direction": ["SERRA BH", "FIAT"]},
       {"name": "BH-NE-02","direction": ["SÃO GABREIL", "FIAT"]},
       {"name": "BH-NO-01","direction": ["CACHOEIRINHA", "FIAT"]},
       {"name": "BH-NO-03","direction": ["CASTELO", "FIAT"]},
@@ -67,7 +67,7 @@
       {"name": "ROTA 9","direction": ["HELIOPOLIS", "FIAT"]},
       {"name": "ROTA 10","direction": ["IGARAPE", "FIAT"]},
       {"name": "ROTA 16","direction": ["BURITIS", "FIAT"]},
-      {"name": "28 H1","direction": ["CABANA", "FIAT"]}
+      {"name": "NOVA-H1-01","direction": ["BAIRRO", "FIAT"]}
     ]
   },
   {
@@ -131,16 +131,10 @@
     "name": "FERREIRA GUEDES",
     "lines": [
       {"name": "LINHA 01","direction": ["ALMOCO", "LEÃO 13", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 02","direction": ["ALMOCO", "LEÃO 13", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 06","direction": ["ALMOCO", "SANTA BARBARA", "LEÃO 13", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 05","direction": ["ALMOCO", "CHACARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 16","direction": ["ALMOCO", "COCAIS", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 18","direction": ["ALMOCO", "CANTEIRO", "ANDAME", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 15","direction": ["ALMOCO", "MAE D'ÁGUA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 03","direction": ["ALMOCO", "SANTA BÁRBARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 08","direction": ["ALMOCO", "SANTA BÁRBARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 10","direction": ["ALMOCO", "ADM BARÃO COCAIS", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 11","direction": ["ALMOCO", "BARÃO COCAIS", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
+      {"name": "LINHA 10","direction": ["VIÚVA", "CANTEIRO", "LEÃO 13", "CARANIRU", "CORREIO"]},
       {"name": "LINHA 12","direction": ["ALMOCO", "VIÚVA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]}
 
     ]
@@ -192,18 +186,24 @@
     ]
   },
   {
-    "name": "VALLOuREC",
+    "name": "APIA",
     "lines": [
-      {"name": "LAFAIETE ADM","direction": ["LAFAIETE", "VALLOuREC"]},
-      {"name": "LAFAIETE TURNO","direction": ["LAFAIETE", "VALLOuREC"]},
-      {"name": "PAMPULHA ADM","direction": ["PAMPULHA", "VALLOuREC"]},
-      {"name": "PAMPULHA TURNO","direction": ["PAMPULHA", "VALLOuREC"]},
-      {"name": "CARREFOUR ADM","direction": ["CARREFOUR", "VALLOuREC"]},
-      {"name": "CARREFOUR TURNO","direction": ["CARREFOUR", "VALLOuREC"]},
-      {"name": "BARREIRO ADM","direction": ["BARREIRO", "VALLOuREC"]},
-      {"name": "IBIRITE ADM","direction": ["IBIRITE", "VALLOuREC"]},
-      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOuREC"]},
-      {"name": "INTERNO","direction": [ "VALLOuREC"]}
+      {"name": "LINHA 01","direction": ["MARIANA", "ANTONIO PEREIRA"]}
+    ]
+  },
+  {
+    "name": "VALLOUREC",
+    "lines": [
+      {"name": "LAFAIETE ADM","direction": ["LAFAIETE", "VALLOUREC"]},
+      {"name": "LAFAIETE TURNO","direction": ["LAFAIETE", "VALLOUREC"]},
+      {"name": "PAMPULHA ADM","direction": ["PAMPULHA", "VALLOUREC"]},
+      {"name": "PAMPULHA TURNO","direction": ["PAMPULHA", "VALLOUREC"]},
+      {"name": "CARREFOUR ADM","direction": ["CARREFOUR", "VALLOUREC"]},
+      {"name": "CARREFOUR TURNO","direction": ["CARREFOUR", "VALLOUREC"]},
+      {"name": "BARREIRO ADM","direction": ["BARREIRO", "VALLOUREC"]},
+      {"name": "IBIRITE ADM","direction": ["IBIRITE", "VALLOUREC"]},
+      {"name": "NOVA LIMA","direction": ["NOVA LIMA", "VALLOUREC"]},
+      {"name": "INTERNO","direction": [ "VALLOUREC"]}
     ]
   },
   {
@@ -248,7 +248,7 @@
       {"name": "ROTA 05","direction": ["BICAS","SHOP MILPLAN"]},
       {"name": "ROTA 06","direction": ["BICAS VILA RICA","MMI"]},
       {"name": "ROTA 07","direction": ["VALE DO AMANHECER","MMI"]},
-      {"name": "ROTA 08","direction": ["VALE DO AMANHECER","MMI"]}
+      {"name": "ROTA 08","direction": ["NOVO HORIZONTE","MMI"]}
     ]
   },
   {
@@ -299,7 +299,6 @@
       {"name": "06 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
       {"name": "07 MINA FABRICA","direction": ["C LAFAIETE",  "PROGEN"]},
       {"name": "05 GONGO SOCO","direction": ["BARAO DE COCAIS",  "GONGO SOCO"]},
-      {"name": "02 CAUE","direction": ["ITABIRA",  "CAUE",  "ALMOCO"]},
       {"name": "MEMORIAL","direction": ["MEMORIAL",  "BASE BRAVO",  "ALMOCO"]},
       {"name": "ALMOCO CONCREMAT","direction": ["ALMOCO",  "CONCREMAT"]},
       {"name": "DERD08","direction": ["BELO HORIZONTE",  "FEIJAO"]},
@@ -397,7 +396,6 @@
       {"name": "INTERNO 2","direction": ["INTERNO"]},
       {"name": "ALMOCO 1","direction": ["REFEITORIO MINA",  "VALE VIGA"]},
       {"name": "ALMOCO 2","direction": ["REFEITORIO MINA",  "VALE VIGA"]},
-      {"name": "ALMOCO 3","direction": ["REFEITORIO MINA",  "VALE VIGA"]},
       {"name": "JANTA","direction": ["REFEITORIO MINA",  "VALE VIGA"]},
       {"name": "CL-A01","direction": ["ADM CONS.",  "VALE VIGA"]},
       {"name": "CL-A02","direction": ["ADM CONS.",  "VALE VIGA"]},
@@ -426,8 +424,8 @@
     "name": "urbano",
     "lines": [
       {"name": "001B","direction": ["CIRCULAR CONTAGEM"]},
-      {"name": "001C","direction": ["PARQUE RENASCER",  " CIDADE INDUSTRIAL"]},
-      {"name": "170","direction": ["CIRCULAR CONTAGEM",  " VILA MILITAR"]},
+      {"name": "001C","direction": ["PARQUE RENASCER",  "CIDADE INDUSTRIAL"]},
+      {"name": "170","direction": ["CIRCULAR CONTAGEM",  "VILA MILITAR"]},
       {"name": "1600","direction": ["PETROLINA",  "ESTACAO ELDORADO"]},
       {"name": "1620","direction": ["JARDIM DAS ROSAS VIA BR-381",  "ESTACAO ELDORADO"]},
       {"name": "1621","direction": ["JARDIM DAS ROSAS",  "ESTAÇÃO ELDORADO VIA CASCATA"]},
