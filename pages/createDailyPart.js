@@ -181,7 +181,7 @@ const CreateDailyPart = (props) => {
 
             } else {
                
-                if(state.dailyPart.client != "VALE VIGA"){
+                if(state.dailyPart.client == "VALE VIGA"){
                     setAddFuel(true)
                 }
 
