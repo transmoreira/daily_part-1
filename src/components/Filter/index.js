@@ -61,6 +61,9 @@ const Filter = (props) => {
         switch (element.id) {
             case "start":
             case "end":
+                if(element.value.length<10){
+                    return
+                }
                 const newDate = new Date(element.value)
                 //newDate.setUTCHours(3)
 

@@ -134,9 +134,8 @@
       {"name": "LINHA 05","direction": ["ALMOCO", "CHACARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 18","direction": ["ALMOCO", "CANTEIRO", "ANDAME", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
       {"name": "LINHA 03","direction": ["ALMOCO", "SANTA BÁRBARA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]},
-      {"name": "LINHA 10","direction": ["VIÚVA", "CANTEIRO", "LEÃO 13", "CARANIRU", "CORREIO"]},
-      {"name": "LINHA 12","direction": ["ALMOCO", "VIÚVA", "CANTEIRO", "PDE CAVALO", "PDE EXPANÇÃO", "CAVA DA DIVISA", "PATIO DE FERRAGEM", "TCLD", "CAVA OESTE", "CAVA SUL", "PILHA FEIJAO", "MIRANTE DO FEIJAO", "DESCARGA DE MINERIO", "CONTAINER","GARCIA"]}
-
+      {"name": "LINHA 10","direction": ["VIÚVA", "CANTEIRO", "LEÃO 13", "CARANIRU", "CORREIO", "PDE EXPANÇÃO", "CAVA SUL"]}
+      
     ]
   },
   {
@@ -168,11 +167,9 @@
       {"name": "SAVASSI","direction": ["BMB", "BELO HORIZONTE"]},
       {"name": "PEDRO LEOPOLDO ADM","direction": ["BMB", "PEDRO LEOPOLDO"]},
       {"name": "PEDRO LEOPOLDO C","direction": ["BMB", "PEDRO LEOPOLDO"]},
-      {"name": "VESPASIANO ADM","direction": ["BMB", "CAIEIRAS"]},
       {"name": "VESPASIANO A","direction": ["BMB", "CAIEIRAS"]},
       {"name": "VESPASIANO B","direction": ["BMB", "CAIEIRAS"]},
       {"name": "VESPASIANO D","direction": ["BMB", "CAIEIRAS"]},
-      {"name": "LAGOA SANTA ADM","direction": ["BMB", "LAPINHA"]},
       {"name": "LAGOA SANTA A","direction": ["BMB", "LAPINHA"]},
       {"name": "LAGOA SANTA B","direction": ["BMB", "LAPINHA"]},
       {"name": "LAGOA SANTA C","direction": ["BMB", "LAPINHA"]},
@@ -217,9 +214,6 @@
     "name": "MANSERV",
     "lines": [
       {"name": "LINHA 01","direction": ["SAO BARBARA", "ANDAIME"]},
-      {"name": "LINHA 02","direction": ["SAO MIGUEL", "COCAIS"]},
-      {"name": "LINHA 03","direction": ["LAGOA", "ANDAIME"]},
-      {"name": "LINHA 04","direction": ["ITABIRA", "IPOEMA", "FAZ. TABATINGA", "FAZ. M. VERMELHO", "FAZ. QUIABO", "ALMOÇO", "SAO GONÇALO", "BARAO DE COCAIS"]},
       {"name": "ITABIRITO","direction": ["ITABIRITO", "BRUMADINHO"]},
       {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA", "MINA FABRICA", "ALMOCO", "INTERNO"]}
     ]
