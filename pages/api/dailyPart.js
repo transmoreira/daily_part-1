@@ -26,7 +26,7 @@ const dailyPart = async (request, response) => {
     }
 
     if (request.method === "GET") {
-
+        
         const { start, end, registration, plate, company = "RN" } = request.query
         const sql = `SELECT 
                         daily_part.id AS id,
@@ -105,9 +105,11 @@ const dailyPart = async (request, response) => {
                 response.status(200).json(newData)
                 //response.status(200).json(data)
             } else {
+                console.log(data)
                 response.status(400).json({ ...data})
             }
         } catch (error) {
+            console.log(data)
             response.status(400).json(error)
             return
         }
