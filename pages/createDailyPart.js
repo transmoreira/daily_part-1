@@ -5,6 +5,8 @@ import clients from "../src/data/clients.json"
 import Table from "../src/components/Table"
 import { dateFormated, unproductiveKm } from "../src/utils/utils"
 import Abastecimento from "./fuelAdd"
+import Info from "../src/components/info"
+import listDer from "../src/data/listDer"
 
 
 const actualDate = new Date()
@@ -104,6 +106,7 @@ const CreateDailyPart = (props) => {
             setState({ ...state })
 
             const registration = await getData(list, "Matrícula não encontrada.")
+            
             state.dailyPart.driver = {
                 registration,
                 name: employees[list.indexOf(registration)].name
@@ -527,6 +530,10 @@ const CreateDailyPart = (props) => {
 
     // inputValue()
 
+    if(listDer.includes(state.dailyPart.driver.registration)){
+        state.hasPending = true
+    }
+ 
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
@@ -535,6 +542,10 @@ const CreateDailyPart = (props) => {
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}
                 value={state.dailyPart.obs || ""} />
+            {state.hasPending &&
+                <Info name={state.dailyPart.driver.name}/>
+            }
+            
 
         </main>
 
