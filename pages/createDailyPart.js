@@ -89,7 +89,7 @@ const CreateDailyPart = (props) => {
         
         const dailyPartImcompleted = localStorage.getItem("dailyPart")
         if (dailyPartImcompleted) {
-            //state.dailyPart = JSON.parse(dailyPartImcompleted)
+            state.dailyPart = JSON.parse(dailyPartImcompleted)
         }
 
         state.closable = true
