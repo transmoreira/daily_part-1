@@ -206,7 +206,7 @@
   {
     "name": "MONTCALM",
     "lines": [
-      {"name": "CONGONHAS","direction": ["DOM OSCAR", "TROPEIRO", "VALE FABRICA"]},
+      {"name": "CONGONHAS","direction": ["TROPEIRO", "VALE FABRICA"]},
       {"name": "INTERNO","direction": ["INTERNO", "VALE FABRICA"]}
     ]
   },
@@ -270,7 +270,6 @@
       {"name": "INT-CMT/TAM","direction": ["CMT",  "TAM"]},
       {"name": "INT-PAIOL","direction": ["CMT",  "PAIOL"]},
       {"name": "MUT-ALMOCO-USINA","direction": [ "MUT"]},
-      {"name": "MUT-01-ALMOCO","direction": ["MUT"]},
       {"name": "MUT-AL-PORT.DIR.","direction": ["MUT"]},
       {"name": "TOD-01-ALMOCO","direction": ["TOD"]},
       {"name": "MAC-CIRCULAR","direction": ["MAC"]},
@@ -289,9 +288,7 @@
       {"name": "JGD-12X36","direction": ["CONTAGEM", "JGD","BRUMADINHO"]},
       {"name": "DERD06","direction": ["ITABIRITO",  "CMM"]},
       {"name": "DERD03","direction": ["BRUMADINHO",  "AURORA",  "CENTRO",  "OBRA", "ALMOCO", "CANTEIRO", "RESTAURANTE"]},
-      {"name": "09 SAO CONCALO","direction": ["SAO G. RIO ABAIXO",  "MINA TORTO"]},
       {"name": "06 MINA FABRICA","direction": ["C LAFAIETE",  "MINA FABRICA"]},
-      {"name": "07 MINA FABRICA","direction": ["C LAFAIETE",  "PROGEN"]},
       {"name": "05 GONGO SOCO","direction": ["BARAO DE COCAIS",  "GONGO SOCO"]},
       {"name": "MEMORIAL","direction": ["MEMORIAL",  "BASE BRAVO",  "ALMOCO"]},
       {"name": "ALMOCO CONCREMAT","direction": ["ALMOCO",  "CONCREMAT"]},

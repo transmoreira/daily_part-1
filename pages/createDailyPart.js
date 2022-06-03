@@ -9,8 +9,16 @@ import Info from "../src/components/info"
 import listDer from "../src/data/listDer"
 
 
-const actualDate = new Date()
-actualDate.setHours(11)
+let actualDate = new Date()
+
+
+const urlDate = "http://worldtimeapi.org/api/timezone/America/Sao_Paulo"
+fetch(urlDate)
+    .then(resp=>resp.json())
+    .then(resp=>{
+        actualDate = new Date(resp.datetime)
+    })
+
 
 let valueInserted
 let timeout
@@ -288,7 +296,7 @@ const CreateDailyPart = (props) => {
             const response = await fetch(
                 "api/travels",
                 {
-                    method: "PUT",
+                    method: "POST",
                     body: JSON.stringify(travel)
                 }
             )
@@ -422,7 +430,7 @@ const CreateDailyPart = (props) => {
 
     const setTraveal = async (travel) => {
         try {
-            const response = await fetch(
+           /* const response = await fetch(
                 "api/travels",
                 {
                     method: "POST",
@@ -430,8 +438,8 @@ const CreateDailyPart = (props) => {
                 }
             )
 
-            const result = await response.json()
-            travel.id = result.insertId
+            const result = await response.json()*/
+            travel.id = 1//result.insertId
             state.dailyPart.travels.push(travel)
             setState({ ...state })
             localStorage.setItem("dailyPart", JSON.stringify(state.dailyPart))
