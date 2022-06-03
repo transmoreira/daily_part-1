@@ -1,11 +1,12 @@
 
 import connect from "./connect"
-
+let count = 0
 
 const dailyPart = async (request, response) => {
 
+   count++
 
-
+    
     const getResult = async (sql) => {
         try {
             const data = await connect(sql)
@@ -85,6 +86,7 @@ const dailyPart = async (request, response) => {
                             client: item.client,
                             date: item.date,
                             obs: item.obs,
+                            count,
                             driver: {
                                 registration: item.registration,
                                 name: item.name
