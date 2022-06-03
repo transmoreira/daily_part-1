@@ -6,6 +6,7 @@ const dailyPart = async (request, response) => {
 
    count++
 
+    
     const getResult = async (sql) => {
         try {
             const data = await connect(sql)

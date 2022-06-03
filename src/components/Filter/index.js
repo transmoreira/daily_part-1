@@ -33,9 +33,13 @@ const getDailyPartsInDataBase = async (company = "RN") => {
 
     const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`,
             {
-                "Cache-Control": {
-                    "publics-maxage":30, 
-                    "stale-while-revalidate":60*10
+                method:"GET",
+                headers:{
+                    "Cache-Control": {
+                    "s-maxage":30, 
+                    "stale-while-revalidate":60*10,
+                    "max-age":30
+                    }
                 }
             }
         )
