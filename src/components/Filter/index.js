@@ -35,11 +35,7 @@ const getDailyPartsInDataBase = async (company = "RN") => {
             {
                 method:"GET",
                 headers:{
-                    "Cache-Control": {
-                    "s-maxage":30, 
-                    "stale-while-revalidate":60*10,
-                    "max-age":30
-                    }
+                    "Cache-Control": `s-maxage=30;stale-while-revalidate=${60*10};max-age=30`
                 }
             }
         )
