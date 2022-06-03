@@ -31,7 +31,14 @@ let dailyPart = []
 
 const getDailyPartsInDataBase = async (company = "RN") => {
 
-    const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`)
+    const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`,
+            {
+                "Cache-Control": {
+                    "publics-maxage":30, 
+                    "stale-while-revalidate":60*10
+                }
+            }
+        )
     dailyPart = await response.json()
 
 }
@@ -175,7 +182,6 @@ const Filter = (props) => {
             return acc
         }, 0)
     }
-
 
 
     return <article className="filter no-print">
