@@ -42,10 +42,10 @@ const tarvel = async (request, response) => {
                             '${destiny}',
                             '${direction}',
                             '${startTicket}',
-                            '${endTime},
-                            '${endKM},
-                            '${passenger},
-                            '${endTicket}                            
+                            '${endTime}',
+                            '${endKM}',
+                            '${passenger}',
+                            '${endTicket}'                            
                         )`
         await getResult(sql)
 
