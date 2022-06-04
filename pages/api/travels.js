@@ -1,6 +1,6 @@
 import connect from "./connect"
 
-const dailyPart = async (request, response) => {
+const tarvel = async (request, response) => {
 
     const getResult = async (sql) => {
         try {            
@@ -35,7 +35,6 @@ const dailyPart = async (request, response) => {
                             endTicket
                         ) 
                         VALUES (
-                            '${id_daily_part}', 
                             '${line}', 
                             '${startTime}',
                             '${startKM}',
