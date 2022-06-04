@@ -7,13 +7,15 @@ import { dateFormated, unproductiveKm } from "../src/utils/utils"
 import Abastecimento from "./fuelAdd"
 import Info from "../src/components/info"
 import listDer from "../src/data/listDer"
+import axios from "axios"
 
 
 let actualDate = new Date()
 
 
 const urlDate = "http://worldtimeapi.org/api/timezone/America/Sao_Paulo"
-fetch(urlDate)
+
+axios.get(urlDate)
     .then(resp=>resp.json())
     .then(resp=>{
         actualDate = new Date(resp.datetime)
