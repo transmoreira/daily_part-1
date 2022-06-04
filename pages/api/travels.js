@@ -7,7 +7,7 @@ const dailyPart = async (request, response) => {
 
             const data = await connect(sql)
             console.log(data, sql)
-            response.status(201).json({...data})
+            response.status(201).json({data, sql})
 
 
         } catch (error) {
