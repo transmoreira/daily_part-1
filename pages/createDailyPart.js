@@ -300,13 +300,14 @@ const CreateDailyPart = (props) => {
                     body: JSON.stringify(travel)
                 }
             )
-
+            console.log(travel)
             const result = await response.json()
             travel.id = result.insertId
+            console.log(travel)
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
             setState({ ...state })
 
-            const date = JSON.parse(localStorage.getItem("dailyPart")).date.toString().substr(8,2)
+            const date = parseInt(JSON.parse(localStorage.getItem("dailyPart")).date.toString().substr(8,2))
             const today = new Date().getDate()
 
             localStorage.removeItem("dailyPart")
