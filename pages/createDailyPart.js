@@ -326,7 +326,7 @@ const CreateDailyPart = (props) => {
             console.log(erro.message)
             //location.reload(true)
             if(shoulTryAgain){
-                updateTravel(travel,false)
+               // updateTravel(travel,false)
             }
         }
     }
