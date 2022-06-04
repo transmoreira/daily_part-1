@@ -440,7 +440,7 @@ const CreateDailyPart = (props) => {
             )
 
             const result = await response.json()*/
-            travel.id = 1//result.insertId
+            travel.id = Math.random()//result.insertId
             state.dailyPart.travels.push(travel)
             setState({ ...state })
             localStorage.setItem("dailyPart", JSON.stringify(state.dailyPart))
