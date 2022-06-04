@@ -16,9 +16,8 @@ let actualDate = new Date()
 const urlDate = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo"
 
 axios.get(urlDate)
-    .then(resp=>resp.json())
     .then(resp=>{
-        actualDate = new Date(resp.datetime)
+        actualDate = new Date(resp.data.datetime)
     })
 
 
@@ -546,11 +545,13 @@ const CreateDailyPart = (props) => {
     if(listDer.includes(state.dailyPart.driver.registration)){
         state.hasPending = true
     }
+
+    
  
     return <>
         <main>
             <div className="info">TOQUE NA PARTE DIÁRIA PARA PREENCHE-LA</div>
-            <Table onClick={inputValue} dailyPart={state.dailyPart} company={company} edit={true}/>
+            <Table  onClick={inputValue} dailyPart={state.dailyPart} company={company} edit={true}/>
             <textarea
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}

@@ -20,7 +20,7 @@ const connect = async (sql)=>{
         return result    
     }catch(erro){
       console.log(19,erro)
-        //connect(sql)
+        connect(sql)
     }
 }
 export const config = {
