@@ -73,4 +73,4 @@ const tarvel = async (request, response) => {
 }
 
 
-export default dailyPart
+export default tarvel
