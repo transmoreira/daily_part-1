@@ -285,7 +285,7 @@ const CreateDailyPart = (props) => {
 
             const dailyPart = await response.json()
             if (dailyPart.length) {
-                state.dailyPart = dailyPart[0]
+                state.dailyPart = dailyPart[dailyPart.length-1]
                 setState({ ...state })
             }
         } catch (erro) {
