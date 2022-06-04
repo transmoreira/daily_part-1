@@ -261,9 +261,11 @@ const CreateDailyPart = (props) => {
 
                 }           
                 
+                
 
                 const travel = {
                     ...actualtravel,
+                    id_daily_part : state.dailyPart.id,
                     endTime: timeTravel,
                     endKM,
                     passenger: passenger,
