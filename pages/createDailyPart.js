@@ -13,7 +13,7 @@ import axios from "axios"
 let actualDate = new Date()
 
 
-const urlDate = "http://worldtimeapi.org/api/timezone/America/Sao_Paulo"
+const urlDate = "https://worldtimeapi.org/api/timezone/America/Sao_Paulo"
 
 axios.get(urlDate)
     .then(resp=>resp.json())
