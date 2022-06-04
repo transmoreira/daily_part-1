@@ -19,9 +19,10 @@ const tarvel = async (request, response) => {
 
     if (request.method === "POST") {
         console.log(request.body)
-        const {  line, startTime, startKM, origin, destiny, direction, startTicket = 0, endTime, endKM, passenger, endTicket = 0 } = JSON.parse(request.body)
+        const { id_daily_part, line, startTime, startKM, origin, destiny, direction, startTicket = 0, endTime, endKM, passenger, endTicket = 0 } = JSON.parse(request.body)
         const sql = `INSERT INTO 
                         travels( 
+                            id_daily_part,
                             line, 
                             startTime,
                             startKM,
@@ -35,6 +36,7 @@ const tarvel = async (request, response) => {
                             endTicket
                         ) 
                         VALUES (
+                            '${id_daily_part}',
                             '${line}', 
                             '${startTime}',
                             '${startKM}',
