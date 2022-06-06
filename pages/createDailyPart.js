@@ -25,8 +25,12 @@ let valueInserted
 let timeout
 
 
+
+
 const CreateDailyPart = (props) => {
 
+    
+    const isComputer = window. screen. width >= 1200
     const company = props.company || "RN"
     const isUrban = company === "TM"
 
@@ -41,7 +45,7 @@ const CreateDailyPart = (props) => {
         dailyPart: {
             car: { number: '', plate: '' },
             client: "",
-            date: dateFormated(actualDate, false),
+            date: isComputer? "" : dateFormated(actualDate, false),
             driver: {
                 name: "",
                 registration: null
@@ -58,6 +62,15 @@ const CreateDailyPart = (props) => {
     }
 
     const inputValue = async (event) => {
+        
+        if(isComputer && !state.dailyPart.date){
+                state.label = <>Informe a <b>DATA</b></>
+                state.type = "date"
+                state.list = []
+                setState({ ...state })
+                state.dailyPart.date = await getData()
+        }
+
         console.log(state)
         const shouldDelete = event.target.className == "delete"
             || event.target.parentElement.parentElement.className == "delete"
@@ -317,8 +330,8 @@ const CreateDailyPart = (props) => {
            
             console.log("Date: " + date , "Today: "+today)
             alert("Viagem gravada com sucesso!")
-            const computer = window. screen. width >= 1200
-            if(date != today && !computer){
+            
+            if(date != today && !isComputer){
                 location.reload()
             }
             
