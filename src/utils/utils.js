@@ -79,7 +79,8 @@ const unproductiveKm = ()=>({
         "GAR SARZEDO",
         "GAR NOVA LIMA",
         "UNIDADE PARDINI",
-        "UNIDADE FIAT"
+        "UNIDADE FIAT",
+        "UNIDADE VALLOUREC"
     ]
 })
 
