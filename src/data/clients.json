@@ -144,6 +144,7 @@
       {"name": "RAPOSOS","direction": ["RAPOSOS", "MUTUCA", "INTERNO"]},
       {"name": "LAFAIETE","direction": ["LAFAIETE", "VALE VIGA", "INTERNO"]},
       {"name": "CONGONHAS","direction": ["CONGONHAS", "VALE FABRICA", "INTERNO"]},
+      {"name": "BETIM/SARZEDO","direction": ["BETIM", "SARZEDO", "INTERNO"]},
       {"name": "L01","direction": ["SAO JOSE", "CMT", "INTERNO"]},
       {"name": "L02","direction": ["ITABIRITO", "PICO", "INTERNO"]},
       {"name": "L03","direction": ["CONGONHAS", "VARGEM GRANDE", "INTERNO"]}
