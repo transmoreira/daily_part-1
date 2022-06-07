@@ -30,7 +30,7 @@ let timeout
 const CreateDailyPart = (props) => {
 
     
-    const isComputer = window. screen. width >= 1200
+    
     const company = props.company || "RN"
     const isUrban = company === "TM"
 
@@ -45,7 +45,7 @@ const CreateDailyPart = (props) => {
         dailyPart: {
             car: { number: '', plate: '' },
             client: "",
-            date: isComputer? "" : dateFormated(actualDate, false),
+            date: dateFormated(actualDate, false),
             driver: {
                 name: "",
                 registration: null
@@ -62,6 +62,7 @@ const CreateDailyPart = (props) => {
     }
 
     const inputValue = async (event) => {
+        const isComputer = window. screen. width >= 1200
         
         if(isComputer && !state.dailyPart.date){
                 state.label = <>Informe a <b>DATA</b></>
