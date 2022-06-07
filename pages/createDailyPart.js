@@ -332,7 +332,10 @@ const CreateDailyPart = (props) => {
             alert("Viagem gravada com sucesso!")
             
             if(date != today && !isComputer){
-                location.reload()
+                const resp = confirm("Terminou a parte diaria do dia "+dailyPart.date+"? se clicar em OK vamos limpar esssa parte diaria")
+                if(resp){
+                    location.reload()
+                }
             }
             
         } catch (erro) {
