@@ -2,7 +2,7 @@ export default (props)=>{
     const {item, number} = props
     
     let partTR = []
-    for(let i = 1; i<=31;i++){
+    for(let i = 1; i<=28;i++){
         partTR.push(<td></td>)
     }
    

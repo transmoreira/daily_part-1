@@ -60,9 +60,6 @@ const Inspecao = (props) => {
                     <th>26</th>
                     <th>27</th>
                     <th>28</th>
-                    <th>29</th>
-                    <th>30</th>
-                    <th>31</th>
                 </tr>
             </thead>
             <tbody>

@@ -426,7 +426,8 @@ const CreateDailyPart = (props) => {
 
         const timeTravel = `${startTime}:00`
         if (!state.dailyPart.travels.length){
-            state.dailyPart.date = timeTravel            
+            const [year,month, day] = timeTravel.substring(0, 10).split("-")
+            state.dailyPart.date = timeTravel.substring(0, 10)          
             onChangeObs()
         }
 
