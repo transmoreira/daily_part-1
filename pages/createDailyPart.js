@@ -188,8 +188,10 @@ const CreateDailyPart = (props) => {
                         body: JSON.stringify(state.dailyPart)
                     }
                 )
-                const result = await response.json()
 
+                console.log(response)
+                const result = await response.json()
+                console.log(result)
                 state.dailyPart.id = result.insertId
                 setState({ ...state })
                 addTravel()
