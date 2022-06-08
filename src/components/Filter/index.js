@@ -127,6 +127,7 @@ const Filter = (props) => {
             sethIddenLoad(false)
             await getDailyPartsInDataBase(company)
             newFilter()
+            sethIddenLoad(true)
         } catch (erro) {
             sethIddenLoad(true)
         }
