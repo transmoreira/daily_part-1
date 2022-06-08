@@ -5,9 +5,7 @@ import Table from "../src/components/Table"
 import Filter from "../src/components/Filter"
 
 import cars from "../src/data/cars.json"
-import employees from "../src/data/employees.json"
 import clients from "../src/data/clients.json"
-import Load from "../src/components/Load"
 
 const Home = (props) => {
 
@@ -135,7 +133,6 @@ const Home = (props) => {
                 </tbody>
             </table>
         </div>
-        
     </>
 }
 

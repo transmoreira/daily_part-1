@@ -124,12 +124,11 @@ const Filter = (props) => {
             event.target.classList.add("disable")
         }
         try {
-            setListDailyParts(false)
+            sethIddenLoad(false)
             await getDailyPartsInDataBase(company)
             newFilter()
-            setListDailyParts(true)
         } catch (erro) {
-
+            sethIddenLoad(true)
         }
         if (event) {
             event.target.classList.remove("disable")
