@@ -6,6 +6,14 @@ export default ()=>{
     const date = new Date()
     const month = date.getMonth()
     const year = date.getFullYear()
+
+    date.setMonth(date.getMonth()+1)
+    date.setDate(1)
+    date.setDate(date.getDate()-1)
+
+    const endMonth = date.getDate()
+
+
     const header = {
         month:months[month]+"/"+year,
         car:{
@@ -17,7 +25,8 @@ export default ()=>{
             capacity:"49 L"
         },
         unidade:"TAM/CTF",
-        company:"Rio Negro"
+        company:"Rio Negro",
+        endMonth:endMonth
 
     }
    

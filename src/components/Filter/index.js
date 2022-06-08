@@ -3,6 +3,7 @@ import clientsJSON from "../../data/clients.json"
 import carsJSON from "../../data/cars.json"
 import employeesJSON from "../../data/employees.json"
 import { dateFormated, exportCsv } from "../../utils/utils"
+import Load from "../../components/Load"
 
 
 
@@ -30,7 +31,7 @@ let dailyPart = []
 
 
 const getDailyPartsInDataBase = async (company = "RN") => {
-
+    
     const response = await fetch(`api/dailyPart?start=${dateFormated(filterDatas.timeCourse.start, false)}&end=${dateFormated(filterDatas.timeCourse.end, false)}&company=${company}`,
             {
                 method:"GET",
@@ -40,7 +41,6 @@ const getDailyPartsInDataBase = async (company = "RN") => {
             }
         )
     dailyPart = await response.json()
-
 }
 
 
@@ -49,6 +49,8 @@ const Filter = (props) => {
     const [listDailyParts, setListDailyParts] = props.state
     const [lines, setLines] = useState([])
     const company = props.company || "RN"
+
+    const [hiddenLoad, sethIddenLoad] = useState(true)
 
 
     
@@ -122,8 +124,10 @@ const Filter = (props) => {
             event.target.classList.add("disable")
         }
         try {
+            setListDailyParts(false)
             await getDailyPartsInDataBase(company)
             newFilter()
+            setListDailyParts(true)
         } catch (erro) {
 
         }
@@ -235,9 +239,7 @@ const Filter = (props) => {
             <span><strong>{kms.productive.toLocaleString('pt-BR')}</strong> KM's produtivos</span>
             <span><strong>{kms.unproductive.toLocaleString('pt-BR')}</strong> KM's improdutivos</span>
         </div>
-
-
-
+        <Load hidden={hiddenLoad}/>
     </article >
 }
 

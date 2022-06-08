@@ -6,6 +6,7 @@ import Table from "../src/components/Table"
 import { dateFormated, unproductiveKm } from "../src/utils/utils"
 import Abastecimento from "./fuelAdd"
 import Info from "../src/components/info"
+import UpdateAddress from "../src/components/info/updateAddress.js"
 import listDer from "../src/data/listDer"
 import axios from "axios"
 
@@ -574,9 +575,11 @@ const CreateDailyPart = (props) => {
                 placeholder="Descreva aqui observações sobre a viagem"
                 onChange={onChangeObs}
                 value={state.dailyPart.obs || ""} />
+            <UpdateAddress/>
             {state.hasPending &&
                 <Info name={state.dailyPart.driver.name}/>
             }
+
             
 
         </main>

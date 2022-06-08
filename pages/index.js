@@ -7,6 +7,7 @@ import Filter from "../src/components/Filter"
 import cars from "../src/data/cars.json"
 import employees from "../src/data/employees.json"
 import clients from "../src/data/clients.json"
+import Load from "../src/components/Load"
 
 const Home = (props) => {
 
@@ -99,7 +100,6 @@ const Home = (props) => {
             <title>Parte Diaria</title>
             <link rel="icon" href="/favicon.png" />
         </Head>
-
         {<Filter state={[listDailyParts, setListDailyParts]} company={company} kms={kms}/>}
         <button onClick={eventSendMail}>Enviar por email</button>
         <main>
@@ -135,6 +135,7 @@ const Home = (props) => {
                 </tbody>
             </table>
         </div>
+        
     </>
 }
 
