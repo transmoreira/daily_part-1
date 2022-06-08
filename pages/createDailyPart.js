@@ -9,6 +9,7 @@ import Info from "../src/components/info"
 import UpdateAddress from "../src/components/info/updateAddress.js"
 import listDer from "../src/data/listDer"
 import axios from "axios"
+import Load from "../src/components/Load"
 
 
 let actualDate = new Date()
@@ -30,7 +31,7 @@ let timeout
 
 const CreateDailyPart = (props) => {
 
-    
+    const [hiddenLoad, sethIddenLoad] = useState(false)
     
     const company = props.company || "RN"
     const isUrban = company === "TM"
@@ -73,7 +74,7 @@ const CreateDailyPart = (props) => {
                 state.dailyPart.date = await getData()
         }
 
-        console.log(state)
+        
         const shouldDelete = event.target.className == "delete"
             || event.target.parentElement.parentElement.className == "delete"
 
@@ -85,6 +86,7 @@ const CreateDailyPart = (props) => {
           
             const responseUse = confirm(`Tem certeza que deseja apagar a viagem de ${travel.startTime}?`)
             if(responseUse){
+                sethIddenLoad(false)
                 try {                                   
                     const response = await fetch(
                         "api/travels",
@@ -107,7 +109,7 @@ const CreateDailyPart = (props) => {
                 } catch (error) {
                         
                 }
-
+                sethIddenLoad(true)
             }
             return
         }
@@ -177,7 +179,7 @@ const CreateDailyPart = (props) => {
                 state.dailyPart.company = "TM"
                 
             }
-
+            sethIddenLoad(false)
             try {
                 const response = await fetch(
                     "api/dailyPart",
@@ -195,6 +197,7 @@ const CreateDailyPart = (props) => {
                 console.log(erro.message)
                 //location.reload(true)
             }
+            sethIddenLoad(true)
             return
         }
 
@@ -205,7 +208,6 @@ const CreateDailyPart = (props) => {
         if(actualtravel){
             if (!actualtravel.destiny || actualtravel.endKM) {
                 addTravel()
-
             } else {
                
                 if(state.dailyPart.client == "VALE VIGA"){
@@ -288,12 +290,15 @@ const CreateDailyPart = (props) => {
 
 
 
-                updateTravel(travel)
+                saveTravel(travel)
             }
+        }else{
+            addTravel()
         }
     }
 
     const getDailyPart = async (plate, registration) => {
+        sethIddenLoad(false)
         try {
             const response = await fetch(`api/dailyPart?start=${dateFormated(actualDate, false)}&end=${dateFormated(actualDate, false)}&plate=${plate}&registration=${registration}&company=${company}`)
 
@@ -307,9 +312,11 @@ const CreateDailyPart = (props) => {
             //location.reload(true)
             await getDailyPart(plate, registration)
         }
+        sethIddenLoad(true)
     }
 
-    const updateTravel = async (travel, shoulTryAgain = true) => {
+    const saveTravel = async (travel, shoulTryAgain = true) => {
+        sethIddenLoad(false)
         try {
             const response = await fetch(
                 "api/travels",
@@ -318,10 +325,10 @@ const CreateDailyPart = (props) => {
                     body: JSON.stringify(travel)
                 }
             )
-            console.log(travel)
+            
             const result = await response.json()
             travel.id = result.insertId
-            console.log(travel)
+            
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
             setState({ ...state })
 
@@ -343,10 +350,11 @@ const CreateDailyPart = (props) => {
         } catch (erro) {
             console.log(erro.message)
             //location.reload(true)
-            if(shoulTryAgain){
-               // updateTravel(travel,false)
-            }
+            //if(shoulTryAgain){
+               saveTravel(travel,false)
+            //}
         }
+        sethIddenLoad(true)
     }
 
     const addTravel = async () => {
@@ -443,15 +451,12 @@ const CreateDailyPart = (props) => {
             startTicket
         }
 
-
-
-
-        setTraveal(travel)
+        saveLocalTraveal(travel)
         console.log(state.dailyPart.travels)
 
     }
 
-    const setTraveal = async (travel) => {
+    const saveLocalTraveal = async (travel) => {
         try {
            /* const response = await fetch(
                 "api/travels",
@@ -469,7 +474,7 @@ const CreateDailyPart = (props) => {
         } catch (erro) {
             alert("Houve um erro ao enviar a parte diaria: "+erro.message)
             //location.reload(true)
-            //setTraveal(travel)
+            //saveLocalTraveal(travel)
         }
     }
 
@@ -535,7 +540,6 @@ const CreateDailyPart = (props) => {
 
     const onChangeObs = (event) => {
         const callback = () => {
-            clearTimeout(timeout)
             try {
                 fetch("api/dailyPart",
                     {
@@ -583,6 +587,8 @@ const CreateDailyPart = (props) => {
             
 
         </main>
+
+        <Load hidden={hiddenLoad}/>
 
         <div className={`modal ${state.close}`}>
             <div className="content-modal">

@@ -10,7 +10,7 @@ const mysql = require('serverless-mysql')({
 
 
 const connect = async (sql)=>{
-  console.log(mysql)
+  //console.log(mysql)
     try{
       //console.log(13)
       const result = await mysql.query(sql)

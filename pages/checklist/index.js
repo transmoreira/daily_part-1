@@ -1,8 +1,11 @@
 import Inspecao from "../../src/components/Inspecao"
 import listInspect from "../../src/components/Inspecao/listInspect.json"
+import { useRouter } from "next/router"
 
 export default ()=>{
 
+    const car = useRouter().query.car
+    console.log(car)
     const date = new Date()
     const month = date.getMonth()
     const year = date.getFullYear()
@@ -18,7 +21,7 @@ export default ()=>{
         month:months[month]+"/"+year,
         car:{
             plate:"XXX-0000",
-            number:"51521",
+            number:car,
             year:2019,
             model:"Comil",
             type:"Micro",

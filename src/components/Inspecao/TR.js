@@ -3,7 +3,7 @@ export default (props)=>{
     
     let partTR = []
     for(let i = 1; i<=endMonth;i++){
-        partTR.push(<td></td>)
+        partTR.push(<td key={i+"empty"}></td>)
     }
    
     return item.text 

@@ -8,7 +8,7 @@ const Inspecao = (props) => {
     console.log(header.endMonth)
     let partTR = []
     for(let i = 1; i<=header.endMonth;i++){
-        partTR.push(<td>{i}</td>)
+        partTR.push(<td key={i}>{i}</td>)
     }
     return (
         <table style={{margin:"auto", fontSize: 12}}>
