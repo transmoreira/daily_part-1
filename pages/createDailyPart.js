@@ -31,7 +31,7 @@ let timeout
 
 const CreateDailyPart = (props) => {
 
-    const [hiddenLoad, sethIddenLoad] = useState(false)
+    const [hiddenLoad, sethIddenLoad] = useState(true)
     
     const company = props.company || "RN"
     const isUrban = company === "TM"
