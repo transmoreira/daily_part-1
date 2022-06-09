@@ -179,27 +179,8 @@ const CreateDailyPart = (props) => {
                 state.dailyPart.company = "TM"
                 
             }
-            sethIddenLoad(false)
-            try {
-                const response = await fetch(
-                    "api/dailyPart",
-                    {
-                        method: "POST",
-                        body: JSON.stringify(state.dailyPart)
-                    }
-                )
-
-                console.log(response)
-                const result = await response.json()
-                console.log(result)
-                state.dailyPart.id = result.insertId
-                setState({ ...state })
-                addTravel()
-            } catch (erro) {
-                console.log(erro.message)
-                //location.reload(true)
-            }
-            sethIddenLoad(true)
+            
+            await saveDailyPart()
             return
         }
 
@@ -299,6 +280,34 @@ const CreateDailyPart = (props) => {
         }
     }
 
+    const saveDailyPart = async ()=>{
+        sethIddenLoad(false)
+        try {
+            const response = await fetch(
+                "api/dailyPart",
+                {
+                    method: "POST",
+                    body: JSON.stringify(state.dailyPart)
+                }
+            )
+
+            /*if(response.status != 201){
+                saveDailyPart()
+                return
+            }*/
+            const result = await response.json()
+            console.log(result)
+            state.dailyPart.id = result.insertId
+            setState({ ...state })
+            addTravel()            
+            sethIddenLoad(true)
+        } catch (erro) {
+            console.log(erro.message)
+            //location.reload(true)
+            //saveDailyPart()
+        }
+    }
+
     const getDailyPart = async (plate, registration) => {
         sethIddenLoad(false)
         try {
@@ -329,6 +338,10 @@ const CreateDailyPart = (props) => {
             )
             
             const result = await response.json()
+            /*if(response.status != 201){
+                saveTravel(travel)
+                return
+            }*/
             travel.id = result.insertId
             
             state.dailyPart.travels[state.dailyPart.travels.length - 1] = travel
@@ -430,7 +443,7 @@ const CreateDailyPart = (props) => {
             state.list = []
             startTicket = state.dailyPart.travels.length 
                 ? state.dailyPart.travels[state.dailyPart.travels.length-1].endTicket
-                : parseInt(await getData())
+                :  parseInt(await getData())
                 || parseInt(await getData())
         }
 
