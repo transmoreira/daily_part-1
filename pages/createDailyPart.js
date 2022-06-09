@@ -291,10 +291,10 @@ const CreateDailyPart = (props) => {
                 }
             )
 
-            /*if(response.status != 201){
+            if(response.status != 201){
                 saveDailyPart()
                 return
-            }*/
+            }
             const result = await response.json()
             console.log(result)
             state.dailyPart.id = result.insertId
@@ -304,7 +304,7 @@ const CreateDailyPart = (props) => {
         } catch (erro) {
             console.log(erro.message)
             //location.reload(true)
-            //saveDailyPart()
+            saveDailyPart()
         }
     }
 
@@ -366,7 +366,7 @@ const CreateDailyPart = (props) => {
             console.log(erro.message)
             //location.reload(true)
             //if(shoulTryAgain){
-               saveTravel(travel,false)
+               //saveTravel(travel,false)
             //}
         }
         sethIddenLoad(true)
