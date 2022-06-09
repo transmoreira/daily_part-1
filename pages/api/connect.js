@@ -2,10 +2,10 @@
 
 const mysql = require('serverless-mysql')({
     config: {
-      host     : process.env.ENDPOINT_RN,
-      database : process.env.DATABASE_RN,
-      user     : process.env.USERNAME_DB_RN,
-      password : process.env.PASSWORD_DB_RN
+      host     : process.env.ENDPOINT,
+      database : process.env.DATABASE,
+      user     : process.env.USERNAME_DB,
+      password : process.env.PASSWORD_DB
     }
   })
 
