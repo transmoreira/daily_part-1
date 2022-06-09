@@ -22,7 +22,7 @@ const dailyPart = async (request, response) => {
 
         } catch (error) {
             console.log(error, sql)
-            response.status(400).json(error)
+            response.status(401).json(error)
         }
     }
 
