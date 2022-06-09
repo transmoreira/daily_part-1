@@ -15,6 +15,10 @@ const Info = ({name})=>{
                 <li style={styleLi}>Cópia de Carteira de Trabalho(Paginas com Foto, dados e contrato)</li>
                 <li style={styleLi}>Cópia do curso Resolução 168</li>
             </ul>
+
+            <p style={styleP}>Se a carteira de Habilitação for digital nao precisa autenticar em cartorio<br/><br/>
+            Atestado de bons antecedentes não vale como certidão criminal negativa<br/>
+            A certidão pode ser retirada<br/><a href="https://rupe.tjmg.jus.br/rupe/justica/publico/certidoes/criarSolicitacaoCertidao.rupe?solicitacaoPublica=true" style={{color:"white", backgroundColor:"green", padding:"0 5px "}}>clicando aqui</a></p>
         </div>
 }
 
@@ -24,7 +28,8 @@ const styleBox = {
     background:"purple",
     color:"yellow",
     margin:"auto",
-
+    paddingBottom:20, 
+    zIndex:9999999
 }
 
 const styleP = {
