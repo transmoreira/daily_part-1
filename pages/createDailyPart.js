@@ -366,7 +366,7 @@ const CreateDailyPart = (props) => {
             console.log(erro.message)
             //location.reload(true)
             //if(shoulTryAgain){
-               //saveTravel(travel,false)
+               saveTravel(travel,false)
             //}
         }
         sethIddenLoad(true)
